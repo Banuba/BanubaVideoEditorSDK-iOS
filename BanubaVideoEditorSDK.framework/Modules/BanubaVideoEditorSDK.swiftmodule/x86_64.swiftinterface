@@ -783,11 +783,9 @@ public struct VideoEditorConfig {
   public var watermarkConfiguration: BanubaVideoEditorSDK.WatermarkConfiguration?
   public var speedSelectionConfiguration: BanubaVideoEditorSDK.SpeedSelectionConfiguration
   public var alertViewConfiguration: BanubaVideoEditorSDK.AlertViewConfiguration
-  public var handsfreeConfiguration: BanubaVideoEditorSDK.HandsfreeConfiguration?
   public var featureConfiguration: BanubaVideoEditorSDK.FeatureConfiguration
-  public var isHandfreeEnabled: Swift.Bool
   public init()
-  public init(videoResolutionConfiguration: VideoEditor.VideoResolutionConfiguration, recorderConfiguration: BanubaVideoEditorSDK.RecorderConfiguration, editorConfiguration: BanubaVideoEditorSDK.EditorConfiguration, singleTrimConfiguration: BanubaVideoEditorSDK.SingleTrimConfiguration, textEditorConfiguration: BanubaVideoEditorSDK.TextEditorConfiguration, toastConfiguration: BanubaVideoEditorSDK.ToastConfiguration, fullScreenActivityConfiguration: BanubaVideoEditorSDK.FullScreenActivityConfiguration, smallActivityIndicatorConfiguration: BanubaVideoEditorSDK.SmallActivityIndicatorConfiguration, albumsConfiguration: BanubaVideoEditorSDK.AlbumsConfiguration, videoOverlayConfiguration: BanubaVideoEditorSDK.VideoOverlayConfiguration, videoDurationConfiguration: BanubaVideoEditorSDK.VideoEditorDurationConfig, gifPickerConfiguration: BanubaVideoEditorSDK.GifPickerConfiguration, slideShowConfiguration: BanubaVideoEditorSDK.SlideShowConfiguration, trimTimeLineConfiguration: BanubaVideoEditorSDK.TrimTimeLineConfiguration, combinedGalleryConfiguration: BanubaVideoEditorSDK.CombinedGalleryConfiguration?, galleryConfiguration: BanubaVideoEditorSDK.GalleryConfiguration, trimGalleryVideoConfiguration: BanubaVideoEditorSDK.TrimGalleryVideoConfiguration, filterConfiguration: BanubaVideoEditorSDK.FilterConfiguration, videoCoverSelectionConfiguration: BanubaVideoEditorSDK.VideoCoverSelectionConfiguration, musicEditorConfiguration: BanubaMusicEditorSDK.MusicEditorConfig, overlayEditorConfiguration: BanubaOverlayEditorSDK.OverlayEditorConfiguration, featureConfiguration: BanubaVideoEditorSDK.FeatureConfiguration, multiTrimConfiguration: BanubaVideoEditorSDK.MultiTrimConfiguration, watermarkConfiguration: BanubaVideoEditorSDK.WatermarkConfiguration?, speedSelectionConfiguration: BanubaVideoEditorSDK.SpeedSelectionConfiguration, alertViewConfiguration: BanubaVideoEditorSDK.AlertViewConfiguration, handsfreeConfiguration: BanubaVideoEditorSDK.HandsfreeConfiguration?)
+  public init(videoResolutionConfiguration: VideoEditor.VideoResolutionConfiguration, recorderConfiguration: BanubaVideoEditorSDK.RecorderConfiguration, editorConfiguration: BanubaVideoEditorSDK.EditorConfiguration, singleTrimConfiguration: BanubaVideoEditorSDK.SingleTrimConfiguration, textEditorConfiguration: BanubaVideoEditorSDK.TextEditorConfiguration, toastConfiguration: BanubaVideoEditorSDK.ToastConfiguration, fullScreenActivityConfiguration: BanubaVideoEditorSDK.FullScreenActivityConfiguration, smallActivityIndicatorConfiguration: BanubaVideoEditorSDK.SmallActivityIndicatorConfiguration, albumsConfiguration: BanubaVideoEditorSDK.AlbumsConfiguration, videoOverlayConfiguration: BanubaVideoEditorSDK.VideoOverlayConfiguration, videoDurationConfiguration: BanubaVideoEditorSDK.VideoEditorDurationConfig, gifPickerConfiguration: BanubaVideoEditorSDK.GifPickerConfiguration, slideShowConfiguration: BanubaVideoEditorSDK.SlideShowConfiguration, trimTimeLineConfiguration: BanubaVideoEditorSDK.TrimTimeLineConfiguration, combinedGalleryConfiguration: BanubaVideoEditorSDK.CombinedGalleryConfiguration?, galleryConfiguration: BanubaVideoEditorSDK.GalleryConfiguration, trimGalleryVideoConfiguration: BanubaVideoEditorSDK.TrimGalleryVideoConfiguration, filterConfiguration: BanubaVideoEditorSDK.FilterConfiguration, videoCoverSelectionConfiguration: BanubaVideoEditorSDK.VideoCoverSelectionConfiguration, musicEditorConfiguration: BanubaMusicEditorSDK.MusicEditorConfig, overlayEditorConfiguration: BanubaOverlayEditorSDK.OverlayEditorConfiguration, featureConfiguration: BanubaVideoEditorSDK.FeatureConfiguration, multiTrimConfiguration: BanubaVideoEditorSDK.MultiTrimConfiguration, watermarkConfiguration: BanubaVideoEditorSDK.WatermarkConfiguration?, speedSelectionConfiguration: BanubaVideoEditorSDK.SpeedSelectionConfiguration, alertViewConfiguration: BanubaVideoEditorSDK.AlertViewConfiguration)
   public mutating func applyFont(_ font: UIKit.UIFont)
   public mutating func updateAlertFonts(_ font: UIKit.UIFont)
   public mutating func updateRecorderFonts(_ font: UIKit.UIFont)
@@ -1053,25 +1051,6 @@ public struct VideoCoverSelectionConfiguration {
   public var sliderMaxTrackTintColor: UIKit.UIColor
   public var backgroundConfiguration: BanubaVideoEditorSDK.BackgroundConfiguration
 }
-public typealias TimerOptionBarConfiguration = BanubaVideoEditorSDK.HandsfreeConfiguration.TimerOptionBarConfiguration
-public struct HandsfreeConfiguration {
-  public struct TimerOptionBarConfiguration {
-    public var disableOptionTitle: Swift.String
-    public var selectorColor: UIKit.UIColor
-    public var selectorTextColor: UIKit.UIColor
-    public var optionBackgroundColor: UIKit.UIColor
-    public var optionCornerRadius: CoreGraphics.CGFloat
-    public var optionTextColor: UIKit.UIColor
-    public var backgroundColor: UIKit.UIColor
-    public var cornerRadius: CoreGraphics.CGFloat
-    public var selectorEdgeInsets: UIKit.UIEdgeInsets
-    public var activeThumbAndLineColor: UIKit.UIColor
-    public var inactiveThumbAndLineColor: UIKit.UIColor
-    public init(disableOptionTitle: Swift.String, selectorColor: UIKit.UIColor, selectorTextColor: UIKit.UIColor, optionBackgroundColor: UIKit.UIColor, optionCornerRadius: CoreGraphics.CGFloat, optionTextColor: UIKit.UIColor, backgroundColor: UIKit.UIColor, cornerRadius: CoreGraphics.CGFloat, selectorEdgeInsets: UIKit.UIEdgeInsets, activeThumbAndLineColor: UIKit.UIColor, inactiveThumbAndLineColor: UIKit.UIColor)
-  }
-  public var timerOptionBarConfiguration: BanubaVideoEditorSDK.HandsfreeConfiguration.TimerOptionBarConfiguration
-  public init(timerOptionBarConfiguration: BanubaVideoEditorSDK.HandsfreeConfiguration.TimerOptionBarConfiguration)
-}
 public protocol MusicSelectorViewControllerDelegate : BanubaVideoEditorSDK.ScrollBarManagerProviding {
   func didSelectFile(at url: Foundation.URL, title: Swift.String, id: Swift.Int64)
   func didClearSelection()
@@ -1243,6 +1222,7 @@ public protocol VideoMetadataStoring {
   var musicEditorMetadata: BanubaVideoEditorSDK.MusicEditorMetadata? { get }
   var effectsOnVideoMetadata: [BanubaVideoEditorSDK.EffectOnVideoMetadata]? { get }
   var delegate: BanubaVideoEditorSDK.VideoMetadataStorageDelegate? { get set }
+  func reset()
   func update(metadata: [BanubaVideoEditorSDK.EffectOnVideoMetadata])
   func update(metadata: [BanubaMusicEditorSDK.AudioTrackAdoptable])
   func update(metadata: BanubaVideoEditorSDK.VideoEditorTrimMetadata)
@@ -1250,8 +1230,6 @@ public protocol VideoMetadataStoring {
   func update(metadata: BanubaVideoEditorSDK.VideoMetadata)
   func update(metadata: BanubaVideoEditorSDK.ColorOnVideoMetadata)
   func update(metadata: BanubaVideoEditorSDK.TimeMetadata)
-  func reset()
-  func resetColorOnVideoMetadata()
 }
 @_hasMissingDesignatedInitializers public class VideoMetadataStorage : BanubaVideoEditorSDK.VideoMetadataStoring {
   public var videoMetadata: BanubaVideoEditorSDK.VideoMetadata? {
@@ -1287,7 +1265,6 @@ public protocol VideoMetadataStoring {
   public func update(metadata: BanubaVideoEditorSDK.VideoEditorMetadata)
   public func update(metadata: BanubaVideoEditorSDK.TimeMetadata)
   public func reset()
-  public func resetColorOnVideoMetadata()
   @objc deinit
 }
 public struct ImageCroppingInfo {
