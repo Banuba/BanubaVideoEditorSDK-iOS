@@ -209,6 +209,13 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 # pragma pop_macro("any")
 #endif
 
+
+SWIFT_PROTOCOL("_TtP20BanubaVideoEditorSDK21ActivityIndicatorView_")
+@protocol ActivityIndicatorView
+- (void)startAnimating;
+- (void)stopAnimating;
+@end
+
 @class NSBundle;
 @class NSCoder;
 
@@ -251,6 +258,18 @@ SWIFT_CLASS("_TtC20BanubaVideoEditorSDK11AudioWriter")
 
 
 
+/// Video Editor main entity and entry point.
+/// Can present and hide root view controller.
+/// Has default export method.
+SWIFT_CLASS("_TtC20BanubaVideoEditorSDK20BanubaVideoEditorSDK")
+@interface BanubaVideoEditorSDK : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
+
+
 
 SWIFT_CLASS("_TtC20BanubaVideoEditorSDK13CountdownView")
 @interface CountdownView : UIView
@@ -264,6 +283,12 @@ SWIFT_CLASS("_TtC20BanubaVideoEditorSDK13CountdownView")
 SWIFT_CLASS("_TtC20BanubaVideoEditorSDK25EditorEffectsConfigHolder")
 @interface EditorEffectsConfigHolder : NSObject
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_PROTOCOL("_TtP20BanubaVideoEditorSDK23EffectsProgressActivity_")
+@protocol EffectsProgressActivity
+@property (nonatomic) float progress;
 @end
 
 

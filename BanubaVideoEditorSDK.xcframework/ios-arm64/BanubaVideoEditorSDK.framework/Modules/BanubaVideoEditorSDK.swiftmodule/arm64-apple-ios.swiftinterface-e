@@ -292,6 +292,9 @@ extension BanubaCameraModule : BanubaVideoEditorSDK.SDKMaskPostprocessServicing 
   public func postprocessStartVideoProcessing(with size: CoreGraphics.CGSize)
   public func postprocessDraw()
 }
+@objc public protocol EffectsProgressActivity : UIKit.UIView {
+  @objc var progress: Swift.Float { get set }
+}
 final public class ApplicationInformation {
   required public init(bundle: Foundation.Bundle)
   final public var version: Swift.String {
@@ -339,11 +342,11 @@ extension AudioWriter : AVFoundation.AVAudioRecorderDelegate {
   @objc dynamic public func audioRecorderEncodeErrorDidOccur(_ recorder: AVFoundation.AVAudioRecorder, error: Swift.Error?)
   @objc dynamic public func audioRecorderDidFinishRecording(_ recorder: AVFoundation.AVAudioRecorder, successfully flag: Swift.Bool)
 }
-public protocol BanubaVideoEditorSDKDelegate : AnyObject {
+public protocol BanubaVideoEditorSDKDelegate : ObjectiveC.NSObject {
   func videoEditorDidCancel(_ videoEditor: BanubaVideoEditorSDK.BanubaVideoEditorSDK)
   func videoEditorDone(_ videoEditor: BanubaVideoEditorSDK.BanubaVideoEditorSDK)
 }
-public class BanubaVideoEditorSDK {
+@objc public class BanubaVideoEditorSDK : ObjectiveC.NSObject {
   weak public var delegate: BanubaVideoEditorSDK.BanubaVideoEditorSDKDelegate?
   public var sdk: BanubaVideoEditorSDK.SDKService {
     get
@@ -366,17 +369,18 @@ public class BanubaVideoEditorSDK {
   public var currentConfiguration: BanubaVideoEditorSDK.VideoEditorConfig {
     get
   }
-  public init(token: Swift.String, effectsToken: Swift.String, configuration: BanubaVideoEditorSDK.VideoEditorConfig, camera: BanubaVideoEditorSDK.CameraModule? = nil, analytics: BanubaVideoEditorSDK.AnalyticsEngine? = nil, externalViewControllerFactory: BanubaVideoEditorSDK.ExternalViewControllerFactory? = nil)
+  public init(token: Foundation.NSString, effectsToken: Foundation.NSString)
   public func exportVideo(fileUrl: Foundation.URL, completion: @escaping (Swift.Bool, Swift.Error?) -> Swift.Void)
   public func exportVideoWithCoverImage(fileUrl: Foundation.URL, completion: @escaping (Swift.Bool, Swift.Error?, UIKit.UIImage) -> Swift.Void)
   public func exportVideos(using configurations: [BanubaVideoEditorSDK.ExportVideoConfiguration], completion: ((Swift.Bool, Swift.Error?) -> Swift.Void)?)
   public func exportVideosWithCoverImage(using configurations: [BanubaVideoEditorSDK.ExportVideoConfiguration], completion: ((Swift.Bool, Swift.Error?, UIKit.UIImage) -> Swift.Void)?)
   public func exportAudio(fileUrl: Foundation.URL, completion: @escaping (Swift.Bool, Swift.Error?) -> Swift.Void)
   public func clearSessionData()
-  public func dismissVideoEditor(animated: Swift.Bool, completion: (() -> Swift.Void)?)
-  public func presentVideoEditor(from hostController: UIKit.UIViewController, animated: Swift.Bool, musicTrack: MediaTrack? = nil, completion: (() -> Swift.Void)?)
+  public func dismissVideoEditor(completion: (() -> Swift.Void)?)
+  public func presentVideoEditor(from hostController: UIKit.UIViewController, completion: (() -> Swift.Void)?)
   public func updateVideoEditorConfig(_ config: BanubaVideoEditorSDK.VideoEditorConfig)
   @objc deinit
+  @objc override dynamic public init()
 }
 extension BanubaVideoEditorSDK {
   public func cameraViewControllerDidCancel(_ controller: UIKit.UIViewController)
@@ -660,6 +664,10 @@ public protocol CameraModule : BanubaVideoEditorSDK.SDKBeautyEffectManaging, Ban
   func takeSnapshot(handler: @escaping (UIKit.UIImage) -> Swift.Void)
   func makeCameraPhoto(cameraSettings: BanubaVideoEditorSDK.CameraModulePhotoSettings, completion: @escaping (UIKit.UIImage?) -> Swift.Void)
   func getRendererView() -> UIKit.UIView
+}
+@objc public protocol ActivityIndicatorView : UIKit.UIView {
+  @objc func startAnimating()
+  @objc func stopAnimating()
 }
 @objc @_inheritsConvenienceInitializers public class GIFPickerDataLoadingViewController : UIKit.UIViewController {
   public var loadingIndicator: BanubaVideoEditorSDK.VideoEditorActivityIndicator?
