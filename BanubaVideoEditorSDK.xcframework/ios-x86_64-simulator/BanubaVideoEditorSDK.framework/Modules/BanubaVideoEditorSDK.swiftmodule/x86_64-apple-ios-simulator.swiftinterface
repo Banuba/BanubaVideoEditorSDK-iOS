@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.3 (swiftlang-1200.0.29.2 clang-1200.0.30.1)
+// swift-compiler-version: Apple Swift version 5.3.1 (swiftlang-1200.0.41 clang-1200.0.32.8)
 // swift-module-flags: -target x86_64-apple-ios11.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name BanubaVideoEditorSDK
 import ARKit
 import AVFoundation
@@ -342,44 +342,45 @@ extension AudioWriter : AVFoundation.AVAudioRecorderDelegate {
   @objc dynamic public func audioRecorderEncodeErrorDidOccur(_ recorder: AVFoundation.AVAudioRecorder, error: Swift.Error?)
   @objc dynamic public func audioRecorderDidFinishRecording(_ recorder: AVFoundation.AVAudioRecorder, successfully flag: Swift.Bool)
 }
-public protocol BanubaVideoEditorSDKDelegate : AnyObject {
-  func videoEditorDidCancel(_ videoEditor: BanubaVideoEditorSDK.BanubaVideoEditorSDK)
-  func videoEditorDone(_ videoEditor: BanubaVideoEditorSDK.BanubaVideoEditorSDK)
+@objc public protocol BanubaVideoEditorSDKDelegate : AnyObject {
+  @objc func videoEditorDidCancel(_ videoEditor: BanubaVideoEditorSDK.BanubaVideoEditorSDK)
+  @objc func videoEditorDone(_ videoEditor: BanubaVideoEditorSDK.BanubaVideoEditorSDK)
 }
-public class BanubaVideoEditorSDK {
-  weak public var delegate: BanubaVideoEditorSDK.BanubaVideoEditorSDKDelegate?
-  public var sdk: BanubaVideoEditorSDK.SDKService {
-    get
+@objc public class BanubaVideoEditorSDK : ObjectiveC.NSObject {
+  @objc weak public var delegate: BanubaVideoEditorSDK.BanubaVideoEditorSDKDelegate?
+  @objc public var sdk: BanubaVideoEditorSDK.SDKService {
+    @objc get
   }
-  public var musicMetadata: BanubaVideoEditorSDK.MusicEditorMetadata? {
-    get
+  @objc public var musicMetadata: BanubaVideoEditorSDK.MusicEditorMetadata? {
+    @objc get
   }
-  public var metadata: BanubaVideoEditorSDK.VideoEditorMetadata? {
-    get
+  @objc public var metadata: BanubaVideoEditorSDK.VideoEditorMetadata? {
+    @objc get
   }
-  public var asset: AVFoundation.AVAsset? {
-    get
+  @objc public var asset: AVFoundation.AVAsset? {
+    @objc get
   }
-  public var musicTrack: VideoEditor.MediaTrack? {
-    get
+  @objc public var musicTrack: VideoEditor.MediaTrack? {
+    @objc get
   }
-  public var imageGenerator: AVFoundation.AVAssetImageGenerator? {
-    get
+  @objc public var imageGenerator: AVFoundation.AVAssetImageGenerator? {
+    @objc get
   }
-  public var currentConfiguration: BanubaVideoEditorSDK.VideoEditorConfig {
-    get
+  @objc public var currentConfiguration: BanubaVideoEditorSDK.VideoEditorConfig {
+    @objc get
   }
-  public init(token: Swift.String, effectsToken: Swift.String, configuration: BanubaVideoEditorSDK.VideoEditorConfig, camera: BanubaVideoEditorSDK.CameraModule? = nil, analytics: BanubaVideoEditorSDK.AnalyticsEngine? = nil, externalViewControllerFactory: BanubaVideoEditorSDK.ExternalViewControllerFactory? = nil)
-  public func exportVideo(fileUrl: Foundation.URL, completion: @escaping (Swift.Bool, Swift.Error?) -> Swift.Void)
-  public func exportVideoWithCoverImage(fileUrl: Foundation.URL, completion: @escaping (Swift.Bool, Swift.Error?, UIKit.UIImage) -> Swift.Void)
-  public func exportVideos(using configurations: [BanubaVideoEditorSDK.ExportVideoConfiguration], completion: ((Swift.Bool, Swift.Error?) -> Swift.Void)?)
-  public func exportVideosWithCoverImage(using configurations: [BanubaVideoEditorSDK.ExportVideoConfiguration], completion: ((Swift.Bool, Swift.Error?, UIKit.UIImage) -> Swift.Void)?)
-  public func exportAudio(fileUrl: Foundation.URL, completion: @escaping (Swift.Bool, Swift.Error?) -> Swift.Void)
-  public func clearSessionData()
-  public func dismissVideoEditor(animated: Swift.Bool, completion: (() -> Swift.Void)?)
-  public func presentVideoEditor(from hostController: UIKit.UIViewController, animated: Swift.Bool, musicTrack: VideoEditor.MediaTrack? = nil, completion: (() -> Swift.Void)?)
-  public func updateVideoEditorConfig(_ config: BanubaVideoEditorSDK.VideoEditorConfig)
+  @objc public init(token: Swift.String, effectsToken: Swift.String, configuration: BanubaVideoEditorSDK.VideoEditorConfig, externalViewControllerFactory: BanubaVideoEditorSDK.ExternalViewControllerFactory? = nil)
+  @objc public func exportVideo(fileUrl: Foundation.URL, completion: @escaping (Swift.Bool, Swift.Error?) -> Swift.Void)
+  @objc public func exportVideoWithCoverImage(fileUrl: Foundation.URL, completion: @escaping (Swift.Bool, Swift.Error?, UIKit.UIImage) -> Swift.Void)
+  @objc public func exportVideos(using configurations: [BanubaVideoEditorSDK.ExportVideoConfiguration], completion: ((Swift.Bool, Swift.Error?) -> Swift.Void)?)
+  @objc public func exportVideosWithCoverImage(using configurations: [BanubaVideoEditorSDK.ExportVideoConfiguration], completion: ((Swift.Bool, Swift.Error?, UIKit.UIImage) -> Swift.Void)?)
+  @objc public func exportAudio(fileUrl: Foundation.URL, completion: @escaping (Swift.Bool, Swift.Error?) -> Swift.Void)
+  @objc public func clearSessionData()
+  @objc public func dismissVideoEditor(animated: Swift.Bool, completion: (() -> Swift.Void)?)
+  @objc public func presentVideoEditor(from hostController: UIKit.UIViewController, animated: Swift.Bool, musicTrack: VideoEditor.MediaTrack? = nil, completion: (() -> Swift.Void)?)
+  @objc public func updateVideoEditorConfig(_ config: BanubaVideoEditorSDK.VideoEditorConfig)
   @objc deinit
+  @objc override dynamic public init()
 }
 extension BanubaVideoEditorSDK {
   public func cameraViewControllerDidCancel(_ controller: UIKit.UIViewController)
@@ -416,16 +417,16 @@ public class TextEditSelectionBorderAnimationBehavior : BanubaVideoEditorSDK.Tex
   @objc deinit
 }
 extension CountdownView {
-  public var countdownDigit: Swift.Int {
-    get
-    set
+  @objc dynamic public var countdownDigit: Swift.Int {
+    @objc get
+    @objc set
   }
   public var digitColor: UIKit.UIColor {
     get
     set
   }
-  public func start(completion: @escaping (Swift.Bool) -> Swift.Void)
-  public func stop()
+  @objc dynamic public func start(completion: @escaping (Swift.Bool) -> Swift.Void)
+  @objc dynamic public func stop()
 }
 public enum CameraAlertType {
   case deleteSegment
@@ -507,7 +508,7 @@ public protocol SDKServicing : AnyObject {
   func takeSnapshot(handler: @escaping (UIKit.UIImage) -> Swift.Void)
   func replaceCamera(_ camera: BanubaVideoEditorSDK.CameraModule, completion: (() -> Swift.Void)?)
 }
-public class SDKService : BanubaVideoEditorSDK.SDKServicing {
+@objc public class SDKService : ObjectiveC.NSObject, BanubaVideoEditorSDK.SDKServicing {
   weak public var cameraChangedDelegate: BanubaVideoEditorSDK.SDKCameraChangedDelegate?
   public var metadataService: BanubaVideoEditorSDK.VideoMetadataStorage
   public var videoRecordSpeed: BanubaVideoEditorSDK.VideoRecordSpeed
@@ -575,6 +576,7 @@ public class SDKService : BanubaVideoEditorSDK.SDKServicing {
   public func replaceCamera(_ camera: BanubaVideoEditorSDK.CameraModule, completion: (() -> Swift.Void)?)
   public func effectsPaths(includeBeautyEffect: Swift.Bool) -> [Swift.String]
   @objc deinit
+  @objc override dynamic public init()
 }
 extension SDKService : BanubaVideoEditorSDK.SDKMaskPostprocessServicing {
   public func postprocessProcessVideoFrame(_ from: CoreVideo.CVPixelBuffer, to: CoreVideo.CVPixelBuffer, time: CoreMedia.CMTime)
@@ -587,8 +589,8 @@ extension SDKService : BanubaVideoEditorSDK.SDKMaskPostprocessServicing {
   public func postprocessStartVideoProcessing(with size: CoreGraphics.CGSize)
   public func postprocessDraw()
 }
-public protocol CountdownTimerViewFactory {
-  func makeCountdownTimerView() -> BanubaVideoEditorSDK.CountdownTimerAnimatableView
+@objc public protocol CountdownTimerViewFactory {
+  @objc func makeCountdownTimerView() -> BanubaVideoEditorSDK.CountdownTimerAnimatableView
 }
 public struct ColorPair : Swift.Equatable {
   public let background: UIKit.UIColor
@@ -716,7 +718,7 @@ public enum CameraNotificationType {
     get
   }
 }
-public struct VideoEditorConfig {
+@_inheritsConvenienceInitializers @objc public class VideoEditorConfig : ObjectiveC.NSObject {
   public var videoResolutionConfiguration: VideoEditor.VideoResolutionConfiguration
   public var recorderConfiguration: BanubaVideoEditorSDK.RecorderConfiguration
   public var editorConfiguration: BanubaVideoEditorSDK.EditorConfiguration
@@ -743,25 +745,26 @@ public struct VideoEditorConfig {
   public var speedSelectionConfiguration: BanubaVideoEditorSDK.SpeedSelectionConfiguration
   public var alertViewConfiguration: BanubaVideoEditorSDK.AlertViewConfiguration
   public var featureConfiguration: BanubaVideoEditorSDK.FeatureConfiguration
-  public init()
+  @objc convenience override dynamic public init()
   public init(videoResolutionConfiguration: VideoEditor.VideoResolutionConfiguration, recorderConfiguration: BanubaVideoEditorSDK.RecorderConfiguration, editorConfiguration: BanubaVideoEditorSDK.EditorConfiguration, singleTrimConfiguration: BanubaVideoEditorSDK.SingleTrimConfiguration, textEditorConfiguration: BanubaVideoEditorSDK.TextEditorConfiguration, toastConfiguration: BanubaVideoEditorSDK.ToastConfiguration, fullScreenActivityConfiguration: BanubaVideoEditorSDK.FullScreenActivityConfiguration, smallActivityIndicatorConfiguration: BanubaVideoEditorSDK.SmallActivityIndicatorConfiguration, albumsConfiguration: BanubaVideoEditorSDK.AlbumsConfiguration, videoOverlayConfiguration: BanubaVideoEditorSDK.VideoOverlayConfiguration, videoDurationConfiguration: BanubaVideoEditorSDK.VideoEditorDurationConfig, gifPickerConfiguration: BanubaVideoEditorSDK.GifPickerConfiguration, slideShowConfiguration: BanubaVideoEditorSDK.SlideShowConfiguration, trimTimeLineConfiguration: BanubaVideoEditorSDK.TrimTimeLineConfiguration, combinedGalleryConfiguration: BanubaVideoEditorSDK.CombinedGalleryConfiguration?, galleryConfiguration: BanubaVideoEditorSDK.GalleryConfiguration, trimGalleryVideoConfiguration: BanubaVideoEditorSDK.TrimGalleryVideoConfiguration, filterConfiguration: BanubaVideoEditorSDK.FilterConfiguration, videoCoverSelectionConfiguration: BanubaVideoEditorSDK.VideoCoverSelectionConfiguration, musicEditorConfiguration: BanubaMusicEditorSDK.MusicEditorConfig, overlayEditorConfiguration: BanubaOverlayEditorSDK.OverlayEditorConfiguration, featureConfiguration: BanubaVideoEditorSDK.FeatureConfiguration, multiTrimConfiguration: BanubaVideoEditorSDK.MultiTrimConfiguration, watermarkConfiguration: BanubaVideoEditorSDK.WatermarkConfiguration?, speedSelectionConfiguration: BanubaVideoEditorSDK.SpeedSelectionConfiguration, alertViewConfiguration: BanubaVideoEditorSDK.AlertViewConfiguration)
-  public mutating func applyFont(_ font: UIKit.UIFont)
-  public mutating func updateAlertFonts(_ font: UIKit.UIFont)
-  public mutating func updateRecorderFonts(_ font: UIKit.UIFont)
-  public mutating func updateMultiTrimFonts(_ font: UIKit.UIFont)
-  public mutating func updateCombinedGalleryFonts(_ font: UIKit.UIFont)
-  public mutating func updateEditorFonts(_ font: UIKit.UIFont)
-  public mutating func updateSingleTrimFonts(_ font: UIKit.UIFont)
-  public mutating func updateToastFonts(_ font: UIKit.UIFont)
-  public mutating func updateFullScreenActivityFonts(_ font: UIKit.UIFont)
-  public mutating func updateAlbumsFonts(_ font: UIKit.UIFont)
-  public mutating func updateTextEditorFonts(_ font: UIKit.UIFont)
-  public mutating func updateSlideShowFonts(_ font: UIKit.UIFont)
-  public mutating func updateGalleryFonts(_ font: UIKit.UIFont)
-  public mutating func updateTrimGalleryVideoFonts(_ font: UIKit.UIFont)
-  public mutating func updateFilterFonts(_ font: UIKit.UIFont)
-  public mutating func updateVideoCoverSelectionFonts(_ font: UIKit.UIFont)
-  public mutating func updateFeatureConfiguration(featureConfiguration: BanubaVideoEditorSDK.FeatureConfiguration)
+  public func applyFont(_ font: UIKit.UIFont)
+  public func updateAlertFonts(_ font: UIKit.UIFont)
+  public func updateRecorderFonts(_ font: UIKit.UIFont)
+  public func updateMultiTrimFonts(_ font: UIKit.UIFont)
+  public func updateCombinedGalleryFonts(_ font: UIKit.UIFont)
+  public func updateEditorFonts(_ font: UIKit.UIFont)
+  public func updateSingleTrimFonts(_ font: UIKit.UIFont)
+  public func updateToastFonts(_ font: UIKit.UIFont)
+  public func updateFullScreenActivityFonts(_ font: UIKit.UIFont)
+  public func updateAlbumsFonts(_ font: UIKit.UIFont)
+  public func updateTextEditorFonts(_ font: UIKit.UIFont)
+  public func updateSlideShowFonts(_ font: UIKit.UIFont)
+  public func updateGalleryFonts(_ font: UIKit.UIFont)
+  public func updateTrimGalleryVideoFonts(_ font: UIKit.UIFont)
+  public func updateFilterFonts(_ font: UIKit.UIFont)
+  public func updateVideoCoverSelectionFonts(_ font: UIKit.UIFont)
+  public func updateFeatureConfiguration(featureConfiguration: BanubaVideoEditorSDK.FeatureConfiguration)
+  @objc deinit
 }
 public struct VideoEditorDurationConfig {
   public var maximumVideoDuration: Foundation.TimeInterval
@@ -1018,10 +1021,10 @@ public protocol MusicSelectorViewControllerDelegate : BanubaVideoEditorSDK.Scrol
 public protocol MusicSelectorViewController : UIKit.UIViewController {
   var delegate: BanubaVideoEditorSDK.MusicSelectorViewControllerDelegate? { get set }
 }
-public protocol ExternalViewControllerFactory {
-  var musicEditorFactory: BanubaMusicEditorSDK.MusicEditorExternalViewControllerFactory? { get set }
-  var countdownTimerViewFactory: BanubaVideoEditorSDK.CountdownTimerViewFactory? { get set }
-  var exposureViewFactory: BanubaVideoEditorSDK.AnimatableViewFactory? { get set }
+@objc public protocol ExternalViewControllerFactory {
+  @objc var musicEditorFactory: BanubaMusicEditorSDK.MusicEditorExternalViewControllerFactory? { get set }
+  @objc var countdownTimerViewFactory: BanubaVideoEditorSDK.CountdownTimerViewFactory? { get set }
+  @objc var exposureViewFactory: BanubaVideoEditorSDK.AnimatableViewFactory? { get set }
 }
 extension UIImage {
   public static func findConfigurationImage(named: Swift.String) -> UIKit.UIImage?
@@ -1032,11 +1035,13 @@ public enum ExportQuality {
   case videoConfiguration(VideoEditor.ExportVideoInfo)
   case auto
 }
-public struct ExportVideoConfiguration {
-  public let fileURL: Foundation.URL
-  public let quality: BanubaVideoEditorSDK.ExportQuality
-  public let watermarkConfiguration: BanubaVideoEditorSDK.WatermarkConfiguration?
+@objc public class ExportVideoConfiguration : ObjectiveC.NSObject {
+  final public let fileURL: Foundation.URL
+  final public let quality: BanubaVideoEditorSDK.ExportQuality
+  final public let watermarkConfiguration: BanubaVideoEditorSDK.WatermarkConfiguration?
   public init(fileURL: Foundation.URL, quality: BanubaVideoEditorSDK.ExportQuality, watermarkConfiguration: BanubaVideoEditorSDK.WatermarkConfiguration?)
+  @objc deinit
+  @objc override dynamic public init()
 }
 public struct RecorderAnalytics {
   public enum EventKind : Swift.String, BanubaVideoEditorSDK.AnalyticsEventKind {
@@ -1770,8 +1775,8 @@ public struct TrimAnalytics {
   }
   public typealias Manager = BanubaVideoEditorSDK.AnalyticsManager<BanubaVideoEditorSDK.TrimAnalytics.EventKind>
 }
-public protocol AnimatableViewFactory {
-  func makeAnimatableView() -> BanubaVideoEditorSDK.AnimatableView
+@objc public protocol AnimatableViewFactory : AnyObject {
+  @objc func makeAnimatableView() -> BanubaVideoEditorSDK.AnimatableView
 }
 public enum EditorEffectKey : Swift.String {
   case name
@@ -1881,152 +1886,208 @@ public protocol AnalyticsEngine : AnyObject {
   func report(error: Swift.Error, message: Swift.String)
   func report(message: Swift.String, parameters: [Swift.String : Any]?)
 }
-public struct VideoEditorTrimMetadata : Swift.Codable {
-  public var url: Foundation.URL
-  public var imageData: Foundation.Data?
-  public init(from decoder: Swift.Decoder) throws
+@objc public class VideoEditorTrimMetadata : ObjectiveC.NSObject, Swift.Codable {
+  @objc public var url: Foundation.URL
+  @objc public var imageData: Foundation.Data?
+  @objc public init(url: Foundation.URL, imageData: Foundation.Data?)
+  @objc deinit
+  @objc override dynamic public init()
+  required public init(from decoder: Swift.Decoder) throws
   public func encode(to encoder: Swift.Encoder) throws
 }
-public struct MusicEditorMetadata : Swift.Codable {
-  public var tracks: [BanubaVideoEditorSDK.MusicEditorTrack]
-  public init(from decoder: Swift.Decoder) throws
+@objc public class MusicEditorMetadata : ObjectiveC.NSObject, Swift.Codable {
+  @objc public var tracks: [BanubaVideoEditorSDK.MusicEditorTrack]
+  @objc public init(tracks: [BanubaVideoEditorSDK.MusicEditorTrack])
+  @objc override dynamic public init()
+  required public init(from decoder: Swift.Decoder) throws
+  @objc deinit
   public func encode(to encoder: Swift.Encoder) throws
 }
-public struct MusicEditorTrack : Swift.Codable {
-  public var url: Foundation.URL
-  public var originalURL: Foundation.URL
-  public var title: Swift.String
-  public var id: Swift.Int64
-  public init(from decoder: Swift.Decoder) throws
+@objc public class MusicEditorTrack : ObjectiveC.NSObject, Swift.Codable {
+  @objc public var url: Foundation.URL
+  @objc public var originalURL: Foundation.URL
+  @objc public var title: Swift.String
+  @objc public var id: Swift.Int64
+  @objc public init(position: Swift.Int, timeScale: Foundation.TimeInterval, compositionStart: Foundation.TimeInterval, timeRangeStart: Foundation.TimeInterval, timeRangeEnd: Foundation.TimeInterval, url: Foundation.URL, originalURL: Foundation.URL, isAudioRecord: Swift.Bool, applyedFilterId: Swift.Int, title: Swift.String, id: Swift.Int64)
+  @objc override dynamic public init()
+  required public init(from decoder: Swift.Decoder) throws
+  @objc deinit
   public func encode(to encoder: Swift.Encoder) throws
 }
-public struct VideoEditorMetadata : Swift.Codable {
-  public let effectsOnVideoMetadata: [BanubaVideoEditorSDK.EffectOnVideoMetadata]?
-  public let colorOnVideoMetadata: BanubaVideoEditorSDK.ColorOnVideoMetadata?
-  public let textOnVideoMetadata: [BanubaVideoEditorSDK.TextOnVideoMetadata]?
-  public let gifOnVideoMetadata: [BanubaVideoEditorSDK.GIFOnVideoMetadata]?
-  public let videoInteractiveMetadata: BanubaVideoEditorSDK.VideoInteractiveMetadata
-  public var videoMetadata: BanubaVideoEditorSDK.VideoMetadata?
-  public init(from decoder: Swift.Decoder) throws
+@objc public class VideoEditorMetadata : ObjectiveC.NSObject, Swift.Codable {
+  @objc final public let effectsOnVideoMetadata: [BanubaVideoEditorSDK.EffectOnVideoMetadata]?
+  @objc final public let colorOnVideoMetadata: BanubaVideoEditorSDK.ColorOnVideoMetadata?
+  @objc final public let textOnVideoMetadata: [BanubaVideoEditorSDK.TextOnVideoMetadata]?
+  @objc final public let gifOnVideoMetadata: [BanubaVideoEditorSDK.GIFOnVideoMetadata]?
+  @objc final public let videoInteractiveMetadata: BanubaVideoEditorSDK.VideoInteractiveMetadata
+  @objc public var videoMetadata: BanubaVideoEditorSDK.VideoMetadata?
+  @objc public init(effectsOnVideoMetadata: [BanubaVideoEditorSDK.EffectOnVideoMetadata]?, colorOnVideoMetadata: BanubaVideoEditorSDK.ColorOnVideoMetadata?, textOnVideoMetadata: [BanubaVideoEditorSDK.TextOnVideoMetadata]?, gifOnVideoMetadata: [BanubaVideoEditorSDK.GIFOnVideoMetadata]?, videoInteractiveMetadata: BanubaVideoEditorSDK.VideoInteractiveMetadata, videoMetadata: BanubaVideoEditorSDK.VideoMetadata?)
+  @objc deinit
+  @objc override dynamic public init()
+  required public init(from decoder: Swift.Decoder) throws
   public func encode(to encoder: Swift.Encoder) throws
 }
-public struct ColorOnVideoMetadata : Swift.Codable {
-  public let title: Swift.String
-  public init(from decoder: Swift.Decoder) throws
+@objc public class ColorOnVideoMetadata : ObjectiveC.NSObject, Swift.Codable {
+  @objc final public let title: Swift.String
+  @objc public init(title: Swift.String)
+  @objc override dynamic public init()
+  required public init(from decoder: Swift.Decoder) throws
+  @objc deinit
   public func encode(to encoder: Swift.Encoder) throws
 }
-public struct EffectOnVideoMetadata : Swift.Codable {
-  public let startTime: BanubaVideoEditorSDK.TimeMetadata
-  public let endTime: BanubaVideoEditorSDK.TimeMetadata
-  public let effectId: Swift.UInt
-  public init(from decoder: Swift.Decoder) throws
+@objc public class EffectOnVideoMetadata : ObjectiveC.NSObject, Swift.Codable {
+  @objc final public let startTime: BanubaVideoEditorSDK.TimeMetadata
+  @objc final public let endTime: BanubaVideoEditorSDK.TimeMetadata
+  @objc final public let effectId: Swift.UInt
+  @objc public init(startTime: BanubaVideoEditorSDK.TimeMetadata, endTime: BanubaVideoEditorSDK.TimeMetadata, effectId: Swift.UInt)
+  @objc override dynamic public init()
+  required public init(from decoder: Swift.Decoder) throws
+  @objc deinit
   public func encode(to encoder: Swift.Encoder) throws
 }
-public struct TextOnVideoMetadata : Swift.Codable {
-  public let imageData: Foundation.Data?
-  public let textParams: BanubaVideoEditorSDK.TextParams
-  public let startTime: BanubaVideoEditorSDK.TimeMetadata
-  public let endTime: BanubaVideoEditorSDK.TimeMetadata
-  public let coordinatesParams: BanubaVideoEditorSDK.CoordinatesParams
-  public init(from decoder: Swift.Decoder) throws
+@objc public class TextOnVideoMetadata : ObjectiveC.NSObject, Swift.Codable {
+  @objc final public let imageData: Foundation.Data?
+  @objc final public let textParams: BanubaVideoEditorSDK.TextParams
+  @objc final public let startTime: BanubaVideoEditorSDK.TimeMetadata
+  @objc final public let endTime: BanubaVideoEditorSDK.TimeMetadata
+  @objc final public let coordinatesParams: BanubaVideoEditorSDK.CoordinatesParams
+  @objc public init(imageData: Foundation.Data?, textParams: BanubaVideoEditorSDK.TextParams, startTime: BanubaVideoEditorSDK.TimeMetadata, endTime: BanubaVideoEditorSDK.TimeMetadata, coordinatesParams: BanubaVideoEditorSDK.CoordinatesParams)
+  @objc override dynamic public init()
+  required public init(from decoder: Swift.Decoder) throws
+  @objc deinit
   public func encode(to encoder: Swift.Encoder) throws
 }
-public struct VideoMetadata : Swift.Codable {
-  public let isSlideShow: Swift.Bool
-  public init(from decoder: Swift.Decoder) throws
+@objc public class VideoMetadata : ObjectiveC.NSObject, Swift.Codable {
+  @objc final public let isSlideShow: Swift.Bool
+  @objc public init(isSlideShow: Swift.Bool)
+  @objc override dynamic public init()
+  required public init(from decoder: Swift.Decoder) throws
+  @objc deinit
   public func encode(to encoder: Swift.Encoder) throws
 }
-public struct GIFOnVideoMetadata : Swift.Codable {
-  public let id: Swift.String
-  public let imageData: Foundation.Data?
-  public let startTime: BanubaVideoEditorSDK.TimeMetadata
-  public let endTime: BanubaVideoEditorSDK.TimeMetadata
-  public let coordinatesParams: BanubaVideoEditorSDK.CoordinatesParams
-  public init(from decoder: Swift.Decoder) throws
+@objc public class GIFOnVideoMetadata : ObjectiveC.NSObject, Swift.Codable {
+  @objc final public let id: Swift.String
+  @objc final public let imageData: Foundation.Data?
+  @objc final public let startTime: BanubaVideoEditorSDK.TimeMetadata
+  @objc final public let endTime: BanubaVideoEditorSDK.TimeMetadata
+  @objc final public let coordinatesParams: BanubaVideoEditorSDK.CoordinatesParams
+  @objc public init(id: Swift.String, imageData: Foundation.Data?, startTime: BanubaVideoEditorSDK.TimeMetadata, endTime: BanubaVideoEditorSDK.TimeMetadata, coordinatesParams: BanubaVideoEditorSDK.CoordinatesParams)
+  @objc override dynamic public init()
+  required public init(from decoder: Swift.Decoder) throws
+  @objc deinit
   public func encode(to encoder: Swift.Encoder) throws
 }
-public struct CoordinatesParams : Swift.Codable {
-  public let transform: CoreGraphics.CGAffineTransform
-  public let frame: CoreGraphics.CGRect
-  public init(from decoder: Swift.Decoder) throws
+@objc public class CoordinatesParams : ObjectiveC.NSObject, Swift.Codable {
+  @objc final public let transform: CoreGraphics.CGAffineTransform
+  @objc final public let frame: CoreGraphics.CGRect
+  @objc public init(transform: CoreGraphics.CGAffineTransform, frame: CoreGraphics.CGRect)
+  @objc override dynamic public init()
+  required public init(from decoder: Swift.Decoder) throws
+  @objc deinit
   public func encode(to encoder: Swift.Encoder) throws
 }
-public struct ColorParams : Swift.Codable {
-  public let red: CoreGraphics.CGFloat?
-  public let green: CoreGraphics.CGFloat?
-  public let blue: CoreGraphics.CGFloat?
-  public let alpha: CoreGraphics.CGFloat?
-  public init(from decoder: Swift.Decoder) throws
+@objc public class ColorParams : ObjectiveC.NSObject, Swift.Codable {
+  final public let red: Swift.Float?
+  final public let green: Swift.Float?
+  final public let blue: Swift.Float?
+  final public let alpha: Swift.Float?
+  @objc public init(red: Swift.Float, green: Swift.Float, blue: Swift.Float, alpha: Swift.Float)
+  @objc override dynamic public init()
+  required public init(from decoder: Swift.Decoder) throws
+  @objc deinit
   public func encode(to encoder: Swift.Encoder) throws
 }
-public struct TextParams : Swift.Codable {
-  public let text: Swift.String?
-  public let textFont: Swift.String?
-  public let fontName: Swift.String?
-  public let fontSize: CoreGraphics.CGFloat?
-  public let textAligment: Swift.Int?
-  public let textColor: BanubaVideoEditorSDK.ColorParams?
-  public let backgroundColor: BanubaVideoEditorSDK.ColorParams?
-  public init(from decoder: Swift.Decoder) throws
+@objc public class TextParams : ObjectiveC.NSObject, Swift.Codable {
+  final public let text: Swift.String?
+  final public let textFont: Swift.String?
+  final public let fontName: Swift.String?
+  final public let fontSize: Swift.Float?
+  final public let textAligment: Swift.Int?
+  final public let textColor: BanubaVideoEditorSDK.ColorParams?
+  final public let backgroundColor: BanubaVideoEditorSDK.ColorParams?
+  public init(text: Swift.String?, textFont: Swift.String?, fontName: Swift.String?, fontSize: Swift.Float?, textAligment: Swift.Int?, textColor: BanubaVideoEditorSDK.ColorParams?, backgroundColor: BanubaVideoEditorSDK.ColorParams?)
+  @objc override dynamic public init()
+  required public init(from decoder: Swift.Decoder) throws
+  @objc deinit
   public func encode(to encoder: Swift.Encoder) throws
 }
-public struct TimeMetadata : Swift.Codable {
-  public let seconds: Swift.Double
-  public let timescale: CoreMedia.CMTimeScale
-  public init(from decoder: Swift.Decoder) throws
+@_hasMissingDesignatedInitializers @objc public class TimeMetadata : ObjectiveC.NSObject, Swift.Codable {
+  final public let seconds: Swift.Double
+  final public let timescale: CoreMedia.CMTimeScale
+  @objc override dynamic public init()
+  required public init(from decoder: Swift.Decoder) throws
+  @objc deinit
   public func encode(to encoder: Swift.Encoder) throws
 }
 extension TimeMetadata {
-  public init(cmTime: CoreMedia.CMTime)
-  public func getCMTime() -> CoreMedia.CMTime
+  @objc convenience dynamic public init(cmTime: CoreMedia.CMTime)
+  @objc dynamic public func getCMTime() -> CoreMedia.CMTime
 }
-public struct VideoInteractiveMetadata : Swift.Codable {
+@objc public class VideoInteractiveMetadata : ObjectiveC.NSObject, Swift.Codable {
   public var interactiveQuestionMetadata: [BanubaVideoEditorSDK.InteractiveQuestionMetadata]
   public var interactivePollMetadata: [BanubaVideoEditorSDK.InteractivePollMetadata]
   public var interactiveInterestMetadata: [BanubaVideoEditorSDK.InteractiveInterestMetadata]
   public var interactiveTestMetadata: [BanubaVideoEditorSDK.InteractiveTestMetadata]
-  public init(from decoder: Swift.Decoder) throws
+  public init(interactiveQuestionMetadata: [BanubaVideoEditorSDK.InteractiveQuestionMetadata], interactivePollMetadata: [BanubaVideoEditorSDK.InteractivePollMetadata], interactiveInterestMetadata: [BanubaVideoEditorSDK.InteractiveInterestMetadata], interactiveTestMetadata: [BanubaVideoEditorSDK.InteractiveTestMetadata])
+  @objc deinit
+  @objc override dynamic public init()
+  required public init(from decoder: Swift.Decoder) throws
   public func encode(to encoder: Swift.Encoder) throws
 }
-public struct InteractiveQuestionMetadata : Swift.Codable {
-  public let imageData: Foundation.Data?
-  public let text: Swift.String
-  public let gradientColors: [BanubaVideoEditorSDK.ColorParams]?
-  public let textColor: BanubaVideoEditorSDK.ColorParams?
-  public let coordinatesParams: BanubaVideoEditorSDK.CoordinatesParams
-  public init(from decoder: Swift.Decoder) throws
+@objc public class InteractiveQuestionMetadata : ObjectiveC.NSObject, Swift.Codable {
+  final public let imageData: Foundation.Data?
+  final public let text: Swift.String
+  final public let gradientColors: [BanubaVideoEditorSDK.ColorParams]?
+  final public let textColor: BanubaVideoEditorSDK.ColorParams?
+  final public let coordinatesParams: BanubaVideoEditorSDK.CoordinatesParams
+  public init(imageData: Foundation.Data?, text: Swift.String, gradientColors: [BanubaVideoEditorSDK.ColorParams]?, textColor: BanubaVideoEditorSDK.ColorParams?, coordinatesParams: BanubaVideoEditorSDK.CoordinatesParams)
+  @objc override dynamic public init()
+  required public init(from decoder: Swift.Decoder) throws
+  @objc deinit
   public func encode(to encoder: Swift.Encoder) throws
 }
-public struct InteractivePollMetadata : Swift.Codable {
-  public let imageData: Foundation.Data?
-  public let titleText: Swift.String
-  public let leftCardText: Swift.String
-  public let rightCardText: Swift.String
-  public let coordinatesParams: BanubaVideoEditorSDK.CoordinatesParams
-  public init(from decoder: Swift.Decoder) throws
+@objc public class InteractivePollMetadata : ObjectiveC.NSObject, Swift.Codable {
+  final public let imageData: Foundation.Data?
+  final public let titleText: Swift.String
+  final public let leftCardText: Swift.String
+  final public let rightCardText: Swift.String
+  final public let coordinatesParams: BanubaVideoEditorSDK.CoordinatesParams
+  public init(imageData: Foundation.Data?, titleText: Swift.String, leftCardText: Swift.String, rightCardText: Swift.String, coordinatesParams: BanubaVideoEditorSDK.CoordinatesParams)
+  @objc override dynamic public init()
+  required public init(from decoder: Swift.Decoder) throws
+  @objc deinit
   public func encode(to encoder: Swift.Encoder) throws
 }
-public struct InteractiveInterestMetadata : Swift.Codable {
-  public let imageData: Foundation.Data?
-  public let title: Swift.String
-  public let coordinatesParams: BanubaVideoEditorSDK.CoordinatesParams
-  public init(from decoder: Swift.Decoder) throws
+@objc public class InteractiveInterestMetadata : ObjectiveC.NSObject, Swift.Codable {
+  final public let imageData: Foundation.Data?
+  final public let title: Swift.String
+  final public let coordinatesParams: BanubaVideoEditorSDK.CoordinatesParams
+  public init(imageData: Foundation.Data?, title: Swift.String, coordinatesParams: BanubaVideoEditorSDK.CoordinatesParams)
+  @objc override dynamic public init()
+  required public init(from decoder: Swift.Decoder) throws
+  @objc deinit
   public func encode(to encoder: Swift.Encoder) throws
 }
-public struct InteractiveTestMetadata : Swift.Codable {
-  public let imageData: Foundation.Data?
-  public let gradientColors: [BanubaVideoEditorSDK.ColorParams]?
-  public let textColor: BanubaVideoEditorSDK.ColorParams?
-  public let title: Swift.String
-  public let fields: [BanubaVideoEditorSDK.InteractiveTestFieldMetaData]
-  public let coordinatesParams: BanubaVideoEditorSDK.CoordinatesParams
-  public init(from decoder: Swift.Decoder) throws
+@objc public class InteractiveTestMetadata : ObjectiveC.NSObject, Swift.Codable {
+  final public let imageData: Foundation.Data?
+  final public let gradientColors: [BanubaVideoEditorSDK.ColorParams]?
+  final public let textColor: BanubaVideoEditorSDK.ColorParams?
+  final public let title: Swift.String
+  final public let fields: [BanubaVideoEditorSDK.InteractiveTestFieldMetaData]
+  final public let coordinatesParams: BanubaVideoEditorSDK.CoordinatesParams
+  public init(imageData: Foundation.Data?, gradientColors: [BanubaVideoEditorSDK.ColorParams]?, textColor: BanubaVideoEditorSDK.ColorParams?, title: Swift.String, fields: [BanubaVideoEditorSDK.InteractiveTestFieldMetaData], coordinatesParams: BanubaVideoEditorSDK.CoordinatesParams)
+  @objc override dynamic public init()
+  required public init(from decoder: Swift.Decoder) throws
+  @objc deinit
   public func encode(to encoder: Swift.Encoder) throws
 }
-public struct InteractiveTestFieldMetaData : Swift.Codable {
-  public let answer: Swift.String
-  public let isAnswer: Swift.Bool
-  public init(from decoder: Swift.Decoder) throws
+@objc public class InteractiveTestFieldMetaData : ObjectiveC.NSObject, Swift.Codable {
+  final public let answer: Swift.String
+  final public let isAnswer: Swift.Bool
+  public init(answer: Swift.String, isAnswer: Swift.Bool)
+  @objc override dynamic public init()
+  required public init(from decoder: Swift.Decoder) throws
+  @objc deinit
   public func encode(to encoder: Swift.Encoder) throws
 }
 extension SmallActivityIndicatorConfiguration {
@@ -2052,8 +2113,8 @@ public protocol TextEditSelectionColorBehavior {
 }
 @objc @_inheritsConvenienceInitializers public class ExposureAnimationView : UIKit.UIView, BanubaVideoEditorSDK.AnimatableView {
   @objc override dynamic public func draw(_ rect: CoreGraphics.CGRect)
-  public func start(completion: @escaping (Swift.Bool) -> Swift.Void)
-  public func stop()
+  @objc public func start(completion: @escaping (Swift.Bool) -> Swift.Void)
+  @objc public func stop()
   @objc deinit
   @objc override dynamic public init(frame: CoreGraphics.CGRect)
   @objc required dynamic public init?(coder: Foundation.NSCoder)
@@ -2442,12 +2503,12 @@ public protocol SDKBeautyEffectManaging : AnyObject {
   var isBeatificationEnabled: Swift.Bool { get set }
   func toggleBeautification() -> Swift.Bool
 }
-public protocol AnimatableView : UIKit.UIView {
-  func start(completion: @escaping (Swift.Bool) -> Swift.Void)
-  func stop()
+@objc public protocol AnimatableView {
+  @objc func start(completion: @escaping (Swift.Bool) -> Swift.Void)
+  @objc func stop()
 }
-public protocol CountdownTimerAnimatableView : BanubaVideoEditorSDK.AnimatableView {
-  var countdownDigit: Swift.Int { get set }
+@objc public protocol CountdownTimerAnimatableView : BanubaVideoEditorSDK.AnimatableView {
+  @objc var countdownDigit: Swift.Int { get set }
 }
 public struct RecordedVideoCover {
   public var image: UIKit.UIImage
