@@ -272,7 +272,6 @@ SWIFT_CLASS("_TtC20BanubaVideoEditorSDK11AudioWriter")
 @end
 
 
-@protocol BanubaVideoEditorSDKDelegate;
 @class SDKService;
 @class MusicEditorMetadata;
 @class VideoEditorMetadata;
@@ -289,8 +288,14 @@ SWIFT_CLASS("_TtC20BanubaVideoEditorSDK11AudioWriter")
 /// Has default export method.
 SWIFT_CLASS("_TtC20BanubaVideoEditorSDK20BanubaVideoEditorSDK")
 @interface BanubaVideoEditorSDK : NSObject
-/// Video editor delegate
-@property (nonatomic, weak) id <BanubaVideoEditorSDKDelegate> _Nullable delegate;
+/// User canceled editing session
+/// \param videoEditor video editor object informing the delegate about user action.
+///
+@property (nonatomic, copy) void (^ _Nullable videoEditorDidCancel)(BanubaVideoEditorSDK * _Nonnull);
+/// User finished editing session
+/// \param videoEditor video editor object informing the delegate about user action.
+///
+@property (nonatomic, copy) void (^ _Nullable videoEditorDone)(BanubaVideoEditorSDK * _Nonnull);
 /// Service used to controll camera module.
 /// Also provides access to video editor services.
 @property (nonatomic, readonly, strong) SDKService * _Nonnull sdk;
@@ -379,20 +384,6 @@ SWIFT_CLASS("_TtC20BanubaVideoEditorSDK20BanubaVideoEditorSDK")
 @end
 
 
-
-
-/// Video Editor Delegate
-SWIFT_PROTOCOL("_TtP20BanubaVideoEditorSDK28BanubaVideoEditorSDKDelegate_")
-@protocol BanubaVideoEditorSDKDelegate
-/// User canceled editing session
-/// \param videoEditor video editor object informing the delegate about user action.
-///
-- (void)videoEditorDidCancel:(BanubaVideoEditorSDK * _Nonnull)videoEditor;
-/// User finished editing session
-/// \param videoEditor video editor object informing the delegate about user action.
-///
-- (void)videoEditorDone:(BanubaVideoEditorSDK * _Nonnull)videoEditor;
-@end
 
 
 

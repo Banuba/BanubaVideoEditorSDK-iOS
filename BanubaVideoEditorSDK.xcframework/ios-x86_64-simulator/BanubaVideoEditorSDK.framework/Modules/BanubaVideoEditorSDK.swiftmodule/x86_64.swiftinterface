@@ -342,12 +342,9 @@ extension AudioWriter : AVFoundation.AVAudioRecorderDelegate {
   @objc dynamic public func audioRecorderEncodeErrorDidOccur(_ recorder: AVFoundation.AVAudioRecorder, error: Swift.Error?)
   @objc dynamic public func audioRecorderDidFinishRecording(_ recorder: AVFoundation.AVAudioRecorder, successfully flag: Swift.Bool)
 }
-@objc public protocol BanubaVideoEditorSDKDelegate : AnyObject {
-  @objc func videoEditorDidCancel(_ videoEditor: BanubaVideoEditorSDK.BanubaVideoEditorSDK)
-  @objc func videoEditorDone(_ videoEditor: BanubaVideoEditorSDK.BanubaVideoEditorSDK)
-}
 @objc public class BanubaVideoEditorSDK : ObjectiveC.NSObject {
-  @objc weak public var delegate: BanubaVideoEditorSDK.BanubaVideoEditorSDKDelegate?
+  @objc public var videoEditorDidCancel: ((BanubaVideoEditorSDK.BanubaVideoEditorSDK) -> Swift.Void)?
+  @objc public var videoEditorDone: ((BanubaVideoEditorSDK.BanubaVideoEditorSDK) -> Swift.Void)?
   @objc public var sdk: BanubaVideoEditorSDK.SDKService {
     @objc get
   }
