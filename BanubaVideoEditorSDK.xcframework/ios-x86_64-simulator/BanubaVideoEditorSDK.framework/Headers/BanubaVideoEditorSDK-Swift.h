@@ -189,6 +189,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #pragma clang diagnostic ignored "-Watimport-in-framework-header"
 #endif
 @import AVFoundation;
+@import BanubaMusicEditorSDK;
 @import CoreGraphics;
 @import CoreMedia;
 @import Foundation;
@@ -336,18 +337,6 @@ SWIFT_CLASS("_TtC20BanubaVideoEditorSDK19AlertViewController")
 
 
 
-SWIFT_PROTOCOL("_TtP20BanubaVideoEditorSDK14AnimatableView_")
-@protocol AnimatableView
-- (void)startWithCompletion:(void (^ _Nonnull)(BOOL))completion;
-- (void)stop;
-@end
-
-
-SWIFT_PROTOCOL("_TtP20BanubaVideoEditorSDK21AnimatableViewFactory_")
-@protocol AnimatableViewFactory
-- (id <AnimatableView> _Nonnull)makeAnimatableView SWIFT_WARN_UNUSED_RESULT;
-@end
-
 
 SWIFT_CLASS("_TtC20BanubaVideoEditorSDK12AudioService")
 @interface AudioService : NSObject
@@ -443,7 +432,6 @@ SWIFT_CLASS("_TtC20BanubaVideoEditorSDK25BanubaButtonConfiguration")
 @class AVAsset;
 @class AVAssetImageGenerator;
 @class VideoEditorConfig;
-@protocol ExternalViewControllerFactory;
 @class UIImage;
 @class ExportVideoConfiguration;
 
@@ -482,13 +470,7 @@ SWIFT_CLASS("_TtC20BanubaVideoEditorSDK17BanubaVideoEditor")
 ///
 /// \param configuration contains all neccesory configurations for the editor
 ///
-/// \param camera camera Module used to control device camera. Default is BanubaCameraModule
-///
-/// \param analytics used by editor to report analytics events
-///
-/// \param externalViewControllerFactory used by Banuba modules to use host view controllers
-///
-- (nonnull instancetype)initWithToken:(NSString * _Nonnull)token effectsToken:(NSString * _Nonnull)effectsToken configuration:(VideoEditorConfig * _Nonnull)configuration externalViewControllerFactory:(id <ExternalViewControllerFactory> _Nullable)externalViewControllerFactory OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithToken:(NSString * _Nonnull)token effectsToken:(NSString * _Nonnull)effectsToken configuration:(VideoEditorConfig * _Nonnull)configuration OBJC_DESIGNATED_INITIALIZER;
 /// Export video with default 1280x720 (or 1920x1080 on required devices) resolution
 /// \param fileUrl url where exported video should be stored.
 ///
@@ -621,25 +603,15 @@ SWIFT_CLASS("_TtC20BanubaVideoEditorSDK17CoordinatesParams")
 @end
 
 
-SWIFT_PROTOCOL("_TtP20BanubaVideoEditorSDK28CountdownTimerAnimatableView_")
-@protocol CountdownTimerAnimatableView <AnimatableView>
-@property (nonatomic) NSInteger countdownDigit;
-@end
-
-
-/// Countdown timer view factory.
-/// Use CountdownView as example.
-SWIFT_PROTOCOL("_TtP20BanubaVideoEditorSDK25CountdownTimerViewFactory_")
-@protocol CountdownTimerViewFactory
-- (id <CountdownTimerAnimatableView> _Nonnull)makeCountdownTimerView SWIFT_WARN_UNUSED_RESULT;
-@end
-
-
 SWIFT_CLASS("_TtC20BanubaVideoEditorSDK13CountdownView")
-@interface CountdownView : UIView <CountdownTimerAnimatableView>
+@interface CountdownView : UIView
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
 - (void)drawRect:(CGRect)rect;
+@end
+
+
+@interface CountdownView (SWIFT_EXTENSION(BanubaVideoEditorSDK)) <MusicEditorCountdownAnimatableView>
 @end
 
 
@@ -727,26 +699,10 @@ SWIFT_CLASS("_TtC20BanubaVideoEditorSDK24ExportVideoConfiguration")
 
 /// Default exposure animation view
 SWIFT_CLASS("_TtC20BanubaVideoEditorSDK21ExposureAnimationView")
-@interface ExposureAnimationView : UIView <AnimatableView>
+@interface ExposureAnimationView : UIView
 - (void)drawRect:(CGRect)rect;
-- (void)startWithCompletion:(void (^ _Nonnull)(BOOL))completion;
-- (void)stop;
 - (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
-@end
-
-@protocol MusicEditorExternalViewControllerFactory;
-
-/// External view controller factory required by VE SDK.
-SWIFT_PROTOCOL("_TtP20BanubaVideoEditorSDK29ExternalViewControllerFactory_")
-@protocol ExternalViewControllerFactory
-/// Creates view controllers required for music selection.
-@property (nonatomic, strong) id <MusicEditorExternalViewControllerFactory> _Nullable musicEditorFactory;
-/// Countdown timer view factory.
-@property (nonatomic, strong) id <CountdownTimerViewFactory> _Nullable countdownTimerViewFactory;
-/// Exposure view factory.
-/// Use DefaultExposureViewFactory which used in demo app.
-@property (nonatomic, strong) id <AnimatableViewFactory> _Nullable exposureViewFactory;
 @end
 
 

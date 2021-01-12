@@ -4,6 +4,7 @@
 import ARKit
 import AVFoundation
 import AVKit
+import BanubaAudioBrowserSDK
 import BanubaEffectPlayer
 import BanubaMusicEditorSDK
 import BanubaOverlayEditorSDK
@@ -14,6 +15,7 @@ import CoreMedia
 import CoreVideo
 import Foundation
 import GLKit
+import Lottie
 import MobileCoreServices
 import OpenGLES
 import Photos
@@ -371,7 +373,7 @@ extension AudioWriter : AVFoundation.AVAudioRecorderDelegate {
   @objc public var currentConfiguration: BanubaVideoEditorSDK.VideoEditorConfig {
     @objc get
   }
-  @objc public init(token: Swift.String, effectsToken: Swift.String, configuration: BanubaVideoEditorSDK.VideoEditorConfig, externalViewControllerFactory: BanubaVideoEditorSDK.ExternalViewControllerFactory? = nil)
+  @objc public init(token: Swift.String, effectsToken: Swift.String, configuration: BanubaVideoEditorSDK.VideoEditorConfig)
   @objc deinit
   @objc public func exportVideo(fileUrl: Foundation.URL, completion: @escaping (Swift.Bool, Swift.Error?) -> Swift.Void)
   @objc public func exportVideoWithCoverImage(fileUrl: Foundation.URL, completion: @escaping (Swift.Bool, Swift.Error?, UIKit.UIImage) -> Swift.Void)
@@ -592,8 +594,8 @@ extension SDKService : BanubaVideoEditorSDK.SDKMaskPostprocessServicing {
   public func postprocessStartVideoProcessing(with size: CoreGraphics.CGSize)
   public func postprocessDraw()
 }
-@objc public protocol CountdownTimerViewFactory {
-  @objc func makeCountdownTimerView() -> BanubaVideoEditorSDK.CountdownTimerAnimatableView
+public protocol CountdownTimerViewFactory {
+  func makeCountdownTimerView() -> BanubaVideoEditorSDK.CountdownTimerAnimatableView
 }
 @objc public class ColorPair : ObjectiveC.NSObject {
   @objc final public let background: UIKit.UIColor
@@ -1128,10 +1130,10 @@ public protocol MusicSelectorViewControllerDelegate : BanubaVideoEditorSDK.Scrol
 public protocol MusicSelectorViewController : UIKit.UIViewController {
   var delegate: BanubaVideoEditorSDK.MusicSelectorViewControllerDelegate? { get set }
 }
-@objc public protocol ExternalViewControllerFactory {
-  @objc var musicEditorFactory: BanubaMusicEditorSDK.MusicEditorExternalViewControllerFactory? { get set }
-  @objc var countdownTimerViewFactory: BanubaVideoEditorSDK.CountdownTimerViewFactory? { get set }
-  @objc var exposureViewFactory: BanubaVideoEditorSDK.AnimatableViewFactory? { get set }
+public protocol ExternalViewControllerFactory {
+  var musicEditorFactory: BanubaMusicEditorSDK.MusicEditorExternalViewControllerFactory? { get set }
+  var countdownTimerViewFactory: BanubaVideoEditorSDK.CountdownTimerViewFactory? { get set }
+  var exposureViewFactory: BanubaVideoEditorSDK.AnimatableViewFactory? { get set }
 }
 extension UIImage {
   public static func findConfigurationImage(named: Swift.String) -> UIKit.UIImage?
@@ -1717,6 +1719,14 @@ extension VideoEditorService : BanubaMusicEditorSDK.VideoEditorServiceAdoptable 
   public func setMusicTrackVolume(_ track: BanubaMusicEditorSDK.AudioTrackAdoptable, volume: Swift.Float, to player: BanubaMusicEditorSDK.PlayerAdoptable)
   public func removeMusicTrack(_ track: BanubaMusicEditorSDK.AudioTrackAdoptable) -> Swift.Bool
 }
+extension AnimationView : BanubaVideoEditorSDK.CountdownTimerAnimatableView {
+  final public var countdownDigit: Swift.Int {
+    get
+    set
+  }
+  final public func start(completion: @escaping (Swift.Bool) -> Swift.Void)
+  final public func stop()
+}
 public enum TimeResult {
   case longerThenRequired
   case shorterThenRequired
@@ -1939,8 +1949,8 @@ public struct TrimAnalytics {
   }
   public typealias Manager = BanubaVideoEditorSDK.AnalyticsManager<BanubaVideoEditorSDK.TrimAnalytics.EventKind>
 }
-@objc public protocol AnimatableViewFactory : AnyObject {
-  @objc func makeAnimatableView() -> BanubaVideoEditorSDK.AnimatableView
+public protocol AnimatableViewFactory : AnyObject {
+  func makeAnimatableView() -> BanubaVideoEditorSDK.AnimatableView
 }
 public enum EditorEffectKey : Swift.String {
   case name
@@ -2277,13 +2287,13 @@ public protocol EffectTextAreaConfig : AnyObject {
 }
 public class DefaultExposureViewFactory : BanubaVideoEditorSDK.AnimatableViewFactory {
   public init()
-  @objc public func makeAnimatableView() -> BanubaVideoEditorSDK.AnimatableView
+  public func makeAnimatableView() -> BanubaVideoEditorSDK.AnimatableView
   @objc deinit
 }
 @objc @_inheritsConvenienceInitializers public class ExposureAnimationView : UIKit.UIView, BanubaVideoEditorSDK.AnimatableView {
   @objc override dynamic public func draw(_ rect: CoreGraphics.CGRect)
-  @objc public func start(completion: @escaping (Swift.Bool) -> Swift.Void)
-  @objc public func stop()
+  public func start(completion: @escaping (Swift.Bool) -> Swift.Void)
+  public func stop()
   @objc deinit
   @objc override dynamic public init(frame: CoreGraphics.CGRect)
   @objc required dynamic public init?(coder: Foundation.NSCoder)
@@ -2600,6 +2610,8 @@ public struct MusicPickerAnalytics {
   }
   public typealias Manager = BanubaVideoEditorSDK.AnalyticsManager<BanubaVideoEditorSDK.MusicPickerAnalytics.EventKind>
 }
+extension CountdownView : BanubaMusicEditorSDK.MusicEditorCountdownAnimatableView {
+}
 public enum ContentLocationType {
   case remote
   case local
@@ -2683,12 +2695,12 @@ public protocol SDKBeautyEffectManaging : AnyObject {
   var isBeatificationEnabled: Swift.Bool { get set }
   func toggleBeautification() -> Swift.Bool
 }
-@objc public protocol AnimatableView {
-  @objc func start(completion: @escaping (Swift.Bool) -> Swift.Void)
-  @objc func stop()
+public protocol AnimatableView {
+  func start(completion: @escaping (Swift.Bool) -> Swift.Void)
+  func stop()
 }
-@objc public protocol CountdownTimerAnimatableView : BanubaVideoEditorSDK.AnimatableView {
-  @objc var countdownDigit: Swift.Int { get set }
+public protocol CountdownTimerAnimatableView : BanubaVideoEditorSDK.AnimatableView {
+  var countdownDigit: Swift.Int { get set }
 }
 public struct RecordedVideoCover {
   public var image: UIKit.UIImage
