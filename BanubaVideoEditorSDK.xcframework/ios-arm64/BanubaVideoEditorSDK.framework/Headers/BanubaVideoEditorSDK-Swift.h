@@ -268,6 +268,7 @@ SWIFT_CLASS("_TtC20BanubaVideoEditorSDK25EditorEffectsConfigHolder")
 @end
 
 
+
 /// Default exposure animation view
 SWIFT_CLASS("_TtC20BanubaVideoEditorSDK21ExposureAnimationView")
 @interface ExposureAnimationView : UIView
@@ -401,6 +402,29 @@ SWIFT_CLASS("_TtC20BanubaVideoEditorSDK22TimelineViewController")
 
 
 
+
+
+
+
+
+SWIFT_CLASS("_TtC20BanubaVideoEditorSDK33VideoCoverSelectionViewController")
+@interface VideoCoverSelectionViewController : UIViewController
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
+- (void)viewDidLoad;
+- (void)viewWillDisappear:(BOOL)animated;
+- (void)viewDidLayoutSubviews;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil SWIFT_UNAVAILABLE;
+@end
+
+
+
+
+@class UIImagePickerController;
+
+@interface VideoCoverSelectionViewController (SWIFT_EXTENSION(BanubaVideoEditorSDK)) <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+- (void)imagePickerController:(UIImagePickerController * _Nonnull)picker didFinishPickingMediaWithInfo:(NSDictionary<UIImagePickerControllerInfoKey, id> * _Nonnull)info;
+- (void)imagePickerControllerDidCancel:(UIImagePickerController * _Nonnull)picker;
+@end
 
 
 
