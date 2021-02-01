@@ -4,7 +4,9 @@
 import ARKit
 import AVFoundation
 import AVKit
+#if canImport(BanubaARCloudSDK)
 import BanubaARCloudSDK
+#endif
 import BanubaEffectPlayer
 import BanubaMusicEditorSDK
 import BanubaOverlayEditorSDK
