@@ -262,7 +262,7 @@ SWIFT_CLASS("_TtC20BanubaVideoEditorSDK36AdditionalEffectsButtonConfiguration")
 typedef SWIFT_ENUM(NSInteger, AdditionalEffectsButtonConfigurationPosition, open) {
   AdditionalEffectsButtonConfigurationPositionTop = 100,
   AdditionalEffectsButtonConfigurationPositionBottom = 200,
-  AdditionalEffectsButtonConfigurationPositionInitial = 300,
+  AdditionalEffectsButtonConfigurationPositionCenter = 300,
 };
 
 typedef SWIFT_ENUM(NSInteger, ButtonType, open) {
@@ -293,9 +293,12 @@ typedef SWIFT_ENUM(NSInteger, TitlePosition, open) {
 
 @class BackButtonConfiguration;
 
+/// The Albums configuration
 SWIFT_CLASS("_TtC20BanubaVideoEditorSDK19AlbumsConfiguration")
 @interface AlbumsConfiguration : NSObject
+/// TextButtonConfiguration setups title button style
 @property (nonatomic, strong) TextButtonConfiguration * _Nonnull textButton;
+/// BackButtonConfiguration setups back button style
 @property (nonatomic, strong) BackButtonConfiguration * _Nonnull backButton;
 - (nonnull instancetype)initWithTextButton:(TextButtonConfiguration * _Nonnull)textButton backButton:(BackButtonConfiguration * _Nonnull)backButton OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
@@ -305,16 +308,26 @@ SWIFT_CLASS("_TtC20BanubaVideoEditorSDK19AlbumsConfiguration")
 
 @class UIFont;
 
+/// The Alert view configuration
 SWIFT_CLASS("_TtC20BanubaVideoEditorSDK22AlertViewConfiguration")
 @interface AlertViewConfiguration : NSObject
+/// Container corner radius
 @property (nonatomic) CGFloat cornerRadius;
+/// Buttons’ radius
 @property (nonatomic) CGFloat buttonRadius;
+/// Refuse button background color
 @property (nonatomic, strong) UIColor * _Nonnull refuseButtonBackgroundColor;
+/// Refuse button text color
 @property (nonatomic, strong) UIColor * _Nonnull refuseButtonTextColor;
+/// Agree button background color
 @property (nonatomic, strong) UIColor * _Nonnull agreeButtonBackgroundColor;
+/// Agree button text color
 @property (nonatomic, strong) UIColor * _Nonnull agreeButtonTextColor;
+/// Main title aligment
 @property (nonatomic) NSTextAlignment titleAligment;
+/// Main title font
 @property (nonatomic, strong) UIFont * _Nonnull titleFont;
+/// Buttons’ font
 @property (nonatomic, strong) UIFont * _Nonnull buttonsFont;
 - (nonnull instancetype)initWithCornerRadius:(CGFloat)cornerRadius buttonRadius:(CGFloat)buttonRadius refuseButtonBackgroundColor:(UIColor * _Nonnull)refuseButtonBackgroundColor refuseButtonTextColor:(UIColor * _Nonnull)refuseButtonTextColor agreeButtonBackgroundColor:(UIColor * _Nonnull)agreeButtonBackgroundColor agreeButtonTextColor:(UIColor * _Nonnull)agreeButtonTextColor titleAligment:(NSTextAlignment)titleAligment titleFont:(UIFont * _Nonnull)titleFont buttonsFont:(UIFont * _Nonnull)buttonsFont OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
@@ -411,16 +424,22 @@ SWIFT_CLASS("_TtC20BanubaVideoEditorSDK25BanubaButtonConfiguration")
 @property (nonatomic, strong) ImageConfiguration * _Nullable imageConfiguration;
 /// Image which will be used in selected state
 @property (nonatomic, strong) TextButtonConfiguration * _Nonnull title;
+/// Title positon
+/// Default is bottom
+@property (nonatomic) enum TitlePosition titlePosition;
 /// Button width
 /// Default value is 50.0.
 @property (nonatomic) CGFloat width;
 /// Button height
 /// Default value is 50.0.
 @property (nonatomic) CGFloat height;
-/// background configuration.
+/// Background configuration.
 @property (nonatomic, strong) BackgroundConfiguration * _Nonnull background;
+/// Spacing between image and title
+/// Default is 0.0
+@property (nonatomic) CGFloat imageTitleSpacing;
 /// Initializes and returns the Banuba button configuration object with specified configurations.
-- (nonnull instancetype)initWithTitle:(TextButtonConfiguration * _Nonnull)title width:(CGFloat)width height:(CGFloat)height background:(BackgroundConfiguration * _Nonnull)background imageConfiguration:(ImageConfiguration * _Nullable)imageConfiguration OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithTitle:(TextButtonConfiguration * _Nonnull)title titlePosition:(enum TitlePosition)titlePosition width:(CGFloat)width height:(CGFloat)height background:(BackgroundConfiguration * _Nonnull)background imageConfiguration:(ImageConfiguration * _Nullable)imageConfiguration imageTitleSpacing:(CGFloat)imageTitleSpacing OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
@@ -450,7 +469,7 @@ SWIFT_CLASS("_TtC20BanubaVideoEditorSDK17BanubaVideoEditor")
 /// \param videoEditor video editor object informing the delegate about user action.
 ///
 @property (nonatomic, copy) void (^ _Nullable videoEditorDone)(BanubaVideoEditor * _Nonnull);
-/// Service used to controll camera module.
+/// Service used to control camera module.
 /// Also provides access to video editor services.
 @property (nonatomic, readonly, strong) SDKService * _Nonnull sdk;
 /// Simple metadata of music composition settings
@@ -468,9 +487,11 @@ SWIFT_CLASS("_TtC20BanubaVideoEditorSDK17BanubaVideoEditor")
 ///
 /// \param effectsToken token used to be able for access Banuba effects
 ///
+/// \param cloudMasksToken token used to be able for access Banuba remote masks
+///
 /// \param configuration contains all neccesory configurations for the editor
 ///
-- (nonnull instancetype)initWithToken:(NSString * _Nonnull)token effectsToken:(NSString * _Nonnull)effectsToken configuration:(VideoEditorConfig * _Nonnull)configuration OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithToken:(NSString * _Nonnull)token effectsToken:(NSString * _Nonnull)effectsToken cloudMasksToken:(NSString * _Nullable)cloudMasksToken configuration:(VideoEditorConfig * _Nonnull)configuration OBJC_DESIGNATED_INITIALIZER;
 /// Export video with default 1280x720 (or 1920x1080 on required devices) resolution
 /// \param fileUrl url where exported video should be stored.
 ///
@@ -489,14 +510,14 @@ SWIFT_CLASS("_TtC20BanubaVideoEditorSDK17BanubaVideoEditor")
 ///
 /// \param completion completion: (success, error), execute on background thread.
 ///
-- (void)exportVideosUsing:(NSArray<ExportVideoConfiguration *> * _Nonnull)configurations completion:(void (^ _Nullable)(BOOL, NSError * _Nullable))completion;
+- (void)exportVideosUsing:(NSArray<ExportVideoConfiguration *> * _Nonnull)configurations completion:(void (^ _Nonnull)(BOOL, NSError * _Nullable))completion;
 /// Export several configurable video with cover image
 /// \param configurations contains configurations for exporting videos such as file url,
 /// watermark and video quality
 ///
 /// \param completion completion: (success, error, image), execute on background thread.
 ///
-- (void)exportVideosWithCoverImageUsing:(NSArray<ExportVideoConfiguration *> * _Nonnull)configurations completion:(void (^ _Nullable)(BOOL, NSError * _Nullable, UIImage * _Nonnull))completion;
+- (void)exportVideosWithCoverImageUsing:(NSArray<ExportVideoConfiguration *> * _Nonnull)configurations completion:(void (^ _Nonnull)(BOOL, NSError * _Nullable, UIImage * _Nonnull))completion;
 /// Export audio from video
 /// \param fileUrl url where exported video should be stored.
 ///
@@ -528,7 +549,6 @@ SWIFT_CLASS("_TtC20BanubaVideoEditorSDK17BanubaVideoEditor")
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
-
 
 
 
@@ -579,18 +599,46 @@ SWIFT_CLASS("_TtC20BanubaVideoEditorSDK11ColorParams")
 @end
 
 @class VideoResolutionConfiguration;
+@class GalleryItemConfiguration;
+@class ImageButtonConfiguration;
+@class SaveButtonConfiguration;
+@class TextConfiguration;
 @class GalleryLayoutConfiguration;
 
+/// The Combined gallery configuration
 SWIFT_CLASS("_TtC20BanubaVideoEditorSDK28CombinedGalleryConfiguration")
 @interface CombinedGalleryConfiguration : NSObject
+/// VideoResolutionConfiguration setups editor options for rendering video
 @property (nonatomic, strong) VideoResolutionConfiguration * _Nonnull videoResolution;
-@property (nonatomic, strong) TextButtonConfiguration * _Nonnull textButton;
-@property (nonatomic, strong) BackButtonConfiguration * _Nonnull backButton;
+/// GalleryItemConfiguration setups gallery item style for collection view cell
+@property (nonatomic, strong) GalleryItemConfiguration * _Nonnull galleryItemConfiguration;
+/// ImageButtonConfiguration setups close button style
+@property (nonatomic, strong) ImageButtonConfiguration * _Nonnull closeButtonConfiguration;
+/// TextButtonConfiguration setups album button style
+@property (nonatomic, strong) TextButtonConfiguration * _Nonnull albumButtonConfiguration;
+/// SaveButtonConfiguration setups next button style
+@property (nonatomic, strong) SaveButtonConfiguration * _Nonnull nextButtonConfiguration;
+/// TextConfiguration setups ‘no photos’ and ‘no videos’ label title style
+@property (nonatomic, strong) TextConfiguration * _Nonnull noItemsLabelConfiguration;
+/// GalleryLayoutConfiguration setups collection view layout for gallery items
 @property (nonatomic, strong) GalleryLayoutConfiguration * _Nonnull layoutConfiguration;
-- (nonnull instancetype)initWithVideoResolution:(VideoResolutionConfiguration * _Nonnull)videoResolution textButton:(TextButtonConfiguration * _Nonnull)textButton backButton:(BackButtonConfiguration * _Nonnull)backButton layoutConfiguration:(GalleryLayoutConfiguration * _Nonnull)layoutConfiguration OBJC_DESIGNATED_INITIALIZER;
+/// Top bar blur color
+@property (nonatomic, strong) UIColor * _Nonnull topBarBlurColor;
+/// ImageButtonConfiguration setups clear selection button style
+@property (nonatomic, strong) ImageButtonConfiguration * _Nonnull clearSelectionButtonConfiguration;
+/// TextButtonConfiguration setups gallery type buttons’ style
+@property (nonatomic, strong) TextButtonConfiguration * _Nonnull galleryTypeButton;
+/// Color for underline view
+@property (nonatomic, strong) UIColor * _Nonnull galleryTypeUnderlineColor;
+/// Setups gallery state with video only
+@property (nonatomic) BOOL isVideoEnabled;
+/// Setups gallery state with photo only
+@property (nonatomic) BOOL isPhotoEnabled;
+- (nonnull instancetype)initWithVideoResolution:(VideoResolutionConfiguration * _Nonnull)videoResolution galleryItemConfiguration:(GalleryItemConfiguration * _Nonnull)galleryItemConfiguration closeButtonConfiguration:(ImageButtonConfiguration * _Nonnull)closeButtonConfiguration albumButtonConfiguration:(TextButtonConfiguration * _Nonnull)albumButtonConfiguration nextButtonConfiguration:(SaveButtonConfiguration * _Nonnull)nextButtonConfiguration layoutConfiguration:(GalleryLayoutConfiguration * _Nonnull)layoutConfiguration topBarBlurColor:(UIColor * _Nonnull)topBarBlurColor clearSelectionButtonConfiguration:(ImageButtonConfiguration * _Nonnull)clearSelectionButtonConfiguration noItemsLabelConfiguration:(TextConfiguration * _Nonnull)noItemsLabelConfiguration galleryTypeButton:(TextButtonConfiguration * _Nonnull)galleryTypeButton galleryTypeUnderlineColor:(UIColor * _Nonnull)galleryTypeUnderlineColor isVideoEnabled:(BOOL)isVideoEnabled isPhotoEnabled:(BOOL)isPhotoEnabled OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
+
 
 
 SWIFT_CLASS("_TtC20BanubaVideoEditorSDK17CoordinatesParams")
@@ -622,17 +670,24 @@ SWIFT_CLASS("_TtC20BanubaVideoEditorSDK13CountdownView")
 @end
 
 
+/// The Editor screen configuration
 SWIFT_CLASS("_TtC20BanubaVideoEditorSDK19EditorConfiguration")
 @interface EditorConfiguration : NSObject
+/// AdditionalEffectsButtonConfiguration array setups all of the camera screen control buttons’ styles
 @property (nonatomic, copy) NSArray<AdditionalEffectsButtonConfiguration *> * _Nonnull additionalEffectsButtons;
+/// Setups all of the camera screen control buttons’ bottom offset
 @property (nonatomic) CGFloat additionalEffectsButtonsBottomOffset;
+/// VideoResolutionConfiguration setups editor options for rendering video
 @property (nonatomic, strong) VideoResolutionConfiguration * _Nonnull videoResolution;
+/// SaveButtonConfiguration setups save button style
 @property (nonatomic, strong) BanubaButtonConfiguration * _Nonnull saveButton;
+/// BackButtonConfiguration setups back button style
 @property (nonatomic, strong) BackButtonConfiguration * _Nonnull backButton;
+/// Indicates whether there will be a preview selection screen after the editor screen
 @property (nonatomic) BOOL isVideoCoverSelectionEnabled;
+/// How the buttons appears on the screen
 @property (nonatomic) BOOL useHorizontalVersion;
-@property (nonatomic, copy) NSString * _Nonnull playButtonImageName;
-- (nonnull instancetype)initWithAdditionalEffectsButtons:(NSArray<AdditionalEffectsButtonConfiguration *> * _Nonnull)additionalEffectsButtons additionalEffectsButtonsBottomOffset:(CGFloat)additionalEffectsButtonsBottomOffset videoResolution:(VideoResolutionConfiguration * _Nonnull)videoResolution saveButton:(BanubaButtonConfiguration * _Nonnull)saveButton backButton:(BackButtonConfiguration * _Nonnull)backButton isVideoCoverSelectionEnabled:(BOOL)isVideoCoverSelectionEnabled useHorizontalVersion:(BOOL)useHorizontalVersion playButtonImageName:(NSString * _Nonnull)playButtonImageName isShortAlertMessageEnabled:(BOOL)isShortAlertMessageEnabled isScannerModeEnabled:(BOOL)isScannerModeEnabled isARCameraEnabled:(BOOL)isARCameraEnabled OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithAdditionalEffectsButtons:(NSArray<AdditionalEffectsButtonConfiguration *> * _Nonnull)additionalEffectsButtons additionalEffectsButtonsBottomOffset:(CGFloat)additionalEffectsButtonsBottomOffset videoResolution:(VideoResolutionConfiguration * _Nonnull)videoResolution saveButton:(BanubaButtonConfiguration * _Nonnull)saveButton backButton:(BackButtonConfiguration * _Nonnull)backButton isVideoCoverSelectionEnabled:(BOOL)isVideoCoverSelectionEnabled useHorizontalVersion:(BOOL)useHorizontalVersion isShortAlertMessageEnabled:(BOOL)isShortAlertMessageEnabled isScannerModeEnabled:(BOOL)isScannerModeEnabled isARCameraEnabled:(BOOL)isARCameraEnabled OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
@@ -644,7 +699,7 @@ SWIFT_CLASS("_TtC20BanubaVideoEditorSDK25EditorEffectsConfigHolder")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
-@class TextConfiguration;
+@protocol ProgressAnimatableViewFactory;
 
 /// The effect item configuration.
 SWIFT_CLASS("_TtC20BanubaVideoEditorSDK23EffectItemConfiguration")
@@ -665,12 +720,19 @@ SWIFT_CLASS("_TtC20BanubaVideoEditorSDK23EffectItemConfiguration")
 @property (nonatomic) UIEdgeInsets imageInsets;
 /// The image corner radius.
 @property (nonatomic) CGFloat imageCornerRadius;
+/// The image placeholder image
+@property (nonatomic, strong) ImageConfiguration * _Nullable imagePlaceholder;
 /// The title should be always visible.
 @property (nonatomic) BOOL alwaysShowTitle;
 /// Show masks title.
 @property (nonatomic) BOOL showMasksTitle;
+/// Download icon
+@property (nonatomic, strong) ImageConfiguration * _Nullable downloadIcon;
+/// The progress view factory
+/// Default is CircularProgressViewFactory.
+@property (nonatomic, strong) id <ProgressAnimatableViewFactory> _Nullable progressViewFactory;
 /// Initializes and returns the effect item configuration object with specified configurations.
-- (nonnull instancetype)initWithTitleStyle:(TextConfiguration * _Nonnull)titleStyle selectionColor:(UIColor * _Nonnull)selectionColor cornerRadius:(CGFloat)cornerRadius borderWidth:(CGFloat)borderWidth selectWhenHighlight:(BOOL)selectWhenHighlight backgroundColor:(UIColor * _Nonnull)backgroundColor imageInsets:(UIEdgeInsets)imageInsets imageCornerRadius:(CGFloat)imageCornerRadius alwaysShowTitle:(BOOL)alwaysShowTitle showMasksTitle:(BOOL)showMasksTitle OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithTitleStyle:(TextConfiguration * _Nonnull)titleStyle selectionColor:(UIColor * _Nonnull)selectionColor cornerRadius:(CGFloat)cornerRadius borderWidth:(CGFloat)borderWidth selectWhenHighlight:(BOOL)selectWhenHighlight backgroundColor:(UIColor * _Nonnull)backgroundColor imageInsets:(UIEdgeInsets)imageInsets imageCornerRadius:(CGFloat)imageCornerRadius imagePlaceholder:(ImageConfiguration * _Nullable)imagePlaceholder alwaysShowTitle:(BOOL)alwaysShowTitle showMasksTitle:(BOOL)showMasksTitle downloadIcon:(ImageConfiguration * _Nullable)downloadIcon progressViewFactory:(id <ProgressAnimatableViewFactory> _Nullable)progressViewFactory OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
@@ -687,6 +749,7 @@ SWIFT_CLASS("_TtC20BanubaVideoEditorSDK21EffectOnVideoMetadata")
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
+
 
 
 /// Export Video Configuration
@@ -714,46 +777,93 @@ SWIFT_CLASS("_TtC20BanubaVideoEditorSDK20FeatureConfiguration")
 @property (nonatomic) BOOL isDoubleTapForToggleCameraEnabled;
 @property (nonatomic) BOOL isMuteCameraAudioEnabled;
 @property (nonatomic) BOOL isInteractivesEnabled;
+@property (nonatomic) BOOL isSimpleVideoCoverEnabled;
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong, getter=default) FeatureConfiguration * _Nonnull default_;)
 + (FeatureConfiguration * _Nonnull)default SWIFT_WARN_UNUSED_RESULT;
-- (nonnull instancetype)initWithIsMusicEditorEnabled:(BOOL)isMusicEditorEnabled isOverlayEditorEnabled:(BOOL)isOverlayEditorEnabled isDoubleTapForToggleCameraEnabled:(BOOL)isDoubleTapForToggleCameraEnabled isMuteCameraAudioEnabled:(BOOL)isMuteCameraAudioEnabled isInteractivesEnabled:(BOOL)isInteractivesEnabled isAudioBrowserEnabled:(BOOL)isAudioBrowserEnabled OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithIsMusicEditorEnabled:(BOOL)isMusicEditorEnabled isOverlayEditorEnabled:(BOOL)isOverlayEditorEnabled isDoubleTapForToggleCameraEnabled:(BOOL)isDoubleTapForToggleCameraEnabled isMuteCameraAudioEnabled:(BOOL)isMuteCameraAudioEnabled isInteractivesEnabled:(BOOL)isInteractivesEnabled isAudioBrowserEnabled:(BOOL)isAudioBrowserEnabled isSimpleVideoCoverEnabled:(BOOL)isSimpleVideoCoverEnabled OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
+@class FilterControlButtonConfig;
 @class RoundedButtonConfiguration;
-@class ImageButtonConfiguration;
 @class ScreenNameConfiguration;
 
+/// The Filter configuration
 SWIFT_CLASS("_TtC20BanubaVideoEditorSDK19FilterConfiguration")
 @interface FilterConfiguration : NSObject
-@property (nonatomic, strong) RoundedButtonConfiguration * _Nonnull cancelButton;
-@property (nonatomic, strong) RoundedButtonConfiguration * _Nonnull doneButton;
+/// Array of control buttons
+@property (nonatomic, copy) NSArray<FilterControlButtonConfig *> * _Nonnull controlButtons;
+/// RoundedButtonConfiguration setups reset button style
 @property (nonatomic, strong) RoundedButtonConfiguration * _Nonnull resetButton;
+/// Tool tip label style
 @property (nonatomic, strong) TextConfiguration * _Nonnull toolTipLabel;
+/// ImageButtonConfiguration setups cursorButton style
 @property (nonatomic, strong) ImageButtonConfiguration * _Nonnull cursorButton;
+/// BackgroundConfiguration setups background view style
 @property (nonatomic, strong) BackgroundConfiguration * _Nonnull backgroundConfiguration;
+/// Time line container corner radius
 @property (nonatomic) CGFloat timelineCornerRadius;
+/// EffectItemConfiguration setups collection view effect item cell
 @property (nonatomic, strong) EffectItemConfiguration * _Nonnull effectItemConfiguration;
-@property (nonatomic) CGFloat doneButtonHeight;
+/// Time line container height
 @property (nonatomic) CGFloat timelineHeight;
+/// Time line container left offset
 @property (nonatomic) CGFloat timelineLeftOffset;
+/// Time line container right offset
 @property (nonatomic) CGFloat timelineRightOffset;
+/// Filters container height
 @property (nonatomic) CGFloat filtersHeight;
+/// ScreenNameConfiguration setups screen title style
 @property (nonatomic, strong) ScreenNameConfiguration * _Nonnull screenNameConfiguration;
-- (nonnull instancetype)initWithCancelButton:(RoundedButtonConfiguration * _Nonnull)cancelButton doneButton:(RoundedButtonConfiguration * _Nonnull)doneButton resetButton:(RoundedButtonConfiguration * _Nonnull)resetButton toolTipLabel:(TextConfiguration * _Nonnull)toolTipLabel cursorButton:(ImageButtonConfiguration * _Nonnull)cursorButton backgroundConfiguration:(BackgroundConfiguration * _Nonnull)backgroundConfiguration timelineCornerRadius:(CGFloat)timelineCornerRadius effectItemConfiguration:(EffectItemConfiguration * _Nonnull)effectItemConfiguration doneButtonHeight:(CGFloat)doneButtonHeight timelineHeight:(CGFloat)timelineHeight timelineLeftOffset:(CGFloat)timelineLeftOffset timelineRightOffset:(CGFloat)timelineRightOffset filtersHeight:(CGFloat)filtersHeight screenNameConfiguration:(ScreenNameConfiguration * _Nonnull)screenNameConfiguration OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithControlButtons:(NSArray<FilterControlButtonConfig *> * _Nonnull)controlButtons resetButton:(RoundedButtonConfiguration * _Nonnull)resetButton toolTipLabel:(TextConfiguration * _Nonnull)toolTipLabel cursorButton:(ImageButtonConfiguration * _Nonnull)cursorButton backgroundConfiguration:(BackgroundConfiguration * _Nonnull)backgroundConfiguration timelineCornerRadius:(CGFloat)timelineCornerRadius effectItemConfiguration:(EffectItemConfiguration * _Nonnull)effectItemConfiguration timelineHeight:(CGFloat)timelineHeight timelineLeftOffset:(CGFloat)timelineLeftOffset timelineRightOffset:(CGFloat)timelineRightOffset filtersHeight:(CGFloat)filtersHeight screenNameConfiguration:(ScreenNameConfiguration * _Nonnull)screenNameConfiguration OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
+
+enum Type : NSInteger;
+
+/// The Filter control button configuration
+SWIFT_CLASS("_TtC20BanubaVideoEditorSDK25FilterControlButtonConfig")
+@interface FilterControlButtonConfig : NSObject
+/// Filter type of the button
+@property (nonatomic, readonly) enum Type type;
+/// ImageName setups normal UIImage for additional button’s UIImageView
+@property (nonatomic, readonly, copy) NSString * _Nonnull imageName;
+/// ImageName setups  selected UIImage for additional button’s UIImageView
+@property (nonatomic, readonly, copy) NSString * _Nullable selectedImageName;
+/// Additional init
+/// \param type Filter type of the button
+///
+/// \param imageName ImageName setups normal UIImage for additional button’s UIImageView
+///
+/// \param selectedImageName ImageName setups selected UIImage for additional button’s UIImageView
+///
+- (nonnull instancetype)initWithType:(enum Type)type imageName:(NSString * _Nonnull)imageName selectedImageName:(NSString * _Nullable)selectedImageName OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+/// Filter control button types
+typedef SWIFT_ENUM(NSInteger, Type, open) {
+  TypeCancel = 0,
+  TypePlay = 1,
+  TypeDone = 2,
+};
 
 @class SmallActivityIndicatorConfiguration;
 
+/// The Full screen activity indicator configuration
 SWIFT_CLASS("_TtC20BanubaVideoEditorSDK31FullScreenActivityConfiguration")
 @interface FullScreenActivityConfiguration : NSObject
+/// Label title font
 @property (nonatomic, strong) UIFont * _Nonnull labelFont;
+/// Container corner radius
 @property (nonatomic) CGFloat cornerRadius;
+/// Background view alpha
 @property (nonatomic) CGFloat activityEffectsViewAlpha;
+/// Throbber
 @property (nonatomic, strong) SmallActivityIndicatorConfiguration * _Nonnull activityIndicator;
 - (nonnull instancetype)initWithLabelFont:(UIFont * _Nonnull)labelFont cornerRadius:(CGFloat)cornerRadius activityEffectsViewAlpha:(CGFloat)activityEffectsViewAlpha activityIndicator:(SmallActivityIndicatorConfiguration * _Nonnull)activityIndicator OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
@@ -791,19 +901,27 @@ SWIFT_CLASS("_TtC20BanubaVideoEditorSDK34GIFPickerDataLoadingViewController")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end
 
-@class SaveButtonConfiguration;
-@class GalleryItemConfiguration;
 
+/// The  Gallery configuration
 SWIFT_CLASS("_TtC20BanubaVideoEditorSDK20GalleryConfiguration")
 @interface GalleryConfiguration : NSObject
+/// BackButtonConfiguration setups back button style
 @property (nonatomic, strong) BackButtonConfiguration * _Nonnull backButtonConfiguration;
+/// TextConfiguration setups title style
 @property (nonatomic, strong) TextConfiguration * _Nonnull titleConfiguration;
+/// TextConfiguration setups ‘no video’ title style
 @property (nonatomic, strong) TextConfiguration * _Nonnull noVideoFoundTitleConfiguration;
+/// TextConfiguration setups ‘no video’ subtitle style
 @property (nonatomic, strong) TextConfiguration * _Nonnull noVideoFoundSubtitleConfiguration;
+/// ImageButtonConfiguration setups multiselect button style
 @property (nonatomic, strong) ImageButtonConfiguration * _Nonnull multiselectButtonConfiguration;
+/// ImageButtonConfiguration setups
 @property (nonatomic, strong) ImageButtonConfiguration * _Nonnull cancelMultiselectButtonConfiguration;
+/// SaveButtonConfiguration setups done button style
 @property (nonatomic, strong) SaveButtonConfiguration * _Nonnull chooseSelectionButtonConfiguration;
+/// GalleryItemConfiguration setups gallery item style for collection view cell
 @property (nonatomic, strong) GalleryItemConfiguration * _Nonnull galleryItemConfiguration;
+/// GalleryLayoutConfiguration setups collection view layout for gallery items
 @property (nonatomic, strong) GalleryLayoutConfiguration * _Nonnull layoutConfiguration;
 - (nonnull instancetype)initWithBackButtonConfiguration:(BackButtonConfiguration * _Nonnull)backButtonConfiguration titleConfiguration:(TextConfiguration * _Nonnull)titleConfiguration noVideoFoundTitleConfiguration:(TextConfiguration * _Nonnull)noVideoFoundTitleConfiguration noVideoFoundSubtitleConfiguration:(TextConfiguration * _Nonnull)noVideoFoundSubtitleConfiguration multiselectButtonConfiguration:(ImageButtonConfiguration * _Nonnull)multiselectButtonConfiguration cancelMultiselectButtonConfiguration:(ImageButtonConfiguration * _Nonnull)cancelMultiselectButtonConfiguration chooseSelectionButtonConfiguration:(SaveButtonConfiguration * _Nonnull)chooseSelectionButtonConfiguration galleryItemConfiguration:(GalleryItemConfiguration * _Nonnull)galleryItemConfiguration layoutConfiguration:(GalleryLayoutConfiguration * _Nonnull)layoutConfiguration OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
@@ -812,15 +930,24 @@ SWIFT_CLASS("_TtC20BanubaVideoEditorSDK20GalleryConfiguration")
 
 
 
+/// The Gallery item configuration
 SWIFT_CLASS("_TtC20BanubaVideoEditorSDK24GalleryItemConfiguration")
 @interface GalleryItemConfiguration : NSObject
+/// Order number background color
 @property (nonatomic, strong) UIColor * _Nonnull orderNumberBackgroudColor;
+/// Order number title color
 @property (nonatomic, strong) UIColor * _Nonnull orderNumberTitleColor;
+/// Image name setups  image for selection indicator
 @property (nonatomic, copy) NSString * _Nonnull backgroundSelectionIndicatorImageName;
+/// Is selection indicator is hidden
 @property (nonatomic) BOOL hideSelectionIndicatorBySelection;
+/// TextConfiguration setups duration label configuration
 @property (nonatomic, strong) TextConfiguration * _Nonnull durationLabelConfiguration;
+/// Duration label background color
 @property (nonatomic, strong) UIColor * _Nonnull durationLabelBackgroundColor;
+/// SmallActivityIndicatorConfiguration setups activitty indicator style
 @property (nonatomic, strong) SmallActivityIndicatorConfiguration * _Nonnull activityIndicatorConfiguration;
+/// Container’s corner radius
 @property (nonatomic) CGFloat cornerRadius;
 - (nonnull instancetype)initWithOrderNumberBackgroudColor:(UIColor * _Nonnull)orderNumberBackgroudColor orderNumberTitleColor:(UIColor * _Nonnull)orderNumberTitleColor backgroundSelectionIndicatorImageName:(NSString * _Nonnull)backgroundSelectionIndicatorImageName hideSelectionIndicatorBySelection:(BOOL)hideSelectionIndicatorBySelection durationLabelConfiguration:(TextConfiguration * _Nonnull)durationLabelConfiguration durationLabelBackgroundColor:(UIColor * _Nonnull)durationLabelBackgroundColor activityIndicatorConfiguration:(SmallActivityIndicatorConfiguration * _Nonnull)activityIndicatorConfiguration cornerRadius:(CGFloat)cornerRadius OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
@@ -829,10 +956,14 @@ SWIFT_CLASS("_TtC20BanubaVideoEditorSDK24GalleryItemConfiguration")
 
 
 
+/// The Gallery layout configuration
 SWIFT_CLASS("_TtC20BanubaVideoEditorSDK26GalleryLayoutConfiguration")
 @interface GalleryLayoutConfiguration : NSObject
+/// Number of items per row
 @property (nonatomic) NSInteger numberOfItemsPerRow;
+/// Spacing between items
 @property (nonatomic) CGFloat interitemSpacing;
+/// Edge insets
 @property (nonatomic) UIEdgeInsets edgeInsets;
 - (nonnull instancetype)initWithNumberOfItemsPerRow:(NSInteger)numberOfItemsPerRow interitemSpacing:(CGFloat)interitemSpacing edgeInsets:(UIEdgeInsets)edgeInsets OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
@@ -876,12 +1007,18 @@ SWIFT_CLASS("_TtCC20BanubaVideoEditorSDK30GalleryVideoPartsConfiguration29Galler
 @end
 
 
+/// The Gif picker configuration
 SWIFT_CLASS("_TtC20BanubaVideoEditorSDK22GifPickerConfiguration")
 @interface GifPickerConfiguration : NSObject
+/// Regular font for controls
 @property (nonatomic, strong) UIFont * _Nonnull regularFont;
+/// Bold font for controls
 @property (nonatomic, strong) UIFont * _Nonnull boldFont;
+/// SmallActivityIndicatorConfiguration setups activity indicator style
 @property (nonatomic, strong) SmallActivityIndicatorConfiguration * _Nonnull activityConfiguration;
+/// Cursor color
 @property (nonatomic, strong) UIColor * _Nonnull cursorColor;
+/// API key to interact with giphy service
 @property (nonatomic, copy) NSString * _Nullable giphyAPIKey;
 - (nonnull instancetype)initWithRegularFont:(UIFont * _Nonnull)regularFont boldFont:(UIFont * _Nonnull)boldFont activityConfiguration:(SmallActivityIndicatorConfiguration * _Nonnull)activityConfiguration cursorColor:(UIColor * _Nonnull)cursorColor giphyAPIKey:(NSString * _Nullable)giphyAPIKey OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
@@ -928,8 +1065,12 @@ SWIFT_CLASS("_TtCC20BanubaVideoEditorSDK22HandsfreeConfiguration27TimerOptionBar
 @property (nonatomic, strong) UIColor * _Nonnull optionTextColor;
 /// The timer option view background color.
 @property (nonatomic, strong) UIColor * _Nonnull backgroundColor;
-/// The bar corner radius.
+/// The HandsFreeViewController corner radius.
 @property (nonatomic) CGFloat cornerRadius;
+/// The slider corner radius.
+@property (nonatomic) CGFloat sliderCornerRadius;
+/// The bar corner radius.
+@property (nonatomic) CGFloat barCornerRadius;
 /// The selector views edge insets.
 @property (nonatomic) UIEdgeInsets selectorEdgeInsets;
 /// The color of the activated switch of active lines in slider.
@@ -939,7 +1080,7 @@ SWIFT_CLASS("_TtCC20BanubaVideoEditorSDK22HandsfreeConfiguration27TimerOptionBar
 /// The minimum value for video duration.
 /// Default 1.0
 @property (nonatomic) double minVideoDuration;
-- (nonnull instancetype)initWithDisableOptionTitle:(NSString * _Nonnull)disableOptionTitle selectorColor:(UIColor * _Nonnull)selectorColor selectorTextColor:(UIColor * _Nonnull)selectorTextColor optionBackgroundColor:(UIColor * _Nonnull)optionBackgroundColor optionCornerRadius:(CGFloat)optionCornerRadius optionTextColor:(UIColor * _Nonnull)optionTextColor backgroundColor:(UIColor * _Nonnull)backgroundColor cornerRadius:(CGFloat)cornerRadius selectorEdgeInsets:(UIEdgeInsets)selectorEdgeInsets activeThumbAndLineColor:(UIColor * _Nonnull)activeThumbAndLineColor inactiveThumbAndLineColor:(UIColor * _Nonnull)inactiveThumbAndLineColor minVideoDuration:(double)minVideoDuration OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithDisableOptionTitle:(NSString * _Nonnull)disableOptionTitle selectorColor:(UIColor * _Nonnull)selectorColor selectorTextColor:(UIColor * _Nonnull)selectorTextColor optionBackgroundColor:(UIColor * _Nonnull)optionBackgroundColor optionCornerRadius:(CGFloat)optionCornerRadius optionTextColor:(UIColor * _Nonnull)optionTextColor backgroundColor:(UIColor * _Nonnull)backgroundColor cornerRadius:(CGFloat)cornerRadius sliderCornerRadius:(CGFloat)sliderCornerRadius barCornerRadius:(CGFloat)barCornerRadius selectorEdgeInsets:(UIEdgeInsets)selectorEdgeInsets activeThumbAndLineColor:(UIColor * _Nonnull)activeThumbAndLineColor inactiveThumbAndLineColor:(UIColor * _Nonnull)inactiveThumbAndLineColor minVideoDuration:(double)minVideoDuration OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
@@ -1026,21 +1167,36 @@ SWIFT_CLASS("_TtC20BanubaVideoEditorSDK23InteractiveTestMetadata")
 @class PlayerControlConfiguration;
 @class TimeLabelConfiguration;
 
+/// The Multi trim configuration
 SWIFT_CLASS("_TtC20BanubaVideoEditorSDK22MultiTrimConfiguration")
 @interface MultiTrimConfiguration : NSObject
+/// SaveButtonConfiguration setups save button style
 @property (nonatomic, strong) SaveButtonConfiguration * _Nonnull saveButton;
+/// BackButtonConfiguration setups save button style
 @property (nonatomic, strong) BackButtonConfiguration * _Nonnull backButton;
+/// ImageButtonConfiguration setups rotate button style
+@property (nonatomic, strong) ImageButtonConfiguration * _Nullable rotateButton;
+/// TimeLineConfiguration setups multi time line bar style and options
 @property (nonatomic, strong) TimeLineConfiguration * _Nonnull timeLimeConfiguration;
+/// TrimTimeLineConfiguration setups single time line bar style and options
 @property (nonatomic, strong) TrimTimeLineConfiguration * _Nonnull trimTimeLineConfiguration;
+/// Time line height
 @property (nonatomic) CGFloat trimTimeLineHeight;
+/// PlayerControlConfiguration setups play/pause button style
 @property (nonatomic, strong) PlayerControlConfiguration * _Nonnull playerControlConfiguration;
+/// BackgroundConfiguration setups background view style
 @property (nonatomic, strong) BackgroundConfiguration * _Nonnull backgroundConfiguration;
+/// BackgroundConfiguration setups bottom background view style
 @property (nonatomic, strong) BackgroundConfiguration * _Nonnull bottomViewBackgroundConfiguration;
+/// ScreenNameConfiguration setups screen title style
 @property (nonatomic, strong) ScreenNameConfiguration * _Nonnull screenNameConfiguration;
+/// Trim sequence edge insets
 @property (nonatomic) UIEdgeInsets trimSequenceEdgeInsets;
+/// Trim sequence height
 @property (nonatomic) CGFloat trimSequenceHeight;
+/// TimeLabelConfiguration setups current duration view style
 @property (nonatomic, strong) TimeLabelConfiguration * _Nonnull editedTimeLabelConfiguration;
-- (nonnull instancetype)initWithSaveButton:(SaveButtonConfiguration * _Nonnull)saveButton backButton:(BackButtonConfiguration * _Nonnull)backButton timeLimeConfiguration:(TimeLineConfiguration * _Nonnull)timeLimeConfiguration trimTimeLineConfiguration:(TrimTimeLineConfiguration * _Nonnull)trimTimeLineConfiguration trimTimeLineHeight:(CGFloat)trimTimeLineHeight playerControlConfiguration:(PlayerControlConfiguration * _Nonnull)playerControlConfiguration backgroundConfiguration:(BackgroundConfiguration * _Nonnull)backgroundConfiguration bottomViewBackgroundConfiguration:(BackgroundConfiguration * _Nonnull)bottomViewBackgroundConfiguration screenNameConfiguration:(ScreenNameConfiguration * _Nonnull)screenNameConfiguration trimSequenceEdgeInsets:(UIEdgeInsets)trimSequenceEdgeInsets trimSequenceHeight:(CGFloat)trimSequenceHeight editedTimeLabelConfiguration:(TimeLabelConfiguration * _Nonnull)editedTimeLabelConfiguration OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithSaveButton:(SaveButtonConfiguration * _Nonnull)saveButton backButton:(BackButtonConfiguration * _Nonnull)backButton rotateButton:(ImageButtonConfiguration * _Nullable)rotateButton timeLimeConfiguration:(TimeLineConfiguration * _Nonnull)timeLimeConfiguration trimTimeLineConfiguration:(TrimTimeLineConfiguration * _Nonnull)trimTimeLineConfiguration trimTimeLineHeight:(CGFloat)trimTimeLineHeight playerControlConfiguration:(PlayerControlConfiguration * _Nonnull)playerControlConfiguration backgroundConfiguration:(BackgroundConfiguration * _Nonnull)backgroundConfiguration bottomViewBackgroundConfiguration:(BackgroundConfiguration * _Nonnull)bottomViewBackgroundConfiguration screenNameConfiguration:(ScreenNameConfiguration * _Nonnull)screenNameConfiguration trimSequenceEdgeInsets:(UIEdgeInsets)trimSequenceEdgeInsets trimSequenceHeight:(CGFloat)trimSequenceHeight editedTimeLabelConfiguration:(TimeLabelConfiguration * _Nonnull)editedTimeLabelConfiguration OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
@@ -1139,64 +1295,111 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) Class _Nonnull layer
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end
 
+
+SWIFT_PROTOCOL("_TtP20BanubaVideoEditorSDK22ProgressAnimatableView_")
+@protocol ProgressAnimatableView
+@property (nonatomic) float progress;
+@end
+
+
+/// Progress animatable view factory.
+/// Default is CircularProgressViewFactory.
+SWIFT_PROTOCOL("_TtP20BanubaVideoEditorSDK29ProgressAnimatableViewFactory_")
+@protocol ProgressAnimatableViewFactory
+- (id <ProgressAnimatableView> _Nonnull)makeProgressAnimatableView SWIFT_WARN_UNUSED_RESULT;
+@end
+
 @class NSArray;
 
+/// The Capture button configuration
 SWIFT_CLASS("_TtC20BanubaVideoEditorSDK25RecordButtonConfiguration")
 @interface RecordButtonConfiguration : NSObject
+/// Color setups capture button round color for idle state
 @property (nonatomic) CGColorRef _Nonnull idleStrokeColor;
+/// Color setups capture button round color for capture state
 @property (nonatomic) CGColorRef _Nonnull strokeColor;
+/// Colors setups capture button gradient filling colors
 @property (nonatomic, strong) NSArray * _Nonnull gradientColors;
+/// Round line width for idle state
 @property (nonatomic) CGFloat circularTimeLineIdleWidth;
+/// Round line width for capture state
 @property (nonatomic) CGFloat circularTimeLineCaptureWidth;
+/// Image name setups core image for idle state
 @property (nonatomic, copy) NSString * _Nonnull normalImageName;
+/// Image name setups core image for capture state
 @property (nonatomic, copy) NSString * _Nonnull recordImageName;
+/// Capture button width
 @property (nonatomic) CGFloat width;
+/// Capture button height
 @property (nonatomic) CGFloat height;
+/// Button resize scale for capture state
 @property (nonatomic) CGFloat recordingScale;
 - (nonnull instancetype)initWithIdleStrokeColor:(CGColorRef _Nonnull)idleStrokeColor strokeColor:(CGColorRef _Nonnull)strokeColor gradientColors:(NSArray * _Nonnull)gradientColors circularTimeLineIdleWidth:(CGFloat)circularTimeLineIdleWidth circularTimeLineCaptureWidth:(CGFloat)circularTimeLineCaptureWidth normalImageName:(NSString * _Nonnull)normalImageName recordImageName:(NSString * _Nonnull)recordImageName width:(CGFloat)width height:(CGFloat)height recordingScale:(CGFloat)recordingScale OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
-typedef SWIFT_ENUM(NSInteger, RecordMode, open) {
-  RecordModeMixed = 0,
-  RecordModeNormal = 1,
-  RecordModePhoto = 2,
-};
-
 @protocol VideoEditorCaptureButtonProvider;
 @class SpeedButtonConfiguration;
 @class TimerConfiguration;
-@class ScrollBarConfiguration;
 @class RecorderEffectsConfiguration;
 
+/// The Camera screen configuration
 SWIFT_CLASS("_TtC20BanubaVideoEditorSDK21RecorderConfiguration")
 @interface RecorderConfiguration : NSObject
+/// VideoResolutionConfiguration setups camera options for capturing and rendering video
 @property (nonatomic, strong) VideoResolutionConfiguration * _Nonnull videoResolution;
+/// SaveButtonConfiguration setups save button style
 @property (nonatomic, strong) SaveButtonConfiguration * _Nullable saveButton;
+/// BackButtonConfiguration setups back button style
 @property (nonatomic, strong) BackButtonConfiguration * _Nonnull backButton;
+/// ImageName setups remove button UIImage
 @property (nonatomic, copy) NSString * _Nonnull removeButtonImageName;
+/// Setups top progress label style. Only for horizontal recorder.
+@property (nonatomic, strong) TextConfiguration * _Nullable progressLabelConfiguration;
+/// Setups top floating line view style. Only for horizontal recorder.
+@property (nonatomic, strong) TextConfiguration * _Nullable floatingLineViewConfiguration;
+/// CaptureButtonMode setups camera capturing functionality
 @property (nonatomic) enum CaptureButtonMode captureButtonMode;
+/// RecordButtonConfiguration setups capture button style
 @property (nonatomic, strong) RecordButtonConfiguration * _Nonnull recordButtonConfiguration;
+/// VideoEditorCaptureButtonProvider provides access to the possibility for creating capture button
 @property (nonatomic, strong) id <VideoEditorCaptureButtonProvider> _Nullable recordButtonProvider;
+/// AdditionalEffectsButtonConfiguration array setups all of the camera screen control buttons’ styles
 @property (nonatomic, copy) NSArray<AdditionalEffectsButtonConfiguration *> * _Nonnull additionalEffectsButtons;
+/// SpeedButtonConfiguration setups speed button style
 @property (nonatomic, strong) SpeedButtonConfiguration * _Nonnull speedButton;
+/// RoundedButtonConfiguration setups gallery button style
 @property (nonatomic, strong) RoundedButtonConfiguration * _Nonnull galleryButton;
+/// Image name setups gallery button image for empty gallery state
 @property (nonatomic, copy) NSString * _Nonnull emptyGalleryImageName;
+/// TimerConfiguration setups timer functionality options
 @property (nonatomic, strong) TimerConfiguration * _Nonnull timerConfiguration;
+/// TimeLineConfiguration setups progress bar style for sequences
 @property (nonatomic, strong) TimeLineConfiguration * _Nonnull timeLineConfiguration;
-@property (nonatomic, strong) ScrollBarConfiguration * _Nonnull scrollBarConfiguration;
+/// Value setups capture button posttion according to the screen bottom
 @property (nonatomic) CGFloat regularRecordButtonPosition;
+/// RecorderEffectsConfiguration setups effects list style
 @property (nonatomic, strong) RecorderEffectsConfiguration * _Nonnull recorderEffectsConfiguration;
+/// Value setups left controls positions according to the capture button bottom
 @property (nonatomic) CGFloat leftControlsBottomOffsetFromCaptureButton;
+/// Value setups left controls positions according to the capture button leading
 @property (nonatomic) CGFloat leftControlsLeftOffset;
+/// Sequence bar height
 @property (nonatomic) CGFloat sequenceHeight;
+/// How the buttons appears on the screen
 @property (nonatomic) BOOL useHorizontalVersion;
+/// Loop audio while recording video if music is selected
 @property (nonatomic) BOOL loopAudioWhileRecording;
+/// This flag suggests that given audio duration setups maximum recording length
 @property (nonatomic) BOOL takeAudioDurationAsMaximum;
+/// Value provides the ability to dynamically changing the title of the song when new audio is adding
 @property (nonatomic) BOOL isDynamicMusicTitle;
+/// Value provides the ability to open front camera by default
 @property (nonatomic) BOOL isDefaultFrontCamera;
-- (nonnull instancetype)initWithVideoResolution:(VideoResolutionConfiguration * _Nonnull)videoResolution saveButton:(SaveButtonConfiguration * _Nullable)saveButton backButton:(BackButtonConfiguration * _Nonnull)backButton removeButtonImageName:(NSString * _Nonnull)removeButtonImageName recordButtonMode:(enum RecordMode)recordButtonMode captureButtonMode:(enum CaptureButtonMode)captureButtonMode recordButtonConfiguration:(RecordButtonConfiguration * _Nonnull)recordButtonConfiguration recordButtonProvider:(id <VideoEditorCaptureButtonProvider> _Nullable)recordButtonProvider additionalEffectsButtons:(NSArray<AdditionalEffectsButtonConfiguration *> * _Nonnull)additionalEffectsButtons speedButton:(SpeedButtonConfiguration * _Nonnull)speedButton galleryButton:(RoundedButtonConfiguration * _Nonnull)galleryButton emptyGalleryImageName:(NSString * _Nonnull)emptyGalleryImageName timerConfiguration:(TimerConfiguration * _Nonnull)timerConfiguration timeLineConfiguration:(TimeLineConfiguration * _Nonnull)timeLineConfiguration scrollBarConfiguration:(ScrollBarConfiguration * _Nonnull)scrollBarConfiguration isShowTextOnMask:(BOOL)isShowTextOnMask regularRecordButtonPosition:(CGFloat)regularRecordButtonPosition recorderEffectsConfiguration:(RecorderEffectsConfiguration * _Nonnull)recorderEffectsConfiguration leftControlsBottomOffsetFromCaptureButton:(CGFloat)leftControlsBottomOffsetFromCaptureButton leftControlsLeftOffset:(CGFloat)leftControlsLeftOffset sequenceHeight:(CGFloat)sequenceHeight useHorizontalVersion:(BOOL)useHorizontalVersion loopAudioWhileRecording:(BOOL)loopAudioWhileRecording takeAudioDurationAsMaximum:(BOOL)takeAudioDurationAsMaximum isDynamicMusicTitle:(BOOL)isDynamicMusicTitle isDefaultFrontCamera:(BOOL)isDefaultFrontCamera OBJC_DESIGNATED_INITIALIZER;
+/// Value setups music title floating view is enabled state
+@property (nonatomic) BOOL isMusicTitleFloatingLineEnabled;
+- (nonnull instancetype)initWithVideoResolution:(VideoResolutionConfiguration * _Nonnull)videoResolution saveButton:(SaveButtonConfiguration * _Nullable)saveButton backButton:(BackButtonConfiguration * _Nonnull)backButton removeButtonImageName:(NSString * _Nonnull)removeButtonImageName progressLabelConfiguration:(TextConfiguration * _Nullable)progressLabelConfiguration floatingLineViewConfiguration:(TextConfiguration * _Nullable)floatingLineViewConfiguration captureButtonMode:(enum CaptureButtonMode)captureButtonMode recordButtonConfiguration:(RecordButtonConfiguration * _Nonnull)recordButtonConfiguration recordButtonProvider:(id <VideoEditorCaptureButtonProvider> _Nullable)recordButtonProvider additionalEffectsButtons:(NSArray<AdditionalEffectsButtonConfiguration *> * _Nonnull)additionalEffectsButtons speedButton:(SpeedButtonConfiguration * _Nonnull)speedButton galleryButton:(RoundedButtonConfiguration * _Nonnull)galleryButton emptyGalleryImageName:(NSString * _Nonnull)emptyGalleryImageName timerConfiguration:(TimerConfiguration * _Nonnull)timerConfiguration timeLineConfiguration:(TimeLineConfiguration * _Nonnull)timeLineConfiguration regularRecordButtonPosition:(CGFloat)regularRecordButtonPosition recorderEffectsConfiguration:(RecorderEffectsConfiguration * _Nonnull)recorderEffectsConfiguration leftControlsBottomOffsetFromCaptureButton:(CGFloat)leftControlsBottomOffsetFromCaptureButton leftControlsLeftOffset:(CGFloat)leftControlsLeftOffset sequenceHeight:(CGFloat)sequenceHeight useHorizontalVersion:(BOOL)useHorizontalVersion loopAudioWhileRecording:(BOOL)loopAudioWhileRecording takeAudioDurationAsMaximum:(BOOL)takeAudioDurationAsMaximum isDynamicMusicTitle:(BOOL)isDynamicMusicTitle isDefaultFrontCamera:(BOOL)isDefaultFrontCamera isMusicTitleFloatingLineEnabled:(BOOL)isMusicTitleFloatingLineEnabled OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
@@ -1293,27 +1496,52 @@ SWIFT_CLASS("_TtC20BanubaVideoEditorSDK23ScreenNameConfiguration")
 
 
 
-SWIFT_CLASS("_TtC20BanubaVideoEditorSDK22ScrollBarConfiguration")
-@interface ScrollBarConfiguration : NSObject
-@property (nonatomic) BOOL isScrollBarShoudDisplay;
-@property (nonatomic, strong) UIFont * _Nonnull normalLabelFont;
-@property (nonatomic, strong) UIFont * _Nonnull slideshowLabelFont;
-- (nonnull instancetype)initWithIsScrollBarShoudDisplay:(BOOL)isScrollBarShoudDisplay normalLabelFont:(UIFont * _Nonnull)normalLabelFont slideshowLabelFont:(UIFont * _Nonnull)slideshowLabelFont OBJC_DESIGNATED_INITIALIZER;
+/// The Video cover selection screen
+SWIFT_CLASS("_TtC20BanubaVideoEditorSDK38SimpleVideoCoverSelectionConfiguration")
+@interface SimpleVideoCoverSelectionConfiguration : NSObject
+/// TextButtonConfiguration setups cancel button style
+@property (nonatomic, strong) TextButtonConfiguration * _Nonnull cancelButton;
+/// RoundedButtonConfiguration setups done button style
+@property (nonatomic, strong) RoundedButtonConfiguration * _Nonnull doneButton;
+/// TextConfiguration setups tool tip label
+@property (nonatomic, strong) TextConfiguration * _Nonnull toolTipLabel;
+/// Slider color
+@property (nonatomic, strong) UIColor * _Nonnull sliderColor;
+/// Slider min state color
+@property (nonatomic, strong) UIColor * _Nonnull sliderMinTrackTintColor;
+/// Slider max state color
+@property (nonatomic, strong) UIColor * _Nonnull sliderMaxTrackTintColor;
+/// BackgroundConfiguration setups background view configuration
+@property (nonatomic, strong) BackgroundConfiguration * _Nonnull backgroundConfiguration;
+- (nonnull instancetype)initWithCancelButton:(TextButtonConfiguration * _Nonnull)cancelButton doneButton:(RoundedButtonConfiguration * _Nonnull)doneButton toolTipLabel:(TextConfiguration * _Nonnull)toolTipLabel sliderColor:(UIColor * _Nonnull)sliderColor sliderMinTrackTintColor:(UIColor * _Nonnull)sliderMinTrackTintColor sliderMaxTrackTintColor:(UIColor * _Nonnull)sliderMaxTrackTintColor backgroundConfiguration:(BackgroundConfiguration * _Nonnull)backgroundConfiguration OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
 
+
+/// The single trim configuration
 SWIFT_CLASS("_TtC20BanubaVideoEditorSDK23SingleTrimConfiguration")
 @interface SingleTrimConfiguration : NSObject
+/// SaveButtonConfiguration setups save button style
 @property (nonatomic, strong) SaveButtonConfiguration * _Nonnull saveButton;
+/// BackButtonConfiguration setups save button style
 @property (nonatomic, strong) BackButtonConfiguration * _Nonnull backButton;
+/// ImageButtonConfiguration setups rotate button style
+@property (nonatomic, strong) ImageButtonConfiguration * _Nullable rotateButton;
+/// SmallActivityIndicatorConfiguration setups throbber style
 @property (nonatomic, strong) SmallActivityIndicatorConfiguration * _Nonnull throbber;
+/// TrimTimeLineConfiguration setups single time line bar style and options
 @property (nonatomic, strong) TrimTimeLineConfiguration * _Nonnull trimTimeLineConfiguration;
+/// Time line height
 @property (nonatomic) CGFloat trimTimeLineHeight;
+/// PlayerControlConfiguration setups play/pause button style
 @property (nonatomic, strong) PlayerControlConfiguration * _Nonnull playerControlConfiguration;
+/// BackgroundConfiguration setups background view style
 @property (nonatomic, strong) BackgroundConfiguration * _Nonnull backgroundConfiguration;
+/// ScreenNameConfiguration setups screen title style
 @property (nonatomic, strong) ScreenNameConfiguration * _Nonnull screenNameConfiguration;
+/// TimeLabelConfiguration setups current duration view style
 @property (nonatomic, strong) TimeLabelConfiguration * _Nonnull editedTimeLabelConfiguration;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
@@ -1334,24 +1562,6 @@ SWIFT_CLASS("_TtC20BanubaVideoEditorSDK26SlideInPresentationManager")
 - (id <UIViewControllerInteractiveTransitioning> _Nullable)interactionControllerForPresentation:(id <UIViewControllerAnimatedTransitioning> _Nonnull)animator SWIFT_WARN_UNUSED_RESULT;
 - (id <UIViewControllerInteractiveTransitioning> _Nullable)interactionControllerForDismissal:(id <UIViewControllerAnimatedTransitioning> _Nonnull)animator SWIFT_WARN_UNUSED_RESULT;
 @end
-
-
-SWIFT_CLASS("_TtC20BanubaVideoEditorSDK22SlideShowConfiguration")
-@interface SlideShowConfiguration : NSObject
-@property (nonatomic, strong) VideoResolutionConfiguration * _Nonnull videoResolution;
-@property (nonatomic, strong) GalleryItemConfiguration * _Nonnull galleryItemConfiguration;
-@property (nonatomic, strong) ImageButtonConfiguration * _Nonnull closeButtonConfiguration;
-@property (nonatomic, strong) TextButtonConfiguration * _Nonnull albumButtonConfiguration;
-@property (nonatomic, strong) SaveButtonConfiguration * _Nonnull nextButtonConfiguration;
-@property (nonatomic, strong) TextConfiguration * _Nonnull noPhotosLabelConfiguration;
-@property (nonatomic, strong) GalleryLayoutConfiguration * _Nonnull layoutConfiguration;
-@property (nonatomic, strong) UIColor * _Nonnull topBarBlurColor;
-@property (nonatomic, strong) ImageButtonConfiguration * _Nonnull clearSelectionButtonConfiguration;
-- (nonnull instancetype)initWithVideoResolution:(VideoResolutionConfiguration * _Nonnull)videoResolution galleryItemConfiguration:(GalleryItemConfiguration * _Nonnull)galleryItemConfiguration closeButtonConfiguration:(ImageButtonConfiguration * _Nonnull)closeButtonConfiguration albumButtonConfiguration:(TextButtonConfiguration * _Nonnull)albumButtonConfiguration nextButtonConfiguration:(SaveButtonConfiguration * _Nonnull)nextButtonConfiguration noPhotosLabelConfiguration:(TextConfiguration * _Nonnull)noPhotosLabelConfiguration layoutConfiguration:(GalleryLayoutConfiguration * _Nonnull)layoutConfiguration topBarBlurColor:(UIColor * _Nonnull)topBarBlurColor clearSelectionButtonConfiguration:(ImageButtonConfiguration * _Nonnull)clearSelectionButtonConfiguration OBJC_DESIGNATED_INITIALIZER;
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-@end
-
 
 
 /// The activity indicator configuration.
@@ -1483,16 +1693,21 @@ SWIFT_CLASS("_TtC20BanubaVideoEditorSDK17TextConfiguration")
 /// The alignment of the text.
 /// Default is .center
 @property (nonatomic) NSTextAlignment alignment;
+/// The optional text
+@property (nonatomic, copy) NSString * _Nullable text;
 /// Initializes and returns the text configuration object with speicified fields.
-- (nonnull instancetype)initWithKern:(double)kern font:(UIFont * _Nonnull)font color:(UIColor * _Nonnull)color alignment:(NSTextAlignment)alignment OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithKern:(double)kern font:(UIFont * _Nonnull)font color:(UIColor * _Nonnull)color alignment:(NSTextAlignment)alignment text:(NSString * _Nullable)text OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
 
+/// The Text editor color item configuration
 SWIFT_CLASS("_TtC20BanubaVideoEditorSDK30TextEditColorItemConfiguration")
 @interface TextEditColorItemConfiguration : NSObject
+/// Item border color
 @property (nonatomic, strong) UIColor * _Nonnull borderColor;
+/// Item border width
 @property (nonatomic) CGFloat borderWidth;
 - (nonnull instancetype)initWithBorderColor:(UIColor * _Nonnull)borderColor borderWidth:(CGFloat)borderWidth OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
@@ -1510,18 +1725,30 @@ SWIFT_PROTOCOL("_TtP20BanubaVideoEditorSDK30TextEditSelectionColorBehavior_")
 @class VideoTextColorPair;
 @class VideoTextFont;
 
+/// The Text editor configuration
 SWIFT_CLASS("_TtC20BanubaVideoEditorSDK23TextEditorConfiguration")
 @interface TextEditorConfiguration : NSObject
+/// RoundedButtonConfiguration setups done button style
 @property (nonatomic, strong) RoundedButtonConfiguration * _Nonnull doneButton;
+/// RoundedButtonConfiguration setups choosing font button style
 @property (nonatomic, strong) RoundedButtonConfiguration * _Nonnull fontButton;
+/// ImageButtonConfiguration setups filling background color button
 @property (nonatomic, strong) ImageButtonConfiguration * _Nonnull textBackgroundButton;
+/// Images for aligment states button
 @property (nonatomic, strong) NSDictionary * _Nonnull alignmentImages;
+/// Pallete of filling colors
 @property (nonatomic, copy) NSArray<VideoTextColorPair *> * _Nonnull palette;
+/// Array of text fonts
 @property (nonatomic, copy) NSArray<VideoTextFont *> * _Nonnull fonts;
+/// BackgroundConfiguration setups background view style
 @property (nonatomic, strong) BackgroundConfiguration * _Nonnull backgroundConfiguration;
+/// ScreenNameConfiguration setups screen title style
 @property (nonatomic, strong) ScreenNameConfiguration * _Nonnull screenNameConfiguration;
+/// Color pallete inset
 @property (nonatomic) UIEdgeInsets palleteInsets;
+/// TextEditSelectionColorBehavior setups text editor selection color behavior
 @property (nonatomic, strong) id <TextEditSelectionColorBehavior> _Nonnull selectionColorBehavior;
+/// TextEditColorItemConfiguration setups pallete’s color items’ configuration
 @property (nonatomic, strong) TextEditColorItemConfiguration * _Nonnull colorItemConfiguration;
 - (nonnull instancetype)initWithDoneButton:(RoundedButtonConfiguration * _Nonnull)doneButton fontButton:(RoundedButtonConfiguration * _Nonnull)fontButton textBackgroundButton:(ImageButtonConfiguration * _Nonnull)textBackgroundButton alignmentImages:(NSDictionary * _Nonnull)alignmentImages palette:(NSArray<VideoTextColorPair *> * _Nonnull)palette fonts:(NSArray<VideoTextFont *> * _Nonnull)fonts backgroundConfiguration:(BackgroundConfiguration * _Nonnull)backgroundConfiguration screenNameConfiguration:(ScreenNameConfiguration * _Nonnull)screenNameConfiguration palleteInsets:(UIEdgeInsets)palleteInsets selectionColorBehavior:(id <TextEditSelectionColorBehavior> _Nonnull)selectionColorBehavior colorItemConfiguration:(TextEditColorItemConfiguration * _Nonnull)colorItemConfiguration OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
@@ -1572,16 +1799,26 @@ SWIFT_CLASS("_TtC20BanubaVideoEditorSDK22TimeLabelConfiguration")
 
 
 
+/// The time line configuration
 SWIFT_CLASS("_TtC20BanubaVideoEditorSDK21TimeLineConfiguration")
 @interface TimeLineConfiguration : NSObject
+/// Property setups ‘isHidden’  option for the time line view
 @property (nonatomic) BOOL isTimeLineHidden;
+/// Time line background color
 @property (nonatomic, strong) UIColor * _Nonnull timeLineBackgroundColor;
+/// Progress bar color
 @property (nonatomic, strong) UIColor * _Nonnull progressBarColor;
+/// Progress bar color for selecting state
 @property (nonatomic, strong) UIColor * _Nonnull progressBarSelectColor;
+/// Thumbnail item corner radius
 @property (nonatomic) CGFloat itemsCornerRadius;
+/// Separator width
 @property (nonatomic) CGFloat separatorWidth;
+/// Separator color
 @property (nonatomic, strong) UIColor * _Nonnull separatorColor;
-- (nonnull instancetype)initWithIsTimeLineHidden:(BOOL)isTimeLineHidden timeLineBackgroundColor:(UIColor * _Nonnull)timeLineBackgroundColor progressBarColor:(UIColor * _Nonnull)progressBarColor progressBarSelectColor:(UIColor * _Nonnull)progressBarSelectColor itemsCornerRadius:(CGFloat)itemsCornerRadius separatorWidth:(CGFloat)separatorWidth separatorColor:(UIColor * _Nonnull)separatorColor OBJC_DESIGNATED_INITIALIZER;
+/// Value setups progress bar as dynamic sequence
+@property (nonatomic) BOOL isDynamicProgressBar;
+- (nonnull instancetype)initWithIsTimeLineHidden:(BOOL)isTimeLineHidden timeLineBackgroundColor:(UIColor * _Nonnull)timeLineBackgroundColor progressBarColor:(UIColor * _Nonnull)progressBarColor progressBarSelectColor:(UIColor * _Nonnull)progressBarSelectColor itemsCornerRadius:(CGFloat)itemsCornerRadius separatorWidth:(CGFloat)separatorWidth separatorColor:(UIColor * _Nonnull)separatorColor isDynamicProgressBar:(BOOL)isDynamicProgressBar OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
@@ -1655,27 +1892,46 @@ SWIFT_CLASS("_TtC20BanubaVideoEditorSDK18ToastConfiguration")
 @property (nonatomic, strong) UIFont * _Nonnull font;
 /// The toast corner of radius.
 @property (nonatomic) CGFloat cornerRadius;
+/// The toast text color
+/// Default is white
+@property (nonatomic, strong) UIColor * _Nonnull textColor;
+/// The toast background color
+/// Default is black
+@property (nonatomic, strong) UIColor * _Nonnull backroundColor;
 /// Initializes and returns the toast configuration object with specified configurations.
-- (nonnull instancetype)initWithKern:(double)kern font:(UIFont * _Nonnull)font cornerRadius:(CGFloat)cornerRadius OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithKern:(double)kern font:(UIFont * _Nonnull)font cornerRadius:(CGFloat)cornerRadius textColor:(UIColor * _Nonnull)textColor backroundColor:(UIColor * _Nonnull)backroundColor OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
 
 
+/// The Trim video parts configuration
 SWIFT_CLASS("_TtC20BanubaVideoEditorSDK29TrimGalleryVideoConfiguration")
 @interface TrimGalleryVideoConfiguration : NSObject
+/// VideoResolutionConfiguration setups editor options for rendering video
 @property (nonatomic, strong) VideoResolutionConfiguration * _Nonnull videoResolutionConfiguration;
+/// SmallActivityIndicatorConfiguration setups activity indicator style
 @property (nonatomic, strong) SmallActivityIndicatorConfiguration * _Nonnull activityIndicatorConfiguration;
+/// ImageButtonConfiguration setups delete video part button style
 @property (nonatomic, strong) ImageButtonConfiguration * _Nonnull deleteGalleryVideoPartButtonConfiguration;
+/// GalleryVideoPartsConfiguration setups video parts styles
 @property (nonatomic, strong) GalleryVideoPartsConfiguration * _Nonnull galleryVideoPartsConfiguration;
+/// BackButtonConfiguration setups back button style
 @property (nonatomic, strong) BackButtonConfiguration * _Nonnull backButtonConfiguration;
+/// BackButtonConfiguration setups next button style
 @property (nonatomic, strong) SaveButtonConfiguration * _Nonnull nextButtonConfiguration;
+/// TextConfiguration setups delete video part button style
 @property (nonatomic, strong) TextConfiguration * _Nonnull deleteToolTipLabel;
+/// PlayerControlConfiguration setups play/pause button style
 @property (nonatomic, strong) PlayerControlConfiguration * _Nonnull playerControlConfiguration;
+/// BackgroundConfiguration setups video parts background style
 @property (nonatomic, strong) BackgroundConfiguration * _Nonnull videoPartsBackgroundConfiguration;
+/// BackgroundConfiguration setups background style
 @property (nonatomic, strong) BackgroundConfiguration * _Nonnull backgroundConfiguration;
+/// ScreenNameConfiguration setups screen title style
 @property (nonatomic, strong) ScreenNameConfiguration * _Nonnull screenNameConfiguration;
+/// TimeLabelConfiguration setups current duration view style
 @property (nonatomic, strong) TimeLabelConfiguration * _Nonnull editedTimeLabelConfiguration;
 - (nonnull instancetype)initWithVideoResolutionConfiguration:(VideoResolutionConfiguration * _Nonnull)videoResolutionConfiguration activityIndicatorConfiguration:(SmallActivityIndicatorConfiguration * _Nonnull)activityIndicatorConfiguration deleteGalleryVideoPartButtonConfiguration:(ImageButtonConfiguration * _Nonnull)deleteGalleryVideoPartButtonConfiguration galleryVideoPartsConfiguration:(GalleryVideoPartsConfiguration * _Nonnull)galleryVideoPartsConfiguration backButtonConfiguration:(BackButtonConfiguration * _Nonnull)backButtonConfiguration nextButtonConfiguration:(SaveButtonConfiguration * _Nonnull)nextButtonConfiguration deleteToolTipLabel:(TextConfiguration * _Nonnull)deleteToolTipLabel playerControlConfiguration:(PlayerControlConfiguration * _Nonnull)playerControlConfiguration videoPartsBackgroundConfiguration:(BackgroundConfiguration * _Nonnull)videoPartsBackgroundConfiguration backgroundConfiguration:(BackgroundConfiguration * _Nonnull)backgroundConfiguration screenNameConfiguration:(ScreenNameConfiguration * _Nonnull)screenNameConfiguration editedTimeLabelConfiguration:(TimeLabelConfiguration * _Nonnull)editedTimeLabelConfiguration OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
@@ -1684,25 +1940,44 @@ SWIFT_CLASS("_TtC20BanubaVideoEditorSDK29TrimGalleryVideoConfiguration")
 
 
 
+/// The Time line configuration
 SWIFT_CLASS("_TtC20BanubaVideoEditorSDK25TrimTimeLineConfiguration")
 @interface TrimTimeLineConfiguration : NSObject
+/// Draggers color when max duration reached
 @property (nonatomic, strong) UIColor * _Nonnull maxColor;
+/// Draggers default colors
 @property (nonatomic, strong) UIColor * _Nonnull defaultColor;
+/// Controls color
 @property (nonatomic, strong) UIColor * _Nonnull trimControlsColor;
+/// Cursor color
 @property (nonatomic, strong) UIColor * _Nonnull cursorColor;
+/// Draggers line color
 @property (nonatomic, strong) UIColor * _Nonnull draggersLineColor;
+/// Draggers corner radius
 @property (nonatomic) CGFloat draggersCornerRadius;
+/// Draggers line width
 @property (nonatomic) CGFloat draggersLineWidth;
+/// Draggers line height
 @property (nonatomic) CGFloat draggersLineHeight;
+/// Number of lines in draggers
 @property (nonatomic) NSInteger numberOfLinesInDraggers;
+/// Draggers line spacing
 @property (nonatomic) CGFloat draggerLinesSpacing;
+/// Time lime borders line width
 @property (nonatomic) CGFloat borderWidth;
+/// Draggers line corner radius
 @property (nonatomic) CGFloat draggersLineCornerRadius;
+/// TextButtonConfiguration setups cancel button style
 @property (nonatomic, strong) TextButtonConfiguration * _Nonnull cancelButtonConfiguration;
+/// TextButtonConfiguration setups done button style
 @property (nonatomic, strong) TextButtonConfiguration * _Nonnull doneButtonConfiguration;
+/// ImageName setups draggers UIImage
 @property (nonatomic, copy) NSString * _Nullable draggerImageName;
+/// Draggers frame width
 @property (nonatomic) CGFloat draggerWidth;
+/// Time line inset
 @property (nonatomic) CGFloat timelineTopBottomInset;
+/// VideoResolutionConfiguration setups trim options for rendering video
 @property (nonatomic, strong) VideoResolutionConfiguration * _Nonnull videoResolution;
 - (nonnull instancetype)initWithMaxColor:(UIColor * _Nonnull)maxColor defaultColor:(UIColor * _Nonnull)defaultColor trimControlsColor:(UIColor * _Nonnull)trimControlsColor cursorColor:(UIColor * _Nonnull)cursorColor draggersLineColor:(UIColor * _Nonnull)draggersLineColor draggersCornerRadius:(CGFloat)draggersCornerRadius draggersLineWidth:(CGFloat)draggersLineWidth draggersLineHeight:(CGFloat)draggersLineHeight numberOfLinesInDraggers:(NSInteger)numberOfLinesInDraggers draggerLinesSpacing:(CGFloat)draggerLinesSpacing borderWidth:(CGFloat)borderWidth draggersLineCornerRadius:(CGFloat)draggersLineCornerRadius cancelButtonConfiguration:(TextButtonConfiguration * _Nonnull)cancelButtonConfiguration doneButtonConfiguration:(TextButtonConfiguration * _Nonnull)doneButtonConfiguration draggerImageName:(NSString * _Nullable)draggerImageName draggerWidth:(CGFloat)draggerWidth timelineTopBottomInset:(CGFloat)timelineTopBottomInset videoResolution:(VideoResolutionConfiguration * _Nonnull)videoResolution OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
@@ -1724,18 +1999,57 @@ SWIFT_CLASS("_TtC20BanubaVideoEditorSDK25TrimTimeLineConfiguration")
 
 
 
+
+
+/// Video cover selection screen configuration
 SWIFT_CLASS("_TtC20BanubaVideoEditorSDK32VideoCoverSelectionConfiguration")
 @interface VideoCoverSelectionConfiguration : NSObject
+/// The cancel button configuration
 @property (nonatomic, strong) TextButtonConfiguration * _Nonnull cancelButton;
-@property (nonatomic, strong) RoundedButtonConfiguration * _Nonnull doneButton;
+/// The done button configuration
+@property (nonatomic, strong) TextButtonConfiguration * _Nonnull doneButton;
+/// The title laber configuration
+@property (nonatomic, strong) TextConfiguration * _Nullable titleLabel;
+/// The tooltip label configuration
 @property (nonatomic, strong) TextConfiguration * _Nonnull toolTipLabel;
-@property (nonatomic, strong) UIColor * _Nonnull sliderColor;
-@property (nonatomic, strong) UIColor * _Nonnull sliderMinTrackTintColor;
-@property (nonatomic, strong) UIColor * _Nonnull sliderMaxTrackTintColor;
+/// The selector view color
+@property (nonatomic, strong) UIColor * _Nonnull selectorColor;
+/// Select cover from gallery button configuration
+@property (nonatomic, strong) BanubaButtonConfiguration * _Nonnull selectGalleryImageButton;
+/// Delete cover from gallery button configuration
+@property (nonatomic, strong) BanubaButtonConfiguration * _Nonnull deleteImageButtonImageConfiguration;
+/// The background configuration
 @property (nonatomic, strong) BackgroundConfiguration * _Nonnull backgroundConfiguration;
-- (nonnull instancetype)initWithCancelButton:(TextButtonConfiguration * _Nonnull)cancelButton doneButton:(RoundedButtonConfiguration * _Nonnull)doneButton toolTipLabel:(TextConfiguration * _Nonnull)toolTipLabel sliderColor:(UIColor * _Nonnull)sliderColor sliderMinTrackTintColor:(UIColor * _Nonnull)sliderMinTrackTintColor sliderMaxTrackTintColor:(UIColor * _Nonnull)sliderMaxTrackTintColor backgroundConfiguration:(BackgroundConfiguration * _Nonnull)backgroundConfiguration OBJC_DESIGNATED_INITIALIZER;
+/// The preview view background configuration
+@property (nonatomic, strong) BackgroundConfiguration * _Nonnull previewBackgroundConfiguration;
+/// The thumbnails Curosr Configuration
+@property (nonatomic, strong) ImageButtonConfiguration * _Nonnull thumbnailsCursorConfiguration;
+/// The number of thumbnails
+@property (nonatomic) NSInteger numberOfThumbnails;
+- (nonnull instancetype)initWithCancelButton:(TextButtonConfiguration * _Nonnull)cancelButton doneButton:(TextButtonConfiguration * _Nonnull)doneButton titleLabel:(TextConfiguration * _Nullable)titleLabel toolTipLabel:(TextConfiguration * _Nonnull)toolTipLabel selectorColor:(UIColor * _Nonnull)selectorColor selectGalleryImageButton:(BanubaButtonConfiguration * _Nonnull)selectGalleryImageButton deleteImageButtonImageConfiguration:(BanubaButtonConfiguration * _Nonnull)deleteImageButtonImageConfiguration backgroundConfiguration:(BackgroundConfiguration * _Nonnull)backgroundConfiguration previewBackgroundConfiguration:(BackgroundConfiguration * _Nonnull)previewBackgroundConfiguration thumbnailsCursorConfiguration:(ImageButtonConfiguration * _Nonnull)thumbnailsCursorConfiguration numberOfThumbnails:(NSInteger)numberOfThumbnails OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
+
+SWIFT_CLASS("_TtC20BanubaVideoEditorSDK33VideoCoverSelectionViewController")
+@interface VideoCoverSelectionViewController : UIViewController
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
+- (void)viewDidLoad;
+- (void)viewWillDisappear:(BOOL)animated;
+- (void)viewDidLayoutSubviews;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil SWIFT_UNAVAILABLE;
+@end
+
+
+
+
+@class UIImagePickerController;
+
+@interface VideoCoverSelectionViewController (SWIFT_EXTENSION(BanubaVideoEditorSDK)) <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+- (void)imagePickerController:(UIImagePickerController * _Nonnull)picker didFinishPickingMediaWithInfo:(NSDictionary<UIImagePickerControllerInfoKey, id> * _Nonnull)info;
+- (void)imagePickerControllerDidCancel:(UIImagePickerController * _Nonnull)picker;
 @end
 
 
@@ -1760,7 +2074,7 @@ SWIFT_PROTOCOL("_TtP20BanubaVideoEditorSDK32VideoEditorCaptureButtonDelegate_")
 /// The capture button view provider.
 SWIFT_PROTOCOL("_TtP20BanubaVideoEditorSDK32VideoEditorCaptureButtonProvider_")
 @protocol VideoEditorCaptureButtonProvider
-- (id <VideoEditorCaptureButton> _Nullable)getButtonFor:(enum RecordMode)mode SWIFT_WARN_UNUSED_RESULT;
+- (id <VideoEditorCaptureButton> _Nullable)getButton SWIFT_WARN_UNUSED_RESULT;
 @end
 
 typedef SWIFT_ENUM(NSInteger, VideoEditorCaptureButtonState, open) {
@@ -1788,13 +2102,13 @@ SWIFT_CLASS("_TtC20BanubaVideoEditorSDK17VideoEditorConfig")
 @property (nonatomic, strong) VideoOverlayConfiguration * _Nonnull videoOverlayConfiguration;
 @property (nonatomic, strong) VideoEditorDurationConfig * _Nonnull videoDurationConfiguration;
 @property (nonatomic, strong) GifPickerConfiguration * _Nonnull gifPickerConfiguration;
-@property (nonatomic, strong) SlideShowConfiguration * _Nonnull slideShowConfiguration;
-@property (nonatomic, strong) CombinedGalleryConfiguration * _Nullable combinedGalleryConfiguration;
+@property (nonatomic, strong) CombinedGalleryConfiguration * _Nonnull combinedGalleryConfiguration;
 @property (nonatomic, strong) TrimTimeLineConfiguration * _Nullable trimTimeLineConfiguration;
 @property (nonatomic, strong) GalleryConfiguration * _Nonnull galleryConfiguration;
 @property (nonatomic, strong) TrimGalleryVideoConfiguration * _Nonnull trimGalleryVideoConfiguration;
 @property (nonatomic, strong) FilterConfiguration * _Nonnull filterConfiguration;
-@property (nonatomic, strong) VideoCoverSelectionConfiguration * _Nonnull videoCoverSelectionConfiguration;
+@property (nonatomic, strong) SimpleVideoCoverSelectionConfiguration * _Nonnull videoCoverSelectionConfiguration;
+@property (nonatomic, strong) VideoCoverSelectionConfiguration * _Nonnull extendedVideoCoverSelectionConfiguration;
 @property (nonatomic, strong) MusicEditorConfig * _Nonnull musicEditorConfiguration;
 @property (nonatomic, strong) OverlayEditorConfiguration * _Nonnull overlayEditorConfiguration;
 @property (nonatomic, strong) MultiTrimConfiguration * _Nonnull multiTrimConfiguration;
@@ -1805,12 +2119,11 @@ SWIFT_CLASS("_TtC20BanubaVideoEditorSDK17VideoEditorConfig")
 @property (nonatomic, strong) FeatureConfiguration * _Nonnull featureConfiguration;
 @property (nonatomic) BOOL isHandfreeEnabled;
 - (nonnull instancetype)init;
-- (nonnull instancetype)initWithVideoResolutionConfiguration:(VideoResolutionConfiguration * _Nonnull)videoResolutionConfiguration recorderConfiguration:(RecorderConfiguration * _Nonnull)recorderConfiguration editorConfiguration:(EditorConfiguration * _Nonnull)editorConfiguration singleTrimConfiguration:(SingleTrimConfiguration * _Nonnull)singleTrimConfiguration textEditorConfiguration:(TextEditorConfiguration * _Nonnull)textEditorConfiguration toastConfiguration:(ToastConfiguration * _Nonnull)toastConfiguration fullScreenActivityConfiguration:(FullScreenActivityConfiguration * _Nonnull)fullScreenActivityConfiguration smallActivityIndicatorConfiguration:(SmallActivityIndicatorConfiguration * _Nonnull)smallActivityIndicatorConfiguration albumsConfiguration:(AlbumsConfiguration * _Nonnull)albumsConfiguration videoOverlayConfiguration:(VideoOverlayConfiguration * _Nonnull)videoOverlayConfiguration videoDurationConfiguration:(VideoEditorDurationConfig * _Nonnull)videoDurationConfiguration gifPickerConfiguration:(GifPickerConfiguration * _Nonnull)gifPickerConfiguration slideShowConfiguration:(SlideShowConfiguration * _Nonnull)slideShowConfiguration trimTimeLineConfiguration:(TrimTimeLineConfiguration * _Nonnull)trimTimeLineConfiguration combinedGalleryConfiguration:(CombinedGalleryConfiguration * _Nullable)combinedGalleryConfiguration galleryConfiguration:(GalleryConfiguration * _Nonnull)galleryConfiguration trimGalleryVideoConfiguration:(TrimGalleryVideoConfiguration * _Nonnull)trimGalleryVideoConfiguration filterConfiguration:(FilterConfiguration * _Nonnull)filterConfiguration videoCoverSelectionConfiguration:(VideoCoverSelectionConfiguration * _Nonnull)videoCoverSelectionConfiguration musicEditorConfiguration:(MusicEditorConfig * _Nonnull)musicEditorConfiguration overlayEditorConfiguration:(OverlayEditorConfiguration * _Nonnull)overlayEditorConfiguration featureConfiguration:(FeatureConfiguration * _Nonnull)featureConfiguration multiTrimConfiguration:(MultiTrimConfiguration * _Nonnull)multiTrimConfiguration watermarkConfiguration:(WatermarkConfiguration * _Nullable)watermarkConfiguration speedSelectionConfiguration:(SpeedSelectionConfiguration * _Nonnull)speedSelectionConfiguration alertViewConfiguration:(AlertViewConfiguration * _Nonnull)alertViewConfiguration handsfreeConfiguration:(HandsfreeConfiguration * _Nullable)handsfreeConfiguration OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithVideoResolutionConfiguration:(VideoResolutionConfiguration * _Nonnull)videoResolutionConfiguration recorderConfiguration:(RecorderConfiguration * _Nonnull)recorderConfiguration editorConfiguration:(EditorConfiguration * _Nonnull)editorConfiguration singleTrimConfiguration:(SingleTrimConfiguration * _Nonnull)singleTrimConfiguration textEditorConfiguration:(TextEditorConfiguration * _Nonnull)textEditorConfiguration toastConfiguration:(ToastConfiguration * _Nonnull)toastConfiguration fullScreenActivityConfiguration:(FullScreenActivityConfiguration * _Nonnull)fullScreenActivityConfiguration smallActivityIndicatorConfiguration:(SmallActivityIndicatorConfiguration * _Nonnull)smallActivityIndicatorConfiguration albumsConfiguration:(AlbumsConfiguration * _Nonnull)albumsConfiguration videoOverlayConfiguration:(VideoOverlayConfiguration * _Nonnull)videoOverlayConfiguration videoDurationConfiguration:(VideoEditorDurationConfig * _Nonnull)videoDurationConfiguration gifPickerConfiguration:(GifPickerConfiguration * _Nonnull)gifPickerConfiguration combinedGalleryConfiguration:(CombinedGalleryConfiguration * _Nonnull)combinedGalleryConfiguration trimTimeLineConfiguration:(TrimTimeLineConfiguration * _Nonnull)trimTimeLineConfiguration galleryConfiguration:(GalleryConfiguration * _Nonnull)galleryConfiguration trimGalleryVideoConfiguration:(TrimGalleryVideoConfiguration * _Nonnull)trimGalleryVideoConfiguration filterConfiguration:(FilterConfiguration * _Nonnull)filterConfiguration videoCoverSelectionConfiguration:(SimpleVideoCoverSelectionConfiguration * _Nonnull)videoCoverSelectionConfiguration extendedVideoCoverSelectionConfiguration:(VideoCoverSelectionConfiguration * _Nonnull)extendedVideoCoverSelectionConfiguration musicEditorConfiguration:(MusicEditorConfig * _Nonnull)musicEditorConfiguration overlayEditorConfiguration:(OverlayEditorConfiguration * _Nonnull)overlayEditorConfiguration featureConfiguration:(FeatureConfiguration * _Nonnull)featureConfiguration multiTrimConfiguration:(MultiTrimConfiguration * _Nonnull)multiTrimConfiguration watermarkConfiguration:(WatermarkConfiguration * _Nullable)watermarkConfiguration speedSelectionConfiguration:(SpeedSelectionConfiguration * _Nonnull)speedSelectionConfiguration alertViewConfiguration:(AlertViewConfiguration * _Nonnull)alertViewConfiguration handsfreeConfiguration:(HandsfreeConfiguration * _Nullable)handsfreeConfiguration OBJC_DESIGNATED_INITIALIZER;
 - (void)applyFont:(UIFont * _Nonnull)font;
 - (void)updateAlertFonts:(UIFont * _Nonnull)font;
 - (void)updateRecorderFonts:(UIFont * _Nonnull)font;
 - (void)updateMultiTrimFonts:(UIFont * _Nonnull)font;
-- (void)updateCombinedGalleryFonts:(UIFont * _Nonnull)font;
 - (void)updateEditorFonts:(UIFont * _Nonnull)font;
 - (void)updateSingleTrimFonts:(UIFont * _Nonnull)font;
 - (void)updateToastFonts:(UIFont * _Nonnull)font;
@@ -1848,6 +2161,7 @@ SWIFT_CLASS("_TtC20BanubaVideoEditorSDK25VideoEditorDurationConfig")
 /// Default is 10.0.
 @property (nonatomic) NSTimeInterval minimumRecordingTimeToPlayCountdownAnimation;
 - (nonnull instancetype)initWithMaximumVideoDuration:(NSTimeInterval)maximumVideoDuration minimumDurationFromCamera:(NSTimeInterval)minimumDurationFromCamera minimumDurationFromGallery:(NSTimeInterval)minimumDurationFromGallery minimumVideoDuration:(NSTimeInterval)minimumVideoDuration minimumTrimmedPartDuration:(NSTimeInterval)minimumTrimmedPartDuration minimumRecordingTimeToPlayCountdownAnimation:(NSTimeInterval)minimumRecordingTimeToPlayCountdownAnimation OBJC_DESIGNATED_INITIALIZER;
+- (BOOL)isValidMaxDurationWithTolerance:(NSTimeInterval)duration SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
@@ -1896,8 +2210,10 @@ SWIFT_CLASS("_TtC20BanubaVideoEditorSDK13VideoMetadata")
 @end
 
 
+/// The Overlay configuration
 SWIFT_CLASS("_TtC20BanubaVideoEditorSDK25VideoOverlayConfiguration")
 @interface VideoOverlayConfiguration : NSObject
+/// ImageConfiguration setups delete button style
 @property (nonatomic, strong) ImageConfiguration * _Nonnull deleteImageConfiguration;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
