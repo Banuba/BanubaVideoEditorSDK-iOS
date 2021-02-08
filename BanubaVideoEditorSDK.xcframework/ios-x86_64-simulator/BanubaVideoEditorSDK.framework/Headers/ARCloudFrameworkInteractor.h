@@ -15,7 +15,7 @@ NS_SWIFT_NAME(ARCloudFrameworkInteractor)
 
 + (BOOL)isFrameworkAvailable;
 
-- (instancetype)init: (NSString *)token;
+//- (instancetype)init: (NSString *)token;
 
 @end
 
