@@ -262,6 +262,7 @@ SWIFT_CLASS("_TtC20BanubaVideoEditorSDK13CountdownView")
 
 
 
+
 SWIFT_CLASS("_TtC20BanubaVideoEditorSDK25EditorEffectsConfigHolder")
 @interface EditorEffectsConfigHolder : NSObject
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;

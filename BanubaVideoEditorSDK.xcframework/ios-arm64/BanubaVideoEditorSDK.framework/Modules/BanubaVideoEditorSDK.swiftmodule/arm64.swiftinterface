@@ -4,6 +4,7 @@
 import ARKit
 import AVFoundation
 import AVKit
+import BanubaARCloudSDK
 import BanubaEffectPlayer
 import BanubaMusicEditorSDK
 import BanubaOverlayEditorSDK
@@ -437,6 +438,8 @@ public class TextEditSelectionBorderAnimationBehavior : BanubaVideoEditorSDK.Tex
   }
   @objc override dynamic public func draw(_ rect: CoreGraphics.CGRect)
   @objc deinit
+}
+extension CountdownView : BanubaMusicEditorSDK.MusicEditorCountdownAnimatableView {
 }
 extension CountdownView {
   public var countdownDigit: Swift.Int {

@@ -6,15 +6,14 @@
 //  Copyright © 2021 Banuba. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+@import Foundation;
+
 NS_ASSUME_NONNULL_BEGIN
 
 NS_SWIFT_NAME(ARCloudFrameworkInteractor)
 @interface ARCloudFrameworkInteractor : NSObject
 
 + (BOOL)isFrameworkAvailable;
-
-- (instancetype)init: (NSString *)token;
 
 @end
 
