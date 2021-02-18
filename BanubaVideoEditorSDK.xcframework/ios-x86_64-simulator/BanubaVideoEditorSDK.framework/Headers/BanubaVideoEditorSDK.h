@@ -18,5 +18,5 @@ FOUNDATION_EXPORT const unsigned char BanubaVideoEditorSDKVersionString[];
 #import <BanubaVideoEditorSDK/BNBAsyncOperation.h>
 #import <BanubaVideoEditorSDK/AssetHelper.h>
 #import <BanubaVideoEditorSDK/LicenceManagerWrapper.h>
-#import <BanubaVideoEditorSDK/ARCloudFrameworkInteractor.h>
+//#import <BanubaVideoEditorSDK/ARCloudFrameworkInteractor.h>
 
