@@ -6,8 +6,8 @@
 //  Copyright © 2021 Banuba. All rights reserved.
 //
 
-@import BanubaSdk;
-@import BanubaEffectPlayer;
+@import BanubaSDKServicing;
+@import AVKit;
 
 NS_ASSUME_NONNULL_BEGIN
 NS_SWIFT_NAME(BanubaSDKFrameworkInteractor)
@@ -15,7 +15,7 @@ NS_SWIFT_NAME(BanubaSDKFrameworkInteractor)
 // MARK: - Banuba Sdk framework interactor
 __attribute__((weak_import)) @interface BanubaSDKFrameworkInteractor : NSObject
 
-@property (strong, nonatomic)  BanubaCameraModule *cameraModule;
+@property (strong, nonatomic)  id<CameraModule> cameraModule;
 
 + (BOOL)isFrameworkAvailable;
 
@@ -25,7 +25,7 @@ __attribute__((weak_import)) @interface BanubaSDKFrameworkInteractor : NSObject
 useHEVCCodecIfPossibleForRecorder:(BOOL) useHEVCCodecIfPossibleForRecorder
                     arCloudPath:(NSString * _Nullable) arCloudPath;
 
-+ (BanubaCameraModule * _Nullable) getCameraModuleInstance;
++ (id<CameraModule> _Nullable) getCameraModuleInstance;
 + (BOOL)isTokenExpired;
 
 @end

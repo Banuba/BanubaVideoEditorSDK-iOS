@@ -263,6 +263,7 @@ SWIFT_CLASS("_TtC20BanubaVideoEditorSDK13CountdownView")
 
 
 
+
 /// Default exposure animation view
 SWIFT_CLASS("_TtC20BanubaVideoEditorSDK21ExposureAnimationView")
 @interface ExposureAnimationView : UIView
