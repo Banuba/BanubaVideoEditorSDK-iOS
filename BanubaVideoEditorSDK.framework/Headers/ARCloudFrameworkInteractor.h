@@ -1,0 +1,63 @@
+//
+//  ARCloudFrameworkInteractor.h
+//  BanubaVideoEditorSDK
+//
+//  Created by Andrei Sak on 6.01.21.
+//  Copyright © 2021 Banuba. All rights reserved.
+//
+
+@import Foundation;
+@import BanubaARCloudSDK;
+
+// MARK:- ARCloudFrameworkInteractor
+NS_ASSUME_NONNULL_BEGIN
+
+typedef void (^getAREffectsCompletion)(NSArray<id<AREffect>> * _Nullable effects, NSError * _Nullable error);
+typedef void (^getArEffectPreviewCompletion)(UIImage * _Nullable image, NSError * _Nullable error);
+typedef void (^downloadProgress)(double downloadProgress);
+typedef void (^downloadArEffectCompletion)(NSURL * _Nullable url, NSError * _Nullable error);
+
+NS_SWIFT_NAME(ARCloudFrameworkInteractor)
+__attribute__((weak_import)) @interface ARCloudFrameworkInteractor : NSObject
+
+@property (strong, nonatomic) BanubaARCloud *arCloud;
+
++ (BOOL)isFrameworkAvailable;
+
+- (instancetype)init: (NSString *) token;
+
+- (void) getAREffects: (getAREffectsCompletion) completion;
+- (void) cancelDownloadingEffect: (NSUInteger) requestId;
+
+- (void) getArEffectPreview: (id<AREffect> _Nonnull) effect
+                 completion: (getArEffectPreviewCompletion) completion;
+
+- (NSUInteger) downloadArEffect: (id<AREffect> _Nonnull) effect
+         downloadProgress: (downloadProgress) downloadProgress
+               completion: (downloadArEffectCompletion) completion;
+
++ (NSURL * _Nullable) getEffectFolderURL;
+@end
+
+NS_ASSUME_NONNULL_END
+
+// MARK:- AREffectWrapper
+
+NS_ASSUME_NONNULL_BEGIN
+NS_SWIFT_NAME(AREffectWrapper)
+__attribute__((weak_import)) @interface AREffectWrapper : NSObject <AREffect>
+
+@property (readonly, copy) NSString *title;
+@property (readonly, copy) NSURL *previewImage;
+@property (readonly, copy) NSURL *downloadLink;
+@property (readonly) BOOL isDownloaded;
+@property (readwrite, nullable, copy, nonatomic) NSURL *localURL;
+
+- (instancetype)init: (NSString *) title
+        previewImage: (NSURL *) previewImage
+        downloadLink: (NSURL *) downloadLink
+        isDownloaded: (BOOL) isDownloaded
+           localURL: (NSURL * _Nullable) localURL;
+@end
+
+NS_ASSUME_NONNULL_END
