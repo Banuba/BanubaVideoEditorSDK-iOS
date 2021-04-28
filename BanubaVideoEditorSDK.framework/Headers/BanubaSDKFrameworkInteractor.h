@@ -25,7 +25,7 @@ __attribute__((weak_import)) @interface BanubaSDKFrameworkInteractor : NSObject
 useHEVCCodecIfPossibleForRecorder:(BOOL) useHEVCCodecIfPossibleForRecorder
                     arCloudPath:(NSString * _Nullable) arCloudPath;
 
-+ (id<CameraModule> _Nullable) getCameraModuleInstance;
++ (id _Nullable) getCameraModuleInstance;
 + (BOOL)isTokenExpired;
 
 @end

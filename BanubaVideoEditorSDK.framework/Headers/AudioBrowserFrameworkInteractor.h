@@ -8,7 +8,6 @@
 
 @import UIKit;
 @import Foundation;
-@import BanubaMusicEditorSDK;
 
 NS_ASSUME_NONNULL_BEGIN
 NS_SWIFT_NAME(AudioBrowserTrackWrapper)
@@ -37,7 +36,7 @@ __attribute__((weak_import)) @interface AudioBrowserFrameworkInteractor : NSObje
 - (instancetype)initWithTransitionDelegate: (id<UIViewControllerTransitioningDelegate>) transitionDelegate
                              selectedTrack: (AudioBrowserTrackWrapper * _Nullable) selectedTrack;
 
--(BaseTrackSelectionViewController * _Nullable) getAudioBrowserController;
+-(UIViewController * _Nullable) getAudioBrowserController;
 
 @end
 NS_ASSUME_NONNULL_END
