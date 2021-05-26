@@ -42,7 +42,7 @@ __attribute__((weak_import)) @interface ARCloudFrameworkInteractor : NSObject
 
 + (BOOL)isFrameworkAvailable;
 
-- (instancetype)init: (NSString *) token;
+- (instancetype)init: (NSString *) arCloudUrl;
 
 - (void) getAREffects: (getAREffectsCompletion) completion;
 - (void) cancelDownloadingEffect: (NSUInteger) requestId;

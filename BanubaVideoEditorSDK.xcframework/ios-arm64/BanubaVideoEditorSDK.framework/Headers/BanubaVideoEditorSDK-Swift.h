@@ -189,6 +189,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #pragma clang diagnostic ignored "-Watimport-in-framework-header"
 #endif
 @import AVFAudio;
+@import BanubaUtilities;
 @import CoreGraphics;
 @import Foundation;
 @import ObjectiveC;
@@ -211,21 +212,6 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #endif
 
 
-@class NSNumber;
-@class NSString;
-@class NSBundle;
-@class NSCoder;
-
-SWIFT_CLASS("_TtC20BanubaVideoEditorSDK19AlertViewController")
-@interface AlertViewController : UIViewController
-- (void)viewWillAppear:(BOOL)animated;
-- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
-@end
-
-
-
-
 
 
 SWIFT_CLASS("_TtC20BanubaVideoEditorSDK12AudioService")
@@ -234,6 +220,7 @@ SWIFT_CLASS("_TtC20BanubaVideoEditorSDK12AudioService")
 @end
 
 @class AVAudioPlayer;
+@class NSNumber;
 
 @interface AudioService (SWIFT_EXTENSION(BanubaVideoEditorSDK)) <AVAudioPlayerDelegate>
 - (void)audioPlayerDidFinishPlaying:(AVAudioPlayer * _Nonnull)player successfully:(BOOL)flag;
@@ -255,6 +242,7 @@ SWIFT_CLASS("_TtC20BanubaVideoEditorSDK11AudioWriter")
 
 
 
+@class NSCoder;
 
 SWIFT_CLASS("_TtC20BanubaVideoEditorSDK13CountdownView")
 @interface CountdownView : UIView
@@ -282,6 +270,8 @@ SWIFT_CLASS("_TtC20BanubaVideoEditorSDK22FullscreenActivityView")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class NSString;
+@class NSBundle;
 
 SWIFT_CLASS("_TtC20BanubaVideoEditorSDK34GIFPickerDataLoadingViewController")
 @interface GIFPickerDataLoadingViewController : UIViewController
@@ -290,6 +280,7 @@ SWIFT_CLASS("_TtC20BanubaVideoEditorSDK34GIFPickerDataLoadingViewController")
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end
+
 
 
 SWIFT_CLASS("_TtC20BanubaVideoEditorSDK8GiphyAPI")
@@ -301,6 +292,16 @@ SWIFT_CLASS("_TtC20BanubaVideoEditorSDK8GiphyAPI")
 
 
 
+@class UIImage;
+
+/// The image configuration
+SWIFT_CLASS("_TtC20BanubaVideoEditorSDK18ImageConfiguration")
+@interface ImageConfiguration : NSObject <ImageConfigurationProtocol>
+/// The image stored or instance by name
+@property (nonatomic, readonly, strong) UIImage * _Nullable image;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
 
 
 
@@ -315,7 +316,6 @@ SWIFT_CLASS("_TtC20BanubaVideoEditorSDK32PreviewSingleVideoViewController")
 
 
 
-@class UIImage;
 
 SWIFT_CLASS("_TtC20BanubaVideoEditorSDK16PreviewVideoView")
 @interface PreviewVideoView : UIImageView
@@ -328,6 +328,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) Class _Nonnull layer
 @end
 
 
+
 SWIFT_CLASS("_TtC20BanubaVideoEditorSDK22TimelineViewController")
 @interface TimelineViewController : UIViewController
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
@@ -336,9 +337,6 @@ SWIFT_CLASS("_TtC20BanubaVideoEditorSDK22TimelineViewController")
 - (void)viewDidLayoutSubviews;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil SWIFT_UNAVAILABLE;
 @end
-
-
-
 
 
 
@@ -375,14 +373,6 @@ SWIFT_CLASS("_TtC20BanubaVideoEditorSDK33VideoCoverSelectionViewController")
 @end
 
 
-
-
-SWIFT_CLASS("_TtC20BanubaVideoEditorSDK28VideoEditorActivityIndicator")
-@interface VideoEditorActivityIndicator : UIView
-@property (nonatomic) CGRect bounds;
-- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
-@end
 
 #if __has_attribute(external_source_symbol)
 # pragma clang attribute pop
