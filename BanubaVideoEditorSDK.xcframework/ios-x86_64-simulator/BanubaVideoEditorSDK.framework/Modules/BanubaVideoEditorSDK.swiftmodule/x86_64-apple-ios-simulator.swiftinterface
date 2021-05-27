@@ -8,7 +8,6 @@ import BanubaLicenseServicingSDK
 import BanubaMusicEditorSDK
 import BanubaOverlayEditorSDK
 import BanubaSDKServicing
-import BanubaSdk
 import BanubaSdkSimple
 import BanubaUtilities
 @_exported import BanubaVideoEditorSDK
