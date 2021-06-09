@@ -257,9 +257,9 @@ SWIFT_CLASS("_TtC20BanubaVideoEditorSDK13CountdownView")
 /// Default exposure animation view
 SWIFT_CLASS("_TtC20BanubaVideoEditorSDK21ExposureAnimationView")
 @interface ExposureAnimationView : UIView
-- (void)drawRect:(CGRect)rect;
 - (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
+- (void)drawRect:(CGRect)rect;
 @end
 
 
