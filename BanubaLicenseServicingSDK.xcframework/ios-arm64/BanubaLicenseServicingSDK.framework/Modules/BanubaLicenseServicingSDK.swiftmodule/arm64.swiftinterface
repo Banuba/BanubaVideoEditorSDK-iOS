@@ -1,13 +1,83 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.4 (swiftlang-1205.0.26.9 clang-1205.0.19.55)
+// swift-compiler-version: Apple Swift version 5.4.2 (swiftlang-1205.0.28.2 clang-1205.0.19.57)
 // swift-module-flags: -target arm64-apple-ios11.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -Onone -module-name BanubaLicenseServicingSDK
 @_exported import BanubaLicenseServicingSDK
+import BanubaUtilities
 import Foundation
 import Swift
+import UIKit
 import os.log
 import os
+public enum BNBInformerEventType {
+  case `init`(BanubaLicenseServicingSDK.BasicEventOptions)
+  case present(BanubaLicenseServicingSDK.BasicEventOptions)
+  case export(BanubaLicenseServicingSDK.BasicEventOptions)
+}
+public protocol BasicEventOptions : Swift.Decodable, Swift.Encodable {
+  var sdkVersion: Swift.String { get }
+  var iOSVersion: Swift.String { get }
+  var deviceType: Swift.String { get }
+  var token: Swift.String { get }
+  func adjustStringJson() -> Swift.String?
+}
+public struct ExportEventOptions : BanubaLicenseServicingSDK.BasicEventOptions {
+  public var token: Swift.String
+  public var sdkVersion: Swift.String
+  public var iOSVersion: Swift.String
+  public var deviceType: Swift.String
+  public init(token: Swift.String, videoResolutions: [Swift.String], maskEffects: [Swift.String]?, fxEffects: [Swift.String]?, colorEffect: Swift.String?, exportDuration: Foundation.TimeInterval, videoDuration: Foundation.TimeInterval, videoCount: Swift.UInt8)
+  public func adjustStringJson() -> Swift.String?
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct InitEventOptions : BanubaLicenseServicingSDK.BasicEventOptions {
+  public var token: Swift.String
+  public var sdkVersion: Swift.String
+  public var iOSVersion: Swift.String
+  public var deviceType: Swift.String
+  public init(token: Swift.String)
+  public func adjustStringJson() -> Swift.String?
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public typealias BanubaVideoEditorEntryPoint = BanubaLicenseServicingSDK.PresentEventOptions.EntryPoint
+public struct PresentEventOptions : BanubaLicenseServicingSDK.BasicEventOptions {
+  public var token: Swift.String
+  public var sdkVersion: Swift.String
+  public var iOSVersion: Swift.String
+  public var deviceType: Swift.String
+  public enum EntryPoint : Swift.String, Swift.Codable {
+    case trim
+    case camera
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public init(token: Swift.String, entryPoint: BanubaLicenseServicingSDK.PresentEventOptions.EntryPoint)
+  public func adjustStringJson() -> Swift.String?
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public class BNBAnalyticsManager {
+  public var license: BanubaLicenseServicingSDK.License {
+    get
+  }
+  public init(license: BanubaLicenseServicingSDK.License)
+  @objc deinit
+}
+extension BNBAnalyticsManager {
+  public func sendEvent(withType type: BanubaLicenseServicingSDK.BNBInformerEventType)
+}
 public struct License : Swift.Equatable {
   public var clientId: Swift.String {
+    get
+  }
+  public var isTrialtoken: Swift.Bool {
+    get
+  }
+  public var supportsAnalytics: Swift.Bool {
     get
   }
   public var supportsFaceAR: Swift.Bool {
