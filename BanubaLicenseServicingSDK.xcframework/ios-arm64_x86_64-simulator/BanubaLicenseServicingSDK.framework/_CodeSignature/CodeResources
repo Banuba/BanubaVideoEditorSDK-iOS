@@ -50,7 +50,7 @@
 		</data>
 		<key>Modules/BanubaLicenseServicingSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		2AQU4QNYnnHDd9AqrJnOufVCS3c=
+		Dbqlom+MRFE8VKUlsLeB2NSG94Y=
 		</data>
 		<key>Modules/BanubaLicenseServicingSDK.swiftmodule/arm64.swiftdoc</key>
 		<data>
@@ -62,7 +62,7 @@
 		</data>
 		<key>Modules/BanubaLicenseServicingSDK.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		2AQU4QNYnnHDd9AqrJnOufVCS3c=
+		Dbqlom+MRFE8VKUlsLeB2NSG94Y=
 		</data>
 		<key>Modules/BanubaLicenseServicingSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -74,7 +74,7 @@
 		</data>
 		<key>Modules/BanubaLicenseServicingSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		FDshQZ0+jhGOT+ofWGUz9BIyxnM=
+		ZE1w9ZymIGhV57lTGdBANfdtpOU=
 		</data>
 		<key>Modules/BanubaLicenseServicingSDK.swiftmodule/x86_64.swiftdoc</key>
 		<data>
@@ -86,7 +86,7 @@
 		</data>
 		<key>Modules/BanubaLicenseServicingSDK.swiftmodule/x86_64.swiftmodule</key>
 		<data>
-		FDshQZ0+jhGOT+ofWGUz9BIyxnM=
+		ZE1w9ZymIGhV57lTGdBANfdtpOU=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -169,7 +169,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			STkFAJI6cSmQtjFKIIUZQme750R1cqBqK3YFsz8EaKs=
+			sZaUNmMmcthgo36twGpdT25vqVTYKvgqTYtiAdc64l4=
 			</data>
 		</dict>
 		<key>Modules/BanubaLicenseServicingSDK.swiftmodule/arm64.swiftdoc</key>
@@ -190,7 +190,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			STkFAJI6cSmQtjFKIIUZQme750R1cqBqK3YFsz8EaKs=
+			sZaUNmMmcthgo36twGpdT25vqVTYKvgqTYtiAdc64l4=
 			</data>
 		</dict>
 		<key>Modules/BanubaLicenseServicingSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -211,7 +211,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			0ZkzpVOKotEaavrkxGwAwB7WCmevrbH+rE3HnXS/vOo=
+			lrYtGlIUzvFTvFeyNU87oG1RPDs+soLRELstC/Fm2SY=
 			</data>
 		</dict>
 		<key>Modules/BanubaLicenseServicingSDK.swiftmodule/x86_64.swiftdoc</key>
@@ -232,7 +232,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			0ZkzpVOKotEaavrkxGwAwB7WCmevrbH+rE3HnXS/vOo=
+			lrYtGlIUzvFTvFeyNU87oG1RPDs+soLRELstC/Fm2SY=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
