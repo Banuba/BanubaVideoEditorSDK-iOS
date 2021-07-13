@@ -13,13 +13,11 @@ NS_SWIFT_NAME(BanubaEffectPlayerInteractor)
 // MARK: - Banuba Sdk framework interactor
 __attribute__((weak_import)) @interface BanubaEffectPlayerInteractor : NSObject
 
-+ (BOOL)isFrameworkAvailable;
-
 + (void)create: (NSString *) token;
 
 + (void)sendEvent: (NSString *) key
             value: (NSString *) value;
 
-+ (NSString * _Nullable)getJson;
++ (NSString *)getJson;
 @end
 NS_ASSUME_NONNULL_END
