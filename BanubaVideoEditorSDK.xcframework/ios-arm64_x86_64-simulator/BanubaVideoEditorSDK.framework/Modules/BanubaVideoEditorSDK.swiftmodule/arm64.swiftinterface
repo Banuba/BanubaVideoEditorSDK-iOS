@@ -314,25 +314,39 @@ public enum DeviceModel : Swift.String {
   case iPod3
   case iPod4
   case iPod5
+  case iPod6
+  case iPod7
   case iPad2
   case iPad3
   case iPad4
+  case iPad5
+  case iPad6
+  case iPad7
+  case iPad8
+  case iPadMini1
+  case iPadMini2
+  case iPadMini3
+  case iPadMini4
+  case iPadMini5
+  case iPadAir1
+  case iPadAir2
+  case iPadAir3
+  case iPadAir4
+  case iPadPro9_7
+  case iPadPro10_5
+  case iPadPro11
+  case iPadPro2_11
+  case iPadPro3_11
+  case iPadPro12_9
+  case iPadPro2_12_9
+  case iPadPro3_12_9
+  case iPadPro4_12_9
+  case iPadPro5_12_9
   case iPhone4
   case iPhone4S
   case iPhone5
   case iPhone5S
   case iPhone5C
-  case iPadMini1
-  case iPadMini2
-  case iPadMini3
-  case iPadAir1
-  case iPadAir2
-  case iPadPro9_7
-  case iPadPro9_7_cell
-  case iPadPro10_5
-  case iPadPro10_5_cell
-  case iPadPro12_9
-  case iPadPro12_9_cell
   case iPhone6
   case iPhone6plus
   case iPhone6S
