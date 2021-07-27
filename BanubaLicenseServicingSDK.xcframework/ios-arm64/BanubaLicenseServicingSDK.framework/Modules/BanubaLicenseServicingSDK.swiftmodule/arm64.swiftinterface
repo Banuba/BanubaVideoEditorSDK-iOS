@@ -78,6 +78,9 @@ public struct License : Swift.Equatable {
   public var isTrialtoken: Swift.Bool {
     get
   }
+  public var collectAnalytics: Swift.Bool {
+    get
+  }
   public var supportsAnalytics: Swift.Bool {
     get
   }
