@@ -16,6 +16,7 @@ import CoreMedia
 import CoreVideo
 import Foundation
 import GLKit
+import ImageIO
 import MobileCoreServices
 import OpenGLES
 import Photos
@@ -184,6 +185,10 @@ extension AudioWriter : AVFAudio.AVAudioRecorderDelegate {
   @objc dynamic public func audioRecorderEncodeErrorDidOccur(_ recorder: AVFAudio.AVAudioRecorder, error: Swift.Error?)
   @objc dynamic public func audioRecorderDidFinishRecording(_ recorder: AVFAudio.AVAudioRecorder, successfully flag: Swift.Bool)
 }
+public struct ExportCoverImages {
+  public var coverImage: UIKit.UIImage?
+  public var gifFileUrl: Foundation.URL?
+}
 public protocol BanubaVideoEditorDelegate : AnyObject {
   func videoEditorDidCancel(_ videoEditor: BanubaVideoEditorSDK.BanubaVideoEditor)
   func videoEditorDone(_ videoEditor: BanubaVideoEditorSDK.BanubaVideoEditor)
@@ -213,7 +218,7 @@ public class BanubaVideoEditor {
   public func exportVideo(fileURL: Foundation.URL, completion: @escaping (Swift.Bool, Swift.Error?) -> Swift.Void)
   public func exportVideoWithCoverImage(fileURL: Foundation.URL, completion: @escaping (Swift.Bool, Swift.Error?, UIKit.UIImage) -> Swift.Void)
   public func exportVideos(using configurations: [BanubaVideoEditorSDK.ExportVideoConfiguration], completion: @escaping (Swift.Bool, Swift.Error?) -> Swift.Void)
-  public func exportVideosWithCoverImage(using configurations: [BanubaVideoEditorSDK.ExportVideoConfiguration], completion: @escaping ((Swift.Bool, Swift.Error?, UIKit.UIImage) -> Swift.Void))
+  public func exportVideosWithCoverImage(using configurations: [BanubaVideoEditorSDK.ExportVideoConfiguration], completion: @escaping ((Swift.Bool, Swift.Error?, BanubaVideoEditorSDK.ExportCoverImages) -> Swift.Void))
   public func exportAudio(fileUrl: Foundation.URL, completion: @escaping (Swift.Bool, Swift.Error?) -> Swift.Void)
   public func clearSessionData()
   public func dismissVideoEditor(animated: Swift.Bool, completion: (() -> Swift.Void)?)
@@ -718,12 +723,17 @@ public enum ExportQuality {
   case videoConfiguration(VideoEditor.ExportVideoInfo)
   case auto
 }
+public struct GifSettings {
+  public var duration: Foundation.TimeInterval
+  public init(duration: Foundation.TimeInterval)
+}
 public struct ExportVideoConfiguration {
   public let fileURL: Foundation.URL
   public let quality: BanubaVideoEditorSDK.ExportQuality
   public let watermarkConfiguration: BanubaVideoEditorSDK.WatermarkConfiguration?
   public let useHEVCCodecIfPossible: Swift.Bool
-  public init(fileURL: Foundation.URL, quality: BanubaVideoEditorSDK.ExportQuality, useHEVCCodecIfPossible: Swift.Bool, watermarkConfiguration: BanubaVideoEditorSDK.WatermarkConfiguration?)
+  public var gifSettings: BanubaVideoEditorSDK.GifSettings?
+  public init(fileURL: Foundation.URL, quality: BanubaVideoEditorSDK.ExportQuality, useHEVCCodecIfPossible: Swift.Bool, watermarkConfiguration: BanubaVideoEditorSDK.WatermarkConfiguration?, gifSettings: BanubaVideoEditorSDK.GifSettings?)
 }
 public struct RecorderAnalytics {
   public enum EventKind : Swift.String, BanubaVideoEditorSDK.AnalyticsEventKind {
@@ -1018,8 +1028,9 @@ public struct FeatureConfiguration {
   public var isInteractivesEnabled: Swift.Bool
   public var isSimpleVideoCoverEnabled: Swift.Bool
   public var supportsTrimRecordedVideo: Swift.Bool
+  public var isDraftsEnabled: Swift.Bool
   public static var `default`: BanubaVideoEditorSDK.FeatureConfiguration
-  public init(isOverlayEditorEnabled: Swift.Bool, isDoubleTapForToggleCameraEnabled: Swift.Bool, isMuteCameraAudioEnabled: Swift.Bool, isInteractivesEnabled: Swift.Bool, isSimpleVideoCoverEnabled: Swift.Bool, supportsTrimRecordedVideo: Swift.Bool)
+  public init(isOverlayEditorEnabled: Swift.Bool, isDoubleTapForToggleCameraEnabled: Swift.Bool, isMuteCameraAudioEnabled: Swift.Bool, isInteractivesEnabled: Swift.Bool, isSimpleVideoCoverEnabled: Swift.Bool, supportsTrimRecordedVideo: Swift.Bool, isDraftsEnabled: Swift.Bool)
 }
 public typealias SpeedBarConfiguration = BanubaVideoEditorSDK.SpeedSelectionConfiguration.SpeedBarConfiguration
 public struct SpeedSelectionConfiguration {
@@ -1416,6 +1427,7 @@ public protocol AnalyticsEngine : AnyObject {
 }
 public struct MusicEditorMetadata : Swift.Codable {
   public var tracks: [BanubaVideoEditorSDK.MusicEditorTrack]
+  public var videoVolume: Swift.Float
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }
@@ -1424,6 +1436,7 @@ public struct MusicEditorTrack : Swift.Codable {
   public var originalURL: Foundation.URL
   public var title: Swift.String
   public var id: Swift.Int32
+  public var volume: Swift.Float
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }
@@ -1595,7 +1608,7 @@ extension WatermarkConfiguration {
   }
 }
 public protocol VideoCoverSelectionControllerDelegate : AnyObject {
-  func videoCoverSelectionController(_ viewController: BanubaVideoEditorSDK.VideoCoverSelectionController, didDoneWithImage image: UIKit.UIImage?, atIndent indent: CoreMedia.CMTime)
+  func videoCoverSelectionController(_ viewController: BanubaVideoEditorSDK.VideoCoverSelectionController, didDoneWithImage image: UIKit.UIImage?, atIndents indents: [CoreMedia.CMTime])
   func videoCoverSelectionControllerDidCancel(_ viewController: BanubaVideoEditorSDK.VideoCoverSelectionController)
 }
 public protocol VideoCoverSelectionController : UIKit.UIViewController {
