@@ -61,63 +61,71 @@ public struct PresentEventOptions : BanubaLicenseServicingSDK.BasicEventOptions 
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }
-public class BNBAnalyticsManager {
+@objc(BNBAnalyticsManager) public class BNBAnalyticsManager : ObjectiveC.NSObject {
   public var license: BanubaLicenseServicingSDK.License {
     get
   }
   public init(license: BanubaLicenseServicingSDK.License)
+  @objc override dynamic public init()
   @objc deinit
 }
 extension BNBAnalyticsManager {
   public func sendEvent(withType type: BanubaLicenseServicingSDK.BNBInformerEventType)
 }
-public struct License : Swift.Equatable {
-  public var clientId: Swift.String {
+@objc public class License : ObjectiveC.NSObject {
+  @objc public var clientId: Swift.String {
     get
   }
-  public var isTrialtoken: Swift.Bool {
+  @objc public var giphyApiKey: Swift.String? {
     get
   }
-  public var collectAnalytics: Swift.Bool {
+  @objc public var isTrialToken: Swift.Bool {
     get
   }
-  public var supportsAnalytics: Swift.Bool {
+  @objc public var collectAnalytics: Swift.Bool {
     get
   }
-  public var supportsFaceAR: Swift.Bool {
+  @objc public var supportsAnalytics: Swift.Bool {
     get
   }
-  public var supportsPiP: Swift.Bool {
+  @objc public var supportsFaceAR: Swift.Bool {
     get
   }
-  public var supportsAudioBrowser: Swift.Bool {
+  @objc public var supportsPiP: Swift.Bool {
     get
   }
-  public var supportsBgSeparation: Swift.Bool {
+  @objc public var supportsAudioBrowser: Swift.Bool {
     get
   }
-  public var postProcessingEffects: [Swift.Int] {
+  @objc public var supportsBgSeparation: Swift.Bool {
     get
   }
-  public var arCloudURL: Swift.String? {
+  @objc public var postProcessingEffects: [Swift.Int] {
     get
   }
-  public var timeBomb: BanubaLicenseServicingSDK.TimeBomb? {
+  @objc public var arCloudURL: Swift.String? {
     get
   }
-  public var supportsFHD: Swift.Bool {
+  @objc public var timeBomb: BanubaLicenseServicingSDK.TimeBomb? {
     get
   }
-  public static func == (lhs: BanubaLicenseServicingSDK.License, rhs: BanubaLicenseServicingSDK.License) -> Swift.Bool
-  public static func getLicense(fromToken token: Swift.String) -> BanubaLicenseServicingSDK.License?
+  @objc public var supportsFHD: Swift.Bool {
+    get
+  }
+  @objc override dynamic public func isEqual(_ object: Any?) -> Swift.Bool
+  @objc public init(clientId: Swift.String, giphyApiKey: Swift.String?, isTrialToken: Swift.Bool, collectAnalytics: Swift.Bool, supportsAnalytics: Swift.Bool, supportsFaceAR: Swift.Bool, supportsPiP: Swift.Bool, supportsAudioBrowser: Swift.Bool, supportsBgSeparation: Swift.Bool, postProcessingEffects: [Swift.Int], arCloudURL: Swift.String?, timeBomb: BanubaLicenseServicingSDK.TimeBomb?, supportsFHD: Swift.Bool, licenseManager: BNBLicenseUtils.BNBAliasLicenseManager?)
+  @objc public static func isTokenExpired(token: Swift.String) -> Swift.Bool
+  @objc public static func getLicense(fromToken token: Swift.String) -> BanubaLicenseServicingSDK.License?
+  @objc override dynamic public init()
+  @objc deinit
 }
-public struct TimeBomb : Swift.Codable, Swift.Equatable {
-  public var yearBegin: Swift.Int, monBegin: Swift.Int, dayBegin: Swift.Int, yearEnd: Swift.Int
-  public var monEnd: Swift.Int, dayEnd: Swift.Int
-  public var isExpired: Swift.Bool {
-    get
+@objc public class TimeBomb : ObjectiveC.NSObject, Swift.Codable {
+  @objc public var yearBegin: Swift.Int, monBegin: Swift.Int, dayBegin: Swift.Int, yearEnd: Swift.Int
+  @objc public var monEnd: Swift.Int, dayEnd: Swift.Int
+  @objc public var isExpired: Swift.Bool {
+    @objc get
   }
-  public static func == (a: BanubaLicenseServicingSDK.TimeBomb, b: BanubaLicenseServicingSDK.TimeBomb) -> Swift.Bool
+  @objc deinit
   public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  required public init(from decoder: Swift.Decoder) throws
 }

@@ -190,6 +190,8 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #if __has_warning("-Watimport-in-framework-header")
 #pragma clang diagnostic ignored "-Watimport-in-framework-header"
 #endif
+@import Foundation;
+@import ObjectiveC;
 #endif
 
 #pragma clang diagnostic ignored "-Wproperty-attribute-mismatch"
@@ -208,6 +210,60 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #endif
 
 
+/// AnalyticsManager is used to interact with banuba analytics servers
+SWIFT_CLASS_NAMED("BNBAnalyticsManager")
+@interface BNBAnalyticsManager : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
+
+@class NSString;
+@class NSNumber;
+@class TimeBomb;
+@class BNBAliasLicenseManager;
+
+SWIFT_CLASS("_TtC25BanubaLicenseServicingSDK7License")
+@interface License : NSObject
+@property (nonatomic, readonly, copy) NSString * _Nonnull clientId;
+@property (nonatomic, readonly, copy) NSString * _Nullable giphyApiKey;
+@property (nonatomic, readonly) BOOL isTrialToken;
+/// Video Editor Analytics
+@property (nonatomic, readonly) BOOL collectAnalytics;
+/// FAR Analytics
+@property (nonatomic, readonly) BOOL supportsAnalytics;
+@property (nonatomic, readonly) BOOL supportsFaceAR;
+@property (nonatomic, readonly) BOOL supportsPiP;
+@property (nonatomic, readonly) BOOL supportsAudioBrowser;
+@property (nonatomic, readonly) BOOL supportsBgSeparation;
+@property (nonatomic, readonly, copy) NSArray<NSNumber *> * _Nonnull postProcessingEffects;
+@property (nonatomic, readonly, copy) NSString * _Nullable arCloudURL;
+@property (nonatomic, readonly, strong) TimeBomb * _Nullable timeBomb;
+@property (nonatomic, readonly) BOOL supportsFHD;
+- (BOOL)isEqual:(id _Nullable)object SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)initWithClientId:(NSString * _Nonnull)clientId giphyApiKey:(NSString * _Nullable)giphyApiKey isTrialToken:(BOOL)isTrialToken collectAnalytics:(BOOL)collectAnalytics supportsAnalytics:(BOOL)supportsAnalytics supportsFaceAR:(BOOL)supportsFaceAR supportsPiP:(BOOL)supportsPiP supportsAudioBrowser:(BOOL)supportsAudioBrowser supportsBgSeparation:(BOOL)supportsBgSeparation postProcessingEffects:(NSArray<NSNumber *> * _Nonnull)postProcessingEffects arCloudURL:(NSString * _Nullable)arCloudURL timeBomb:(TimeBomb * _Nullable)timeBomb supportsFHD:(BOOL)supportsFHD licenseManager:(BNBAliasLicenseManager * _Nullable)licenseManager OBJC_DESIGNATED_INITIALIZER;
+/// Check whether token is expired
+/// \param token your token that you want to verify.
+///
++ (BOOL)isTokenExpiredWithToken:(NSString * _Nonnull)token SWIFT_WARN_UNUSED_RESULT;
++ (License * _Nullable)getLicenseFromToken:(NSString * _Nonnull)token SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
+
+SWIFT_CLASS("_TtC25BanubaLicenseServicingSDK8TimeBomb")
+@interface TimeBomb : NSObject
+@property (nonatomic, readonly) NSInteger yearBegin;
+@property (nonatomic, readonly) NSInteger monBegin;
+@property (nonatomic, readonly) NSInteger dayBegin;
+@property (nonatomic, readonly) NSInteger yearEnd;
+@property (nonatomic, readonly) NSInteger monEnd;
+@property (nonatomic, readonly) NSInteger dayEnd;
+@property (nonatomic, readonly) BOOL isExpired;
+@end
 
 #if __has_attribute(external_source_symbol)
 # pragma clang attribute pop
@@ -406,6 +462,8 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #if __has_warning("-Watimport-in-framework-header")
 #pragma clang diagnostic ignored "-Watimport-in-framework-header"
 #endif
+@import Foundation;
+@import ObjectiveC;
 #endif
 
 #pragma clang diagnostic ignored "-Wproperty-attribute-mismatch"
@@ -424,6 +482,60 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #endif
 
 
+/// AnalyticsManager is used to interact with banuba analytics servers
+SWIFT_CLASS_NAMED("BNBAnalyticsManager")
+@interface BNBAnalyticsManager : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
+
+@class NSString;
+@class NSNumber;
+@class TimeBomb;
+@class BNBAliasLicenseManager;
+
+SWIFT_CLASS("_TtC25BanubaLicenseServicingSDK7License")
+@interface License : NSObject
+@property (nonatomic, readonly, copy) NSString * _Nonnull clientId;
+@property (nonatomic, readonly, copy) NSString * _Nullable giphyApiKey;
+@property (nonatomic, readonly) BOOL isTrialToken;
+/// Video Editor Analytics
+@property (nonatomic, readonly) BOOL collectAnalytics;
+/// FAR Analytics
+@property (nonatomic, readonly) BOOL supportsAnalytics;
+@property (nonatomic, readonly) BOOL supportsFaceAR;
+@property (nonatomic, readonly) BOOL supportsPiP;
+@property (nonatomic, readonly) BOOL supportsAudioBrowser;
+@property (nonatomic, readonly) BOOL supportsBgSeparation;
+@property (nonatomic, readonly, copy) NSArray<NSNumber *> * _Nonnull postProcessingEffects;
+@property (nonatomic, readonly, copy) NSString * _Nullable arCloudURL;
+@property (nonatomic, readonly, strong) TimeBomb * _Nullable timeBomb;
+@property (nonatomic, readonly) BOOL supportsFHD;
+- (BOOL)isEqual:(id _Nullable)object SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)initWithClientId:(NSString * _Nonnull)clientId giphyApiKey:(NSString * _Nullable)giphyApiKey isTrialToken:(BOOL)isTrialToken collectAnalytics:(BOOL)collectAnalytics supportsAnalytics:(BOOL)supportsAnalytics supportsFaceAR:(BOOL)supportsFaceAR supportsPiP:(BOOL)supportsPiP supportsAudioBrowser:(BOOL)supportsAudioBrowser supportsBgSeparation:(BOOL)supportsBgSeparation postProcessingEffects:(NSArray<NSNumber *> * _Nonnull)postProcessingEffects arCloudURL:(NSString * _Nullable)arCloudURL timeBomb:(TimeBomb * _Nullable)timeBomb supportsFHD:(BOOL)supportsFHD licenseManager:(BNBAliasLicenseManager * _Nullable)licenseManager OBJC_DESIGNATED_INITIALIZER;
+/// Check whether token is expired
+/// \param token your token that you want to verify.
+///
++ (BOOL)isTokenExpiredWithToken:(NSString * _Nonnull)token SWIFT_WARN_UNUSED_RESULT;
++ (License * _Nullable)getLicenseFromToken:(NSString * _Nonnull)token SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
+
+SWIFT_CLASS("_TtC25BanubaLicenseServicingSDK8TimeBomb")
+@interface TimeBomb : NSObject
+@property (nonatomic, readonly) NSInteger yearBegin;
+@property (nonatomic, readonly) NSInteger monBegin;
+@property (nonatomic, readonly) NSInteger dayBegin;
+@property (nonatomic, readonly) NSInteger yearEnd;
+@property (nonatomic, readonly) NSInteger monEnd;
+@property (nonatomic, readonly) NSInteger dayEnd;
+@property (nonatomic, readonly) BOOL isExpired;
+@end
 
 #if __has_attribute(external_source_symbol)
 # pragma clang attribute pop
