@@ -215,7 +215,6 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 
 
 
-
 SWIFT_CLASS("_TtC20BanubaVideoEditorSDK12AudioService")
 @interface AudioService : NSObject
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
@@ -254,6 +253,16 @@ SWIFT_CLASS("_TtC20BanubaVideoEditorSDK13CountdownView")
 - (void)drawRect:(CGRect)rect;
 @end
 
+
+/// Setups drafts feature
+typedef SWIFT_ENUM(NSInteger, DraftsFeatureConfig, open) {
+/// Drafts enabled. Alert asking for saving video to drafts will be presented after editing a video. Drafts button in gallery is displayed.
+  DraftsFeatureConfigEnabled = 0,
+/// Drafts enabled. No alert will be presented after editing a video. Drafts button in gallery is displayed.
+  DraftsFeatureConfigEnabledSaveToDraftsByDefault = 1,
+/// Drafts disabled completely. Drafts button in gallery is hidden.
+  DraftsFeatureConfigDisabled = 2,
+};
 
 
 
@@ -305,42 +314,6 @@ SWIFT_CLASS("_TtC20BanubaVideoEditorSDK18ImageConfiguration")
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
-
-
-
-
-SWIFT_CLASS("_TtC20BanubaVideoEditorSDK32PreviewSingleVideoViewController")
-@interface PreviewSingleVideoViewController : UIViewController
-- (void)viewDidLayoutSubviews;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder SWIFT_UNAVAILABLE;
-- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil SWIFT_UNAVAILABLE;
-@end
-
-
-
-
-
-SWIFT_CLASS("_TtC20BanubaVideoEditorSDK16PreviewVideoView")
-@interface PreviewVideoView : UIImageView
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) Class _Nonnull layerClass;)
-+ (Class _Nonnull)layerClass SWIFT_WARN_UNUSED_RESULT;
-- (nonnull instancetype)initWithImage:(UIImage * _Nullable)image OBJC_DESIGNATED_INITIALIZER;
-- (nonnull instancetype)initWithImage:(UIImage * _Nullable)image highlightedImage:(UIImage * _Nullable)highlightedImage OBJC_DESIGNATED_INITIALIZER SWIFT_AVAILABILITY(ios,introduced=3.0);
-- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
-@end
-
-
-
-SWIFT_CLASS("_TtC20BanubaVideoEditorSDK22TimelineViewController")
-@interface TimelineViewController : UIViewController
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
-- (void)viewDidLoad;
-- (void)viewDidLayoutSubviews;
-- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil SWIFT_UNAVAILABLE;
-@end
-
 
 
 
@@ -597,7 +570,6 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 
 
 
-
 SWIFT_CLASS("_TtC20BanubaVideoEditorSDK12AudioService")
 @interface AudioService : NSObject
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
@@ -636,6 +608,16 @@ SWIFT_CLASS("_TtC20BanubaVideoEditorSDK13CountdownView")
 - (void)drawRect:(CGRect)rect;
 @end
 
+
+/// Setups drafts feature
+typedef SWIFT_ENUM(NSInteger, DraftsFeatureConfig, open) {
+/// Drafts enabled. Alert asking for saving video to drafts will be presented after editing a video. Drafts button in gallery is displayed.
+  DraftsFeatureConfigEnabled = 0,
+/// Drafts enabled. No alert will be presented after editing a video. Drafts button in gallery is displayed.
+  DraftsFeatureConfigEnabledSaveToDraftsByDefault = 1,
+/// Drafts disabled completely. Drafts button in gallery is hidden.
+  DraftsFeatureConfigDisabled = 2,
+};
 
 
 
@@ -687,42 +669,6 @@ SWIFT_CLASS("_TtC20BanubaVideoEditorSDK18ImageConfiguration")
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
-
-
-
-
-SWIFT_CLASS("_TtC20BanubaVideoEditorSDK32PreviewSingleVideoViewController")
-@interface PreviewSingleVideoViewController : UIViewController
-- (void)viewDidLayoutSubviews;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder SWIFT_UNAVAILABLE;
-- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil SWIFT_UNAVAILABLE;
-@end
-
-
-
-
-
-SWIFT_CLASS("_TtC20BanubaVideoEditorSDK16PreviewVideoView")
-@interface PreviewVideoView : UIImageView
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) Class _Nonnull layerClass;)
-+ (Class _Nonnull)layerClass SWIFT_WARN_UNUSED_RESULT;
-- (nonnull instancetype)initWithImage:(UIImage * _Nullable)image OBJC_DESIGNATED_INITIALIZER;
-- (nonnull instancetype)initWithImage:(UIImage * _Nullable)image highlightedImage:(UIImage * _Nullable)highlightedImage OBJC_DESIGNATED_INITIALIZER SWIFT_AVAILABILITY(ios,introduced=3.0);
-- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
-@end
-
-
-
-SWIFT_CLASS("_TtC20BanubaVideoEditorSDK22TimelineViewController")
-@interface TimelineViewController : UIViewController
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
-- (void)viewDidLoad;
-- (void)viewDidLayoutSubviews;
-- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil SWIFT_UNAVAILABLE;
-@end
-
 
 
 
