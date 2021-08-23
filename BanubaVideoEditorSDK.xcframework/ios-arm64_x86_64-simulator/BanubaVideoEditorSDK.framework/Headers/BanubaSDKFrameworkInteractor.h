@@ -23,6 +23,7 @@ useHEVCCodecIfPossibleForRecorder:(BOOL) useHEVCCodecIfPossibleForRecorder
                     arCloudPath:(NSString * _Nullable) arCloudPath;
 
 + (id _Nullable) getCameraModuleInstance;
++ (id _Nullable) getMaskPostprocessingServiceWithVideoSize:(CGSize) videoSize;
 + (BOOL)isTokenExpired;
 
 @end
