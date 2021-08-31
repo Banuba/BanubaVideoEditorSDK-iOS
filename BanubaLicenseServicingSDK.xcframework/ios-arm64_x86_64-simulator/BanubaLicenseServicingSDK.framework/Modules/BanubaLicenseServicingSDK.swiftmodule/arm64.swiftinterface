@@ -62,10 +62,13 @@ public struct PresentEventOptions : BanubaLicenseServicingSDK.BasicEventOptions 
   public init(from decoder: Swift.Decoder) throws
 }
 @objc(BNBAnalyticsManager) public class BNBAnalyticsManager : ObjectiveC.NSObject {
+  public static var token: Swift.String {
+    get
+  }
   public var license: BanubaLicenseServicingSDK.License {
     get
   }
-  public init(license: BanubaLicenseServicingSDK.License)
+  public init(token: Swift.String, license: BanubaLicenseServicingSDK.License)
   @objc override dynamic public init()
   @objc deinit
 }
