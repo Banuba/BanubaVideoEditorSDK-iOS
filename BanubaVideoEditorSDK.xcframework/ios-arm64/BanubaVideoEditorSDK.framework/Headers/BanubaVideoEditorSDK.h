@@ -14,8 +14,6 @@ FOUNDATION_EXPORT double BanubaVideoEditorSDKVersionNumber;
 //! Project version string for BanubaVideoEditorSDK.
 FOUNDATION_EXPORT const unsigned char BanubaVideoEditorSDKVersionString[];
 
-#import <BanubaVideoEditorSDK/BNBValuesAnimator.h>
-#import <BanubaVideoEditorSDK/AssetHelper.h>
 #import <BanubaVideoEditorSDK/ARCloudFrameworkInteractor.h>
 #import <BanubaVideoEditorSDK/AudioBrowserFrameworkInteractor.h>
 #import <BanubaVideoEditorSDK/BanubaSDKFrameworkInteractor.h>
