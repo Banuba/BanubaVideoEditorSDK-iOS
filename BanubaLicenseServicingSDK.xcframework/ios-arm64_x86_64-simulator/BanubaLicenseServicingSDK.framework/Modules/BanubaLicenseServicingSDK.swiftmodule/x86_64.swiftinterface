@@ -50,6 +50,7 @@ public struct PresentEventOptions : BanubaLicenseServicingSDK.BasicEventOptions 
   public enum EntryPoint : Swift.String, Swift.Codable {
     case trim
     case camera
+    case drafts
     public init?(rawValue: Swift.String)
     public typealias RawValue = Swift.String
     public var rawValue: Swift.String {
