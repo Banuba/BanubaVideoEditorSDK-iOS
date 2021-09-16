@@ -266,6 +266,7 @@ typedef SWIFT_ENUM(NSInteger, DraftsFeatureConfig, open) {
 
 
 
+
 /// Default exposure animation view
 SWIFT_CLASS("_TtC20BanubaVideoEditorSDK21ExposureAnimationView")
 @interface ExposureAnimationView : UIView
@@ -314,6 +315,7 @@ SWIFT_CLASS("_TtC20BanubaVideoEditorSDK18ImageConfiguration")
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
+
 
 
 
@@ -621,6 +623,7 @@ typedef SWIFT_ENUM(NSInteger, DraftsFeatureConfig, open) {
 
 
 
+
 /// Default exposure animation view
 SWIFT_CLASS("_TtC20BanubaVideoEditorSDK21ExposureAnimationView")
 @interface ExposureAnimationView : UIView
@@ -669,6 +672,7 @@ SWIFT_CLASS("_TtC20BanubaVideoEditorSDK18ImageConfiguration")
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
+
 
 
 
