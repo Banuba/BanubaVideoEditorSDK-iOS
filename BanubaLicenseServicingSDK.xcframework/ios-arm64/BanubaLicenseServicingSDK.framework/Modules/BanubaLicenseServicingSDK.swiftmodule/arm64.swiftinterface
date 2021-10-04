@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.4.2 (swiftlang-1205.0.28.2 clang-1205.0.19.57)
+// swift-compiler-version: Apple Swift version 5.5 (swiftlang-1300.0.31.1 clang-1300.0.29.1)
 // swift-module-flags: -target arm64-apple-ios11.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -Onone -module-name BanubaLicenseServicingSDK
 import BNBLicenseUtils
 @_exported import BanubaLicenseServicingSDK
@@ -7,6 +7,7 @@ import BanubaUtilities
 import Foundation
 import Swift
 import UIKit
+import _Concurrency
 import os.log
 import os
 public enum BNBInformerEventType {
@@ -70,10 +71,9 @@ public struct PresentEventOptions : BanubaLicenseServicingSDK.BasicEventOptions 
     get
   }
   public init(token: Swift.String, license: BanubaLicenseServicingSDK.License)
-  @objc override dynamic public init()
   @objc deinit
 }
-extension BNBAnalyticsManager {
+extension BanubaLicenseServicingSDK.BNBAnalyticsManager {
   public func sendEvent(withType type: BanubaLicenseServicingSDK.BNBInformerEventType)
 }
 @objc public class License : ObjectiveC.NSObject {
@@ -120,7 +120,6 @@ extension BNBAnalyticsManager {
   @objc public init(clientId: Swift.String, giphyApiKey: Swift.String?, isTrialToken: Swift.Bool, collectAnalytics: Swift.Bool, supportsAnalytics: Swift.Bool, supportsFaceAR: Swift.Bool, supportsPiP: Swift.Bool, supportsAudioBrowser: Swift.Bool, supportsBgSeparation: Swift.Bool, postProcessingEffects: [Swift.Int], arCloudURL: Swift.String?, timeBomb: BanubaLicenseServicingSDK.TimeBomb?, supportsFHD: Swift.Bool, licenseManager: BNBLicenseUtils.BNBAliasLicenseManager?)
   @objc public static func isTokenExpired(token: Swift.String) -> Swift.Bool
   @objc public static func getLicense(fromToken token: Swift.String) -> BanubaLicenseServicingSDK.License?
-  @objc override dynamic public init()
   @objc deinit
 }
 @objc public class TimeBomb : ObjectiveC.NSObject, Swift.Codable {
