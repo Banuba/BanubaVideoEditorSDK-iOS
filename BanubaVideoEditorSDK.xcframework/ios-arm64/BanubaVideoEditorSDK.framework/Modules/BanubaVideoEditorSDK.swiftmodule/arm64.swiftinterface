@@ -576,6 +576,7 @@ public struct TrimVideoCompositionEditItem {
       get
     }
   }
+  public init(title: Swift.String, icon: BanubaVideoEditorSDK.ImageConfiguration, type: BanubaVideoEditorSDK.TrimVideoCompositionEditItem.TrimVideoCompositionEditItemType)
 }
 public struct FilterConfiguration {
   public var controlButtons: [BanubaVideoEditorSDK.FilterControlButtonConfig]
