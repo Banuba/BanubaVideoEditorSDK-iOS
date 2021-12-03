@@ -27,7 +27,7 @@ public struct ExportEventOptions : BanubaLicenseServicingSDK.BasicEventOptions {
   public var sdkVersion: Swift.String
   public var iOSVersion: Swift.String
   public var deviceType: Swift.String
-  public init(token: Swift.String, videoResolutions: [Swift.String], maskEffects: [Swift.String]?, fxEffects: [Swift.String]?, colorEffect: Swift.String?, exportDuration: Foundation.TimeInterval, videoDuration: Foundation.TimeInterval, videoCount: Swift.UInt8)
+  public init(token: Swift.String, videoResolutions: [Swift.String], postProcessingEffects: [Swift.String]?, cameraEffects: [Swift.String]?, exportDuration: Foundation.TimeInterval, videoDuration: Foundation.TimeInterval, videoCount: Swift.UInt8)
   public func adjustStringJson() -> Swift.String?
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
@@ -63,6 +63,16 @@ public struct PresentEventOptions : BanubaLicenseServicingSDK.BasicEventOptions 
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }
+public enum EffectType : Swift.String {
+  case mask
+  case filter
+  case beautification
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
 @objc(BNBAnalyticsManager) public class BNBAnalyticsManager : ObjectiveC.NSObject {
   public static var token: Swift.String {
     get
@@ -70,6 +80,7 @@ public struct PresentEventOptions : BanubaLicenseServicingSDK.BasicEventOptions 
   public var license: BanubaLicenseServicingSDK.License {
     get
   }
+  public var cameraEffects: [BanubaLicenseServicingSDK.EffectType : [Swift.String?]]
   public init(token: Swift.String, license: BanubaLicenseServicingSDK.License)
   @objc deinit
 }
