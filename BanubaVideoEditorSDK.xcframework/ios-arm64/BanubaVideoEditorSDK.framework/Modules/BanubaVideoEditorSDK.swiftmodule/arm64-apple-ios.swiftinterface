@@ -387,7 +387,7 @@ public struct TextEditorConfiguration {
   public var alignmentImages: [BanubaVideoEditorSDK.VideoTextAligment : BanubaVideoEditorSDK.ImageButtonConfiguration]
   public var palette: [BanubaVideoEditorSDK.VideoTextColorPair]
   public var fonts: [BanubaVideoEditorSDK.VideoTextFont]
-  public var backgroundConfiguration: BanubaUtilities.BackgroundConfiguration
+  public var additionalPaletteBackgroundConfiguration: BanubaUtilities.BackgroundConfiguration
   public var screenNameConfiguration: BanubaVideoEditorSDK.ScreenNameConfiguration
   public var palleteInsets: UIKit.UIEdgeInsets
   public var fontInsets: UIKit.UIEdgeInsets
@@ -543,6 +543,7 @@ public struct TrimVideosConfiguration {
   public var videoResolutionConfiguration: BanubaUtilities.VideoResolutionConfiguration
   public var backButtonConfiguration: BanubaVideoEditorSDK.ImageButtonConfiguration
   public var nextButtonConfiguration: BanubaVideoEditorSDK.ImageButtonConfiguration
+  public var controlsPanelBackgroundColor: UIKit.UIColor
   public var playerControlConfiguration: BanubaUtilities.PlayerControlConfiguration
   public var videoPartsBackgroundConfiguration: BanubaUtilities.BackgroundConfiguration
   public var backgroundConfiguration: BanubaUtilities.BackgroundConfiguration
@@ -576,6 +577,9 @@ public struct TrimVideoCompositionEditItem {
       get
     }
   }
+  public let title: Swift.String
+  public let icon: BanubaVideoEditorSDK.ImageConfiguration
+  public let type: BanubaVideoEditorSDK.TrimVideoCompositionEditItem.TrimVideoCompositionEditItemType
   public init(title: Swift.String, icon: BanubaVideoEditorSDK.ImageConfiguration, type: BanubaVideoEditorSDK.TrimVideoCompositionEditItem.TrimVideoCompositionEditItemType)
 }
 public struct FilterConfiguration {
