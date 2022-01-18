@@ -20,6 +20,7 @@ import MobileCoreServices
 import Photos
 import Swift
 import UIKit
+import VEPlaybackSDK
 import VideoEditor
 import _Concurrency
 public struct VideoOverlayObjectWithImage : BanubaOverlayEditorSDK.OverlayItem {
@@ -38,7 +39,8 @@ public struct VideoOverlayObjectWithImage : BanubaOverlayEditorSDK.OverlayItem {
   public var transform: CoreGraphics.CGAffineTransform
   public var type: BanubaOverlayEditorSDK.OverlayAddButtonConfig.`Type`?
   public var position: BanubaOverlayEditorSDK.OverlayItemLinePosition?
-  public init(id: Swift.String, image: UIKit.UIImage, imageData: Foundation.Data, startTime: CoreMedia.CMTime, endTime: CoreMedia.CMTime, frame: CoreGraphics.CGRect = .zero, transform: CoreGraphics.CGAffineTransform = .identity)
+  public var order: Swift.Int
+  public init(id: Swift.String, image: UIKit.UIImage, imageData: Foundation.Data, startTime: CoreMedia.CMTime, endTime: CoreMedia.CMTime, frame: CoreGraphics.CGRect = .zero, transform: CoreGraphics.CGAffineTransform = .identity, order: Swift.Int = .zero)
 }
 public struct VideoOverlayObjectWithText : BanubaOverlayEditorSDK.OverlayItem {
   public let id: Swift.String
@@ -60,6 +62,7 @@ public struct VideoOverlayObjectWithText : BanubaOverlayEditorSDK.OverlayItem {
   public var transform: CoreGraphics.CGAffineTransform
   public var type: BanubaOverlayEditorSDK.OverlayAddButtonConfig.`Type`?
   public var position: BanubaOverlayEditorSDK.OverlayItemLinePosition?
+  public var order: Swift.Int
   public init()
   public init(image: UIKit.UIImage)
 }
@@ -127,6 +130,16 @@ extension BanubaVideoEditorSDK.AudioWriter : AVFAudio.AVAudioRecorderDelegate {
   @objc dynamic public func audioRecorderEncodeErrorDidOccur(_ recorder: AVFAudio.AVAudioRecorder, error: Swift.Error?)
   @objc dynamic public func audioRecorderDidFinishRecording(_ recorder: AVFAudio.AVAudioRecorder, successfully flag: Swift.Bool)
 }
+@objc public class VideoEditorLaunchConfig : ObjectiveC.NSObject {
+  public var entryPoint: BanubaLicenseServicingSDK.PresentEventOptions.EntryPoint
+  public var hostController: UIKit.UIViewController
+  public var videoItems: [Foundation.URL]?
+  public var pipVideoItem: Foundation.URL?
+  public var musicTrack: BanubaUtilities.MediaTrack?
+  public var animated: Swift.Bool
+  public init(entryPoint: BanubaLicenseServicingSDK.PresentEventOptions.EntryPoint, hostController: UIKit.UIViewController, videoItems: [Foundation.URL]? = nil, pipVideoItem: Foundation.URL? = nil, musicTrack: BanubaUtilities.MediaTrack? = nil, animated: Swift.Bool)
+  @objc deinit
+}
 public struct ExportCoverImages {
   public var coverImage: UIKit.UIImage?
   public var gifFileUrl: Foundation.URL?
@@ -166,11 +179,8 @@ public class BanubaVideoEditor {
   public func exportAudio(fileUrl: Foundation.URL, completion: @escaping (Swift.Bool, Swift.Error?) -> Swift.Void)
   public func clearSessionData()
   public func dismissVideoEditor(animated: Swift.Bool, completion: (() -> Swift.Void)?)
-  public func presentVideoEditorAtDrafts(from hostController: UIKit.UIViewController, animated: Swift.Bool, completion: (() -> Swift.Void)?)
-  public func presentVideoEditor(from hostController: UIKit.UIViewController, animated: Swift.Bool, musicTrack: BanubaUtilities.MediaTrack? = nil, completion: (() -> Swift.Void)?)
-  public func presentVideoEditor(withPIPVideoItem pipVideoItem: Foundation.URL, from hostController: UIKit.UIViewController, animated: Swift.Bool, musicTrack: BanubaUtilities.MediaTrack? = nil, completion: (() -> Swift.Void)?)
-  public func presentVideoEditor(withVideoItems videoItems: [Foundation.URL], from hostController: UIKit.UIViewController, animated: Swift.Bool, musicTrack: BanubaUtilities.MediaTrack? = nil, completion: (() -> Swift.Void)?)
-  public func presentVideoEditorAtEditor(withVideoItems videoItems: [Foundation.URL], from hostController: UIKit.UIViewController, animated: Swift.Bool, musicTrack: BanubaUtilities.MediaTrack? = nil, completion: (() -> Swift.Void)?)
+  public func getVideoEditorNavigationController(withLaunchConfiguration configuration: BanubaVideoEditorSDK.VideoEditorLaunchConfig) -> UIKit.UINavigationController?
+  public func presentVideoEditor(withLaunchConfiguration configuration: BanubaVideoEditorSDK.VideoEditorLaunchConfig, completion: (() -> Swift.Void)?)
   public func updateVideoEditorConfig(_ config: BanubaVideoEditorSDK.VideoEditorConfig)
 }
 extension BanubaVideoEditorSDK.BanubaVideoEditor {
@@ -460,6 +470,7 @@ public struct RecorderConfiguration {
   public var isPhotoSequenceAnimationEnabled: Swift.Bool
   public var progressBarPosition: BanubaVideoEditorSDK.RecorderConfiguration.ProgressBarPosition
   public var muteMicrophoneForPIP: Swift.Bool
+  public var isAudioRateEqualsVideoSpeed: Swift.Bool
 }
 public struct RecordButtonConfiguration {
   public var idleStrokeColor: CoreGraphics.CGColor
@@ -572,6 +583,7 @@ public struct TrimVideoPartConfiguration {
 public struct TrimVideoCompositionEditItem {
   public enum TrimVideoCompositionEditItemType {
     case rotate
+    case split
     case delete
     case trim
     public static func == (a: BanubaVideoEditorSDK.TrimVideoCompositionEditItem.TrimVideoCompositionEditItemType, b: BanubaVideoEditorSDK.TrimVideoCompositionEditItem.TrimVideoCompositionEditItemType) -> Swift.Bool
@@ -760,23 +772,6 @@ public protocol TimelineViewControllerDelegate : AnyObject {
   public var range: BanubaVideoEditorSDK.EffectInterval.IntervalRange
   @objc deinit
 }
-public protocol RecorderPresenterProtocol : AnyObject {
-  func changeViewToIdleState()
-  func changeViewToCaptureState()
-  func setSequenceViewMaximumVideoDuration(_ duration: Foundation.TimeInterval)
-  func updateCaptureProgress(_ progress: Swift.Double, relevantProgress: Swift.String, isUndoAction: Swift.Bool)
-  func presentCountdownAnimations(with timeout: Foundation.TimeInterval, completion: @escaping (Swift.Bool) -> ())
-  func dismissCountdownAnimations(isRecording: Swift.Bool)
-  func sequenceViewRemoveLast()
-  func presentAlertAboutLowDiskSpace()
-  func captureSessionDidEnd()
-  func presentMessage(with text: Swift.String)
-  func didStartExportPhoto()
-  func didEndExportPhoto()
-  func didUpdateVideoSequence()
-  func didReachMaximumDuration()
-  func updateNextButtonAppearance()
-}
 public struct PIPSwitchCellConfiguration {
   public var identifier: BanubaSDKServicing.PIPSwitchLayoutSetting
   public var selectedIdentifier: BanubaSDKServicing.PIPSwitchLayoutSetting
@@ -932,8 +927,9 @@ public struct FeatureConfiguration {
   public var draftsConfig: BanubaVideoEditorSDK.DraftsFeatureConfig
   public var isAspectsEnabled: Swift.Bool
   public var isSpeedBarEnabled: Swift.Bool
+  public var isVideoFitsAspect: Swift.Bool
   public static var `default`: BanubaVideoEditorSDK.FeatureConfiguration
-  public init(isOverlayEditorEnabled: Swift.Bool, isDoubleTapForToggleCameraEnabled: Swift.Bool, isMuteCameraAudioEnabled: Swift.Bool, isInteractivesEnabled: Swift.Bool, isSimpleVideoCoverEnabled: Swift.Bool, supportsTrimRecordedVideo: Swift.Bool, draftsConfig: BanubaVideoEditorSDK.DraftsFeatureConfig, isAspectsEnabled: Swift.Bool, isSpeedBarEnabled: Swift.Bool)
+  public init(isOverlayEditorEnabled: Swift.Bool, isDoubleTapForToggleCameraEnabled: Swift.Bool, isMuteCameraAudioEnabled: Swift.Bool, isInteractivesEnabled: Swift.Bool, isSimpleVideoCoverEnabled: Swift.Bool, supportsTrimRecordedVideo: Swift.Bool, draftsConfig: BanubaVideoEditorSDK.DraftsFeatureConfig, isAspectsEnabled: Swift.Bool, isSpeedBarEnabled: Swift.Bool, isVideoFitsAspect: Swift.Bool)
 }
 public struct RecorderEffectsConfiguration {
   public var cornerRadius: CoreGraphics.CGFloat
@@ -1039,7 +1035,8 @@ public struct VideoCoverSelectionConfiguration {
   public var previewBackgroundConfiguration: BanubaUtilities.BackgroundConfiguration
   public var thumbnailsCursorConfiguration: BanubaVideoEditorSDK.ImageButtonConfiguration
   public var numberOfThumbnails: Swift.Int
-  public init(cancelButton: BanubaUtilities.RoundedButtonConfiguration, doneButton: BanubaUtilities.RoundedButtonConfiguration, titleLabel: BanubaUtilities.TextConfiguration?, toolTipLabel: BanubaUtilities.TextConfiguration, selectorColor: UIKit.UIColor, selectGalleryImageButton: BanubaVideoEditorSDK.BanubaButtonConfiguration, deleteImageButtonImageConfiguration: BanubaVideoEditorSDK.BanubaButtonConfiguration, backgroundConfiguration: BanubaUtilities.BackgroundConfiguration, previewBackgroundConfiguration: BanubaUtilities.BackgroundConfiguration, thumbnailsCursorConfiguration: BanubaVideoEditorSDK.ImageButtonConfiguration, numberOfThumbnails: Swift.Int)
+  public var galleryImageCompressionQuality: CoreGraphics.CGFloat
+  public init(cancelButton: BanubaUtilities.RoundedButtonConfiguration, doneButton: BanubaUtilities.RoundedButtonConfiguration, titleLabel: BanubaUtilities.TextConfiguration?, toolTipLabel: BanubaUtilities.TextConfiguration, selectorColor: UIKit.UIColor, selectGalleryImageButton: BanubaVideoEditorSDK.BanubaButtonConfiguration, deleteImageButtonImageConfiguration: BanubaVideoEditorSDK.BanubaButtonConfiguration, backgroundConfiguration: BanubaUtilities.BackgroundConfiguration, previewBackgroundConfiguration: BanubaUtilities.BackgroundConfiguration, thumbnailsCursorConfiguration: BanubaVideoEditorSDK.ImageButtonConfiguration, numberOfThumbnails: Swift.Int, galleryImageCompressionQuality: CoreGraphics.CGFloat)
 }
 public struct FilterControlButtonConfig {
   public enum `Type` : Swift.String {
@@ -1491,6 +1488,10 @@ extension BanubaVideoEditorSDK.MaskModel : BanubaVideoEditorSDK.ExternalMask {
   }
 }
 extension BanubaVideoEditorSDK.MaskModel : BanubaVideoEditorSDK.EffectViewModel {
+  public var lutFileName: Swift.String? {
+    get
+    set(newValue)
+  }
   public func isEqual(to model: BanubaVideoEditorSDK.EffectViewModel) -> Swift.Bool
   public var type: BanubaVideoEditorSDK.EffectType {
     get
@@ -1545,9 +1546,13 @@ public protocol EffectViewModel : AnyObject {
   var progress: Swift.Float? { get set }
   var progressHandler: ((_ progress: Swift.Float, _ failed: Swift.Bool) -> Swift.Void)? { get set }
   var downloadType: BanubaVideoEditorSDK.ContentLocationType { get }
+  var lutFileName: Swift.String? { get }
   func isEqual(to model: BanubaVideoEditorSDK.EffectViewModel) -> Swift.Bool
 }
 extension BanubaSDKServicing.EffectModel : BanubaVideoEditorSDK.EffectViewModel {
+  public var lutFileName: Swift.String? {
+    get
+  }
   public var downloadType: BanubaVideoEditorSDK.ContentLocationType {
     get
   }
@@ -1572,6 +1577,9 @@ extension BanubaSDKServicing.EffectModel : BanubaVideoEditorSDK.EffectViewModel 
   }
 }
 extension VideoEditor.VideoEditorFilterModel : BanubaVideoEditorSDK.EffectViewModel {
+  public var lutFileName: Swift.String? {
+    get
+  }
   public var downloadType: BanubaVideoEditorSDK.ContentLocationType {
     get
   }
