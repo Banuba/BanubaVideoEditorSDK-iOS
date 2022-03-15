@@ -190,10 +190,8 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #if __has_warning("-Watimport-in-framework-header")
 #pragma clang diagnostic ignored "-Watimport-in-framework-header"
 #endif
-@import AVFAudio;
 @import BanubaUtilities;
 @import CoreGraphics;
-@import Foundation;
 @import ObjectiveC;
 @import UIKit;
 #endif
@@ -212,22 +210,6 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 # pragma clang attribute push(__attribute__((external_source_symbol(language="Swift", defined_in="BanubaVideoEditorSDK",generated_declaration))), apply_to=any(function,enum,objc_interface,objc_category,objc_protocol))
 # pragma pop_macro("any")
 #endif
-
-
-
-SWIFT_CLASS("_TtC20BanubaVideoEditorSDK11AudioWriter")
-@interface AudioWriter : NSObject
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-@end
-
-@class AVAudioRecorder;
-@class NSNumber;
-
-@interface AudioWriter (SWIFT_EXTENSION(BanubaVideoEditorSDK)) <AVAudioRecorderDelegate>
-- (void)audioRecorderEncodeErrorDidOccur:(AVAudioRecorder * _Nonnull)recorder error:(NSError * _Nullable)error;
-- (void)audioRecorderDidFinishRecording:(AVAudioRecorder * _Nonnull)recorder successfully:(BOOL)flag;
-@end
 
 
 
@@ -265,6 +247,7 @@ SWIFT_CLASS("_TtC20BanubaVideoEditorSDK21ExposureAnimationView")
 - (void)drawRect:(CGRect)rect;
 @end
 
+@class NSNumber;
 @class NSString;
 @class NSBundle;
 
@@ -288,25 +271,6 @@ SWIFT_CLASS("_TtC20BanubaVideoEditorSDK22FullscreenActivityView")
 - (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end
-
-
-SWIFT_CLASS("_TtC20BanubaVideoEditorSDK34GIFPickerDataLoadingViewController")
-@interface GIFPickerDataLoadingViewController : UIViewController
-- (void)viewDidLoad;
-- (void)viewWillAppear:(BOOL)animated;
-- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
-@end
-
-
-
-SWIFT_CLASS("_TtC20BanubaVideoEditorSDK8GiphyAPI")
-@interface GiphyAPI : NSObject
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-@end
-
-
 
 
 @class UIImage;
@@ -341,27 +305,6 @@ SWIFT_CLASS("_TtC20BanubaVideoEditorSDK25TrimTimeLineConfiguration")
 
 
 
-
-
-
-
-SWIFT_CLASS("_TtC20BanubaVideoEditorSDK33VideoCoverSelectionViewController")
-@interface VideoCoverSelectionViewController : UIViewController
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
-- (void)viewDidLoad;
-- (void)viewWillAppear:(BOOL)animated;
-- (void)viewDidLayoutSubviews;
-- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil SWIFT_UNAVAILABLE;
-@end
-
-
-
-@class UIImagePickerController;
-
-@interface VideoCoverSelectionViewController (SWIFT_EXTENSION(BanubaVideoEditorSDK)) <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
-- (void)imagePickerController:(UIImagePickerController * _Nonnull)picker didFinishPickingMediaWithInfo:(NSDictionary<UIImagePickerControllerInfoKey, id> * _Nonnull)info;
-- (void)imagePickerControllerDidCancel:(UIImagePickerController * _Nonnull)picker;
-@end
 
 
 
@@ -570,10 +513,8 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #if __has_warning("-Watimport-in-framework-header")
 #pragma clang diagnostic ignored "-Watimport-in-framework-header"
 #endif
-@import AVFAudio;
 @import BanubaUtilities;
 @import CoreGraphics;
-@import Foundation;
 @import ObjectiveC;
 @import UIKit;
 #endif
@@ -592,22 +533,6 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 # pragma clang attribute push(__attribute__((external_source_symbol(language="Swift", defined_in="BanubaVideoEditorSDK",generated_declaration))), apply_to=any(function,enum,objc_interface,objc_category,objc_protocol))
 # pragma pop_macro("any")
 #endif
-
-
-
-SWIFT_CLASS("_TtC20BanubaVideoEditorSDK11AudioWriter")
-@interface AudioWriter : NSObject
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-@end
-
-@class AVAudioRecorder;
-@class NSNumber;
-
-@interface AudioWriter (SWIFT_EXTENSION(BanubaVideoEditorSDK)) <AVAudioRecorderDelegate>
-- (void)audioRecorderEncodeErrorDidOccur:(AVAudioRecorder * _Nonnull)recorder error:(NSError * _Nullable)error;
-- (void)audioRecorderDidFinishRecording:(AVAudioRecorder * _Nonnull)recorder successfully:(BOOL)flag;
-@end
 
 
 
@@ -645,6 +570,7 @@ SWIFT_CLASS("_TtC20BanubaVideoEditorSDK21ExposureAnimationView")
 - (void)drawRect:(CGRect)rect;
 @end
 
+@class NSNumber;
 @class NSString;
 @class NSBundle;
 
@@ -668,25 +594,6 @@ SWIFT_CLASS("_TtC20BanubaVideoEditorSDK22FullscreenActivityView")
 - (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end
-
-
-SWIFT_CLASS("_TtC20BanubaVideoEditorSDK34GIFPickerDataLoadingViewController")
-@interface GIFPickerDataLoadingViewController : UIViewController
-- (void)viewDidLoad;
-- (void)viewWillAppear:(BOOL)animated;
-- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
-@end
-
-
-
-SWIFT_CLASS("_TtC20BanubaVideoEditorSDK8GiphyAPI")
-@interface GiphyAPI : NSObject
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-@end
-
-
 
 
 @class UIImage;
@@ -721,27 +628,6 @@ SWIFT_CLASS("_TtC20BanubaVideoEditorSDK25TrimTimeLineConfiguration")
 
 
 
-
-
-
-
-SWIFT_CLASS("_TtC20BanubaVideoEditorSDK33VideoCoverSelectionViewController")
-@interface VideoCoverSelectionViewController : UIViewController
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
-- (void)viewDidLoad;
-- (void)viewWillAppear:(BOOL)animated;
-- (void)viewDidLayoutSubviews;
-- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil SWIFT_UNAVAILABLE;
-@end
-
-
-
-@class UIImagePickerController;
-
-@interface VideoCoverSelectionViewController (SWIFT_EXTENSION(BanubaVideoEditorSDK)) <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
-- (void)imagePickerController:(UIImagePickerController * _Nonnull)picker didFinishPickingMediaWithInfo:(NSDictionary<UIImagePickerControllerInfoKey, id> * _Nonnull)info;
-- (void)imagePickerControllerDidCancel:(UIImagePickerController * _Nonnull)picker;
-@end
 
 
 
