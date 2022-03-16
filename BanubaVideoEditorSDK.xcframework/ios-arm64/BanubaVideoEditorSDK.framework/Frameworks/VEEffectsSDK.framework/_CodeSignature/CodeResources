@@ -22,15 +22,15 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		QUwPAHgCAIw7XVDqyWzspXWC1xs=
+		kWeDjb4doMsoAQlHls6IMTRtLyY=
 		</data>
 		<key>Modules/VEEffectsSDK.swiftmodule/Project/arm64-apple-ios.swiftsourceinfo</key>
 		<data>
-		HUavj1ymBrEqJAkAk2AuO79mIbw=
+		rDqWbhQ54qch/ZMWrCxB4HPHgRE=
 		</data>
 		<key>Modules/VEEffectsSDK.swiftmodule/Project/arm64.swiftsourceinfo</key>
 		<data>
-		HUavj1ymBrEqJAkAk2AuO79mIbw=
+		rDqWbhQ54qch/ZMWrCxB4HPHgRE=
 		</data>
 		<key>Modules/VEEffectsSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
@@ -42,7 +42,7 @@
 		</data>
 		<key>Modules/VEEffectsSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		p28jTgoWPzmEVF8NiU7px/OfzRE=
+		dVQ4cZNoA8yMK+2lhQ12tg4/YUU=
 		</data>
 		<key>Modules/VEEffectsSDK.swiftmodule/arm64.swiftdoc</key>
 		<data>
@@ -54,7 +54,7 @@
 		</data>
 		<key>Modules/VEEffectsSDK.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		p28jTgoWPzmEVF8NiU7px/OfzRE=
+		dVQ4cZNoA8yMK+2lhQ12tg4/YUU=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -99,14 +99,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			ETEeAFP+O/mJTsqfLeb1lwHuo/s7GxnoNH61qTHsUoY=
+			f/CMREbnMt/hkK2eJe8js223+0qprQwtckORqluoMt4=
 			</data>
 		</dict>
 		<key>Modules/VEEffectsSDK.swiftmodule/Project/arm64.swiftsourceinfo</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ETEeAFP+O/mJTsqfLeb1lwHuo/s7GxnoNH61qTHsUoY=
+			f/CMREbnMt/hkK2eJe8js223+0qprQwtckORqluoMt4=
 			</data>
 		</dict>
 		<key>Modules/VEEffectsSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
@@ -127,7 +127,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Kjls3FlgyVbvBYrxQRrXxzIKQmeSc0DAgc7UU51br5c=
+			JINw2rH1s0SVH2phUfRDDCZ+aY5MaahSjWr5QrSb4js=
 			</data>
 		</dict>
 		<key>Modules/VEEffectsSDK.swiftmodule/arm64.swiftdoc</key>
@@ -148,7 +148,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Kjls3FlgyVbvBYrxQRrXxzIKQmeSc0DAgc7UU51br5c=
+			JINw2rH1s0SVH2phUfRDDCZ+aY5MaahSjWr5QrSb4js=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

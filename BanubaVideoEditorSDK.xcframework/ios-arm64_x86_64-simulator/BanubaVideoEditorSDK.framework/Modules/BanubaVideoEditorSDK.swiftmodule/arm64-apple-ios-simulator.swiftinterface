@@ -175,6 +175,13 @@ extension BanubaVideoEditorSDK.BanubaVideoEditor {
     get
   }
 }
+public class TextEditSelectionBorderAnimationBehavior : BanubaVideoEditorSDK.TextEditSelectionColorBehavior {
+  final public let defaultBorderWidth: CoreGraphics.CGFloat
+  final public let selectedBorderWidth: CoreGraphics.CGFloat
+  public init(defaultBorderWidth: CoreGraphics.CGFloat, selectedBorderWidth: CoreGraphics.CGFloat)
+  public func setColorView(_ colorView: UIKit.UIView, selected: Swift.Bool, animated: Swift.Bool)
+  @objc deinit
+}
 @_hasMissingDesignatedInitializers public class DefaultCountdownAnimatableView : BanubaVideoEditorSDK.CountdownTimerViewFactory {
   public func makeCountdownTimerView() -> BanubaUtilities.CountdownTimerAnimatableView
   @objc deinit
