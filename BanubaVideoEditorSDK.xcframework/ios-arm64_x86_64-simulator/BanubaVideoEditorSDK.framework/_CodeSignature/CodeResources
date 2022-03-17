@@ -120,22 +120,6 @@
 		<data>
 		xkYXask+NyN6jxg15jMwjtmQzLg=
 		</data>
-		<key>Frameworks/VEEffectsSDK.framework/Info.plist</key>
-		<data>
-		Hd/olx5qeqy6ZAEf1R70QkJUiHs=
-		</data>
-		<key>Frameworks/VEEffectsSDK.framework/VEEffectsSDK</key>
-		<data>
-		bTtGTLW6TLD5q2qU4KmDfOGpE24=
-		</data>
-		<key>Frameworks/VEEffectsSDK.framework/_CodeSignature/CodeResources</key>
-		<data>
-		SAKIUgFD/gesNVnkwiOXDT7O2n0=
-		</data>
-		<key>Frameworks/VEEffectsSDK.framework/default.metallib</key>
-		<data>
-		ijlXuaDibIZHGGeRuXfi9KgsS8M=
-		</data>
 		<key>FullscreenActivityView.nib</key>
 		<data>
 		gv64xLUu7f9Sy7pDffWnEqRDXbs=
@@ -210,19 +194,19 @@
 		</data>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/Project/arm64-apple-ios-simulator.swiftsourceinfo</key>
 		<data>
-		rBFqEomYtbXp+H5N98HOMXbvFYs=
+		sBU+4Lm1v7Wo6oBEWyXeyvnD8fs=
 		</data>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/Project/arm64.swiftsourceinfo</key>
 		<data>
-		rBFqEomYtbXp+H5N98HOMXbvFYs=
+		sBU+4Lm1v7Wo6oBEWyXeyvnD8fs=
 		</data>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo</key>
 		<data>
-		VUERRd9y2j8nw0VsbTfatCOtF8g=
+		mD05mOY5AvzQ8eq/BNlVXwavTqI=
 		</data>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/Project/x86_64.swiftsourceinfo</key>
 		<data>
-		VUERRd9y2j8nw0VsbTfatCOtF8g=
+		mD05mOY5AvzQ8eq/BNlVXwavTqI=
 		</data>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -618,34 +602,6 @@
 			2Ykl3mwu/gb9A7GfmUKHva3zztwblCRrWm8jTp8psOo=
 			</data>
 		</dict>
-		<key>Frameworks/VEEffectsSDK.framework/Info.plist</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			MZMzJF5ZcanDgSQo2YgM5UAWFtE2kZ3/ALjM9209mN0=
-			</data>
-		</dict>
-		<key>Frameworks/VEEffectsSDK.framework/VEEffectsSDK</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			8iVkbXZL1TVNBn/P+SkQjAPn1PFRaoMr8WP222qZlRM=
-			</data>
-		</dict>
-		<key>Frameworks/VEEffectsSDK.framework/_CodeSignature/CodeResources</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			c7XmrNFcCupFXNwFGMGJ3FHupJKJBytrZRbqS/7FE98=
-			</data>
-		</dict>
-		<key>Frameworks/VEEffectsSDK.framework/default.metallib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			M/JSsUrG7SpsF1wRsYAzG2isEclx1A5/q+VqI4TtMLk=
-			</data>
-		</dict>
 		<key>FullscreenActivityView.nib</key>
 		<dict>
 			<key>hash2</key>
@@ -769,28 +725,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			2OL/joGdgVMjimPKHNioLcJLKNh0uieTjCeXxTAXIyk=
+			LgCOD8IYNocbvBN4emJasoX50+dzJ9ralTd5qZe1yv4=
 			</data>
 		</dict>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/Project/arm64.swiftsourceinfo</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			2OL/joGdgVMjimPKHNioLcJLKNh0uieTjCeXxTAXIyk=
+			LgCOD8IYNocbvBN4emJasoX50+dzJ9ralTd5qZe1yv4=
 			</data>
 		</dict>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			AVPQAzzpWFRpZUfiuw4TWwHRhkdL6rbStAwzLGN2lvQ=
+			qPHfiebaRVgkPyC8leHkbIBvApFgu67/q53DgztoCBA=
 			</data>
 		</dict>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/Project/x86_64.swiftsourceinfo</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			AVPQAzzpWFRpZUfiuw4TWwHRhkdL6rbStAwzLGN2lvQ=
+			qPHfiebaRVgkPyC8leHkbIBvApFgu67/q53DgztoCBA=
 			</data>
 		</dict>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
