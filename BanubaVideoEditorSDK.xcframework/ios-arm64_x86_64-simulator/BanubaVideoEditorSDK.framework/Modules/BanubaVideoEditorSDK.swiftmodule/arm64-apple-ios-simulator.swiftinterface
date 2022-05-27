@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.6 (swiftlang-5.6.0.323.62 clang-1316.0.20.8)
+// swift-compiler-version: Apple Swift version 5.6.1 (swiftlang-5.6.0.323.66 clang-1316.0.20.12)
 // swift-module-flags: -target arm64-apple-ios11.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=unchecked -Onone -module-name BanubaVideoEditorSDK
 import AVFoundation
 import AVKit
@@ -24,6 +24,17 @@ import VEExportSDK
 import VEPlaybackSDK
 import VideoEditor
 import _Concurrency
+public class EffectItem {
+  public var effect: BanubaVideoEditorSDK.EffectListItemConfiguration.`Type`
+  public var icon: BanubaUtilities.ImageConfigurationProtocol?
+  public var text: BanubaUtilities.TextConfiguration
+  public var isSelected: Swift.Bool
+  public var width: CoreGraphics.CGFloat
+  public var height: CoreGraphics.CGFloat
+  public var selectedColor: UIKit.UIColor
+  public init(choosedEffect: BanubaVideoEditorSDK.EffectListItemConfiguration.`Type`, icon: BanubaUtilities.ImageConfigurationProtocol?, text: BanubaUtilities.TextConfiguration, width: CoreGraphics.CGFloat, height: CoreGraphics.CGFloat, selectedColor: UIKit.UIColor)
+  @objc deinit
+}
 public class VideoOverlayObjectWithImage : BanubaOverlayEditorSDK.OverlayItem {
   final public let id: Swift.String
   public var image: UIKit.UIImage
@@ -42,10 +53,11 @@ public class VideoOverlayObjectWithImage : BanubaOverlayEditorSDK.OverlayItem {
   public var position: BanubaOverlayEditorSDK.OverlayItemLinePosition?
   public var order: Swift.Int
   public init(id: Swift.String, image: UIKit.UIImage, imageData: Foundation.Data, startTime: CoreMedia.CMTime, endTime: CoreMedia.CMTime, frame: CoreGraphics.CGRect = .zero, transform: CoreGraphics.CGAffineTransform = .identity, order: Swift.Int = .zero)
+  @objc public func copy(with zone: ObjectiveC.NSZone? = nil) -> Any
   @objc deinit
 }
 public class VideoOverlayObjectWithText : BanubaOverlayEditorSDK.OverlayItem {
-  final public let id: Swift.String
+  public var id: Swift.String
   public var image: UIKit.UIImage
   public var startTime: CoreMedia.CMTime
   public var endTime: CoreMedia.CMTime
@@ -55,6 +67,7 @@ public class VideoOverlayObjectWithText : BanubaOverlayEditorSDK.OverlayItem {
   public var isEditable: Swift.Bool {
     get
   }
+  public var wasApplied: Swift.Bool
   public var text: Swift.String?
   public var font: BanubaVideoEditorSDK.VideoTextFont?
   public var backgroundColor: UIKit.UIColor?
@@ -67,6 +80,7 @@ public class VideoOverlayObjectWithText : BanubaOverlayEditorSDK.OverlayItem {
   public var order: Swift.Int
   convenience public init()
   public init(image: UIKit.UIImage)
+  @objc public func copy(with zone: ObjectiveC.NSZone? = nil) -> Any
   @objc deinit
 }
 @objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class FullscreenActivityView : UIKit.UIView {
@@ -145,6 +159,9 @@ public class BanubaVideoEditor {
   public var videoMetadata: BanubaUtilities.VideoMetadata? {
     get
   }
+  public var pixelateEffectsList: BanubaUtilities.PixelateList? {
+    get
+  }
   public var asset: AVFoundation.AVAsset? {
     get
   }
@@ -157,7 +174,7 @@ public class BanubaVideoEditor {
   public var currentConfiguration: BanubaVideoEditorSDK.VideoEditorConfig {
     get
   }
-  public init(token: Swift.String, isCameraEnabled: Swift.Bool = true, configuration: BanubaVideoEditorSDK.VideoEditorConfig, analytics: BanubaVideoEditorSDK.AnalyticsEngine? = nil, externalViewControllerFactory: BanubaVideoEditorSDK.ExternalViewControllerFactory? = nil)
+  public init(token: Swift.String, isCameraEnabled: Swift.Bool = true, configuration: BanubaVideoEditorSDK.VideoEditorConfig, externalViewControllerFactory: BanubaVideoEditorSDK.ExternalViewControllerFactory? = nil)
   @objc deinit
   public func export(using configuration: VEExportSDK.ExportConfiguration, completion: @escaping ((_ success: Swift.Bool, _ error: Swift.Error?, _ exportCoverImages: BanubaVideoEditorSDK.ExportCoverImages?) -> Swift.Void))
   public func stopExport()
@@ -274,9 +291,10 @@ public struct VideoEditorConfig {
   public var featureConfiguration: BanubaVideoEditorSDK.FeatureConfiguration
   public var isHandfreeEnabled: Swift.Bool
   public var draftsConfiguration: BanubaVideoEditorSDK.DraftsConfiguration
-  public var aspectsConfiguration: BanubaVideoEditorSDK.AspectsConfiguration
+  public var aspectsConfiguration: BanubaVideoEditorSDK.EffectsListConfiguration
+  public var transitionsConfiguration: BanubaVideoEditorSDK.EffectsListConfiguration
   public init()
-  public init(videoResolutionConfiguration: BanubaUtilities.VideoResolutionConfiguration, recorderConfiguration: BanubaVideoEditorSDK.RecorderConfiguration, editorConfiguration: BanubaVideoEditorSDK.EditorConfiguration, textEditorConfiguration: BanubaVideoEditorSDK.TextEditorConfiguration, toastConfiguration: BanubaVideoEditorSDK.ToastConfiguration, fullScreenActivityConfiguration: BanubaVideoEditorSDK.FullScreenActivityConfiguration, smallActivityIndicatorConfiguration: BanubaUtilities.SmallActivityIndicatorConfiguration, albumsConfiguration: BanubaUtilities.AlbumsConfiguration, videoOverlayConfiguration: BanubaVideoEditorSDK.VideoOverlayConfiguration, videoDurationConfiguration: BanubaVideoEditorTrimSDK.VideoEditorDurationConfig, gifPickerConfiguration: BanubaVideoEditorSDK.GifPickerConfiguration, combinedGalleryConfiguration: BanubaUtilities.GalleryConfiguration, trimVideosConfiguration: BanubaVideoEditorSDK.TrimVideosConfiguration, trimVideoConfiguration: BanubaVideoEditorSDK.TrimVideoConfiguration, filterConfiguration: BanubaVideoEditorSDK.FilterConfiguration, extendedVideoCoverSelectionConfiguration: BanubaVideoEditorSDK.VideoCoverSelectionConfiguration, musicEditorConfiguration: BanubaMusicEditorSDK.MusicEditorConfig, overlayEditorConfiguration: BanubaOverlayEditorSDK.OverlayEditorConfiguration, featureConfiguration: BanubaVideoEditorSDK.FeatureConfiguration, watermarkConfiguration: VideoEditor.WatermarkConfiguration?, alertViewConfiguration: BanubaUtilities.AlertViewConfiguration, handsfreeConfiguration: BanubaVideoEditorSDK.HandsfreeConfiguration?, pipSettingsConfiguration: BanubaVideoEditorSDK.PIPSettingsConfiguration?, hintViewConfiguration: BanubaVideoEditorSDK.HintViewConfiguration?, draftsConfiguration: BanubaVideoEditorSDK.DraftsConfiguration, aspectsConfiguration: BanubaVideoEditorSDK.AspectsConfiguration)
+  public init(videoResolutionConfiguration: BanubaUtilities.VideoResolutionConfiguration, recorderConfiguration: BanubaVideoEditorSDK.RecorderConfiguration, editorConfiguration: BanubaVideoEditorSDK.EditorConfiguration, textEditorConfiguration: BanubaVideoEditorSDK.TextEditorConfiguration, toastConfiguration: BanubaVideoEditorSDK.ToastConfiguration, fullScreenActivityConfiguration: BanubaVideoEditorSDK.FullScreenActivityConfiguration, smallActivityIndicatorConfiguration: BanubaUtilities.SmallActivityIndicatorConfiguration, albumsConfiguration: BanubaUtilities.AlbumsConfiguration, videoOverlayConfiguration: BanubaVideoEditorSDK.VideoOverlayConfiguration, videoDurationConfiguration: BanubaVideoEditorTrimSDK.VideoEditorDurationConfig, gifPickerConfiguration: BanubaVideoEditorSDK.GifPickerConfiguration, combinedGalleryConfiguration: BanubaUtilities.GalleryConfiguration, trimVideosConfiguration: BanubaVideoEditorSDK.TrimVideosConfiguration, trimVideoConfiguration: BanubaVideoEditorSDK.TrimVideoConfiguration, filterConfiguration: BanubaVideoEditorSDK.FilterConfiguration, extendedVideoCoverSelectionConfiguration: BanubaVideoEditorSDK.VideoCoverSelectionConfiguration, musicEditorConfiguration: BanubaMusicEditorSDK.MusicEditorConfig, overlayEditorConfiguration: BanubaOverlayEditorSDK.OverlayEditorConfiguration, featureConfiguration: BanubaVideoEditorSDK.FeatureConfiguration, watermarkConfiguration: VideoEditor.WatermarkConfiguration?, alertViewConfiguration: BanubaUtilities.AlertViewConfiguration, handsfreeConfiguration: BanubaVideoEditorSDK.HandsfreeConfiguration?, pipSettingsConfiguration: BanubaVideoEditorSDK.PIPSettingsConfiguration?, hintViewConfiguration: BanubaVideoEditorSDK.HintViewConfiguration?, draftsConfiguration: BanubaVideoEditorSDK.DraftsConfiguration, aspectsConfiguration: BanubaVideoEditorSDK.EffectsListConfiguration, transitionsConfiguration: BanubaVideoEditorSDK.EffectsListConfiguration)
   public mutating func applyFont(_ font: UIKit.UIFont)
   public mutating func updateAlertFonts(_ font: UIKit.UIFont)
   public mutating func updateRecorderFonts(_ font: UIKit.UIFont)
@@ -374,6 +392,8 @@ public struct RecorderConfiguration {
   public var progressBarPosition: BanubaVideoEditorSDK.RecorderConfiguration.ProgressBarPosition
   public var muteMicrophoneForPIP: Swift.Bool
   public var isAudioRateEqualsVideoSpeed: Swift.Bool
+  public var isGalleryButtonHidden: Swift.Bool
+  public var supportMultiRecords: Swift.Bool
 }
 public struct RecordButtonConfiguration {
   public var idleStrokeColor: CoreGraphics.CGColor
@@ -417,6 +437,9 @@ public struct TimeLineConfiguration {
   public var separatorColor: UIKit.UIColor
   public var isDynamicProgressBar: Swift.Bool
 }
+public struct TransitionActionConfiguration {
+  public init(imageConfiguration: BanubaVideoEditorSDK.ImageConfiguration, height: CoreGraphics.CGFloat, clicableWidth: CoreGraphics.CGFloat, backgroundColor: UIKit.UIColor, cornerRadius: CoreGraphics.CGFloat, shadowColor: UIKit.UIColor)
+}
 @objc public class TrimTimeLineConfiguration : ObjectiveC.NSObject {
   public var controlsColor: UIKit.UIColor
   public var cursorColor: UIKit.UIColor
@@ -425,7 +448,8 @@ public struct TimeLineConfiguration {
   public var timelineTopBottomInset: CoreGraphics.CGFloat
   public var videoResolution: BanubaUtilities.VideoResolutionConfiguration
   public var draggerConfiguration: BanubaVideoEditorSDK.DraggerConfiguration
-  public init(controlsColor: UIKit.UIColor, cursorColor: UIKit.UIColor, borderWidth: CoreGraphics.CGFloat, trimContentCornerRadius: CoreGraphics.CGFloat, timelineTopBottomInset: CoreGraphics.CGFloat, videoResolution: BanubaUtilities.VideoResolutionConfiguration, draggerConfiguration: BanubaVideoEditorSDK.DraggerConfiguration)
+  public var transitionIcons: [BanubaUtilities.TransitionType : BanubaVideoEditorSDK.TransitionActionConfiguration]?
+  public init(controlsColor: UIKit.UIColor, cursorColor: UIKit.UIColor, borderWidth: CoreGraphics.CGFloat, trimContentCornerRadius: CoreGraphics.CGFloat, timelineTopBottomInset: CoreGraphics.CGFloat, videoResolution: BanubaUtilities.VideoResolutionConfiguration, draggerConfiguration: BanubaVideoEditorSDK.DraggerConfiguration, transitionIcons: [BanubaUtilities.TransitionType : BanubaVideoEditorSDK.TransitionActionConfiguration]? = nil)
   @objc deinit
 }
 public struct DraggerConfiguration {
@@ -472,6 +496,7 @@ public struct TrimVideosConfiguration {
   public var videoPartConfiguration: BanubaVideoEditorSDK.TrimVideoPartConfiguration
   public var reorderingVideoToolTipLabelConfiguration: BanubaUtilities.TextConfiguration
   public var trimTimelineConfiguration: BanubaVideoEditorSDK.TrimTimeLineConfiguration
+  public var isGalleryButtonHidden: Swift.Bool
 }
 public struct TrimVideoPartConfiguration {
   public var borderWidth: CoreGraphics.CGFloat
@@ -518,6 +543,7 @@ public struct FilterConfiguration {
   public var screenNameConfiguration: BanubaVideoEditorSDK.ScreenNameConfiguration
   public var preferredLutsOrder: [Swift.String]
   public var preferredMasksOrder: [Swift.String]
+  public var preferredVideoEffectOrderAndSet: [VEEffectsSDK.VisualEffectApplicatorType]
 }
 public typealias TimerOptionBarConfiguration = BanubaVideoEditorSDK.HandsfreeConfiguration.TimerOptionBarConfiguration
 public struct HandsfreeConfiguration {
@@ -577,13 +603,13 @@ public struct HintViewConfiguration {
   public var textConfiguration: BanubaUtilities.TextConfiguration
   public var arrowConfiguration: BanubaVideoEditorSDK.HintViewConfiguration.ArrowConfiguration
 }
+public protocol MusicSelectorViewController : UIKit.UIViewController {
+  var delegate: BanubaVideoEditorSDK.MusicSelectorViewControllerDelegate? { get set }
+}
 public protocol MusicSelectorViewControllerDelegate {
   func didSelectFile(at url: Foundation.URL, title: Swift.String, id: Swift.Int64)
   func didClearSelection()
   func didCancel()
-}
-public protocol MusicSelectorViewController : UIKit.UIViewController {
-  var delegate: BanubaVideoEditorSDK.MusicSelectorViewControllerDelegate? { get set }
 }
 public protocol ExternalViewControllerFactory {
   var musicEditorFactory: BanubaMusicEditorSDK.MusicEditorExternalViewControllerFactory? { get set }
@@ -596,55 +622,6 @@ extension BanubaVideoEditorSDK.ExternalViewControllerFactory {
     get
     set
   }
-}
-public struct RecorderAnalytics {
-  public enum EventKind : Swift.String, BanubaVideoEditorSDK.AnalyticsEventKind {
-    public static let domain: Swift.String
-    case toggleFlash
-    case changeSpeed
-    case toggleCamera
-    case toggleTimer
-    case addFilter
-    case addMask
-    case changeMaskSubtype
-    case toggleBeautification
-    case presentMusicPicker
-    case presentMaskPicker
-    case presentFilterPicker
-    case recordVideoPart
-    case removeVideoPart
-    case done
-    public var parameterKeys: [BanubaVideoEditorSDK.RecorderAnalytics.ParameterKey]? {
-      get
-    }
-    public init?(rawValue: Swift.String)
-    public typealias ParameterKey = BanubaVideoEditorSDK.RecorderAnalytics.ParameterKey
-    public typealias RawValue = Swift.String
-    public var rawValue: Swift.String {
-      get
-    }
-  }
-  public enum ParameterKey : Swift.String, BanubaVideoEditorSDK.AnalyticsParameterKey {
-    case isFlashOn
-    case recordSpeed
-    case cameraType
-    case timerDuration
-    case filterID
-    case maskID
-    case musicID
-    case maskSubtypeID
-    case isBeautificationOn
-    case recordingGesture
-    case videoPartDuration
-    case videoPartInfos
-    case videoPartCount
-    public init?(rawValue: Swift.String)
-    public typealias RawValue = Swift.String
-    public var rawValue: Swift.String {
-      get
-    }
-  }
-  public typealias Manager = BanubaVideoEditorSDK.AnalyticsManager<BanubaVideoEditorSDK.RecorderAnalytics.EventKind>
 }
 public struct AnalyticsDefaults {
   public static let recorderScreenName: Swift.String
@@ -816,8 +793,10 @@ public struct FeatureConfiguration {
   public var isAspectsEnabled: Swift.Bool
   public var isSpeedBarEnabled: Swift.Bool
   public var isVideoFitsAspect: Swift.Bool
+  public var openAutomaticallyPIPSettingsDropdown: Swift.Bool
+  public var useTransitions: Swift.Bool
   public static let `default`: BanubaVideoEditorSDK.FeatureConfiguration
-  public init(isOverlayEditorEnabled: Swift.Bool, isDoubleTapForToggleCameraEnabled: Swift.Bool, isMuteCameraAudioEnabled: Swift.Bool, isVideoCoverSelectionEnabled: Swift.Bool, isSimpleVideoCoverEnabled: Swift.Bool, supportsTrimRecordedVideo: Swift.Bool, draftsConfig: BanubaVideoEditorSDK.DraftsFeatureConfig, isAspectsEnabled: Swift.Bool, isSpeedBarEnabled: Swift.Bool, isVideoFitsAspect: Swift.Bool, isBlurEffectsExportable: Swift.Bool)
+  public init(isOverlayEditorEnabled: Swift.Bool, isDoubleTapForToggleCameraEnabled: Swift.Bool, isMuteCameraAudioEnabled: Swift.Bool, isVideoCoverSelectionEnabled: Swift.Bool, isSimpleVideoCoverEnabled: Swift.Bool, supportsTrimRecordedVideo: Swift.Bool, draftsConfig: BanubaVideoEditorSDK.DraftsFeatureConfig, isAspectsEnabled: Swift.Bool, isSpeedBarEnabled: Swift.Bool, isVideoFitsAspect: Swift.Bool, isBlurEffectsExportable: Swift.Bool, openAutomaticallyPIPSettingsDropdown: Swift.Bool, useTransitions: Swift.Bool)
 }
 public struct RecorderEffectsConfiguration {
   public var cornerRadius: CoreGraphics.CGFloat
@@ -857,6 +836,7 @@ public struct TimerConfiguration {
   }
   public var defaultButton: BanubaVideoEditorSDK.ImageButtonConfiguration
   public var options: [BanubaVideoEditorSDK.TimerConfiguration.TimerOptionConfiguration]
+  public var soundPath: Swift.String?
 }
 public struct ScreenNameConfiguration {
   public var isHidden: Swift.Bool
@@ -991,23 +971,29 @@ public struct DraftMenuItem {
   public var image: BanubaVideoEditorSDK.ImageConfiguration?
   public init(type: BanubaVideoEditorSDK.DraftMenuItemType, name: BanubaUtilities.TextConfiguration, image: BanubaVideoEditorSDK.ImageConfiguration?)
 }
-public struct AspectConfiguration {
-  public var aspectRatio: BanubaUtilities.AspectRatio
+public struct EffectListItemConfiguration {
+  public enum `Type` : Swift.Equatable {
+    case aspect(BanubaUtilities.AspectRatio)
+    case transition(BanubaUtilities.TransitionType)
+    public static func == (a: BanubaVideoEditorSDK.EffectListItemConfiguration.`Type`, b: BanubaVideoEditorSDK.EffectListItemConfiguration.`Type`) -> Swift.Bool
+  }
+  public var effect: BanubaVideoEditorSDK.EffectListItemConfiguration.`Type`
   public var icon: BanubaVideoEditorSDK.ImageConfiguration?
   public var title: BanubaUtilities.TextConfiguration
   public var width: CoreGraphics.CGFloat
   public var height: CoreGraphics.CGFloat
   public var selectedColor: UIKit.UIColor
-  public init(aspectRatio: BanubaUtilities.AspectRatio, icon: BanubaVideoEditorSDK.ImageConfiguration?, title: BanubaUtilities.TextConfiguration, width: CoreGraphics.CGFloat, height: CoreGraphics.CGFloat, selectedColor: UIKit.UIColor)
+  public init(effect: BanubaVideoEditorSDK.EffectListItemConfiguration.`Type`, icon: BanubaVideoEditorSDK.ImageConfiguration?, title: BanubaUtilities.TextConfiguration, width: CoreGraphics.CGFloat, height: CoreGraphics.CGFloat, selectedColor: UIKit.UIColor)
 }
-public struct AspectsConfiguration {
+public struct EffectsListConfiguration {
   public var cancelButton: BanubaVideoEditorSDK.ImageButtonConfiguration
   public var doneButton: BanubaVideoEditorSDK.ImageButtonConfiguration
   public var backgroundConfiguration: BanubaUtilities.BackgroundConfiguration
   public var backgroundControlsViewColor: UIKit.UIColor
-  public var aspects: [BanubaVideoEditorSDK.AspectConfiguration]
-  public var defaultAspect: BanubaUtilities.AspectRatio
-  public init(cancelButton: BanubaVideoEditorSDK.ImageButtonConfiguration, doneButton: BanubaVideoEditorSDK.ImageButtonConfiguration, backgroundConfiguration: BanubaUtilities.BackgroundConfiguration, backgroundControlsViewColor: UIKit.UIColor, aspects: [BanubaVideoEditorSDK.AspectConfiguration], defaultAspect: BanubaUtilities.AspectRatio)
+  public var effects: [BanubaVideoEditorSDK.EffectListItemConfiguration]
+  public var defaultEffect: BanubaVideoEditorSDK.EffectListItemConfiguration.`Type`
+  public var primaryAspect: BanubaUtilities.AspectRatio?
+  public init(cancelButton: BanubaVideoEditorSDK.ImageButtonConfiguration, doneButton: BanubaVideoEditorSDK.ImageButtonConfiguration, backgroundConfiguration: BanubaUtilities.BackgroundConfiguration, backgroundControlsViewColor: UIKit.UIColor, effects: [BanubaVideoEditorSDK.EffectListItemConfiguration], defaultEffect: BanubaVideoEditorSDK.EffectListItemConfiguration.`Type`, primaryAspect: BanubaUtilities.AspectRatio? = nil)
 }
 public struct VideoOverlayItemViewConfiguration {
   public var scaleIconWidth: CoreGraphics.CGFloat
@@ -1046,6 +1032,117 @@ public enum EffectType {
 extension UIKit.UIColor {
   convenience public init?(colorParams: BanubaUtilities.ColorParams)
 }
+public enum VideoRecordSpeed : Swift.Int, Swift.CaseIterable {
+  case half
+  case normal
+  case double
+  case triple
+  public init?(rawValue: Swift.Int)
+  public typealias AllCases = [BanubaVideoEditorSDK.VideoRecordSpeed]
+  public typealias RawValue = Swift.Int
+  public static var allCases: [BanubaVideoEditorSDK.VideoRecordSpeed] {
+    get
+  }
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public protocol SDKCameraChangedDelegate : AnyObject {
+  func sdkDidChangeCamera(cameraStartedCompletion: (() -> Swift.Void)?)
+  func sdkWillChangeCamera()
+}
+public protocol SDKCameraServicing {
+  var videoRecordSpeed: BanubaVideoEditorSDK.VideoRecordSpeed { get set }
+  var isARCameraSupported: Swift.Bool { get }
+  var cameraChangedDelegate: BanubaVideoEditorSDK.SDKCameraChangedDelegate? { get set }
+  var renderQueue: Dispatch.DispatchQueue { get }
+  var playerViewSize: CoreGraphics.CGSize { get }
+  var autoStart: Swift.Bool { get set }
+  var allowProcessing: Swift.Bool { get set }
+  var isLoaded: Swift.Bool { get }
+  func effectsPaths(includeBeautyEffect: Swift.Bool) -> [Swift.String]
+  func setupCamera()
+  func setupPostprocessing()
+  func destroy()
+  func start(completion: @escaping () -> Swift.Void)
+  func stop()
+  func stop(completion: (() -> Swift.Void)?)
+  func applyFilter(_ filter: BanubaSDKServicing.EffectModel)
+  func removeFilter(_ filter: BanubaSDKServicing.EffectModel)
+  func removeAllFilters()
+  func startRenderLoop()
+  func stopRenderLoop()
+  func loadMask(name: Swift.String)
+  func unloadMask()
+  func setRenderTarget(view: UIKit.UIView)
+  func removeRenderTarget()
+  func toggleBeautification() -> Swift.Bool
+  func discardAppliedChanges()
+  func configurePhotoModeIfNeeded(isFrontCamera: Swift.Bool, isEnableTorch: Swift.Bool)
+  func getRendererView() -> UIKit.UIView
+  func takeSnapshot(handler: @escaping (UIKit.UIImage?) -> Swift.Void)
+  func replaceCamera(_ camera: BanubaSDKServicing.CameraModule, completion: (() -> Swift.Void)?)
+}
+public class SDKCameraService : BanubaVideoEditorSDK.SDKCameraServicing {
+  weak public var cameraChangedDelegate: BanubaVideoEditorSDK.SDKCameraChangedDelegate?
+  public var videoRecordSpeed: BanubaVideoEditorSDK.VideoRecordSpeed
+  public var isLoaded: Swift.Bool {
+    get
+  }
+  public var playerViewSize: CoreGraphics.CGSize {
+    get
+  }
+  public var autoStart: Swift.Bool {
+    get
+    set
+  }
+  public var allowProcessing: Swift.Bool {
+    get
+    set
+  }
+  public var isARCameraSupported: Swift.Bool {
+    get
+  }
+  public var renderQueue: Dispatch.DispatchQueue {
+    get
+  }
+  required public init(cameraModule: BanubaSDKServicing.CameraModule, masksPostprocessingServicing: BanubaSDKServicing.SDKMaskPostprocessServicing?)
+  @objc deinit
+}
+extension BanubaVideoEditorSDK.SDKCameraService {
+  public func setupCamera()
+  public func setupPostprocessing()
+  public func destroy()
+}
+extension BanubaVideoEditorSDK.SDKCameraService {
+  public func configurePhotoModeIfNeeded(isFrontCamera: Swift.Bool, isEnableTorch: Swift.Bool)
+}
+extension BanubaVideoEditorSDK.SDKCameraService {
+  public func replaceCamera(_ camera: BanubaSDKServicing.CameraModule, completion: (() -> Swift.Void)?)
+}
+extension BanubaVideoEditorSDK.SDKCameraService {
+  public func start(completion: @escaping () -> Swift.Void)
+  public func stop()
+  public func stop(completion: (() -> Swift.Void)?)
+  public func takeSnapshot(handler: @escaping (UIKit.UIImage?) -> Swift.Void)
+}
+extension BanubaVideoEditorSDK.SDKCameraService {
+  public func effectsPaths(includeBeautyEffect: Swift.Bool) -> [Swift.String]
+  public func applyFilter(_ filter: BanubaSDKServicing.EffectModel)
+  public func removeFilter(_ filter: BanubaSDKServicing.EffectModel)
+  public func removeAllFilters()
+  public func loadMask(name: Swift.String)
+  public func unloadMask()
+  public func toggleBeautification() -> Swift.Bool
+  public func discardAppliedChanges()
+}
+extension BanubaVideoEditorSDK.SDKCameraService {
+  public func startRenderLoop()
+  public func stopRenderLoop()
+  public func setRenderTarget(view: UIKit.UIView)
+  public func removeRenderTarget()
+  public func getRendererView() -> UIKit.UIView
+}
 @objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class FeedbackAlertViewController : UIKit.UIViewController {
   public enum ActionTypes {
     case agree
@@ -1072,68 +1169,8 @@ public enum Result<T> {
   public func get() throws -> T
   public func map<U>(_ transform: (T) -> U) -> BanubaVideoEditorSDK.Result<U>
 }
-public struct TrimAnalytics {
-  public enum EventKind : Swift.String, BanubaVideoEditorSDK.AnalyticsEventKind {
-    public static let domain: Swift.String
-    case addVideo
-    case moveVideo
-    case changePartDuration
-    case removeVideoPart
-    case done
-    public var parameterKeys: [BanubaVideoEditorSDK.TrimAnalytics.ParameterKey]? {
-      get
-    }
-    public init?(rawValue: Swift.String)
-    public typealias ParameterKey = BanubaVideoEditorSDK.TrimAnalytics.ParameterKey
-    public typealias RawValue = Swift.String
-    public var rawValue: Swift.String {
-      get
-    }
-  }
-  public enum ParameterKey : Swift.String, BanubaVideoEditorSDK.AnalyticsParameterKey {
-    case videoPartCount
-    public init?(rawValue: Swift.String)
-    public typealias RawValue = Swift.String
-    public var rawValue: Swift.String {
-      get
-    }
-  }
-  public typealias Manager = BanubaVideoEditorSDK.AnalyticsManager<BanubaVideoEditorSDK.TrimAnalytics.EventKind>
-}
 public protocol AnimatableViewFactory {
   func makeAnimatableView() -> BanubaUtilities.AnimatableView
-}
-public struct EffectPickerAnalytics {
-  public enum EventKind : Swift.String, BanubaVideoEditorSDK.AnalyticsEventKind {
-    public static let domain: Swift.String
-    case present
-    case cancel
-    case addEffect
-    case removeEffect
-    case done
-    public var parameterKeys: [BanubaVideoEditorSDK.EffectPickerAnalytics.ParameterKey]? {
-      get
-    }
-    public init?(rawValue: Swift.String)
-    public typealias ParameterKey = BanubaVideoEditorSDK.EffectPickerAnalytics.ParameterKey
-    public typealias RawValue = Swift.String
-    public var rawValue: Swift.String {
-      get
-    }
-  }
-  public enum ParameterKey : Swift.String, BanubaVideoEditorSDK.AnalyticsParameterKey {
-    case context
-    case effectType
-    case effectID
-    case effectDuration
-    case effectIDs
-    public init?(rawValue: Swift.String)
-    public typealias RawValue = Swift.String
-    public var rawValue: Swift.String {
-      get
-    }
-  }
-  public typealias Manager = BanubaVideoEditorSDK.AnalyticsManager<BanubaVideoEditorSDK.EffectPickerAnalytics.EventKind>
 }
 public protocol ExternalMaskProviding {
   var didReceiveExternalMasks: (([BanubaVideoEditorSDK.ExternalMask]) -> Swift.Void)? { get set }
@@ -1144,6 +1181,7 @@ public protocol ExternalMaskProviding {
 }
 public protocol ExternalMask {
   var id: Swift.UInt { get }
+  var maskType: Swift.String? { get }
   var name: Swift.String { get }
   var url: Foundation.URL { get }
   var previewImageURL: Foundation.URL { get }
@@ -1168,10 +1206,6 @@ public enum VideoTextAligment : Swift.Int {
   public var rawValue: Swift.Int {
     get
   }
-}
-public protocol AnalyticsEngine : AnyObject {
-  func report(error: Swift.Error, message: Swift.String)
-  func report(message: Swift.String, parameters: [Swift.String : Any]?)
 }
 extension BanubaUtilities.SmallActivityIndicatorConfiguration {
   public static var config: BanubaUtilities.SmallActivityIndicatorConfiguration {
@@ -1203,36 +1237,6 @@ public class DefaultExposureViewFactory : BanubaVideoEditorSDK.AnimatableViewFac
   @_Concurrency.MainActor(unsafe) public func stop()
   @objc deinit
 }
-public struct EditorAnalytics {
-  public enum EventKind : Swift.String, BanubaVideoEditorSDK.AnalyticsEventKind {
-    public static let domain: Swift.String
-    case appearEffects
-    case cancel
-    case done
-    public var parameterKeys: [BanubaVideoEditorSDK.EditorAnalytics.ParameterKey]? {
-      get
-    }
-    public init?(rawValue: Swift.String)
-    public typealias ParameterKey = BanubaVideoEditorSDK.EditorAnalytics.ParameterKey
-    public typealias RawValue = Swift.String
-    public var rawValue: Swift.String {
-      get
-    }
-  }
-  public enum ParameterKey : Swift.String, BanubaVideoEditorSDK.AnalyticsParameterKey {
-    case videoPartsCount
-    case musicId
-    case visualEffectIds
-    case colorEffectId
-    case timeEffectIds
-    public init?(rawValue: Swift.String)
-    public typealias RawValue = Swift.String
-    public var rawValue: Swift.String {
-      get
-    }
-  }
-  public typealias Manager = BanubaVideoEditorSDK.AnalyticsManager<BanubaVideoEditorSDK.EditorAnalytics.EventKind>
-}
 public enum CaptureButtonMode {
   case video
   case mixed
@@ -1242,87 +1246,12 @@ public enum CaptureButtonMode {
     get
   }
 }
-public protocol AnalyticsEventKind : Swift.RawRepresentable where Self.RawValue == Swift.String {
-  associatedtype ParameterKey : BanubaVideoEditorSDK.AnalyticsParameterKey
-  static var domain: Swift.String { get }
-  var parameterKeys: [Self.ParameterKey]? { get }
-}
-extension BanubaVideoEditorSDK.AnalyticsEventKind {
-  public var id: Swift.String {
-    get
-  }
-}
-public protocol AnalyticsParameterKey : Swift.Hashable, Swift.RawRepresentable where Self.RawValue == Swift.String {
-}
-public class AnalyticsManager<Kind> where Kind : BanubaVideoEditorSDK.AnalyticsEventKind {
-  public typealias ParameterKey = Kind.ParameterKey
-  public init(analyticsEngine: BanubaVideoEditorSDK.AnalyticsEngine)
-  public func log(_ eventKind: Kind, _ parameters: [BanubaVideoEditorSDK.AnalyticsManager<Kind>.ParameterKey : Any]? = nil)
-  public func set(_ value: Any?, forKey key: BanubaVideoEditorSDK.AnalyticsManager<Kind>.ParameterKey)
-  public func log(error: Swift.Error, message: Swift.String)
-  @objc deinit
-}
-public struct GalleryAnalytics {
-  public enum EventKind : Swift.String, BanubaVideoEditorSDK.AnalyticsEventKind {
-    public static let domain: Swift.String
-    case present
-    case multichoiceOn
-    case done
-    public var parameterKeys: [BanubaVideoEditorSDK.GalleryAnalytics.ParameterKey]? {
-      get
-    }
-    public init?(rawValue: Swift.String)
-    public typealias ParameterKey = BanubaVideoEditorSDK.GalleryAnalytics.ParameterKey
-    public typealias RawValue = Swift.String
-    public var rawValue: Swift.String {
-      get
-    }
-  }
-  public enum ParameterKey : Swift.String, BanubaVideoEditorSDK.AnalyticsParameterKey {
-    case isMultichoiceOn
-    public init?(rawValue: Swift.String)
-    public typealias RawValue = Swift.String
-    public var rawValue: Swift.String {
-      get
-    }
-  }
-  public typealias Manager = BanubaVideoEditorSDK.AnalyticsManager<BanubaVideoEditorSDK.GalleryAnalytics.EventKind>
-}
 public protocol ProgressAnimatableViewFactory {
   func makeProgressAnimatableView() -> BanubaUtilities.ProgressAnimatableView
 }
 @_hasMissingDesignatedInitializers public class CircularProgressViewFactory : BanubaVideoEditorSDK.ProgressAnimatableViewFactory {
   public func makeProgressAnimatableView() -> BanubaUtilities.ProgressAnimatableView
   @objc deinit
-}
-public struct MusicPickerAnalytics {
-  public enum EventKind : Swift.String, BanubaVideoEditorSDK.AnalyticsEventKind {
-    public static let domain: Swift.String
-    case present
-    case cancel
-    case select
-    case remove
-    case done
-    public var parameterKeys: [BanubaVideoEditorSDK.MusicPickerAnalytics.ParameterKey]? {
-      get
-    }
-    public init?(rawValue: Swift.String)
-    public typealias ParameterKey = BanubaVideoEditorSDK.MusicPickerAnalytics.ParameterKey
-    public typealias RawValue = Swift.String
-    public var rawValue: Swift.String {
-      get
-    }
-  }
-  public enum ParameterKey : Swift.String, BanubaVideoEditorSDK.AnalyticsParameterKey {
-    case context
-    case musicId
-    public init?(rawValue: Swift.String)
-    public typealias RawValue = Swift.String
-    public var rawValue: Swift.String {
-      get
-    }
-  }
-  public typealias Manager = BanubaVideoEditorSDK.AnalyticsManager<BanubaVideoEditorSDK.MusicPickerAnalytics.EventKind>
 }
 public enum ContentLocationType : Swift.Int {
   case remote
@@ -1408,6 +1337,7 @@ public protocol RecordButton : UIKit.UIView {
 }
 public protocol RecordButtonDelegate : AnyObject {
   func recordButtonDidTakePhoto(_ recordButton: BanubaVideoEditorSDK.RecordButton)
+  func recordButtonDidCancelTakePhoto(_ recordButton: BanubaVideoEditorSDK.RecordButton)
   func recordButtonDidStartVideoRecording(_ recordButton: BanubaVideoEditorSDK.RecordButton)
   func recordButtonDidStopVideoRecording(_ recordButton: BanubaVideoEditorSDK.RecordButton)
 }
@@ -1423,8 +1353,6 @@ extension BanubaVideoEditorSDK.TrimVideoCompositionEditItem.TrimVideoComposition
 extension BanubaVideoEditorSDK.TrimVideoCompositionEditItem.TrimVideoCompositionEditItemType : Swift.Hashable {}
 extension BanubaVideoEditorSDK.HintArrowPosition : Swift.Equatable {}
 extension BanubaVideoEditorSDK.HintArrowPosition : Swift.Hashable {}
-extension BanubaVideoEditorSDK.RecorderAnalytics.EventKind : Swift.Equatable {}
-extension BanubaVideoEditorSDK.RecorderAnalytics.EventKind : Swift.Hashable {}
 extension BanubaVideoEditorSDK.AdditionalEffectsButtonConfiguration.Position : Swift.Equatable {}
 extension BanubaVideoEditorSDK.AdditionalEffectsButtonConfiguration.Position : Swift.Hashable {}
 extension BanubaVideoEditorSDK.AdditionalEffectsButtonConfiguration.Position : Swift.RawRepresentable {}
@@ -1443,23 +1371,16 @@ extension BanubaVideoEditorSDK.DraftMenuItemType : Swift.Equatable {}
 extension BanubaVideoEditorSDK.DraftMenuItemType : Swift.Hashable {}
 extension BanubaVideoEditorSDK.EffectType : Swift.Equatable {}
 extension BanubaVideoEditorSDK.EffectType : Swift.Hashable {}
+extension BanubaVideoEditorSDK.VideoRecordSpeed : Swift.Equatable {}
+extension BanubaVideoEditorSDK.VideoRecordSpeed : Swift.Hashable {}
+extension BanubaVideoEditorSDK.VideoRecordSpeed : Swift.RawRepresentable {}
 extension BanubaVideoEditorSDK.FeedbackAlertViewController.ActionTypes : Swift.Equatable {}
 extension BanubaVideoEditorSDK.FeedbackAlertViewController.ActionTypes : Swift.Hashable {}
-extension BanubaVideoEditorSDK.TrimAnalytics.EventKind : Swift.Equatable {}
-extension BanubaVideoEditorSDK.TrimAnalytics.EventKind : Swift.Hashable {}
-extension BanubaVideoEditorSDK.EffectPickerAnalytics.EventKind : Swift.Equatable {}
-extension BanubaVideoEditorSDK.EffectPickerAnalytics.EventKind : Swift.Hashable {}
 extension BanubaVideoEditorSDK.VideoTextAligment : Swift.Equatable {}
 extension BanubaVideoEditorSDK.VideoTextAligment : Swift.Hashable {}
 extension BanubaVideoEditorSDK.VideoTextAligment : Swift.RawRepresentable {}
-extension BanubaVideoEditorSDK.EditorAnalytics.EventKind : Swift.Equatable {}
-extension BanubaVideoEditorSDK.EditorAnalytics.EventKind : Swift.Hashable {}
 extension BanubaVideoEditorSDK.CaptureButtonMode : Swift.Equatable {}
 extension BanubaVideoEditorSDK.CaptureButtonMode : Swift.Hashable {}
-extension BanubaVideoEditorSDK.GalleryAnalytics.EventKind : Swift.Equatable {}
-extension BanubaVideoEditorSDK.GalleryAnalytics.EventKind : Swift.Hashable {}
-extension BanubaVideoEditorSDK.MusicPickerAnalytics.EventKind : Swift.Equatable {}
-extension BanubaVideoEditorSDK.MusicPickerAnalytics.EventKind : Swift.Hashable {}
 extension BanubaVideoEditorSDK.ContentLocationType : Swift.Equatable {}
 extension BanubaVideoEditorSDK.ContentLocationType : Swift.Hashable {}
 extension BanubaVideoEditorSDK.ContentLocationType : Swift.RawRepresentable {}

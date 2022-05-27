@@ -15,16 +15,18 @@ NS_SWIFT_NAME(AREffectWrapper)
 __attribute__((weak_import)) @interface AREffectWrapper : NSObject
 
 @property (readonly, copy) NSString *title;
+@property (readonly, nullable, copy) NSString *type;
 @property (readonly, copy) NSURL *previewImage;
 @property (readonly, copy) NSURL *downloadLink;
 @property (readonly) BOOL isDownloaded;
 @property (readwrite, nullable, copy, nonatomic) NSURL *localURL;
 
 - (instancetype)init: (NSString *) title
+                type: (NSString * _Nullable) type
         previewImage: (NSURL *) previewImage
         downloadLink: (NSURL *) downloadLink
         isDownloaded: (BOOL) isDownloaded
-           localURL: (NSURL * _Nullable) localURL;
+            localURL: (NSURL * _Nullable) localURL;
 @end
 
 NS_ASSUME_NONNULL_END
@@ -42,7 +44,8 @@ __attribute__((weak_import)) @interface ARCloudFrameworkInteractor : NSObject
 
 + (BOOL)isFrameworkAvailable;
 
-- (instancetype)init: (NSString *) arCloudUrl;
+- (instancetype)init: (NSString *) arCloudUrl
+   embeddedEffectURLs: (NSArray<NSURL *> * _Nullable) embeddedEffectsURLs;
 
 - (void) getAREffects: (getAREffectsCompletion) completion;
 - (void) cancelDownloadingEffect: (NSUInteger) requestId;
