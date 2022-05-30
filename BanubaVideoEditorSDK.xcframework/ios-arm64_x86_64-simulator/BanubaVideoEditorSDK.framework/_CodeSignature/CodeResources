@@ -194,11 +194,11 @@
 		</data>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/Project/arm64-apple-ios-simulator.swiftsourceinfo</key>
 		<data>
-		4HYdWQyCodOtdBDYqXGxiPiAzAo=
+		guEscvxj2z8mQL09gSJGB1cQ6Q4=
 		</data>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo</key>
 		<data>
-		kl2MbzsiO4HF1Ezbl4D1TU/gVmQ=
+		S9KNYt7d0h5cfzVfAjgBJ4tjVYY=
 		</data>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -210,7 +210,7 @@
 		</data>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		PsHwah04fizPDnhCbePuX5zD/YI=
+		ms8hlw8xTB1XhjJd4XT9vdvwp1I=
 		</data>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -222,7 +222,7 @@
 		</data>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		uuTPwKZn74ybv/CWvc+NCp/urQ4=
+		X62dKuH9RNBZHhuutphdxhtW8QE=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -705,14 +705,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			22pfPKuFy7Y3tz7ju7ABPXxcIqxCnJWOm8cRq+e+CmU=
+			dT3YmnVkTqPX5F1wNJknO3GWnPeLtvz+ymVJvbE1Hd0=
 			</data>
 		</dict>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			iYEeqY+Ov5CCXdkfNcAX+zw+niM+mlpdpTy6zUHql4A=
+			TkrSyI7YJoQkJ6ee34kj3vS7g8BuRj3B4bpghfdRnZg=
 			</data>
 		</dict>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
@@ -733,7 +733,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			MlXfEj03pL2jMAtAl251338iv4EM4ric4rKm+EmjXpY=
+			z36g9uAEOjH346dSRNP7bfw+YOkwneinvxpkx8JY0Uc=
 			</data>
 		</dict>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -754,7 +754,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			gxnwc+RgkMDBQQKEZ4/qFt8/2uE5szNuO4PsDjS5P40=
+			ok18aVNQvhjoj1R9EebuGw3Ewz6oNqjPpPdId+vDtQM=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
