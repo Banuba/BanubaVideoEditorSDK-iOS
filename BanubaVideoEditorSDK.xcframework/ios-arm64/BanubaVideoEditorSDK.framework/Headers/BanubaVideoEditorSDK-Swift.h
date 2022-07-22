@@ -231,13 +231,13 @@ SWIFT_CLASS("_TtC20BanubaVideoEditorSDK13CountdownView")
 
 /// Setups drafts feature
 typedef SWIFT_ENUM(NSInteger, DraftsFeatureConfig, open) {
-/// Drafts enabled. Alert asking for saving video to drafts will be presented after editing a video. Drafts button in gallery is displayed.
+/// Drafts enabled. Alert asking for saving video to drafts will be presented after editing a video. Drafts button on the start screen  is displayed.
   DraftsFeatureConfigEnabled = 0,
-/// Drafts enabled. No alert will be presented after editing a video. Drafts button in gallery is displayed.
+/// Drafts enabled. No alert will be presented after editing a video. Drafts button on the start screen is displayed.
   DraftsFeatureConfigEnabledSaveToDraftsByDefault = 1,
-/// Drafts disabled completely. Drafts button in gallery is hidden.
+/// Drafts disabled completely. Drafts button on the start screen is hidden.
   DraftsFeatureConfigDisabled = 2,
-/// Drafts enabled. Cover screen will not be presented after editing a video. Drafts button in gallery is displayed.
+/// Drafts enabled. Cover screen will not be presented after editing a video. Drafts button on the start screen is displayed.
   DraftsFeatureConfigEnabledAskIfSaveNotExport = 3,
 };
 
@@ -277,11 +277,14 @@ SWIFT_CLASS("_TtC20BanubaVideoEditorSDK22FullscreenActivityView")
 @end
 
 
+@class UIColor;
 @class UIImage;
 
 /// The image configuration
 SWIFT_CLASS("_TtC20BanubaVideoEditorSDK18ImageConfiguration")
 @interface ImageConfiguration : NSObject <ImageConfigurationProtocol>
+/// It tint setted, you need  set it as tint color of UIImageView
+@property (nonatomic, strong) UIColor * _Nullable tintColor;
 /// The image stored or instance by name
 @property (nonatomic, readonly, strong) UIImage * _Nullable image;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;

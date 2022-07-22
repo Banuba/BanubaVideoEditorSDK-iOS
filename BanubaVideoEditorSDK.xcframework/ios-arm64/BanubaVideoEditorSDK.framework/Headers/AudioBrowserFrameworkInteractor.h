@@ -16,11 +16,13 @@ NS_SWIFT_NAME(AudioBrowserTrackWrapper)
 __attribute__((weak_import)) @interface AudioBrowserTrackWrapper : NSObject
 
 @property (nonatomic) int32_t trackId;
-@property (strong, nonatomic) NSString *name;
+@property (strong, nonatomic, nullable) NSString *name;
+@property (strong, nonatomic) NSString *additionalName;
 @property (strong, nonatomic) NSURL *url;
 
 - (instancetype)init: (int32_t) trackId
                 name: (NSString *) name
+      additionalName: (NSString * _Nullable) additionalName
                  url: (NSURL * _Nullable) url;
 @end
 NS_ASSUME_NONNULL_END
