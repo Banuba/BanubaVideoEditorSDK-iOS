@@ -427,7 +427,6 @@ public struct RecorderConfiguration {
   public var backroundMusicContainerConfiguration: BanubaUtilities.BackgroundConfiguration?
   public var floatingViewSeparatedLines: Swift.Bool
   public var effectSelectorContainerCornerRadius: CoreGraphics.CGFloat
-  public var preferredStatusBarStyle: UIKit.UIStatusBarStyle
 }
 public struct RecordButtonConfiguration {
   public var idleStrokeColor: CoreGraphics.CGColor
@@ -508,7 +507,6 @@ public struct EditorConfiguration {
   public var useHEVCCodecIfPossible: Swift.Bool
   public var isVideoAspectFillEnabled: Swift.Bool
   public var backgroundColor: UIKit.UIColor
-  public var preferredStatusBarStyle: UIKit.UIStatusBarStyle
 }
 public struct GifPickerConfiguration {
   public var regularFont: UIKit.UIFont
@@ -536,7 +534,6 @@ public struct TrimVideosConfiguration {
   public var reorderingVideoToolTipLabelConfiguration: BanubaUtilities.TextConfiguration
   public var trimTimelineConfiguration: BanubaVideoEditorSDK.TrimTimeLineConfiguration
   public var isGalleryButtonHidden: Swift.Bool
-  public var preferredStatusBarStyle: UIKit.UIStatusBarStyle
 }
 public struct TrimVideoPartConfiguration {
   public var borderWidth: CoreGraphics.CGFloat
@@ -590,13 +587,9 @@ public struct HandsfreeConfiguration {
   public struct TimerOptionBarConfiguration {
     public var selectorColor: UIKit.UIColor
     public var selectorTextColor: UIKit.UIColor
-    public var selectorTextFont: UIKit.UIFont
-    public var selectorBorderWidth: CoreGraphics.CGFloat
-    public var selectorBorderColor: CoreGraphics.CGColor
     public var optionBackgroundColor: UIKit.UIColor
     public var optionCornerRadius: CoreGraphics.CGFloat
     public var optionTextColor: UIKit.UIColor
-    public var optionTextFont: UIKit.UIFont
     public var backgroundColor: UIKit.UIColor
     public var backgroundViewColor: UIKit.UIColor
     public var cornerRadius: CoreGraphics.CGFloat
@@ -611,19 +604,12 @@ public struct HandsfreeConfiguration {
     public var switchOnTintColor: UIKit.UIColor
     public var modeTitleColor: UIKit.UIColor
     public var dragTitleColor: UIKit.UIColor
-    public var dragTitleFont: UIKit.UIFont
     public var buttonTitleColor: UIKit.UIColor
-    public var buttonTitleFont: UIKit.UIFont
     public var currentValueTextColor: UIKit.UIColor
     public var minimumValueTextColor: UIKit.UIColor
     public var maximumValueTextColor: UIKit.UIColor
-    public var currentValueTextFont: UIKit.UIFont
-    public var minimumValueTextFont: UIKit.UIFont
-    public var maximumValueTextFont: UIKit.UIFont
     public var thumbLineViewColor: UIKit.UIColor
-    public var thumbLineViewBackgroundColor: UIKit.UIColor
-    public var cursorViewColor: UIKit.UIColor
-    public init(selectorColor: UIKit.UIColor, selectorTextColor: UIKit.UIColor, selectorTextFont: UIKit.UIFont, selectorBorderWidth: CoreGraphics.CGFloat, selectorBorderColor: CoreGraphics.CGColor, optionBackgroundColor: UIKit.UIColor, optionCornerRadius: CoreGraphics.CGFloat, optionTextColor: UIKit.UIColor, optionTextFont: UIKit.UIFont, backgroundColor: UIKit.UIColor, backgroundViewColor: UIKit.UIColor, cornerRadius: CoreGraphics.CGFloat, sliderCornerRadius: CoreGraphics.CGFloat, barCornerRadius: CoreGraphics.CGFloat, selectorEdgeInsets: UIKit.UIEdgeInsets, activeThumbAndLineColor: UIKit.UIColor, inactiveThumbAndLineColor: UIKit.UIColor, minVideoDuration: Swift.Double, buttonCornerRadius: CoreGraphics.CGFloat, buttonBackgroundColor: UIKit.UIColor, switchOnTintColor: UIKit.UIColor, modeTitleColor: UIKit.UIColor, dragTitleColor: UIKit.UIColor, dragTitleFont: UIKit.UIFont, buttonTitleColor: UIKit.UIColor, buttonTitleFont: UIKit.UIFont, currentValueTextColor: UIKit.UIColor, minimumValueTextColor: UIKit.UIColor, maximumValueTextColor: UIKit.UIColor, currentValueTextFont: UIKit.UIFont, minimumValueTextFont: UIKit.UIFont, maximumValueTextFont: UIKit.UIFont, thumbLineViewColor: UIKit.UIColor, thumbLineViewBackgroundColor: UIKit.UIColor, cursorViewColor: UIKit.UIColor)
+    public init(selectorColor: UIKit.UIColor, selectorTextColor: UIKit.UIColor, optionBackgroundColor: UIKit.UIColor, optionCornerRadius: CoreGraphics.CGFloat, optionTextColor: UIKit.UIColor, backgroundColor: UIKit.UIColor, backgroundViewColor: UIKit.UIColor, cornerRadius: CoreGraphics.CGFloat, sliderCornerRadius: CoreGraphics.CGFloat, barCornerRadius: CoreGraphics.CGFloat, selectorEdgeInsets: UIKit.UIEdgeInsets, activeThumbAndLineColor: UIKit.UIColor, inactiveThumbAndLineColor: UIKit.UIColor, minVideoDuration: Swift.Double, buttonCornerRadius: CoreGraphics.CGFloat, buttonBackgroundColor: UIKit.UIColor, switchOnTintColor: UIKit.UIColor, modeTitleColor: UIKit.UIColor, dragTitleColor: UIKit.UIColor, buttonTitleColor: UIKit.UIColor, currentValueTextColor: UIKit.UIColor, minimumValueTextColor: UIKit.UIColor, maximumValueTextColor: UIKit.UIColor, thumbLineViewColor: UIKit.UIColor)
   }
   public var timerOptionBarConfiguration: BanubaVideoEditorSDK.HandsfreeConfiguration.TimerOptionBarConfiguration
   public init(timerOptionBarConfiguration: BanubaVideoEditorSDK.HandsfreeConfiguration.TimerOptionBarConfiguration)
@@ -955,8 +941,7 @@ public struct VideoCoverSelectionConfiguration {
   public var thumbnailsCursorConfiguration: BanubaVideoEditorSDK.ImageButtonConfiguration
   public var numberOfThumbnails: Swift.Int
   public var galleryImageCompressionQuality: CoreGraphics.CGFloat
-  public var preferredStatusBarStyle: UIKit.UIStatusBarStyle
-  public init(cancelButton: BanubaUtilities.RoundedButtonConfiguration, doneButton: BanubaUtilities.RoundedButtonConfiguration, titleLabel: BanubaUtilities.TextConfiguration?, toolTipLabel: BanubaUtilities.TextConfiguration, selectorColor: UIKit.UIColor, selectGalleryImageButton: BanubaVideoEditorSDK.BanubaButtonConfiguration, deleteImageButtonImageConfiguration: BanubaVideoEditorSDK.BanubaButtonConfiguration, backgroundConfiguration: BanubaUtilities.BackgroundConfiguration, previewBackgroundConfiguration: BanubaUtilities.BackgroundConfiguration, thumbnailsCursorConfiguration: BanubaVideoEditorSDK.ImageButtonConfiguration, numberOfThumbnails: Swift.Int, galleryImageCompressionQuality: CoreGraphics.CGFloat, preferredStatusBarStyle: UIKit.UIStatusBarStyle)
+  public init(cancelButton: BanubaUtilities.RoundedButtonConfiguration, doneButton: BanubaUtilities.RoundedButtonConfiguration, titleLabel: BanubaUtilities.TextConfiguration?, toolTipLabel: BanubaUtilities.TextConfiguration, selectorColor: UIKit.UIColor, selectGalleryImageButton: BanubaVideoEditorSDK.BanubaButtonConfiguration, deleteImageButtonImageConfiguration: BanubaVideoEditorSDK.BanubaButtonConfiguration, backgroundConfiguration: BanubaUtilities.BackgroundConfiguration, previewBackgroundConfiguration: BanubaUtilities.BackgroundConfiguration, thumbnailsCursorConfiguration: BanubaVideoEditorSDK.ImageButtonConfiguration, numberOfThumbnails: Swift.Int, galleryImageCompressionQuality: CoreGraphics.CGFloat)
 }
 public struct FilterControlButtonConfig {
   public enum `Type` : Swift.String {
