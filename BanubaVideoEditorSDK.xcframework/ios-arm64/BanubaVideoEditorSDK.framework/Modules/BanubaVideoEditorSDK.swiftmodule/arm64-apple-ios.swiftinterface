@@ -202,7 +202,7 @@ public class BanubaVideoEditor {
   public func updateVideoEditorConfig(_ config: BanubaVideoEditorSDK.VideoEditorConfig)
 }
 extension BanubaVideoEditorSDK.BanubaVideoEditor {
-  public static func presentSharingViewController(from hostController: UIKit.UIViewController, configuration: BanubaVideoEditorSDK.SharingScreenConfiguration, mainVideoUrl: Foundation.URL, videoUrls: [Foundation.URL], previewImage: UIKit.UIImage, animated: Swift.Bool)
+  public static func presentSharingViewController(from hostController: UIKit.UIViewController, configuration: BanubaVideoEditorSDK.SharingScreenConfiguration, mainVideoUrl: Foundation.URL, videoUrls: [Foundation.URL], previewImage: UIKit.UIImage, animated: Swift.Bool, completion: (() -> Swift.Void)?)
 }
 extension BanubaVideoEditorSDK.BanubaVideoEditor {
   public static func presentFeedBackAlertViewController(from hostController: UIKit.UIViewController, animated: Swift.Bool, completion: @escaping (BanubaVideoEditorSDK.FeedbackAlertViewController.ActionTypes) -> Swift.Void)
