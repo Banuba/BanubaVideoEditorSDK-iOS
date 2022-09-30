@@ -28,6 +28,20 @@ __attribute__((weak_import)) @interface AudioBrowserTrackWrapper : NSObject
 NS_ASSUME_NONNULL_END
 
 NS_ASSUME_NONNULL_BEGIN
+NS_SWIFT_NAME(AudioBrowserConfigWrapper)
+
+//MARK: - AudioBrowserConfigAdapter
+__attribute__((weak_import)) @interface AudioBrowserConfigWrapper : NSObject
+
+@property (strong, nonatomic, nullable) NSData *data;
+
+- (instancetype)initWithConfigData:(NSData * _Nullable) data;
+
+@end
+
+NS_ASSUME_NONNULL_END
+
+NS_ASSUME_NONNULL_BEGIN
 NS_SWIFT_NAME(AudioBrowserFrameworkInteractor)
 
 // MARK: - Audio browser framework interactor
@@ -37,7 +51,8 @@ __attribute__((weak_import)) @interface AudioBrowserFrameworkInteractor : NSObje
 + (void)setMubertPat: (NSString *) pat;
 
 - (instancetype)initWithTransitionDelegate: (id<UIViewControllerTransitioningDelegate>) transitionDelegate
-                             selectedTrack: (AudioBrowserTrackWrapper * _Nullable) selectedTrack;
+                             selectedTrack: (AudioBrowserTrackWrapper * _Nullable) selectedTrack
+                 audioBrowserConfiguration: (AudioBrowserConfigWrapper * _Nullable) config;
 
 -(UIViewController * _Nullable) getAudioBrowserController;
 
