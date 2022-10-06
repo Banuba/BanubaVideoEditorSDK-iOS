@@ -285,8 +285,9 @@ public struct VideoTextFont : Swift.Equatable {
 }
 public struct GiphyImage {
   public let id: Swift.String
-  public let smallUrl: Foundation.URL
-  public let originalUrl: Foundation.URL
+  public let resolution: BanubaVideoEditorSDK.GiphyResolution
+  public let mediumUrl: Foundation.URL
+  public let originalUrl: Foundation.URL?
 }
 public enum DeviceModel : Swift.String {
   case simulator, iPod1, iPod2, iPod3, iPod4, iPod5, iPod6, iPod7, iPad2, iPad3, iPad4, iPad5, iPad6, iPad7, iPad8, iPadMini1, iPadMini2, iPadMini3, iPadMini4, iPadMini5, iPadAir1, iPadAir2, iPadAir3, iPadAir4, iPadPro9_7, iPadPro10_5, iPadPro11, iPadPro2_11, iPadPro3_11, iPadPro12_9, iPadPro2_12_9, iPadPro3_12_9, iPadPro4_12_9, iPadPro5_12_9, iPhone4, iPhone4S, iPhone5, iPhone5S, iPhone5C, iPhone6, iPhone6plus, iPhone6S, iPhone6Splus, iPhoneSE, iPhone7, iPhone7plus, iPhone8, iPhone8plus, iPhoneX, iPhoneXS, iPhoneXSmax, iPhoneXR, iPhone11, iPhone11Pro, iPhone11ProMax, iPhoneSE2ndGen, iPhone12, iPhone12Mini, iPhone12Pro, iPhone12ProMax, unrecognized
@@ -599,6 +600,7 @@ public struct GifPickerConfiguration {
   public var boldFont: UIKit.UIFont
   public var activityConfiguration: BanubaUtilities.SmallActivityIndicatorConfiguration
   public var cursorColor: UIKit.UIColor
+  public var gifResolution: BanubaVideoEditorSDK.GiphyResolution
   public var giphyAPIKey: Swift.String?
 }
 public struct TrimVideosConfiguration {
@@ -1400,6 +1402,15 @@ public protocol ProgressAnimatableViewFactory {
   public func makeProgressAnimatableView() -> BanubaUtilities.ProgressAnimatableView
   @objc deinit
 }
+public enum GiphyResolution {
+  case medium
+  case original
+  public static func == (a: BanubaVideoEditorSDK.GiphyResolution, b: BanubaVideoEditorSDK.GiphyResolution) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
 public enum ContentLocationType : Swift.Int {
   case remote
   case local
@@ -1513,6 +1524,8 @@ extension BanubaVideoEditorSDK.FeedbackAlertViewController.ActionTypes : Swift.H
 extension BanubaVideoEditorSDK.VideoTextAligment : Swift.Equatable {}
 extension BanubaVideoEditorSDK.VideoTextAligment : Swift.Hashable {}
 extension BanubaVideoEditorSDK.VideoTextAligment : Swift.RawRepresentable {}
+extension BanubaVideoEditorSDK.GiphyResolution : Swift.Equatable {}
+extension BanubaVideoEditorSDK.GiphyResolution : Swift.Hashable {}
 extension BanubaVideoEditorSDK.ContentLocationType : Swift.Equatable {}
 extension BanubaVideoEditorSDK.ContentLocationType : Swift.Hashable {}
 extension BanubaVideoEditorSDK.ContentLocationType : Swift.RawRepresentable {}
