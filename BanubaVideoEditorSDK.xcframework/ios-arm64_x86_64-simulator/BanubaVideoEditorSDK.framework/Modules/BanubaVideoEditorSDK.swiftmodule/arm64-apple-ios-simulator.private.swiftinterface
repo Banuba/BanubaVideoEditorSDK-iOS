@@ -1,10 +1,9 @@
 // swift-interface-format-version: 1.0
 // swift-compiler-version: Apple Swift version 5.7 (swiftlang-5.7.0.127.4 clang-1400.0.29.50)
-// swift-module-flags: -target arm64-apple-ios11.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=unchecked -Onone -module-name BanubaVideoEditorSDK
+// swift-module-flags: -target arm64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=unchecked -O -module-name BanubaVideoEditorSDK
 // swift-module-flags-ignorable: -enable-bare-slash-regex
 import AVFoundation
 import AVKit
-import BanubaAudioBrowserSDK
 import BanubaLicenseServicingSDK
 import BanubaMusicEditorSDK
 import BanubaOverlayEditorSDK
@@ -367,7 +366,6 @@ public enum CaptureButtonViewMode {
   }
 }
 public struct VideoEditorConfig {
-  public var audioBrowserConfiguration: BanubaAudioBrowserSDK.AudioBrowserConfig
   public var videoResolutionConfiguration: BanubaUtilities.VideoResolutionConfiguration
   public var recorderConfiguration: BanubaVideoEditorSDK.RecorderConfiguration
   public var editorConfiguration: BanubaVideoEditorSDK.EditorConfiguration
@@ -391,7 +389,6 @@ public struct VideoEditorConfig {
   public var popoverAlertViewConfiguration: BanubaUtilities.PopoverAlertViewConfiguration
   public var handsfreeConfiguration: BanubaVideoEditorSDK.HandsfreeConfiguration?
   public var pipSettingsConfiguration: BanubaVideoEditorSDK.PIPSettingsConfiguration?
-  public var hintViewConfiguration: BanubaVideoEditorSDK.HintViewConfiguration?
   public var sharingScreenConfiguration: BanubaVideoEditorSDK.SharingScreenConfiguration
   public var featureConfiguration: BanubaVideoEditorSDK.FeatureConfiguration
   public var isHandfreeEnabled: Swift.Bool
@@ -400,7 +397,7 @@ public struct VideoEditorConfig {
   public var transitionsConfiguration: BanubaVideoEditorSDK.EffectsListConfiguration
   public var progressViewConfiguration: BanubaVideoEditorSDK.ProgressViewConfiguration
   public init()
-  public init(audioBrowserConfiguration: BanubaAudioBrowserSDK.AudioBrowserConfig, videoResolutionConfiguration: BanubaUtilities.VideoResolutionConfiguration, recorderConfiguration: BanubaVideoEditorSDK.RecorderConfiguration, editorConfiguration: BanubaVideoEditorSDK.EditorConfiguration, textEditorConfiguration: BanubaVideoEditorSDK.TextEditorConfiguration, toastConfiguration: BanubaVideoEditorSDK.ToastConfiguration, fullScreenActivityConfiguration: BanubaVideoEditorSDK.FullScreenActivityConfiguration, smallActivityIndicatorConfiguration: BanubaUtilities.SmallActivityIndicatorConfiguration, albumsConfiguration: BanubaUtilities.AlbumsConfiguration, videoOverlayConfiguration: BanubaVideoEditorSDK.VideoOverlayConfiguration, videoDurationConfiguration: BanubaVideoEditorTrimSDK.VideoEditorDurationConfig, gifPickerConfiguration: BanubaVideoEditorSDK.GifPickerConfiguration, combinedGalleryConfiguration: BanubaUtilities.GalleryConfiguration, trimVideosConfiguration: BanubaVideoEditorSDK.TrimVideosConfiguration, trimVideoConfiguration: BanubaVideoEditorSDK.TrimVideoConfiguration, filterConfiguration: BanubaVideoEditorSDK.FilterConfiguration, extendedVideoCoverSelectionConfiguration: BanubaVideoEditorSDK.VideoCoverSelectionConfiguration, musicEditorConfiguration: BanubaMusicEditorSDK.MusicEditorConfig, overlayEditorConfiguration: BanubaOverlayEditorSDK.OverlayEditorConfiguration, featureConfiguration: BanubaVideoEditorSDK.FeatureConfiguration, watermarkConfiguration: VideoEditor.WatermarkConfiguration?, alertViewConfiguration: BanubaUtilities.AlertViewConfiguration, popoverAlertViewConfiguration: BanubaUtilities.PopoverAlertViewConfiguration, handsfreeConfiguration: BanubaVideoEditorSDK.HandsfreeConfiguration?, pipSettingsConfiguration: BanubaVideoEditorSDK.PIPSettingsConfiguration?, hintViewConfiguration: BanubaVideoEditorSDK.HintViewConfiguration?, sharingScreenConfiguration: BanubaVideoEditorSDK.SharingScreenConfiguration, draftsConfiguration: BanubaVideoEditorSDK.DraftsConfiguration, aspectsConfiguration: BanubaVideoEditorSDK.EffectsListConfiguration, transitionsConfiguration: BanubaVideoEditorSDK.EffectsListConfiguration, progressViewConfiguration: BanubaVideoEditorSDK.ProgressViewConfiguration)
+  public init(videoResolutionConfiguration: BanubaUtilities.VideoResolutionConfiguration, recorderConfiguration: BanubaVideoEditorSDK.RecorderConfiguration, editorConfiguration: BanubaVideoEditorSDK.EditorConfiguration, textEditorConfiguration: BanubaVideoEditorSDK.TextEditorConfiguration, toastConfiguration: BanubaVideoEditorSDK.ToastConfiguration, fullScreenActivityConfiguration: BanubaVideoEditorSDK.FullScreenActivityConfiguration, smallActivityIndicatorConfiguration: BanubaUtilities.SmallActivityIndicatorConfiguration, albumsConfiguration: BanubaUtilities.AlbumsConfiguration, videoOverlayConfiguration: BanubaVideoEditorSDK.VideoOverlayConfiguration, videoDurationConfiguration: BanubaVideoEditorTrimSDK.VideoEditorDurationConfig, gifPickerConfiguration: BanubaVideoEditorSDK.GifPickerConfiguration, combinedGalleryConfiguration: BanubaUtilities.GalleryConfiguration, trimVideosConfiguration: BanubaVideoEditorSDK.TrimVideosConfiguration, trimVideoConfiguration: BanubaVideoEditorSDK.TrimVideoConfiguration, filterConfiguration: BanubaVideoEditorSDK.FilterConfiguration, extendedVideoCoverSelectionConfiguration: BanubaVideoEditorSDK.VideoCoverSelectionConfiguration, musicEditorConfiguration: BanubaMusicEditorSDK.MusicEditorConfig, overlayEditorConfiguration: BanubaOverlayEditorSDK.OverlayEditorConfiguration, featureConfiguration: BanubaVideoEditorSDK.FeatureConfiguration, watermarkConfiguration: VideoEditor.WatermarkConfiguration?, alertViewConfiguration: BanubaUtilities.AlertViewConfiguration, popoverAlertViewConfiguration: BanubaUtilities.PopoverAlertViewConfiguration, handsfreeConfiguration: BanubaVideoEditorSDK.HandsfreeConfiguration?, pipSettingsConfiguration: BanubaVideoEditorSDK.PIPSettingsConfiguration?, sharingScreenConfiguration: BanubaVideoEditorSDK.SharingScreenConfiguration, draftsConfiguration: BanubaVideoEditorSDK.DraftsConfiguration, aspectsConfiguration: BanubaVideoEditorSDK.EffectsListConfiguration, transitionsConfiguration: BanubaVideoEditorSDK.EffectsListConfiguration, progressViewConfiguration: BanubaVideoEditorSDK.ProgressViewConfiguration)
   public mutating func applyFont(_ font: UIKit.UIFont)
   public mutating func updateAlertFonts(_ font: UIKit.UIFont)
   public mutating func updateProgressViewFonts(_ font: UIKit.UIFont)
@@ -714,30 +711,6 @@ public struct HandsfreeConfiguration {
   }
   public var timerOptionBarConfiguration: BanubaVideoEditorSDK.HandsfreeConfiguration.TimerOptionBarConfiguration
   public init(timerOptionBarConfiguration: BanubaVideoEditorSDK.HandsfreeConfiguration.TimerOptionBarConfiguration)
-}
-public enum HintArrowPosition {
-  case topLeft
-  case topRight
-  case bottomLeft
-  case bottomRight
-  public static func == (a: BanubaVideoEditorSDK.HintArrowPosition, b: BanubaVideoEditorSDK.HintArrowPosition) -> Swift.Bool
-  public func hash(into hasher: inout Swift.Hasher)
-  public var hashValue: Swift.Int {
-    get
-  }
-}
-public struct HintViewConfiguration {
-  public struct ArrowConfiguration {
-    public var position: BanubaVideoEditorSDK.HintArrowPosition
-    public var arrowHeight: CoreFoundation.CGFloat
-    public var cathetusLength: CoreFoundation.CGFloat
-    public var curveControlOffset: CoreFoundation.CGFloat
-  }
-  public var cornerRadius: CoreFoundation.CGFloat
-  public var backgroundColor: UIKit.UIColor
-  public var textInset: UIKit.UIEdgeInsets
-  public var textConfiguration: BanubaUtilities.TextConfiguration
-  public var arrowConfiguration: BanubaVideoEditorSDK.HintViewConfiguration.ArrowConfiguration
 }
 public class ProgressViewConfiguration {
   public var messageConfiguration: BanubaUtilities.TextConfiguration
@@ -1496,8 +1469,6 @@ extension BanubaVideoEditorSDK.CaptureButtonViewMode : Swift.Equatable {}
 extension BanubaVideoEditorSDK.CaptureButtonViewMode : Swift.Hashable {}
 extension BanubaVideoEditorSDK.TrimVideoCompositionEditItem.TrimVideoCompositionEditItemType : Swift.Equatable {}
 extension BanubaVideoEditorSDK.TrimVideoCompositionEditItem.TrimVideoCompositionEditItemType : Swift.Hashable {}
-extension BanubaVideoEditorSDK.HintArrowPosition : Swift.Equatable {}
-extension BanubaVideoEditorSDK.HintArrowPosition : Swift.Hashable {}
 extension BanubaVideoEditorSDK.AdditionalEffectsButtonConfiguration.Position : Swift.Equatable {}
 extension BanubaVideoEditorSDK.AdditionalEffectsButtonConfiguration.Position : Swift.Hashable {}
 extension BanubaVideoEditorSDK.AdditionalEffectsButtonConfiguration.Position : Swift.RawRepresentable {}
