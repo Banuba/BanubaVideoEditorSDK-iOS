@@ -77735,21 +77735,21 @@
     {
       "filePath": "\/Users\/rostyslav\/Developer\/Banuba\/banuba_ve_sdk_ios\/ios\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/ViewControllers\/EffectSelector\/GalleryItemViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 640,
+      "offset": 663,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/rostyslav\/Developer\/Banuba\/banuba_ve_sdk_ios\/ios\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/ViewControllers\/EffectSelector\/GalleryItemViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 707,
+      "offset": 730,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/rostyslav\/Developer\/Banuba\/banuba_ve_sdk_ios\/ios\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/ViewControllers\/EffectSelector\/GalleryItemViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 813,
+      "offset": 836,
       "length": 5,
       "value": "false"
     },
@@ -80582,20 +80582,6 @@
       "value": "\"BanubaVideoEditorSDK.BanubaVideoEditorNavigationController\""
     },
     {
-      "filePath": "\/Users\/rostyslav\/Developer\/Banuba\/banuba_ve_sdk_ios\/ios\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/ViewControllers\/EffectSelector\/EffectAdditionalMediaPickerViewController.swift",
-      "kind": "FloatLiteral",
-      "offset": 1515,
-      "length": 5,
-      "value": "200.0"
-    },
-    {
-      "filePath": "\/Users\/rostyslav\/Developer\/Banuba\/banuba_ve_sdk_ios\/ios\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/ViewControllers\/EffectSelector\/EffectAdditionalMediaPickerViewController.swift",
-      "kind": "FloatLiteral",
-      "offset": 1530,
-      "length": 5,
-      "value": "200.0"
-    },
-    {
       "filePath": "\/Users\/rostyslav\/Developer\/Banuba\/banuba_ve_sdk_ios\/ios\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/ViewControllers\/TextEditor\/TextEditCollectionView\/Cells\/TextEditColorCollectionViewCell.swift",
       "kind": "FloatLiteral",
       "offset": 274,
@@ -80716,36 +80702,50 @@
     },
     {
       "filePath": "\/Users\/rostyslav\/Developer\/Banuba\/banuba_ve_sdk_ios\/ios\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/ViewControllers\/EffectSelector\/GalleryAssetsPickerCollectionViewHandler.swift",
+      "kind": "FloatLiteral",
+      "offset": 609,
+      "length": 5,
+      "value": "200.0"
+    },
+    {
+      "filePath": "\/Users\/rostyslav\/Developer\/Banuba\/banuba_ve_sdk_ios\/ios\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/ViewControllers\/EffectSelector\/GalleryAssetsPickerCollectionViewHandler.swift",
+      "kind": "FloatLiteral",
+      "offset": 624,
+      "length": 5,
+      "value": "200.0"
+    },
+    {
+      "filePath": "\/Users\/rostyslav\/Developer\/Banuba\/banuba_ve_sdk_ios\/ios\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/ViewControllers\/EffectSelector\/GalleryAssetsPickerCollectionViewHandler.swift",
       "kind": "StringLiteral",
-      "offset": 535,
+      "offset": 640,
       "length": 40,
       "value": "\"BanubaVideoEditorSDK.GalleryAssetsPickerCollectionViewHandler\""
     },
     {
       "filePath": "\/Users\/rostyslav\/Developer\/Banuba\/banuba_ve_sdk_ios\/ios\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/ViewControllers\/EffectSelector\/GalleryAssetsPickerCollectionViewHandler.swift",
       "kind": "FloatLiteral",
-      "offset": 5200,
+      "offset": 6016,
       "length": 4,
       "value": "16.0"
     },
     {
       "filePath": "\/Users\/rostyslav\/Developer\/Banuba\/banuba_ve_sdk_ios\/ios\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/ViewControllers\/EffectSelector\/GalleryAssetsPickerCollectionViewHandler.swift",
       "kind": "FloatLiteral",
-      "offset": 5241,
+      "offset": 6057,
       "length": 4,
       "value": "16.0"
     },
     {
       "filePath": "\/Users\/rostyslav\/Developer\/Banuba\/banuba_ve_sdk_ios\/ios\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/ViewControllers\/EffectSelector\/GalleryAssetsPickerCollectionViewHandler.swift",
       "kind": "FloatLiteral",
-      "offset": 5284,
+      "offset": 6100,
       "length": 4,
       "value": "20.0"
     },
     {
       "filePath": "\/Users\/rostyslav\/Developer\/Banuba\/banuba_ve_sdk_ios\/ios\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/ViewControllers\/EffectSelector\/GalleryAssetsPickerCollectionViewHandler.swift",
       "kind": "FloatLiteral",
-      "offset": 5326,
+      "offset": 6142,
       "length": 4,
       "value": "46.0"
     },
