@@ -368,7 +368,6 @@ SWIFT_CLASS("_TtC20BanubaVideoEditorSDK25TrimTimeLineConfiguration")
 
 
 
-
 /// The video editor launch configuration
 SWIFT_CLASS("_TtC20BanubaVideoEditorSDK23VideoEditorLaunchConfig")
 @interface VideoEditorLaunchConfig : NSObject
@@ -740,7 +739,6 @@ SWIFT_CLASS("_TtC20BanubaVideoEditorSDK25TrimTimeLineConfiguration")
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
-
 
 
 

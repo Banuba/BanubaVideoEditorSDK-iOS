@@ -368,7 +368,6 @@ SWIFT_CLASS("_TtC20BanubaVideoEditorSDK25TrimTimeLineConfiguration")
 
 
 
-
 /// The video editor launch configuration
 SWIFT_CLASS("_TtC20BanubaVideoEditorSDK23VideoEditorLaunchConfig")
 @interface VideoEditorLaunchConfig : NSObject
