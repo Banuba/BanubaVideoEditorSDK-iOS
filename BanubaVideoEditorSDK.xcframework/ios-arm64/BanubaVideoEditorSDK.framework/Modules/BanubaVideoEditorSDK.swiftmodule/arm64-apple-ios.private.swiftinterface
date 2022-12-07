@@ -162,9 +162,11 @@ public protocol BanubaVideoEditorDelegate : AnyObject {
   func videoEditorDidCancel(_ videoEditor: BanubaVideoEditorSDK.BanubaVideoEditor)
   func videoEditorDone(_ videoEditor: BanubaVideoEditorSDK.BanubaVideoEditor)
   func videoEditor(_ videoEditor: BanubaVideoEditorSDK.BanubaVideoEditor, shouldProcessMediaUrls urls: [Foundation.URL]) -> Swift.Bool
+  func videoEditor(_ videoEditor: BanubaVideoEditorSDK.BanubaVideoEditor, didSaveDraft draft: BanubaVideoEditorSDK.ExternalDraft)
 }
 extension BanubaVideoEditorSDK.BanubaVideoEditorDelegate {
   public func videoEditor(_ videoEditor: BanubaVideoEditorSDK.BanubaVideoEditor, shouldProcessMediaUrls urls: [Foundation.URL]) -> Swift.Bool
+  public func videoEditor(_ videoEditor: BanubaVideoEditorSDK.BanubaVideoEditor, didSaveDraft draft: BanubaVideoEditorSDK.ExternalDraft)
 }
 public class BanubaVideoEditor {
   weak public var delegate: BanubaVideoEditorSDK.BanubaVideoEditorDelegate?
@@ -195,6 +197,9 @@ public class BanubaVideoEditor {
   public var currentConfiguration: BanubaVideoEditorSDK.VideoEditorConfig {
     get
   }
+  public var draftActionType: BanubaVideoEditorSDK.DraftActionType {
+    get
+  }
   public init?(token: Swift.String, isCameraEnabled: Swift.Bool = true, configuration: BanubaVideoEditorSDK.VideoEditorConfig, externalViewControllerFactory: BanubaVideoEditorSDK.ExternalViewControllerFactory? = nil)
   @objc deinit
   public func export(using configuration: VEExportSDK.ExportConfiguration, exportProgress: ((Foundation.TimeInterval) -> Swift.Void)?, completion: @escaping ((_ success: Swift.Bool, _ error: Swift.Error?, _ exportCoverImages: BanubaVideoEditorSDK.ExportCoverImages?) -> Swift.Void))
@@ -215,6 +220,10 @@ extension BanubaVideoEditorSDK.BanubaVideoEditor {
   public static var currentDevice: Swift.String {
     get
   }
+}
+extension BanubaVideoEditorSDK.BanubaVideoEditor {
+  public func exportExternalDraft(_ externalDraft: BanubaVideoEditorSDK.ExternalDraft) throws -> Foundation.URL
+  public func importExternalDraft(fromZipUrl url: Foundation.URL) throws -> BanubaVideoEditorSDK.ExternalDraft
 }
 public class TextEditSelectionBorderAnimationBehavior : BanubaVideoEditorSDK.TextEditSelectionColorBehavior {
   final public let defaultBorderWidth: CoreFoundation.CGFloat
@@ -356,6 +365,20 @@ public enum CaptureButtonViewMode {
     get
   }
 }
+public enum DraftActionType {
+  case save
+  case update
+  case cancel
+  case none
+  public var isSaveOrUpdate: Swift.Bool {
+    get
+  }
+  public static func == (a: BanubaVideoEditorSDK.DraftActionType, b: BanubaVideoEditorSDK.DraftActionType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
 public struct VideoEditorConfig {
   public var videoResolutionConfiguration: BanubaUtilities.VideoResolutionConfiguration
   public var recorderConfiguration: BanubaVideoEditorSDK.RecorderConfiguration
@@ -486,6 +509,7 @@ public struct RecorderConfiguration {
   public var floatingViewSeparatedLines: Swift.Bool
   public var effectSelectorContainerCornerRadius: CoreFoundation.CGFloat
   public var preferredStatusBarStyle: UIKit.UIStatusBarStyle
+  public var videoDurationButtonConfiguration: BanubaVideoEditorSDK.BanubaButtonConfiguration
 }
 public struct RecordButtonConfiguration {
   public var idleStrokeColor: CoreGraphics.CGColor
@@ -587,6 +611,7 @@ public struct GifPickerConfiguration {
   public var cursorColor: UIKit.UIColor
   public var gifResolution: BanubaVideoEditorSDK.GiphyResolution
   public var giphyAPIKey: Swift.String?
+  public var preferredRating: Swift.String?
 }
 public struct TrimVideosConfiguration {
   public var videoResolutionConfiguration: BanubaUtilities.VideoResolutionConfiguration
@@ -878,7 +903,7 @@ public protocol RecordButtonProvider {
   case enabled = 0
   case enabledSaveToDraftsByDefault = 1
   case disabled = 2
-  case enabledAskIfSaveNotExport
+  case enabledAskIfSaveNotExport = 3
   public init?(rawValue: Swift.Int)
   public typealias AllCases = [BanubaVideoEditorSDK.DraftsFeatureConfig]
   public typealias RawValue = Swift.Int
@@ -1456,6 +1481,8 @@ extension BanubaVideoEditorSDK.SharingServiceModel.SharingType : Swift.Equatable
 extension BanubaVideoEditorSDK.SharingServiceModel.SharingType : Swift.Hashable {}
 extension BanubaVideoEditorSDK.CaptureButtonViewMode : Swift.Equatable {}
 extension BanubaVideoEditorSDK.CaptureButtonViewMode : Swift.Hashable {}
+extension BanubaVideoEditorSDK.DraftActionType : Swift.Equatable {}
+extension BanubaVideoEditorSDK.DraftActionType : Swift.Hashable {}
 extension BanubaVideoEditorSDK.TrimVideoCompositionEditItem.TrimVideoCompositionEditItemType : Swift.Equatable {}
 extension BanubaVideoEditorSDK.TrimVideoCompositionEditItem.TrimVideoCompositionEditItemType : Swift.Hashable {}
 extension BanubaVideoEditorSDK.AdditionalEffectsButtonConfiguration.Position : Swift.Equatable {}

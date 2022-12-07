@@ -275,7 +275,7 @@ typedef SWIFT_ENUM(NSInteger, DraftsFeatureConfig, open) {
   DraftsFeatureConfigEnabledSaveToDraftsByDefault = 1,
 /// Drafts disabled completely. Drafts button on the start screen is hidden.
   DraftsFeatureConfigDisabled = 2,
-/// Drafts enabled. Cover screen will not be presented after editing a video. Drafts button on the start screen is displayed.
+/// Drafts enabled. Cover screen will not be presented after editing a video.
   DraftsFeatureConfigEnabledAskIfSaveNotExport = 3,
 };
 
