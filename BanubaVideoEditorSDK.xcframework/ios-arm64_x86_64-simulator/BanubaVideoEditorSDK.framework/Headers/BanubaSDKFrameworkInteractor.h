@@ -24,7 +24,6 @@ useHEVCCodecIfPossibleForRecorder:(BOOL) useHEVCCodecIfPossibleForRecorder
 
 + (id _Nullable) getCameraModuleInstance;
 + (id _Nullable) getMaskPostprocessingServiceWithVideoSize:(CGSize) videoSize;
-+ (BOOL)isTokenExpired;
 
 @end
 NS_ASSUME_NONNULL_END
