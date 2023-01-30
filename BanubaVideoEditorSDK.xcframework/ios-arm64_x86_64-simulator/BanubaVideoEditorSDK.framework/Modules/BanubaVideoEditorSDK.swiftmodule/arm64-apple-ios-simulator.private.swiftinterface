@@ -179,7 +179,7 @@ public class BanubaVideoEditor {
   public var videoMetadata: BanubaUtilities.VideoMetadata? {
     get
   }
-  public var pixelateEffectsList: BanubaUtilities.PixelateList? {
+  public var blurEffectsList: BanubaUtilities.BlurList? {
     get
   }
   public var asset: AVFoundation.AVAsset? {
@@ -463,8 +463,8 @@ public struct TextEditFontItemConfiguration {
 }
 public struct VideoOverlayConfiguration {
   public var deleteImageConfiguration: BanubaVideoEditorSDK.ImageConfiguration
-  public var videoOverlayItemViewPixelateConfiguration: BanubaVideoEditorSDK.VideoOverlayItemViewConfiguration?
-  public init(deleteImageConfiguration: BanubaVideoEditorSDK.ImageConfiguration, videoOverlayItemViewPixelateConfiguration: BanubaVideoEditorSDK.VideoOverlayItemViewConfiguration)
+  public var videoOverlayItemViewBlurConfiguration: BanubaVideoEditorSDK.VideoOverlayItemViewConfiguration?
+  public init(deleteImageConfiguration: BanubaVideoEditorSDK.ImageConfiguration, videoOverlayItemViewBlurConfiguration: BanubaVideoEditorSDK.VideoOverlayItemViewConfiguration)
 }
 public struct FullScreenActivityConfiguration {
   public var labelFont: UIKit.UIFont
@@ -863,7 +863,7 @@ public struct AdditionalEffectsButtonConfiguration {
     case masks
     case muteSound
     case pip
-    case pixelate
+    case blur
     case trimDraft
     public init?(rawValue: Swift.String)
     public typealias RawValue = Swift.String
@@ -902,6 +902,7 @@ public protocol RecordButtonProvider {
   }
 }
 public struct FeatureConfiguration {
+  public var isBlurEnabled: Swift.Bool
   public var isBlurEffectsExportable: Swift.Bool
   public var isOverlayEditorEnabled: Swift.Bool
   public var isDoubleTapForToggleCameraEnabled: Swift.Bool
@@ -915,7 +916,7 @@ public struct FeatureConfiguration {
   public var openAutomaticallyPIPSettingsDropdown: Swift.Bool
   public var useTransitions: Swift.Bool
   public static let `default`: BanubaVideoEditorSDK.FeatureConfiguration
-  public init(isOverlayEditorEnabled: Swift.Bool, isDoubleTapForToggleCameraEnabled: Swift.Bool, isMuteCameraAudioEnabled: Swift.Bool, isVideoCoverSelectionEnabled: Swift.Bool, isSimpleVideoCoverEnabled: Swift.Bool, supportsTrimRecordedVideo: Swift.Bool, draftsConfig: BanubaVideoEditorSDK.DraftsFeatureConfig, isAspectsEnabled: Swift.Bool, isSpeedBarEnabled: Swift.Bool, isVideoFitsAspect: Swift.Bool, isBlurEffectsExportable: Swift.Bool, openAutomaticallyPIPSettingsDropdown: Swift.Bool, useTransitions: Swift.Bool)
+  public init(isOverlayEditorEnabled: Swift.Bool, isDoubleTapForToggleCameraEnabled: Swift.Bool, isMuteCameraAudioEnabled: Swift.Bool, isVideoCoverSelectionEnabled: Swift.Bool, isSimpleVideoCoverEnabled: Swift.Bool, supportsTrimRecordedVideo: Swift.Bool, draftsConfig: BanubaVideoEditorSDK.DraftsFeatureConfig, isAspectsEnabled: Swift.Bool, isSpeedBarEnabled: Swift.Bool, isVideoFitsAspect: Swift.Bool, isBlurEnabled: Swift.Bool, isBlurEffectsExportable: Swift.Bool, openAutomaticallyPIPSettingsDropdown: Swift.Bool, useTransitions: Swift.Bool)
 }
 public struct RecorderEffectsConfiguration {
   public var cornerRadius: CoreFoundation.CGFloat
@@ -1130,8 +1131,8 @@ public struct VideoOverlayItemViewConfiguration {
   public var overlaySelectedBorderWidth: CoreFoundation.CGFloat
   public var overlaySelectedBorderColor: CoreGraphics.CGColor
   public var scaleIconImageName: Swift.String
-  public var pixelateItemMinSize: CoreFoundation.CGSize
-  public init(scaleIconWidth: CoreFoundation.CGFloat, scaleIconHeight: CoreFoundation.CGFloat, overlaySelectedBorderWidth: CoreFoundation.CGFloat, overlaySelectedBorderColor: CoreGraphics.CGColor, scaleIconImageName: Swift.String, pixelateItemMinSize: CoreFoundation.CGSize)
+  public var blurItemMinSize: CoreFoundation.CGSize
+  public init(scaleIconWidth: CoreFoundation.CGFloat, scaleIconHeight: CoreFoundation.CGFloat, overlaySelectedBorderWidth: CoreFoundation.CGFloat, overlaySelectedBorderColor: CoreGraphics.CGColor, scaleIconImageName: Swift.String, blurItemMinSize: CoreFoundation.CGSize)
 }
 extension VideoEditor.VideoEditorService : BanubaMusicEditorSDK.VideoEditorServiceAdoptable {
   final public var isMultiAudioEnabled: Swift.Bool {
