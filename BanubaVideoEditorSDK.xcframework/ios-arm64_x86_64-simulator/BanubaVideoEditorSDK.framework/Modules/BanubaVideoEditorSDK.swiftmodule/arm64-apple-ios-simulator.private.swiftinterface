@@ -915,8 +915,9 @@ public struct FeatureConfiguration {
   public var isVideoFitsAspect: Swift.Bool
   public var openAutomaticallyPIPSettingsDropdown: Swift.Bool
   public var useTransitions: Swift.Bool
+  public var isDraftSavedToastEnabled: Swift.Bool
   public static let `default`: BanubaVideoEditorSDK.FeatureConfiguration
-  public init(isOverlayEditorEnabled: Swift.Bool, isDoubleTapForToggleCameraEnabled: Swift.Bool, isMuteCameraAudioEnabled: Swift.Bool, isVideoCoverSelectionEnabled: Swift.Bool, isSimpleVideoCoverEnabled: Swift.Bool, supportsTrimRecordedVideo: Swift.Bool, draftsConfig: BanubaVideoEditorSDK.DraftsFeatureConfig, isAspectsEnabled: Swift.Bool, isSpeedBarEnabled: Swift.Bool, isVideoFitsAspect: Swift.Bool, isBlurEnabled: Swift.Bool, isBlurEffectsExportable: Swift.Bool, openAutomaticallyPIPSettingsDropdown: Swift.Bool, useTransitions: Swift.Bool)
+  public init(isOverlayEditorEnabled: Swift.Bool, isDoubleTapForToggleCameraEnabled: Swift.Bool, isMuteCameraAudioEnabled: Swift.Bool, isVideoCoverSelectionEnabled: Swift.Bool, isSimpleVideoCoverEnabled: Swift.Bool, supportsTrimRecordedVideo: Swift.Bool, draftsConfig: BanubaVideoEditorSDK.DraftsFeatureConfig, isAspectsEnabled: Swift.Bool, isSpeedBarEnabled: Swift.Bool, isVideoFitsAspect: Swift.Bool, isBlurEnabled: Swift.Bool, isBlurEffectsExportable: Swift.Bool, openAutomaticallyPIPSettingsDropdown: Swift.Bool, useTransitions: Swift.Bool, isDraftSavedToastEnabled: Swift.Bool)
 }
 public struct RecorderEffectsConfiguration {
   public var cornerRadius: CoreFoundation.CGFloat

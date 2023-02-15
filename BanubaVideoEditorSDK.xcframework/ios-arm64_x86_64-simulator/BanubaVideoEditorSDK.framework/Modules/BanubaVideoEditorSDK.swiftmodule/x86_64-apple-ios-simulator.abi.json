@@ -49050,6 +49050,92 @@
           },
           {
             "kind": "Var",
+            "name": "isDraftSavedToastEnabled",
+            "printedName": "isDraftSavedToastEnabled",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:20BanubaVideoEditorSDK20FeatureConfigurationV24isDraftSavedToastEnabledSbvp",
+            "mangledName": "$s20BanubaVideoEditorSDK20FeatureConfigurationV24isDraftSavedToastEnabledSbvp",
+            "moduleName": "BanubaVideoEditorSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20BanubaVideoEditorSDK20FeatureConfigurationV24isDraftSavedToastEnabledSbvg",
+                "mangledName": "$s20BanubaVideoEditorSDK20FeatureConfigurationV24isDraftSavedToastEnabledSbvg",
+                "moduleName": "BanubaVideoEditorSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20BanubaVideoEditorSDK20FeatureConfigurationV24isDraftSavedToastEnabledSbvs",
+                "mangledName": "$s20BanubaVideoEditorSDK20FeatureConfigurationV24isDraftSavedToastEnabledSbvs",
+                "moduleName": "BanubaVideoEditorSDK",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20BanubaVideoEditorSDK20FeatureConfigurationV24isDraftSavedToastEnabledSbvM",
+                "mangledName": "$s20BanubaVideoEditorSDK20FeatureConfigurationV24isDraftSavedToastEnabledSbvM",
+                "moduleName": "BanubaVideoEditorSDK",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
             "name": "default",
             "printedName": "default",
             "children": [
@@ -49098,7 +49184,7 @@
           {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(isOverlayEditorEnabled:isDoubleTapForToggleCameraEnabled:isMuteCameraAudioEnabled:isVideoCoverSelectionEnabled:isSimpleVideoCoverEnabled:supportsTrimRecordedVideo:draftsConfig:isAspectsEnabled:isSpeedBarEnabled:isVideoFitsAspect:isBlurEnabled:isBlurEffectsExportable:openAutomaticallyPIPSettingsDropdown:useTransitions:)",
+            "printedName": "init(isOverlayEditorEnabled:isDoubleTapForToggleCameraEnabled:isMuteCameraAudioEnabled:isVideoCoverSelectionEnabled:isSimpleVideoCoverEnabled:supportsTrimRecordedVideo:draftsConfig:isAspectsEnabled:isSpeedBarEnabled:isVideoFitsAspect:isBlurEnabled:isBlurEffectsExportable:openAutomaticallyPIPSettingsDropdown:useTransitions:isDraftSavedToastEnabled:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -49189,11 +49275,17 @@
                 "name": "Bool",
                 "printedName": "Swift.Bool",
                 "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:20BanubaVideoEditorSDK20FeatureConfigurationV09isOverlayC7Enabled0g24DoubleTapForToggleCameraI00g4Muten5AudioI00gb14CoverSelectionI00g6SimplebqI0020supportsTrimRecordedB012draftsConfig0g7AspectsI00g8SpeedBarI00gB10FitsAspect0g4BlurI00G21BlurEffectsExportable36openAutomaticallyPIPSettingsDropdown14useTransitionsACSb_S5bAA06DraftseX0OS7btcfc",
-            "mangledName": "$s20BanubaVideoEditorSDK20FeatureConfigurationV09isOverlayC7Enabled0g24DoubleTapForToggleCameraI00g4Muten5AudioI00gb14CoverSelectionI00g6SimplebqI0020supportsTrimRecordedB012draftsConfig0g7AspectsI00g8SpeedBarI00gB10FitsAspect0g4BlurI00G21BlurEffectsExportable36openAutomaticallyPIPSettingsDropdown14useTransitionsACSb_S5bAA06DraftseX0OS7btcfc",
+            "usr": "s:20BanubaVideoEditorSDK20FeatureConfigurationV09isOverlayC7Enabled0g24DoubleTapForToggleCameraI00g4Muten5AudioI00gb14CoverSelectionI00g6SimplebqI0020supportsTrimRecordedB012draftsConfig0g7AspectsI00g8SpeedBarI00gB10FitsAspect0g4BlurI00G21BlurEffectsExportable36openAutomaticallyPIPSettingsDropdown14useTransitions0g15DraftSavedToastI0ACSb_S5bAA06DraftseX0OS8btcfc",
+            "mangledName": "$s20BanubaVideoEditorSDK20FeatureConfigurationV09isOverlayC7Enabled0g24DoubleTapForToggleCameraI00g4Muten5AudioI00gb14CoverSelectionI00g6SimplebqI0020supportsTrimRecordedB012draftsConfig0g7AspectsI00g8SpeedBarI00gB10FitsAspect0g4BlurI00G21BlurEffectsExportable36openAutomaticallyPIPSettingsDropdown14useTransitions0g15DraftSavedToastI0ACSb_S5bAA06DraftseX0OS8btcfc",
             "moduleName": "BanubaVideoEditorSDK",
             "declAttributes": [
               "AccessControl"
@@ -62735,6 +62827,23 @@
       },
       {
         "kind": "Import",
+        "name": "BanubaLicenseServicingSDK",
+        "printedName": "BanubaLicenseServicingSDK",
+        "declKind": "Import",
+        "moduleName": "BanubaVideoEditorSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "BanubaSDKServicing",
+        "printedName": "BanubaSDKServicing",
+        "declKind": "Import",
+        "moduleName": "BanubaVideoEditorSDK"
+      },
+      {
+        "kind": "Import",
         "name": "UIKit",
         "printedName": "UIKit",
         "declKind": "Import",
@@ -63096,6 +63205,51 @@
         "declAttributes": [
           "RawDocComment"
         ]
+      },
+      {
+        "kind": "Import",
+        "name": "VideoEditor",
+        "printedName": "VideoEditor",
+        "declKind": "Import",
+        "moduleName": "BanubaVideoEditorSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "BanubaUtilities",
+        "printedName": "BanubaUtilities",
+        "declKind": "Import",
+        "moduleName": "BanubaVideoEditorSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "BanubaLicenseServicingSDK",
+        "printedName": "BanubaLicenseServicingSDK",
+        "declKind": "Import",
+        "moduleName": "BanubaVideoEditorSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "VEEffectsSDK",
+        "printedName": "VEEffectsSDK",
+        "declKind": "Import",
+        "moduleName": "BanubaVideoEditorSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "VEExportSDK",
+        "printedName": "VEExportSDK",
+        "declKind": "Import",
+        "moduleName": "BanubaVideoEditorSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "BanubaMusicEditorSDK",
+        "printedName": "BanubaMusicEditorSDK",
+        "declKind": "Import",
+        "moduleName": "BanubaVideoEditorSDK"
       },
       {
         "kind": "Import",
@@ -74777,7 +74931,7 @@
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/ViewControllers\/Editor\/EditorPresenter.swift",
       "kind": "BooleanLiteral",
-      "offset": 4888,
+      "offset": 5032,
       "length": 4,
       "value": "true"
     },
@@ -76254,14 +76408,14 @@
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/ViewControllers\/PreviewSingleVideo\/VideoPlaybackController.swift",
       "kind": "BooleanLiteral",
-      "offset": 4126,
+      "offset": 4127,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/ViewControllers\/PreviewSingleVideo\/VideoPlaybackController.swift",
       "kind": "BooleanLiteral",
-      "offset": 4151,
+      "offset": 4152,
       "length": 5,
       "value": "false"
     },
@@ -76723,21 +76877,21 @@
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/Services\/Configurations\/VideoEditorConfig.swift",
       "kind": "BooleanLiteral",
-      "offset": 3388,
+      "offset": 3297,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/Services\/Configurations\/VideoEditorConfig.swift",
       "kind": "FloatLiteral",
-      "offset": 28871,
+      "offset": 28780,
       "length": 3,
       "value": "0.2"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/Services\/Configurations\/VideoEditorConfig.swift",
       "kind": "StringLiteral",
-      "offset": 31573,
+      "offset": 31482,
       "length": 25,
       "value": "\"BanubaVideoEditorSDK.TrimTimeLineConfiguration\""
     },
@@ -77444,119 +77598,126 @@
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/Services\/Configurations\/ConfigurationEntities.swift",
       "kind": "BooleanLiteral",
-      "offset": 13955,
+      "offset": 14105,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/Services\/Configurations\/ConfigurationEntities.swift",
       "kind": "BooleanLiteral",
-      "offset": 14000,
+      "offset": 14150,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/Services\/Configurations\/ConfigurationEntities.swift",
       "kind": "BooleanLiteral",
-      "offset": 14037,
+      "offset": 14187,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/Services\/Configurations\/ConfigurationEntities.swift",
       "kind": "BooleanLiteral",
-      "offset": 14078,
+      "offset": 14228,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/Services\/Configurations\/ConfigurationEntities.swift",
       "kind": "BooleanLiteral",
-      "offset": 14115,
+      "offset": 14265,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/Services\/Configurations\/ConfigurationEntities.swift",
       "kind": "BooleanLiteral",
-      "offset": 14153,
+      "offset": 14303,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/Services\/Configurations\/ConfigurationEntities.swift",
       "kind": "BooleanLiteral",
-      "offset": 14229,
+      "offset": 14379,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/Services\/Configurations\/ConfigurationEntities.swift",
       "kind": "BooleanLiteral",
-      "offset": 14258,
+      "offset": 14408,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/Services\/Configurations\/ConfigurationEntities.swift",
       "kind": "BooleanLiteral",
-      "offset": 14287,
+      "offset": 14437,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/Services\/Configurations\/ConfigurationEntities.swift",
       "kind": "BooleanLiteral",
-      "offset": 14313,
+      "offset": 14463,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/Services\/Configurations\/ConfigurationEntities.swift",
       "kind": "BooleanLiteral",
-      "offset": 14348,
+      "offset": 14498,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/Services\/Configurations\/ConfigurationEntities.swift",
       "kind": "BooleanLiteral",
-      "offset": 14396,
+      "offset": 14546,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/Services\/Configurations\/ConfigurationEntities.swift",
       "kind": "BooleanLiteral",
-      "offset": 14423,
+      "offset": 14573,
       "length": 4,
       "value": "true"
+    },
+    {
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/Services\/Configurations\/ConfigurationEntities.swift",
+      "kind": "BooleanLiteral",
+      "offset": 14609,
+      "length": 5,
+      "value": "false"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/Services\/Configurations\/ConfigurationEntities.swift",
       "kind": "IntegerLiteral",
-      "offset": 26973,
+      "offset": 27257,
       "length": 2,
       "value": "50"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/Services\/Configurations\/ConfigurationEntities.swift",
       "kind": "IntegerLiteral",
-      "offset": 26999,
+      "offset": 27283,
       "length": 2,
       "value": "50"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/Services\/Configurations\/ConfigurationEntities.swift",
       "kind": "FloatLiteral",
-      "offset": 27128,
+      "offset": 27412,
       "length": 3,
       "value": "0.0"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/Services\/Configurations\/ConfigurationEntities.swift",
       "kind": "StringLiteral",
-      "offset": 32142,
+      "offset": 32426,
       "length": 18,
       "value": "\"BanubaVideoEditorSDK.ImageConfiguration\""
     },
@@ -77804,6 +77965,13 @@
       "offset": 1690,
       "length": 4,
       "value": "true"
+    },
+    {
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/ViewControllers\/Recorder\/RecorderAnalyticsManager.swift",
+      "kind": "BooleanLiteral",
+      "offset": 380,
+      "length": 5,
+      "value": "false"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/ViewControllers\/Trim\/TrimVideoComposition\/CompositionControlsHandler\/EditVideoControlItemCollectionViewCell.swift",
@@ -78284,21 +78452,21 @@
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/ViewControllers\/Recorder\/RecordSpeed\/SpeedSelectionBar.swift",
       "kind": "IntegerLiteral",
-      "offset": 2002,
+      "offset": 2131,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/ViewControllers\/Recorder\/RecordSpeed\/SpeedSelectionBar.swift",
       "kind": "IntegerLiteral",
-      "offset": 2042,
+      "offset": 2171,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/ViewControllers\/Recorder\/RecordSpeed\/SpeedSelectionBar.swift",
       "kind": "StringLiteral",
-      "offset": 2114,
+      "offset": 2243,
       "length": 3,
       "value": "\".\""
     },
@@ -80104,42 +80272,42 @@
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/ViewControllers\/Recorder\/RecorderPresenter.swift",
       "kind": "BooleanLiteral",
-      "offset": 4200,
+      "offset": 4201,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/ViewControllers\/Recorder\/RecorderPresenter.swift",
       "kind": "BooleanLiteral",
-      "offset": 4503,
+      "offset": 4504,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/ViewControllers\/Recorder\/RecorderPresenter.swift",
       "kind": "Array",
-      "offset": 4548,
+      "offset": 4549,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/ViewControllers\/Recorder\/RecorderPresenter.swift",
       "kind": "BooleanLiteral",
-      "offset": 4808,
+      "offset": 4809,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/ViewControllers\/Recorder\/RecorderPresenter.swift",
       "kind": "BooleanLiteral",
-      "offset": 4853,
+      "offset": 4854,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/ViewControllers\/Recorder\/RecorderPresenter.swift",
       "kind": "BooleanLiteral",
-      "offset": 4942,
+      "offset": 4943,
       "length": 5,
       "value": "false"
     },
@@ -80153,14 +80321,14 @@
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/ViewControllers\/Recorder\/RecorderPresenter.swift",
       "kind": "BooleanLiteral",
-      "offset": 16498,
+      "offset": 15778,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/ViewControllers\/Recorder\/RecorderPresenter.swift",
       "kind": "BooleanLiteral",
-      "offset": 23499,
+      "offset": 22746,
       "length": 5,
       "value": "false"
     },
@@ -80363,21 +80531,28 @@
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/ViewControllers\/VideoOverlay\/VideoOverlayViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 3029,
+      "offset": 2441,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/ViewControllers\/VideoOverlay\/VideoOverlayViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 4146,
+      "offset": 3070,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/ViewControllers\/VideoOverlay\/VideoOverlayViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 4188,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/ViewControllers\/VideoOverlay\/VideoOverlayViewController.swift",
       "kind": "FloatLiteral",
-      "offset": 19009,
+      "offset": 19200,
       "length": 3,
       "value": "1.0"
     },
