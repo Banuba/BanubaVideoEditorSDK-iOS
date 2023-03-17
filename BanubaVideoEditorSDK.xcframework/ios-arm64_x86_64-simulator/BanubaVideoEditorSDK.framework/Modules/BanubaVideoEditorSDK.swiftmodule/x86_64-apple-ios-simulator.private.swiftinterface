@@ -205,7 +205,7 @@ public class BanubaVideoEditor {
   public func export(using configuration: VEExportSDK.ExportConfiguration, exportProgress: ((Foundation.TimeInterval) -> Swift.Void)?, completion: @escaping ((_ success: Swift.Bool, _ error: Swift.Error?, _ exportCoverImages: BanubaVideoEditorSDK.ExportCoverImages?) -> Swift.Void))
   public func stopExport()
   public func isExporting() -> Swift.Bool
-  public func exportAudio(fileUrl: Foundation.URL, completion: @escaping (Swift.Bool, Swift.Error?) -> Swift.Void)
+  public func exportAudio(fileUrl: Foundation.URL, audioSettings: [Swift.String : Any] = VESettings.audio, completion: @escaping (Swift.Bool, Swift.Error?) -> Swift.Void)
   public func clearSessionData()
   public func dismissVideoEditor(animated: Swift.Bool, completion: (() -> Swift.Void)?)
   public func getVideoEditorNavigationController(withLaunchConfiguration configuration: BanubaVideoEditorSDK.VideoEditorLaunchConfig) -> UIKit.UINavigationController?
@@ -513,6 +513,7 @@ public struct RecorderConfiguration {
   public var effectSelectorContainerCornerRadius: CoreFoundation.CGFloat
   public var preferredStatusBarStyle: UIKit.UIStatusBarStyle
   public var videoDurationButtonConfiguration: BanubaVideoEditorSDK.BanubaButtonConfiguration
+  public var isVideoDurationButtonHidden: Swift.Bool
 }
 public struct RecordButtonConfiguration {
   public var idleStrokeColor: CoreGraphics.CGColor
@@ -917,7 +918,7 @@ public struct FeatureConfiguration {
   public var useTransitions: Swift.Bool
   public var isDraftSavedToastEnabled: Swift.Bool
   public static let `default`: BanubaVideoEditorSDK.FeatureConfiguration
-  public init(isOverlayEditorEnabled: Swift.Bool, isDoubleTapForToggleCameraEnabled: Swift.Bool, isMuteCameraAudioEnabled: Swift.Bool, isVideoCoverSelectionEnabled: Swift.Bool, isSimpleVideoCoverEnabled: Swift.Bool, supportsTrimRecordedVideo: Swift.Bool, draftsConfig: BanubaVideoEditorSDK.DraftsFeatureConfig, isAspectsEnabled: Swift.Bool, isSpeedBarEnabled: Swift.Bool, isVideoFitsAspect: Swift.Bool, isBlurEnabled: Swift.Bool, isBlurEffectsExportable: Swift.Bool, openAutomaticallyPIPSettingsDropdown: Swift.Bool, useTransitions: Swift.Bool, isDraftSavedToastEnabled: Swift.Bool)
+  public init(isOverlayEditorEnabled: Swift.Bool, isDoubleTapForToggleCameraEnabled: Swift.Bool, isMuteCameraAudioEnabled: Swift.Bool, isVideoCoverSelectionEnabled: Swift.Bool, supportsTrimRecordedVideo: Swift.Bool, draftsConfig: BanubaVideoEditorSDK.DraftsFeatureConfig, isAspectsEnabled: Swift.Bool, isSpeedBarEnabled: Swift.Bool, isVideoFitsAspect: Swift.Bool, isBlurEnabled: Swift.Bool, isBlurEffectsExportable: Swift.Bool, openAutomaticallyPIPSettingsDropdown: Swift.Bool, useTransitions: Swift.Bool, isDraftSavedToastEnabled: Swift.Bool)
 }
 public struct RecorderEffectsConfiguration {
   public var cornerRadius: CoreFoundation.CGFloat
@@ -1181,7 +1182,6 @@ public protocol SDKCameraChangedDelegate : AnyObject {
 }
 public protocol SDKCameraServicing {
   var videoRecordSpeed: BanubaVideoEditorSDK.VideoRecordSpeed { get set }
-  var isARCameraSupported: Swift.Bool { get }
   var cameraChangedDelegate: BanubaVideoEditorSDK.SDKCameraChangedDelegate? { get set }
   var renderQueue: Dispatch.DispatchQueue? { get }
   var playerViewSize: CoreFoundation.CGSize { get }
@@ -1211,6 +1211,7 @@ public protocol SDKCameraServicing {
   func getRendererView() -> UIKit.UIView
   func takeSnapshot(handler: @escaping (UIKit.UIImage?) -> Swift.Void)
   func replaceCamera(_ camera: BanubaSDKServicing.CameraModule, completion: (() -> Swift.Void)?)
+  func addFPSListener(_ listener: ((_ fpsInfo: Foundation.NSAttributedString) -> Swift.Void)?)
 }
 public class SDKCameraService : BanubaVideoEditorSDK.SDKCameraServicing {
   weak public var cameraChangedDelegate: BanubaVideoEditorSDK.SDKCameraChangedDelegate?
@@ -1228,9 +1229,6 @@ public class SDKCameraService : BanubaVideoEditorSDK.SDKCameraServicing {
   public var allowProcessing: Swift.Bool {
     get
     set
-  }
-  public var isARCameraSupported: Swift.Bool {
-    get
   }
   public var renderQueue: Dispatch.DispatchQueue? {
     get
@@ -1272,6 +1270,7 @@ extension BanubaVideoEditorSDK.SDKCameraService {
   public func setRenderTarget(view: UIKit.UIView)
   public func removeRenderTarget()
   public func getRendererView() -> UIKit.UIView
+  public func addFPSListener(_ listener: ((_ fpsInfo: Foundation.NSAttributedString) -> Swift.Void)?)
 }
 @objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class FeedbackAlertViewController : UIKit.UIViewController {
   public enum ActionTypes {
