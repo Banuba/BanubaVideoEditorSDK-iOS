@@ -34,7 +34,7 @@ NS_SWIFT_NAME(AudioBrowserFrameworkInteractor)
 __attribute__((weak_import)) @interface AudioBrowserFrameworkInteractor : NSObject
 
 + (BOOL)isFrameworkAvailable;
-+ (void)setMubertPat: (NSString *) pat;
++ (void)setMubertKeys: (NSString *)license token:(NSString*)token;
 
 - (instancetype)initWithTransitionDelegate: (id<UIViewControllerTransitioningDelegate>) transitionDelegate
                              selectedTrack: (AudioBrowserTrackWrapper * _Nullable) selectedTrack;

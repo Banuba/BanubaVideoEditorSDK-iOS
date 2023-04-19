@@ -7527,12 +7527,12 @@
               {
                 "kind": "TypeNominal",
                 "name": "Optional",
-                "printedName": "((Swift.Double) -> ())?",
+                "printedName": "((Swift.Float) -> ())?",
                 "children": [
                   {
                     "kind": "TypeFunc",
                     "name": "Function",
-                    "printedName": "(Swift.Double) -> ()",
+                    "printedName": "(Swift.Float) -> ()",
                     "children": [
                       {
                         "kind": "TypeNominal",
@@ -7541,9 +7541,9 @@
                       },
                       {
                         "kind": "TypeNominal",
-                        "name": "Double",
-                        "printedName": "Swift.Double",
-                        "usr": "s:Sd"
+                        "name": "Float",
+                        "printedName": "Swift.Float",
+                        "usr": "s:Sf"
                       }
                     ]
                   }
@@ -7553,7 +7553,7 @@
               {
                 "kind": "TypeFunc",
                 "name": "Function",
-                "printedName": "(Swift.Bool, Swift.Error?, BanubaVideoEditorSDK.ExportCoverImages?) -> ()",
+                "printedName": "(Swift.Error?, BanubaVideoEditorSDK.ExportCoverImages?) -> ()",
                 "children": [
                   {
                     "kind": "TypeNominal",
@@ -7563,14 +7563,8 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Tuple",
-                    "printedName": "(Swift.Bool, Swift.Error?, BanubaVideoEditorSDK.ExportCoverImages?)",
+                    "printedName": "(Swift.Error?, BanubaVideoEditorSDK.ExportCoverImages?)",
                     "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Bool",
-                        "printedName": "Swift.Bool",
-                        "usr": "s:Sb"
-                      },
                       {
                         "kind": "TypeNominal",
                         "name": "Optional",
@@ -7605,8 +7599,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:20BanubaVideoEditorSDK0abC0C6export5using0E8Progress10completiony08VEExportD019ExportConfigurationV_ySdcSgySb_s5Error_pSgAA0J11CoverImagesVSgtctF",
-            "mangledName": "$s20BanubaVideoEditorSDK0abC0C6export5using0E8Progress10completiony08VEExportD019ExportConfigurationV_ySdcSgySb_s5Error_pSgAA0J11CoverImagesVSgtctF",
+            "usr": "s:20BanubaVideoEditorSDK0abC0C6export5using0E8Progress10completiony08VEExportD019ExportConfigurationV_ySfcSgys5Error_pSg_AA0J11CoverImagesVSgtctF",
+            "mangledName": "$s20BanubaVideoEditorSDK0abC0C6export5using0E8Progress10completiony08VEExportD019ExportConfigurationV_ySfcSgys5Error_pSg_AA0J11CoverImagesVSgtctF",
             "moduleName": "BanubaVideoEditorSDK",
             "declAttributes": [
               "AccessControl",
@@ -7696,7 +7690,7 @@
               {
                 "kind": "TypeFunc",
                 "name": "Function",
-                "printedName": "(Swift.Bool, Swift.Error?) -> ()",
+                "printedName": "(Swift.Error?) -> ()",
                 "children": [
                   {
                     "kind": "TypeNominal",
@@ -7705,37 +7699,24 @@
                   },
                   {
                     "kind": "TypeNominal",
-                    "name": "Tuple",
-                    "printedName": "(Swift.Bool, Swift.Error?)",
+                    "name": "Optional",
+                    "printedName": "Swift.Error?",
                     "children": [
                       {
                         "kind": "TypeNominal",
-                        "name": "Bool",
-                        "printedName": "Swift.Bool",
-                        "usr": "s:Sb"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Optional",
-                        "printedName": "Swift.Error?",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "Error",
-                            "printedName": "Swift.Error",
-                            "usr": "s:s5ErrorP"
-                          }
-                        ],
-                        "usr": "s:Sq"
+                        "name": "Error",
+                        "printedName": "Swift.Error",
+                        "usr": "s:s5ErrorP"
                       }
-                    ]
+                    ],
+                    "usr": "s:Sq"
                   }
                 ]
               }
             ],
             "declKind": "Func",
-            "usr": "s:20BanubaVideoEditorSDK0abC0C11exportAudio7fileUrl13audioSettings10completiony10Foundation3URLV_SDySSypGySb_s5Error_pSgtctF",
-            "mangledName": "$s20BanubaVideoEditorSDK0abC0C11exportAudio7fileUrl13audioSettings10completiony10Foundation3URLV_SDySSypGySb_s5Error_pSgtctF",
+            "usr": "s:20BanubaVideoEditorSDK0abC0C11exportAudio7fileUrl13audioSettings10completiony10Foundation3URLV_SDySSypGys5Error_pSgctF",
+            "mangledName": "$s20BanubaVideoEditorSDK0abC0C11exportAudio7fileUrl13audioSettings10completiony10Foundation3URLV_SDySSypGys5Error_pSgctF",
             "moduleName": "BanubaVideoEditorSDK",
             "declAttributes": [
               "AccessControl",
@@ -79903,48 +79884,48 @@
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/Services\/VideoSequenceZipArchiver\/ExternalDraftEntities\/ExternalDraftEditorData.swift",
       "kind": "StringLiteral",
       "offset": 715,
-      "length": 13,
-      "value": "\"videoVolume\""
+      "length": 8,
+      "value": "\"volume\""
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/Services\/VideoSequenceZipArchiver\/ExternalDraftEntities\/ExternalDraftEditorData.swift",
       "kind": "StringLiteral",
-      "offset": 746,
+      "offset": 741,
       "length": 7,
       "value": "\"color\""
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/Services\/VideoSequenceZipArchiver\/ExternalDraftEntities\/ExternalDraftEditorData.swift",
       "kind": "StringLiteral",
-      "offset": 778,
+      "offset": 773,
       "length": 14,
       "value": "\"musicEffects\""
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/Services\/VideoSequenceZipArchiver\/ExternalDraftEntities\/ExternalDraftEditorData.swift",
       "kind": "StringLiteral",
-      "offset": 818,
+      "offset": 813,
       "length": 15,
       "value": "\"visualEffects\""
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/Services\/VideoSequenceZipArchiver\/ExternalDraftEntities\/ExternalDraftEditorData.swift",
       "kind": "StringLiteral",
-      "offset": 857,
+      "offset": 852,
       "length": 13,
       "value": "\"textEffects\""
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/Services\/VideoSequenceZipArchiver\/ExternalDraftEntities\/ExternalDraftEditorData.swift",
       "kind": "StringLiteral",
-      "offset": 897,
+      "offset": 892,
       "length": 16,
       "value": "\"stickerEffects\""
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/Services\/VideoSequenceZipArchiver\/ExternalDraftEntities\/ExternalDraftEditorData.swift",
       "kind": "StringLiteral",
-      "offset": 933,
+      "offset": 928,
       "length": 9,
       "value": "\"records\""
     },
@@ -79959,265 +79940,265 @@
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/Services\/VideoSequenceZipArchiver\/ExternalDraftEntities\/ExternalDraftEditorData.swift",
       "kind": "StringLiteral",
       "offset": 715,
-      "length": 13,
-      "value": "\"videoVolume\""
+      "length": 8,
+      "value": "\"volume\""
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/Services\/VideoSequenceZipArchiver\/ExternalDraftEntities\/ExternalDraftEditorData.swift",
       "kind": "StringLiteral",
-      "offset": 746,
+      "offset": 741,
       "length": 7,
       "value": "\"color\""
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/Services\/VideoSequenceZipArchiver\/ExternalDraftEntities\/ExternalDraftEditorData.swift",
       "kind": "StringLiteral",
-      "offset": 778,
+      "offset": 773,
       "length": 14,
       "value": "\"musicEffects\""
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/Services\/VideoSequenceZipArchiver\/ExternalDraftEntities\/ExternalDraftEditorData.swift",
       "kind": "StringLiteral",
-      "offset": 818,
+      "offset": 813,
       "length": 15,
       "value": "\"visualEffects\""
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/Services\/VideoSequenceZipArchiver\/ExternalDraftEntities\/ExternalDraftEditorData.swift",
       "kind": "StringLiteral",
-      "offset": 857,
+      "offset": 852,
       "length": 13,
       "value": "\"textEffects\""
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/Services\/VideoSequenceZipArchiver\/ExternalDraftEntities\/ExternalDraftEditorData.swift",
       "kind": "StringLiteral",
-      "offset": 897,
+      "offset": 892,
       "length": 16,
       "value": "\"stickerEffects\""
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/Services\/VideoSequenceZipArchiver\/ExternalDraftEntities\/ExternalDraftEditorData.swift",
       "kind": "StringLiteral",
-      "offset": 933,
+      "offset": 928,
       "length": 9,
       "value": "\"records\""
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/Services\/VideoSequenceZipArchiver\/ExternalDraftEntities\/ExternalDraftEditorData.swift",
       "kind": "StringLiteral",
-      "offset": 1052,
+      "offset": 1047,
       "length": 14,
       "value": "\"camera_track\""
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/Services\/VideoSequenceZipArchiver\/ExternalDraftEntities\/ExternalDraftEditorData.swift",
       "kind": "StringLiteral",
-      "offset": 1084,
+      "offset": 1079,
       "length": 7,
       "value": "\"voice\""
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/Services\/VideoSequenceZipArchiver\/ExternalDraftEntities\/ExternalDraftEditorData.swift",
       "kind": "StringLiteral",
-      "offset": 1109,
+      "offset": 1104,
       "length": 7,
       "value": "\"track\""
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/Services\/VideoSequenceZipArchiver\/ExternalDraftEntities\/ExternalDraftEditorData.swift",
       "kind": "StringLiteral",
-      "offset": 1052,
+      "offset": 1047,
       "length": 14,
       "value": "\"camera_track\""
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/Services\/VideoSequenceZipArchiver\/ExternalDraftEntities\/ExternalDraftEditorData.swift",
       "kind": "StringLiteral",
-      "offset": 1084,
+      "offset": 1079,
       "length": 7,
       "value": "\"voice\""
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/Services\/VideoSequenceZipArchiver\/ExternalDraftEntities\/ExternalDraftEditorData.swift",
       "kind": "StringLiteral",
-      "offset": 1109,
+      "offset": 1104,
       "length": 7,
       "value": "\"track\""
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/Services\/VideoSequenceZipArchiver\/ExternalDraftEntities\/ExternalDraftEditorData.swift",
       "kind": "StringLiteral",
-      "offset": 1474,
+      "offset": 1469,
       "length": 11,
       "value": "\"sourceUri\""
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/Services\/VideoSequenceZipArchiver\/ExternalDraftEntities\/ExternalDraftEditorData.swift",
       "kind": "StringLiteral",
-      "offset": 1503,
+      "offset": 1498,
       "length": 7,
       "value": "\"title\""
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/Services\/VideoSequenceZipArchiver\/ExternalDraftEntities\/ExternalDraftEditorData.swift",
       "kind": "StringLiteral",
-      "offset": 1531,
+      "offset": 1526,
       "length": 8,
       "value": "\"artist\""
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/Services\/VideoSequenceZipArchiver\/ExternalDraftEntities\/ExternalDraftEditorData.swift",
       "kind": "StringLiteral",
-      "offset": 1565,
+      "offset": 1560,
       "length": 15,
       "value": "\"timelineIndex\""
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/Services\/VideoSequenceZipArchiver\/ExternalDraftEntities\/ExternalDraftEditorData.swift",
       "kind": "StringLiteral",
-      "offset": 1609,
+      "offset": 1604,
       "length": 18,
       "value": "\"sourceDurationMs\""
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/Services\/VideoSequenceZipArchiver\/ExternalDraftEntities\/ExternalDraftEditorData.swift",
       "kind": "StringLiteral",
-      "offset": 1655,
+      "offset": 1650,
       "length": 17,
       "value": "\"startOnSourceMs\""
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/Services\/VideoSequenceZipArchiver\/ExternalDraftEntities\/ExternalDraftEditorData.swift",
       "kind": "StringLiteral",
-      "offset": 1695,
+      "offset": 1690,
       "length": 12,
       "value": "\"durationMs\""
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/Services\/VideoSequenceZipArchiver\/ExternalDraftEntities\/ExternalDraftEditorData.swift",
       "kind": "StringLiteral",
-      "offset": 1737,
+      "offset": 1732,
       "length": 19,
       "value": "\"startOnTimelineMs\""
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/Services\/VideoSequenceZipArchiver\/ExternalDraftEntities\/ExternalDraftEditorData.swift",
       "kind": "StringLiteral",
-      "offset": 1775,
+      "offset": 1770,
       "length": 8,
       "value": "\"volume\""
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/Services\/VideoSequenceZipArchiver\/ExternalDraftEntities\/ExternalDraftEditorData.swift",
       "kind": "StringLiteral",
-      "offset": 1803,
+      "offset": 1798,
       "length": 9,
       "value": "\"playUri\""
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/Services\/VideoSequenceZipArchiver\/ExternalDraftEntities\/ExternalDraftEditorData.swift",
       "kind": "StringLiteral",
-      "offset": 1836,
+      "offset": 1831,
       "length": 13,
       "value": "\"equalizerId\""
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/Services\/VideoSequenceZipArchiver\/ExternalDraftEntities\/ExternalDraftEditorData.swift",
       "kind": "StringLiteral",
-      "offset": 1866,
+      "offset": 1861,
       "length": 6,
       "value": "\"type\""
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/Services\/VideoSequenceZipArchiver\/ExternalDraftEntities\/ExternalDraftEditorData.swift",
       "kind": "StringLiteral",
-      "offset": 1474,
+      "offset": 1469,
       "length": 11,
       "value": "\"sourceUri\""
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/Services\/VideoSequenceZipArchiver\/ExternalDraftEntities\/ExternalDraftEditorData.swift",
       "kind": "StringLiteral",
-      "offset": 1503,
+      "offset": 1498,
       "length": 7,
       "value": "\"title\""
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/Services\/VideoSequenceZipArchiver\/ExternalDraftEntities\/ExternalDraftEditorData.swift",
       "kind": "StringLiteral",
-      "offset": 1531,
+      "offset": 1526,
       "length": 8,
       "value": "\"artist\""
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/Services\/VideoSequenceZipArchiver\/ExternalDraftEntities\/ExternalDraftEditorData.swift",
       "kind": "StringLiteral",
-      "offset": 1565,
+      "offset": 1560,
       "length": 15,
       "value": "\"timelineIndex\""
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/Services\/VideoSequenceZipArchiver\/ExternalDraftEntities\/ExternalDraftEditorData.swift",
       "kind": "StringLiteral",
-      "offset": 1609,
+      "offset": 1604,
       "length": 18,
       "value": "\"sourceDurationMs\""
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/Services\/VideoSequenceZipArchiver\/ExternalDraftEntities\/ExternalDraftEditorData.swift",
       "kind": "StringLiteral",
-      "offset": 1655,
+      "offset": 1650,
       "length": 17,
       "value": "\"startOnSourceMs\""
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/Services\/VideoSequenceZipArchiver\/ExternalDraftEntities\/ExternalDraftEditorData.swift",
       "kind": "StringLiteral",
-      "offset": 1695,
+      "offset": 1690,
       "length": 12,
       "value": "\"durationMs\""
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/Services\/VideoSequenceZipArchiver\/ExternalDraftEntities\/ExternalDraftEditorData.swift",
       "kind": "StringLiteral",
-      "offset": 1737,
+      "offset": 1732,
       "length": 19,
       "value": "\"startOnTimelineMs\""
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/Services\/VideoSequenceZipArchiver\/ExternalDraftEntities\/ExternalDraftEditorData.swift",
       "kind": "StringLiteral",
-      "offset": 1775,
+      "offset": 1770,
       "length": 8,
       "value": "\"volume\""
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/Services\/VideoSequenceZipArchiver\/ExternalDraftEntities\/ExternalDraftEditorData.swift",
       "kind": "StringLiteral",
-      "offset": 1803,
+      "offset": 1798,
       "length": 9,
       "value": "\"playUri\""
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/Services\/VideoSequenceZipArchiver\/ExternalDraftEntities\/ExternalDraftEditorData.swift",
       "kind": "StringLiteral",
-      "offset": 1836,
+      "offset": 1831,
       "length": 13,
       "value": "\"equalizerId\""
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/Services\/VideoSequenceZipArchiver\/ExternalDraftEntities\/ExternalDraftEditorData.swift",
       "kind": "StringLiteral",
-      "offset": 1866,
+      "offset": 1861,
       "length": 6,
       "value": "\"type\""
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/Services\/VideoSequenceZipArchiver\/ExternalDraftEntities\/ExternalDraftEditorData.swift",
       "kind": "StringLiteral",
-      "offset": 2808,
+      "offset": 2803,
       "length": 28,
       "value": "\"BanubaVideoEditorSDK.ExternalDraftEditorDataMaker\""
     },

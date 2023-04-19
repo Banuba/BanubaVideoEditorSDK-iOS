@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.7 (swiftlang-5.7.0.127.4 clang-1400.0.29.50)
+// swift-compiler-version: Apple Swift version 5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)
 // swift-module-flags: -target arm64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=unchecked -O -module-name BanubaVideoEditorSDK
 // swift-module-flags-ignorable: -enable-bare-slash-regex
 import AVFoundation
@@ -202,10 +202,10 @@ public class BanubaVideoEditor {
   }
   public init?(token: Swift.String, isCameraEnabled: Swift.Bool = true, configuration: BanubaVideoEditorSDK.VideoEditorConfig, externalViewControllerFactory: BanubaVideoEditorSDK.ExternalViewControllerFactory? = nil)
   @objc deinit
-  public func export(using configuration: VEExportSDK.ExportConfiguration, exportProgress: ((Foundation.TimeInterval) -> Swift.Void)?, completion: @escaping ((_ success: Swift.Bool, _ error: Swift.Error?, _ exportCoverImages: BanubaVideoEditorSDK.ExportCoverImages?) -> Swift.Void))
+  public func export(using configuration: VEExportSDK.ExportConfiguration, exportProgress: ((Swift.Float) -> Swift.Void)?, completion: @escaping ((_ error: Swift.Error?, _ exportCoverImages: BanubaVideoEditorSDK.ExportCoverImages?) -> Swift.Void))
   public func stopExport()
   public func isExporting() -> Swift.Bool
-  public func exportAudio(fileUrl: Foundation.URL, audioSettings: [Swift.String : Any] = VESettings.audio, completion: @escaping (Swift.Bool, Swift.Error?) -> Swift.Void)
+  public func exportAudio(fileUrl: Foundation.URL, audioSettings: [Swift.String : Any] = VESettings.audio, completion: @escaping (Swift.Error?) -> Swift.Void)
   public func clearSessionData()
   public func dismissVideoEditor(animated: Swift.Bool, completion: (() -> Swift.Void)?)
   public func getVideoEditorNavigationController(withLaunchConfiguration configuration: BanubaVideoEditorSDK.VideoEditorLaunchConfig) -> UIKit.UINavigationController?
