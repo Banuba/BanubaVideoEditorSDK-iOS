@@ -760,10 +760,6 @@ extension BanubaVideoEditorSDK.ExternalViewControllerFactory {
     set
   }
 }
-public protocol TimelineViewControllerDelegate : AnyObject {
-  func changeVideoPosition(on time: CoreMedia.CMTime)
-  func shouldPauseVideo()
-}
 public struct PIPSwitchCellConfiguration {
   public var identifier: BanubaSDKServicing.PIPSwitchLayoutSetting
   public var selectedIdentifier: BanubaSDKServicing.PIPSwitchLayoutSetting

@@ -40236,70 +40236,6 @@
         "moduleName": "BanubaVideoEditorSDK"
       },
       {
-        "kind": "TypeDecl",
-        "name": "TimelineViewControllerDelegate",
-        "printedName": "TimelineViewControllerDelegate",
-        "children": [
-          {
-            "kind": "Function",
-            "name": "changeVideoPosition",
-            "printedName": "changeVideoPosition(on:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "CMTime",
-                "printedName": "CoreMedia.CMTime",
-                "usr": "c:@SA@CMTime"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:20BanubaVideoEditorSDK30TimelineViewControllerDelegateP06changeB8Position2onySo6CMTimea_tF",
-            "mangledName": "$s20BanubaVideoEditorSDK30TimelineViewControllerDelegateP06changeB8Position2onySo6CMTimea_tF",
-            "moduleName": "BanubaVideoEditorSDK",
-            "genericSig": "<τ_0_0 where τ_0_0 : BanubaVideoEditorSDK.TimelineViewControllerDelegate>",
-            "sugared_genericSig": "<Self where Self : BanubaVideoEditorSDK.TimelineViewControllerDelegate>",
-            "protocolReq": true,
-            "reqNewWitnessTableEntry": true,
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "shouldPauseVideo",
-            "printedName": "shouldPauseVideo()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:20BanubaVideoEditorSDK30TimelineViewControllerDelegateP011shouldPauseB0yyF",
-            "mangledName": "$s20BanubaVideoEditorSDK30TimelineViewControllerDelegateP011shouldPauseB0yyF",
-            "moduleName": "BanubaVideoEditorSDK",
-            "genericSig": "<τ_0_0 where τ_0_0 : BanubaVideoEditorSDK.TimelineViewControllerDelegate>",
-            "sugared_genericSig": "<Self where Self : BanubaVideoEditorSDK.TimelineViewControllerDelegate>",
-            "protocolReq": true,
-            "reqNewWitnessTableEntry": true,
-            "funcSelfKind": "NonMutating"
-          }
-        ],
-        "declKind": "Protocol",
-        "usr": "s:20BanubaVideoEditorSDK30TimelineViewControllerDelegateP",
-        "mangledName": "$s20BanubaVideoEditorSDK30TimelineViewControllerDelegateP",
-        "moduleName": "BanubaVideoEditorSDK",
-        "genericSig": "<τ_0_0 : AnyObject>",
-        "sugared_genericSig": "<Self : AnyObject>",
-        "declAttributes": [
-          "AccessControl"
-        ]
-      },
-      {
         "kind": "Import",
         "name": "UIKit",
         "printedName": "UIKit",
@@ -77139,21 +77075,21 @@
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/Components\/Timeline\/TimelineViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 433,
+      "offset": 426,
       "length": 3,
       "value": "100"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/Components\/Timeline\/TimelineViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 1425,
+      "offset": 1418,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/Components\/Timeline\/TimelineViewController.swift",
       "kind": "StringLiteral",
-      "offset": 952,
+      "offset": 945,
       "length": 22,
       "value": "\"BanubaVideoEditorSDK.TimelineViewController\""
     },
