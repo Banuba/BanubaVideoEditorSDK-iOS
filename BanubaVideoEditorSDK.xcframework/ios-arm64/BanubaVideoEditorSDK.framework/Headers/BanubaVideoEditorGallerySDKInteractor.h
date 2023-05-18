@@ -17,6 +17,8 @@ __attribute__((weak_import)) @interface BanubaVideoEditorGallerySDKInteractor : 
 
 @property (strong, nonatomic)  id<GalleryViewControllerFactory> factory;
 
+- (void)setAutoCutAvailable:(BOOL)isAvailable;
+
 @end
 
 NS_ASSUME_NONNULL_END

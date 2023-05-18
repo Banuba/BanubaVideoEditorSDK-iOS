@@ -257,6 +257,15 @@ using UInt = size_t;
 
 
 
+
+/// The Composition Timeline configuration
+SWIFT_CLASS("_TtC20BanubaVideoEditorSDK32CompositionTimelineConfiguration")
+@interface CompositionTimelineConfiguration : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
 @class NSCoder;
 
 SWIFT_CLASS("_TtC20BanubaVideoEditorSDK13CountdownView")
@@ -299,6 +308,7 @@ SWIFT_CLASS("_TtC20BanubaVideoEditorSDK27FeedbackAlertViewController")
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end
+
 
 
 
@@ -354,6 +364,7 @@ SWIFT_CLASS("_TtC20BanubaVideoEditorSDK25TrimTimeLineConfiguration")
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
+
 
 
 
@@ -642,6 +653,15 @@ using UInt = size_t;
 
 
 
+
+/// The Composition Timeline configuration
+SWIFT_CLASS("_TtC20BanubaVideoEditorSDK32CompositionTimelineConfiguration")
+@interface CompositionTimelineConfiguration : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
 @class NSCoder;
 
 SWIFT_CLASS("_TtC20BanubaVideoEditorSDK13CountdownView")
@@ -684,6 +704,7 @@ SWIFT_CLASS("_TtC20BanubaVideoEditorSDK27FeedbackAlertViewController")
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end
+
 
 
 
@@ -739,6 +760,7 @@ SWIFT_CLASS("_TtC20BanubaVideoEditorSDK25TrimTimeLineConfiguration")
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
+
 
 
 

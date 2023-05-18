@@ -36,8 +36,9 @@ __attribute__((weak_import)) @interface AudioBrowserFrameworkInteractor : NSObje
 + (BOOL)isFrameworkAvailable;
 + (void)setMubertKeys: (NSString *)license token:(NSString*)token;
 
-- (instancetype)initWithTransitionDelegate: (id<UIViewControllerTransitioningDelegate>) transitionDelegate
-                             selectedTrack: (AudioBrowserTrackWrapper * _Nullable) selectedTrack;
+- (instancetype)initWithSelectedTrack: (AudioBrowserTrackWrapper * _Nullable) selectedTrack
+                  isNewBrowserEnabled:(BOOL)isNewBrowserEnabled
+                        videoDuration:(double)videoDuration;
 
 -(UIViewController * _Nullable) getAudioBrowserController;
 
