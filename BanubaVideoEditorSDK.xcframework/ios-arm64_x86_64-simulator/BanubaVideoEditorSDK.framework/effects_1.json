@@ -1,0 +1,15 @@
+{
+  "intervals": [
+    {
+      "effects": [
+        {
+          "type": "visual",
+          "name": "acid_whip",
+          "params": {}
+        }
+      ],
+      "from": 1.8343764172335602,
+      "to": 7.825124716553288
+    }
+  ]
+}

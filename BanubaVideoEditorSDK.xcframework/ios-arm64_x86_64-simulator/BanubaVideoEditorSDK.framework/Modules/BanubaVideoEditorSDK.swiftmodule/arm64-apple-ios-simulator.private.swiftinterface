@@ -1393,7 +1393,8 @@ public typealias ExternalDraft = VideoEditor.VideoSequence
   @objc deinit
 }
 public struct CaptionsConfiguration {
-  public var captionsUrl: Swift.String?
+  public var captionsUploadUrl: Swift.String?
+  public var captionsTranscribeUrl: Swift.String?
   public var apiKey: Swift.String?
 }
 public protocol ExternalMaskProviding {
