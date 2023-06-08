@@ -1,15 +1,1 @@
-{
-  "intervals": [
-    {
-      "effects": [
-        {
-          "type": "visual",
-          "name": "flash",
-          "params": {}
-        }
-      ],
-      "from": 1.8343764172335602,
-      "to": 7.825124716553288
-    }
-  ]
-}
+{"video": "data/videos/test/000003.mp4", "track": "data/music/gttr-short-2-fast/chart/16_no lyrics.mp3", "loop_audio_times": 1, "track_type": "Track.FAST", "video_duration": 62.86666666666667, "track_duration": 110.88054421768707, "intervals": [{"effects": [{"type": "visual", "name": "twitch", "params": {}}, {"type": "visual", "name": "zoom", "params": {}}, {"type": "visual", "name": "soul", "params": {}}], "from": 0.09287981859410431, "to": 1.9504761904761905}, {"effects": [], "from": 1.9504761904761905, "to": 3.7848526077097504}, {"effects": [{"type": "visual", "name": "twitch", "params": {}}, {"type": "visual", "name": "zoom", "params": {}}, {"type": "visual", "name": "soul", "params": {}}], "from": 3.7848526077097504, "to": 5.642448979591837}, {"effects": [], "from": 5.642448979591837, "to": 7.476825396825397}, {"effects": [{"type": "visual", "name": "twitch", "params": {}}, {"type": "visual", "name": "zoom", "params": {}}, {"type": "visual", "name": "soul", "params": {}}], "from": 7.476825396825397, "to": 14.86077097505669}, {"effects": [], "from": 14.86077097505669, "to": 18.552743764172334}, {"effects": [{"type": "visual", "name": "twitch", "params": {}}, {"type": "visual", "name": "zoom", "params": {}}, {"type": "visual", "name": "soul", "params": {}}], "from": 18.552743764172334, "to": 22.244716553287983}, {"effects": [], "from": 22.244716553287983, "to": 24.102312925170068}, {"effects": [{"type": "visual", "name": "twitch", "params": {}}, {"type": "visual", "name": "zoom", "params": {}}, {"type": "visual", "name": "soul", "params": {}}], "from": 24.102312925170068, "to": 35.15501133786848}, {"effects": [], "from": 35.15501133786848, "to": 37.01260770975057}, {"effects": [{"type": "visual", "name": "twitch", "params": {}}, {"type": "visual", "name": "zoom", "params": {}}, {"type": "visual", "name": "soul", "params": {}}], "from": 37.01260770975057, "to": 40.704580498866214}, {"effects": [], "from": 40.704580498866214, "to": 44.39655328798186}, {"effects": [{"type": "visual", "name": "twitch", "params": {}}, {"type": "visual", "name": "zoom", "params": {}}, {"type": "visual", "name": "soul", "params": {}}], "from": 44.39655328798186, "to": 46.25414965986395}, {"effects": [], "from": 46.25414965986395, "to": 51.78049886621315}, {"effects": [{"type": "visual", "name": "twitch", "params": {}}, {"type": "visual", "name": "zoom", "params": {}}, {"type": "visual", "name": "soul", "params": {}}], "from": 51.78049886621315, "to": 53.63809523809524}, {"effects": [], "from": 53.63809523809524, "to": 57.30684807256236}, {"effects": [{"type": "visual", "name": "twitch", "params": {}}, {"type": "visual", "name": "zoom", "params": {}}, {"type": "visual", "name": "soul", "params": {}}], "from": 57.30684807256236, "to": 61.02204081632653}, {"effects": [], "from": 61.02204081632653, "to": 62.85641723356009}]}

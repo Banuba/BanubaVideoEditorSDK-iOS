@@ -1,15 +1,1 @@
-{
-  "intervals": [
-    {
-      "effects": [
-        {
-          "type": "visual",
-          "name": "dv_cam",
-          "params": {}
-        }
-      ],
-      "from": 1.8343764172335602,
-      "to": 7.825124716553288
-    }
-  ]
-}
+{"video": "data/videos/test/000004.mp4", "track": "data/music/gttr-short-2-fast/chart/Lobo Loco - Greetings New Orleans (ID 1910).mp3", "loop_audio_times": 1, "track_type": "Track.FAST", "video_duration": 18.733333333333334, "track_duration": 52.49387755102041, "intervals": [{"effects": [{"type": "visual", "name": "twitch", "params": {}}, {"type": "visual", "name": "zoom", "params": {}}, {"type": "visual", "name": "soul", "params": {}}], "from": 0.06965986394557823, "to": 2.136235827664399}, {"effects": [], "from": 2.136235827664399, "to": 6.199727891156463}, {"effects": [{"type": "visual", "name": "twitch", "params": {}}, {"type": "visual", "name": "zoom", "params": {}}, {"type": "visual", "name": "soul", "params": {}}], "from": 6.199727891156463, "to": 9.961360544217687}, {"effects": [], "from": 9.961360544217687, "to": 11.935056689342403}, {"effects": [{"type": "visual", "name": "twitch", "params": {}}, {"type": "visual", "name": "zoom", "params": {}}, {"type": "visual", "name": "soul", "params": {}}], "from": 11.935056689342403, "to": 16.114648526077097}, {"effects": [], "from": 16.114648526077097, "to": 18.250884353741498}]}
