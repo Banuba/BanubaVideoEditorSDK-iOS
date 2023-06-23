@@ -618,7 +618,8 @@ public struct TextOnVideoMetadata : Swift.Codable {
   public let coordinatesParams: BanubaVideoEditorSDK.CoordinatesParams
   public let order: Swift.Int
   public let textColorDestinationId: Swift.Int
-  public init(id: Swift.String, imageData: Foundation.Data?, textParams: BanubaVideoEditorSDK.TextParams, startTime: BanubaVideoEditorSDK.TimeMetadata, endTime: BanubaVideoEditorSDK.TimeMetadata, coordinatesParams: BanubaVideoEditorSDK.CoordinatesParams, order: Swift.Int, textColorDestinationId: Swift.Int)
+  public let linePositionOrderNumber: Swift.Int?
+  public init(id: Swift.String, imageData: Foundation.Data?, textParams: BanubaVideoEditorSDK.TextParams, startTime: BanubaVideoEditorSDK.TimeMetadata, endTime: BanubaVideoEditorSDK.TimeMetadata, coordinatesParams: BanubaVideoEditorSDK.CoordinatesParams, order: Swift.Int, textColorDestinationId: Swift.Int, linePositionOrderNumber: Swift.Int?)
   public init(from decoder: any Swift.Decoder) throws
   public func encode(to encoder: any Swift.Encoder) throws
 }
@@ -1200,6 +1201,7 @@ public struct EditorConfiguration {
   public var backButton: BanubaUtilities.BackButtonConfiguration
   public var editDraftBackButton: BanubaUtilities.BackButtonConfiguration
   public var openTrimButton: BanubaVideoEditorSDK.AdditionalEffectsButtonConfiguration
+  public var musicPanelConfiguration: BanubaVideoEditorSDK.MusicPanelConfiguration
   public var isVideoAspectFillEnabled: Swift.Bool
   public var backgroundColor: UIKit.UIColor
   public var preferredStatusBarStyle: UIKit.UIStatusBarStyle
@@ -1572,6 +1574,13 @@ public struct GalleryAssetItemConfiguration {
   public var borderWidth: CoreFoundation.CGFloat
   public var normalImage: BanubaVideoEditorSDK.ImageConfiguration
   public var activityIndicatorConfiguration: BanubaUtilities.SmallActivityIndicatorConfiguration
+}
+public struct MusicPanelConfiguration {
+  public var floatingLineViewConfiguration: BanubaUtilities.TextConfiguration?
+  public var floatingLineViewWidth: CoreFoundation.CGFloat?
+  public var backroundConfiguration: BanubaUtilities.BackgroundConfiguration?
+  public var removeMusicButtonConfiguration: BanubaVideoEditorSDK.ImageButtonConfiguration
+  public var musicPanelImageConfiguration: BanubaVideoEditorSDK.ImageConfiguration
 }
 public struct TimerConfiguration {
   public struct TimerOptionConfiguration : Swift.Equatable {

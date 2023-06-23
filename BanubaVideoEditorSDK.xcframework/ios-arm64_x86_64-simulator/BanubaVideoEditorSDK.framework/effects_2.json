@@ -10,26 +10,16 @@
             "effects": [
                 {
                     "type": "visual",
-                    "name": "twitch",
+                    "name": "cathode",
                     "params": {}
                 },
                 {
                     "type": "visual",
                     "name": "zoom",
                     "params": {}
-                },
-                {
-                    "type": "visual",
-                    "name": "soul",
-                    "params": {}
                 }
             ],
             "from": 0.8359183673469388,
-            "to": 2.414875283446712
-        },
-        {
-            "effects": [],
-            "from": 2.414875283446712,
             "to": 3.9938321995464854
         },
         {
