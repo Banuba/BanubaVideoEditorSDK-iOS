@@ -966,10 +966,17 @@ public enum DraftActionType {
 }
 public struct VideoEditorColorsPalette {
   public let primaryColor: UIKit.UIColor
-  public let iconPrimaryCololor: UIKit.UIColor
   public let secondaryColor: UIKit.UIColor
   public let accentColor: UIKit.UIColor
-  public init(primaryColor: UIKit.UIColor, iconPrimaryCololor: UIKit.UIColor, secondaryColor: UIKit.UIColor, accentColor: UIKit.UIColor)
+  public let effectButtonColorsPalette: BanubaVideoEditorSDK.EffectButtonColorsPalette
+  public init(primaryColor: UIKit.UIColor, secondaryColor: UIKit.UIColor, accentColor: UIKit.UIColor, effectButtonColorsPalette: BanubaVideoEditorSDK.EffectButtonColorsPalette)
+}
+public struct EffectButtonColorsPalette {
+  public let defaultIconColor: UIKit.UIColor
+  public let defaultBackgroundColor: UIKit.UIColor
+  public let selectedIconColor: UIKit.UIColor
+  public let selectedBackgroundColor: UIKit.UIColor
+  public init(defaultIconColor: UIKit.UIColor, defaultBackgroundColor: UIKit.UIColor, selectedIconColor: UIKit.UIColor, selectedBackgroundColor: UIKit.UIColor)
 }
 public struct VideoEditorConfig {
   public var videoResolutionConfiguration: BanubaUtilities.VideoResolutionConfiguration
@@ -1663,7 +1670,8 @@ public struct VideoCoverSelectionConfiguration {
   public var galleryImageCompressionQuality: CoreFoundation.CGFloat
   public var preferredStatusBarStyle: UIKit.UIStatusBarStyle
   public var isGalleryButtonHidden: Swift.Bool
-  public init(cancelButton: BanubaUtilities.RoundedButtonConfiguration, doneButton: BanubaUtilities.RoundedButtonConfiguration, titleLabel: BanubaUtilities.TextConfiguration?, toolTipLabel: BanubaUtilities.TextConfiguration, selectGalleryImageButton: BanubaVideoEditorSDK.BanubaButtonConfiguration, deleteImageButtonImageConfiguration: BanubaVideoEditorSDK.BanubaButtonConfiguration, backgroundConfiguration: BanubaUtilities.BackgroundConfiguration, previewBackgroundConfiguration: BanubaUtilities.BackgroundConfiguration, thumbnailsCursorConfiguration: BanubaVideoEditorSDK.ImageButtonConfiguration, numberOfThumbnails: Swift.Int, galleryImageCompressionQuality: CoreFoundation.CGFloat, preferredStatusBarStyle: UIKit.UIStatusBarStyle, isGalleryButtonHidden: Swift.Bool)
+  public var bottomViewConfiguration: BanubaUtilities.BackgroundConfiguration
+  public init(cancelButton: BanubaUtilities.RoundedButtonConfiguration, doneButton: BanubaUtilities.RoundedButtonConfiguration, titleLabel: BanubaUtilities.TextConfiguration?, toolTipLabel: BanubaUtilities.TextConfiguration, selectGalleryImageButton: BanubaVideoEditorSDK.BanubaButtonConfiguration, deleteImageButtonImageConfiguration: BanubaVideoEditorSDK.BanubaButtonConfiguration, backgroundConfiguration: BanubaUtilities.BackgroundConfiguration, previewBackgroundConfiguration: BanubaUtilities.BackgroundConfiguration, thumbnailsCursorConfiguration: BanubaVideoEditorSDK.ImageButtonConfiguration, numberOfThumbnails: Swift.Int, galleryImageCompressionQuality: CoreFoundation.CGFloat, preferredStatusBarStyle: UIKit.UIStatusBarStyle, isGalleryButtonHidden: Swift.Bool, bottomViewConfiguration: BanubaUtilities.BackgroundConfiguration)
 }
 public struct FilterControlButtonConfig {
   public enum `Type` : Swift.String {
