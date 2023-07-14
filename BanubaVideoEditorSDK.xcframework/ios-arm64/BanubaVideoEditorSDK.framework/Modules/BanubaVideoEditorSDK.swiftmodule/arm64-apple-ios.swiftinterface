@@ -4,6 +4,7 @@
 // swift-module-flags-ignorable: -enable-bare-slash-regex
 import AVFoundation
 import AVKit
+import BanubaEffectPlayer
 import BanubaLicenseServicingSDK
 import BanubaSDKServicing
 import BanubaSdkSimple
@@ -186,7 +187,6 @@ public struct MainMusicViewControllerConfig {
   public var previewViewBackgroundConfiguration: BanubaUtilities.BackgroundConfiguration
   public var videoControlsViewBackgroundConfiguration: BanubaUtilities.BackgroundConfiguration
   public var timelineCornerRadius: CoreFoundation.CGFloat
-  public var alertConfig: BanubaUtilities.AlertViewConfiguration
   public var toastConfiguration: BanubaUtilities.ToastConfiguration
 }
 public struct AudioRecorderViewControllerConfig {
@@ -567,12 +567,10 @@ public struct VideoEditorMetadata : Swift.Codable {
   public var gifOnVideoMetadata: [BanubaVideoEditorSDK.GIFOnVideoMetadata]?
   public var blurOnVideoMetadata: [BanubaVideoEditorSDK.BlurOnVideoMetadata]?
   public var filtersOnVideoMetadata: [BanubaVideoEditorSDK.FilterOnVideoMetadata]?
-  public var captionsMetadata: BanubaVideoEditorSDK.CaptionsMetadata?
   public var analyticsMetadataJSON: Swift.String?
   public static var empty: BanubaVideoEditorSDK.VideoEditorMetadata {
     get
   }
-  public init(effectsOnVideoMetadata: [BanubaVideoEditorSDK.EffectOnVideoMetadata]?, colorOnVideoMetadata: BanubaVideoEditorSDK.ColorOnVideoMetadata?, textOnVideoMetadata: [BanubaVideoEditorSDK.TextOnVideoMetadata]?, gifOnVideoMetadata: [BanubaVideoEditorSDK.GIFOnVideoMetadata]?, blurOnVideoMetadata: [BanubaVideoEditorSDK.BlurOnVideoMetadata]?, filtersOnVideoMetadata: [BanubaVideoEditorSDK.FilterOnVideoMetadata]?, captionsMetadata: BanubaVideoEditorSDK.CaptionsMetadata?, analyticsMetadataJSON: Swift.String?)
   public func adjustBlurEffectMetadata() -> BanubaVideoEditorSDK.BlurList?
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
@@ -741,24 +739,6 @@ public struct Params : Swift.Codable {
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
-public struct AutoCutEffectsMetadata : Swift.Codable {
-  public let intervals: [BanubaVideoEditorSDK.AutoCutEffectsInterval]
-  public static var empty: BanubaVideoEditorSDK.AutoCutEffectsMetadata {
-    get
-  }
-  public init(intervals: [BanubaVideoEditorSDK.AutoCutEffectsInterval])
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
-}
-public struct AutoCutEffectsInterval : Swift.Codable {
-  public let from: CoreMedia.CMTime
-  public let to: CoreMedia.CMTime
-  public let visualEffectApplicatorTypeRawValues: [Swift.String]
-  public let transitionTypeRawValues: [Swift.String]
-  public init(from: CoreMedia.CMTime, to: CoreMedia.CMTime, visualEffectApplicatorTypeRawValues: [Swift.String], transitionTypeRawValues: [Swift.String])
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
-}
 extension BanubaVideoEditorSDK.EffectOnVideoMetadata {
   public init(from editorCompositionEffect: any VideoEditor.EditorCompositionEditableEffectProtocol)
 }
@@ -847,7 +827,6 @@ public struct MainOverlayViewControllerConfig {
   public var draggerCornerRadius: CoreFoundation.CGFloat?
   public var timeLabelsOffset: CoreFoundation.CGFloat
   public var itemsTopOffset: CoreFoundation.CGFloat
-  public var alertConfig: BanubaUtilities.AlertViewConfiguration
   public var previewViewBackgroundConfiguration: BanubaUtilities.BackgroundConfiguration
 }
 public struct OverlayAddButtonConfig {
@@ -1441,10 +1420,6 @@ public struct TextShadowConfiguration {
   public func shadow() -> UIKit.NSShadow
 }
 public struct SpeedBarButtonsConfiguration {
-  public var imageNameHalf: Swift.String
-  public var imageNameNormal: Swift.String
-  public var imageNameDouble: Swift.String
-  public var imageNameTriple: Swift.String
   public var imageHalf: BanubaVideoEditorSDK.ImageConfiguration?
   public var imageNormal: BanubaVideoEditorSDK.ImageConfiguration?
   public var imageDouble: BanubaVideoEditorSDK.ImageConfiguration?
@@ -1453,7 +1428,7 @@ public struct SpeedBarButtonsConfiguration {
   public var titleColor: UIKit.UIColor
   public var backgroundColor: UIKit.UIColor
   public var cornerRadius: CoreFoundation.CGFloat?
-  public init(imageNameHalf: Swift.String, imageNameNormal: Swift.String, imageNameDouble: Swift.String, imageNameTriple: Swift.String, imageHalf: BanubaVideoEditorSDK.ImageConfiguration? = nil, imageNormal: BanubaVideoEditorSDK.ImageConfiguration? = nil, imageDouble: BanubaVideoEditorSDK.ImageConfiguration? = nil, imageTriple: BanubaVideoEditorSDK.ImageConfiguration? = nil, selectedTitleColor: UIKit.UIColor, titleColor: UIKit.UIColor, backgroundColor: UIKit.UIColor, cornerRadius: CoreFoundation.CGFloat?)
+  public init(imageHalf: BanubaVideoEditorSDK.ImageConfiguration? = nil, imageNormal: BanubaVideoEditorSDK.ImageConfiguration? = nil, imageDouble: BanubaVideoEditorSDK.ImageConfiguration? = nil, imageTriple: BanubaVideoEditorSDK.ImageConfiguration? = nil, selectedTitleColor: UIKit.UIColor, titleColor: UIKit.UIColor, backgroundColor: UIKit.UIColor, cornerRadius: CoreFoundation.CGFloat?)
 }
 public struct AdditionalEffectsButtonConfiguration {
   public enum Position : Swift.Int {
@@ -1964,43 +1939,15 @@ extension BanubaVideoEditorSDK.SDKCameraService {
 extension BanubaVideoEditorSDK.FeedbackAlertViewController {
   @_Concurrency.MainActor(unsafe) public static func makeAlertViewController() -> BanubaVideoEditorSDK.FeedbackAlertViewController
 }
-public enum Result<T> {
-  case success(T)
-  case failure(any Swift.Error)
-  public func get() throws -> T
-  public func map<U>(_ transform: (T) -> U) -> BanubaVideoEditorSDK.Result<U>
+@_hasMissingDesignatedInitializers public class SliderRounderCalculator {
+  public static func getRoundedVolumeValue(_ volume: Swift.Float, wasChanged: Swift.Bool) -> (rounded: Swift.Float, displayed: Swift.String)
+  @objc deinit
 }
+public typealias Result<T> = Swift.Result<T, any Swift.Error>
 public protocol VideoMetadataStorageDelegate : AnyObject {
-  func videoMetadataStorageDidStartStoring(_ videoMetadataStorage: any BanubaVideoEditorSDK.VideoMetadataStoring)
+  func videoMetadataStorageDidStartStoring(_ videoMetadataStorage: BanubaVideoEditorSDK.VideoMetadataStorage)
 }
-public protocol VideoMetadataStoring {
-  var videoSequence: VideoEditor.VideoSequence? { get }
-  var videoEditorMetadata: BanubaVideoEditorSDK.VideoEditorMetadata? { get }
-  var videoMetadata: BanubaVideoEditorSDK.VideoMetadata? { get }
-  var videoEditorTrimMetadata: BanubaVideoEditorSDK.VideoEditorTrimMetadata? { get }
-  var audioTracks: [any BanubaUtilities.AudioTrackAdoptable]? { get }
-  var videoCoverMetadata: BanubaVideoEditorSDK.VideoCoverMetadata? { get }
-  var musicEditorMetadata: BanubaVideoEditorSDK.MusicEditorMetadata? { get }
-  var cameraSessionMetadata: BanubaVideoEditorSDK.CameraSessionMetadata? { get }
-  var autoCutMetadata: BanubaVideoEditorSDK.AutoCutEffectsMetadata? { get }
-  var delegate: (any BanubaVideoEditorSDK.VideoMetadataStorageDelegate)? { get set }
-  func update(metadata: BanubaVideoEditorSDK.CameraSessionMetadata)
-  func update(metadata: [any BanubaUtilities.AudioTrackAdoptable], trackVolumes: [Swift.Int32 : Swift.Float], pipVolume: Swift.Float?, videoVolume: Swift.Float)
-  func update(musicEditorTracks: [BanubaVideoEditorSDK.MusicEditorTrack], trackVolumes: [Swift.Int32 : Swift.Float], pipVolume: Swift.Float?, videoVolume: Swift.Float)
-  func update(metadata: BanubaVideoEditorSDK.VideoEditorTrimMetadata)
-  func update(metadata: BanubaVideoEditorSDK.VideoEditorMetadata)
-  func update(metadata: BanubaVideoEditorSDK.VideoMetadata)
-  func update(metadata: BanubaVideoEditorSDK.VideoCoverMetadata)
-  func update(metadata: BanubaVideoEditorSDK.AutoCutEffectsMetadata)
-  func reset()
-  func setupCurrentSequence(_ videoSequence: VideoEditor.VideoSequence)
-  func videoMetadata(forVideoSequence: VideoEditor.VideoSequence?) -> BanubaVideoEditorSDK.VideoMetadata?
-  func videoCoverMetadata(forVideoSequence: VideoEditor.VideoSequence?) -> BanubaVideoEditorSDK.VideoCoverMetadata?
-  func videoEditorTrimMetadata(for videoSequence: VideoEditor.VideoSequence) -> BanubaVideoEditorSDK.VideoEditorTrimMetadata?
-  func replaceMetadata(ofVideoSequence: VideoEditor.VideoSequence, withVideoSequence: VideoEditor.VideoSequence)
-  func duplicateMetadata(ofVideoSequence: VideoEditor.VideoSequence, toVideoSequence: VideoEditor.VideoSequence)
-}
-public class VideoMetadataStorage : BanubaVideoEditorSDK.VideoMetadataStoring {
+public class VideoMetadataStorage {
   weak public var delegate: (any BanubaVideoEditorSDK.VideoMetadataStorageDelegate)?
   public var videoSequence: VideoEditor.VideoSequence? {
     get
@@ -2026,9 +1973,6 @@ public class VideoMetadataStorage : BanubaVideoEditorSDK.VideoMetadataStoring {
   public var cameraSessionMetadata: BanubaVideoEditorSDK.CameraSessionMetadata? {
     get
   }
-  public var autoCutMetadata: BanubaVideoEditorSDK.AutoCutEffectsMetadata? {
-    get
-  }
   required public init(videoSequence: VideoEditor.VideoSequence? = nil, fileManager: Foundation.FileManager = FileManager.default)
   @objc deinit
   public func update(metadata: [any BanubaUtilities.AudioTrackAdoptable], trackVolumes: [Swift.Int32 : Swift.Float], pipVolume: Swift.Float?, videoVolume: Swift.Float)
@@ -2038,7 +1982,6 @@ public class VideoMetadataStorage : BanubaVideoEditorSDK.VideoMetadataStoring {
   public func update(metadata: BanubaVideoEditorSDK.VideoMetadata)
   public func update(metadata: BanubaVideoEditorSDK.VideoEditorMetadata)
   public func update(metadata: BanubaVideoEditorSDK.VideoCoverMetadata)
-  public func update(metadata: BanubaVideoEditorSDK.AutoCutEffectsMetadata)
   public func reset()
   public func setupCurrentSequence(_ videoSequence: VideoEditor.VideoSequence)
   public func videoMetadata(forVideoSequence videoSequence: VideoEditor.VideoSequence?) -> BanubaVideoEditorSDK.VideoMetadata?
@@ -2165,33 +2108,6 @@ public protocol SequencesServicing {
 }
 extension BanubaVideoEditorSDK.SequencesServicing {
   public func createNewSequence(withMusicTrack musicTrack: BanubaUtilities.MediaTrack? = nil, isSlideShow: Swift.Bool = false, editingStep: BanubaVideoEditorSDK.VideoSequenceEditingStep = .camera, maxVideoDuration: Foundation.TimeInterval) -> VideoEditor.VideoSequence
-}
-public class SequencesService : BanubaVideoEditorSDK.SequencesServicing {
-  final public let aspectRatio: BanubaUtilities.AspectRatio
-  public var currentSequence: VideoEditor.VideoSequence? {
-    get
-  }
-  public var lastModifiedSequence: VideoEditor.VideoSequence? {
-    get
-  }
-  public var sequences: [VideoEditor.VideoSequence] {
-    get
-  }
-  public var draftedSequences: [VideoEditor.VideoSequence] {
-    get
-  }
-  final public let videoSequenceService: any VideoEditor.VideoSequenceServicing
-  final public let metadataStorage: any BanubaVideoEditorSDK.VideoMetadataStoring
-  public init(videoSequenceService: any VideoEditor.VideoSequenceServicing, metadataStorage: any BanubaVideoEditorSDK.VideoMetadataStoring, aspectRatio: BanubaUtilities.AspectRatio)
-  public func createNewSequence(withMusicTrack musicTrack: BanubaUtilities.MediaTrack?, isSlideShow: Swift.Bool, editingStep: BanubaVideoEditorSDK.VideoSequenceEditingStep, maxVideoDuration: Foundation.TimeInterval) -> VideoEditor.VideoSequence
-  public func cancelAndRemoveCurrentSequence()
-  public func removeSequence(_ videoSequence: VideoEditor.VideoSequence) -> Swift.Bool
-  public func duplicateSequence(_ videoSequence: VideoEditor.VideoSequence, withSameName useSameName: Swift.Bool) -> (VideoEditor.VideoSequence, BanubaVideoEditorSDK.VideoMetadata)
-  public func replaceSequenceWithId(_ sequenceId: Swift.String, withVideoSequence videoSequence: VideoEditor.VideoSequence)
-  public func setupWithVideoSequence(_ videoSequence: VideoEditor.VideoSequence)
-  public func setEditingStep(_ editingStep: BanubaVideoEditorSDK.VideoSequenceEditingStep, forSequence videoSequence: VideoEditor.VideoSequence)
-  public func generateNameForSequence(isDraftSequence: Swift.Bool = false) -> Swift.String
-  @objc deinit
 }
 public protocol ProgressAnimatableViewFactory {
   func makeProgressAnimatableView() -> any BanubaUtilities.ProgressAnimatableView

@@ -18,4 +18,3 @@ FOUNDATION_EXPORT const unsigned char BanubaVideoEditorSDKVersionString[];
 #import <BanubaVideoEditorSDK/AudioBrowserFrameworkInteractor.h>
 #import <BanubaVideoEditorSDK/BanubaSDKFrameworkInteractor.h>
 #import <BanubaVideoEditorSDK/BanubaVideoEditorGallerySDKInteractor.h>
-
