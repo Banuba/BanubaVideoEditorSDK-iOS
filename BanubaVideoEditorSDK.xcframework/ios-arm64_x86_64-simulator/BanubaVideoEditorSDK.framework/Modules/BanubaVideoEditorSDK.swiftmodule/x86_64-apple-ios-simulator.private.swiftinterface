@@ -4,7 +4,6 @@
 // swift-module-flags-ignorable: -enable-bare-slash-regex
 import AVFoundation
 import AVKit
-import BanubaEffectPlayer
 import BanubaLicenseServicingSDK
 import BanubaSDKServicing
 import BanubaSdkSimple
