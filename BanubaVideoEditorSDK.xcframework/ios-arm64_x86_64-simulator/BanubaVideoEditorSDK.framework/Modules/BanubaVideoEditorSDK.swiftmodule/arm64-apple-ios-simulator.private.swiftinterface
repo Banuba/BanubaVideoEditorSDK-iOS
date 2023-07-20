@@ -127,6 +127,10 @@ public class BanubaVideoEditor {
   public var asset: AVFoundation.AVAsset? {
     get
   }
+  public var externalAnalyticsEventListener: (any BanubaVideoEditorSDK.ExternalSDKAnalyticsEventsListener)? {
+    get
+    set
+  }
   public var musicTrack: BanubaUtilities.MediaTrack? {
     get
   }
@@ -484,6 +488,52 @@ public struct VideoTextFont : Swift.Equatable {
   public var name: Swift.String
   public init(font: UIKit.UIFont?, name: Swift.String)
   public static func == (a: BanubaVideoEditorSDK.VideoTextFont, b: BanubaVideoEditorSDK.VideoTextFont) -> Swift.Bool
+}
+public protocol ExternalSDKAnalyticsEventsListener : AnyObject {
+  func onVideoEditorSDKEvent(_ event: Swift.String)
+}
+public enum SDKEventScreen : Swift.String, Swift.Codable {
+  case camera
+  case editor
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum SDKEventName : Swift.String {
+  case maskDownloaded
+  case maskApplied
+  case maskCancelled
+  case exportVideo
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public struct SDKEffectEvent : Swift.Codable {
+  public let name: Swift.String
+  public let data: BanubaVideoEditorSDK.SDKEventEffectData
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct SDKEventEffectData : Swift.Codable, Swift.Hashable {
+  public let name: Swift.String
+  public let screen: BanubaVideoEditorSDK.SDKEventScreen?
+  public func hash(into hasher: inout Swift.Hasher)
+  public static func == (a: BanubaVideoEditorSDK.SDKEventEffectData, b: BanubaVideoEditorSDK.SDKEventEffectData) -> Swift.Bool
+  public func encode(to encoder: any Swift.Encoder) throws
+  public var hashValue: Swift.Int {
+    get
+  }
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct SDKExportEvent : Swift.Codable {
+  public let name: Swift.String
+  public let masks: [BanubaVideoEditorSDK.SDKEventEffectData]
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct CameraSessionMetadata : Swift.Codable {
   public var isFrontCamera: Swift.Bool
@@ -947,7 +997,9 @@ public struct VideoEditorColorsPalette {
   public let secondaryColor: UIKit.UIColor
   public let accentColor: UIKit.UIColor
   public let effectButtonColorsPalette: BanubaVideoEditorSDK.EffectButtonColorsPalette
-  public init(primaryColor: UIKit.UIColor, secondaryColor: UIKit.UIColor, accentColor: UIKit.UIColor, effectButtonColorsPalette: BanubaVideoEditorSDK.EffectButtonColorsPalette)
+  public let addGalleryItemBackgroundColor: UIKit.UIColor
+  public let addGalleryItemIconColor: UIKit.UIColor
+  public init(primaryColor: UIKit.UIColor, secondaryColor: UIKit.UIColor, accentColor: UIKit.UIColor, effectButtonColorsPalette: BanubaVideoEditorSDK.EffectButtonColorsPalette, addGalleryItemBackgroundColor: UIKit.UIColor, addGalleryItemIconColor: UIKit.UIColor)
 }
 public struct EffectButtonColorsPalette {
   public let defaultIconColor: UIKit.UIColor
@@ -2227,6 +2279,12 @@ extension BanubaVideoEditorSDK.VoiceEffectType : Swift.Hashable {}
 extension BanubaVideoEditorSDK.VoiceEffectType : Swift.RawRepresentable {}
 extension BanubaVideoEditorSDK.SharingServiceModel.SharingType : Swift.Equatable {}
 extension BanubaVideoEditorSDK.SharingServiceModel.SharingType : Swift.Hashable {}
+extension BanubaVideoEditorSDK.SDKEventScreen : Swift.Equatable {}
+extension BanubaVideoEditorSDK.SDKEventScreen : Swift.Hashable {}
+extension BanubaVideoEditorSDK.SDKEventScreen : Swift.RawRepresentable {}
+extension BanubaVideoEditorSDK.SDKEventName : Swift.Equatable {}
+extension BanubaVideoEditorSDK.SDKEventName : Swift.Hashable {}
+extension BanubaVideoEditorSDK.SDKEventName : Swift.RawRepresentable {}
 extension BanubaVideoEditorSDK.VideoSequenceEditingStep : Swift.Equatable {}
 extension BanubaVideoEditorSDK.VideoSequenceEditingStep : Swift.Hashable {}
 extension BanubaVideoEditorSDK.VideoSequenceEditingStep : Swift.RawRepresentable {}

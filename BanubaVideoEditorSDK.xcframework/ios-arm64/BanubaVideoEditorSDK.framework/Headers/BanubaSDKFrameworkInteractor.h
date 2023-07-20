@@ -9,6 +9,7 @@
 @import AVKit;
 
 #include "VisualClipVideo.h"
+#include "VisualClipListener.h"
 
 NS_ASSUME_NONNULL_BEGIN
 NS_SWIFT_NAME(BanubaSDKFrameworkInteractor)
@@ -32,8 +33,8 @@ useHEVCCodecIfPossibleForRecorder:(BOOL) useHEVCCodecIfPossibleForRecorder
                                                  transitionEffects:(NSArray<NSString *> *)transitionEffects
                                                             videos:(NSArray<VisualClipVideo *> *)videos
                                                          numFrames:(int32_t)numFrames
-                                                        resultSize:(int32_t)resultSize;
-
+                                                        resultSize:(int32_t)resultSize
+                                                      cancellation:(BOOL (^)(double progress))cancellationBlock;
 
 @end
 NS_ASSUME_NONNULL_END
