@@ -38,6 +38,7 @@ __attribute__((weak_import)) @interface AudioBrowserFrameworkInteractor : NSObje
 
 - (instancetype)initWithSelectedTrack: (AudioBrowserTrackWrapper * _Nullable) selectedTrack
                   isNewBrowserEnabled:(BOOL)isNewBrowserEnabled
+          isAudioPartSelectionEnabled:(BOOL)isAudioPartSelectionEnabled
                         videoDuration:(double)videoDuration;
 
 -(UIViewController * _Nullable) getAudioBrowserController;
