@@ -19,11 +19,13 @@ __attribute__((weak_import)) @interface AudioBrowserTrackWrapper : NSObject
 @property (strong, nonatomic, nullable) NSString *name;
 @property (strong, nonatomic) NSString *additionalName;
 @property (strong, nonatomic) NSURL *url;
+@property (strong, nonatomic) NSURL *coverURL;
 
 - (instancetype)init: (NSUUID *) uuid
                 name: (NSString *) name
       additionalName: (NSString * _Nullable) additionalName
-                 url: (NSURL * _Nullable) url;
+                 url: (NSURL * _Nullable) url
+            coverURL: (NSURL * _Nullable) url;
 @end
 NS_ASSUME_NONNULL_END
 
