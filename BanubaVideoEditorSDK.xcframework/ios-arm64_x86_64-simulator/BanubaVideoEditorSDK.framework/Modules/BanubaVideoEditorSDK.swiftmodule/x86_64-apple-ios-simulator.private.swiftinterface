@@ -1099,7 +1099,6 @@ public struct TextEditorConfiguration {
   public var palette: [BanubaVideoEditorSDK.VideoTextColorPair]
   public var fonts: [BanubaVideoEditorSDK.VideoTextFont]
   public var additionalPaletteBackgroundConfiguration: BanubaUtilities.BackgroundConfiguration
-  public var screenNameConfiguration: BanubaVideoEditorSDK.ScreenNameConfiguration
   public var palleteInsets: UIKit.UIEdgeInsets
   public var fontInsets: UIKit.UIEdgeInsets
   public var selectionColorBehavior: any BanubaVideoEditorSDK.TextEditSelectionColorBehavior
@@ -1117,10 +1116,9 @@ public struct TextEditFontItemConfiguration {
   public let fontSize: CoreFoundation.CGFloat
   public let cornerRadius: CoreFoundation.CGFloat
   public let backgroundColor: UIKit.UIColor
-  public let isBackgroundViewHidden: Swift.Bool
   public let borderSelectionColor: UIKit.UIColor
   public let borderSelectionWidth: CoreFoundation.CGFloat
-  public init(titleColor: UIKit.UIColor, fontSize: CoreFoundation.CGFloat, cornerRadius: CoreFoundation.CGFloat, backgroundColor: UIKit.UIColor, isBackgroundViewHidden: Swift.Bool, borderSelectionColor: UIKit.UIColor = .clear, borderSelectionWidth: CoreFoundation.CGFloat = .zero)
+  public init(titleColor: UIKit.UIColor, fontSize: CoreFoundation.CGFloat, cornerRadius: CoreFoundation.CGFloat, backgroundColor: UIKit.UIColor, borderSelectionColor: UIKit.UIColor = .clear, borderSelectionWidth: CoreFoundation.CGFloat = .zero)
 }
 public struct VideoOverlayConfiguration {
   public var deleteImageConfiguration: BanubaVideoEditorSDK.ImageConfiguration
@@ -1204,7 +1202,6 @@ public struct TrimVideoConfiguration {
   public var backgroundConfiguration: BanubaUtilities.BackgroundConfiguration
   public var controlsPanelBackgroundColor: UIKit.UIColor
   public var trimmerPanelBackgroundColor: UIKit.UIColor
-  public var screenNameConfiguration: BanubaVideoEditorSDK.ScreenNameConfiguration
   public var timeLabelsConfiguration: BanubaUtilities.TextConfiguration
 }
 public struct TimeLineConfiguration {
@@ -1304,7 +1301,6 @@ public struct TrimVideosConfiguration {
   public var playerControlConfiguration: BanubaUtilities.PlayerControlConfiguration
   public var videoPartsBackgroundConfiguration: BanubaUtilities.BackgroundConfiguration
   public var backgroundConfiguration: BanubaUtilities.BackgroundConfiguration
-  public var screenNameConfiguration: BanubaVideoEditorSDK.ScreenNameConfiguration
   public var aspectsButton: BanubaVideoEditorSDK.ImageButtonConfiguration?
   public var timeLabelsConfiguration: BanubaUtilities.TextConfiguration
   public var editVideoItemTitleConfiguration: BanubaUtilities.TextConfiguration
@@ -1360,7 +1356,6 @@ public struct FilterConfiguration {
   public var timelineLeftOffset: CoreFoundation.CGFloat
   public var timelineRightOffset: CoreFoundation.CGFloat
   public var filtersHeight: CoreFoundation.CGFloat
-  public var screenNameConfiguration: BanubaVideoEditorSDK.ScreenNameConfiguration
   public var preferredLutsOrder: [Swift.String]
   public var preferredMasksOrder: [Swift.String]
   public var preferredVideoEffectOrderAndSet: [VEEffectsSDK.VisualEffectApplicatorType]
@@ -1656,11 +1651,6 @@ public struct TimerConfiguration {
   public var options: [BanubaVideoEditorSDK.TimerConfiguration.TimerOptionConfiguration]
   public var soundPath: Swift.String?
 }
-public struct ScreenNameConfiguration {
-  public var isHidden: Swift.Bool
-  public var style: BanubaUtilities.TextConfiguration?
-  public init(isHidden: Swift.Bool, style: BanubaUtilities.TextConfiguration? = nil)
-}
 public struct GalleryVideoPartsConfiguration {
   public var addGalleryVideoPartImageName: Swift.String
   public var videoPartConfiguration: BanubaVideoEditorSDK.GalleryVideoPartsConfiguration.GalleryVideoPartConfiguration
@@ -1828,12 +1818,13 @@ public struct EffectListItemConfiguration {
 public struct EffectsListConfiguration {
   public var cancelButton: BanubaVideoEditorSDK.ImageButtonConfiguration
   public var doneButton: BanubaVideoEditorSDK.ImageButtonConfiguration
+  public var playPauseButton: BanubaUtilities.PlayerControlConfiguration?
   public var backgroundConfiguration: BanubaUtilities.BackgroundConfiguration
   public var backgroundControlsViewColor: UIKit.UIColor
   public var effects: [BanubaVideoEditorSDK.EffectListItemConfiguration]
   public var defaultEffect: BanubaVideoEditorSDK.EffectListItemConfiguration.`Type`
   public var primaryAspect: BanubaUtilities.AspectRatio?
-  public init(cancelButton: BanubaVideoEditorSDK.ImageButtonConfiguration, doneButton: BanubaVideoEditorSDK.ImageButtonConfiguration, backgroundConfiguration: BanubaUtilities.BackgroundConfiguration, backgroundControlsViewColor: UIKit.UIColor, effects: [BanubaVideoEditorSDK.EffectListItemConfiguration], defaultEffect: BanubaVideoEditorSDK.EffectListItemConfiguration.`Type`, primaryAspect: BanubaUtilities.AspectRatio? = nil)
+  public init(cancelButton: BanubaVideoEditorSDK.ImageButtonConfiguration, doneButton: BanubaVideoEditorSDK.ImageButtonConfiguration, playPauseButton: BanubaUtilities.PlayerControlConfiguration?, backgroundConfiguration: BanubaUtilities.BackgroundConfiguration, backgroundControlsViewColor: UIKit.UIColor, effects: [BanubaVideoEditorSDK.EffectListItemConfiguration], defaultEffect: BanubaVideoEditorSDK.EffectListItemConfiguration.`Type`, primaryAspect: BanubaUtilities.AspectRatio? = nil)
 }
 public struct VideoOverlayItemViewConfiguration {
   public var scaleIconWidth: CoreFoundation.CGFloat
