@@ -118,7 +118,7 @@ final public class ApplicationInformation {
     public var draftsConfig: BanubaVideoEditorSDK.DraftsFeatureConfig
     public init(externalDraft: BanubaVideoEditorSDK.ExternalDraft, draftsConfig: BanubaVideoEditorSDK.DraftsFeatureConfig)
   }
-  public init(entryPoint: BanubaLicenseServicingSDK.PresentEventOptions.EntryPoint, hostController: UIKit.UIViewController, videoItems: [Foundation.URL]? = nil, pipVideoItem: Foundation.URL? = nil, draftedLaunchConfig: BanubaVideoEditorSDK.VideoEditorLaunchConfig.DraftedLaunchConfig? = nil, musicTrack: BanubaUtilities.MediaTrack? = nil, animated: Swift.Bool)
+  public init(entryPoint: BanubaLicenseServicingSDK.BanubaVideoEditorEntryPoint, hostController: UIKit.UIViewController, videoItems: [Foundation.URL]? = nil, pipVideoItem: Foundation.URL? = nil, draftedLaunchConfig: BanubaVideoEditorSDK.VideoEditorLaunchConfig.DraftedLaunchConfig? = nil, musicTrack: BanubaUtilities.MediaTrack? = nil, animated: Swift.Bool)
   @objc deinit
 }
 public struct ExportCoverImages {
@@ -171,7 +171,7 @@ public class BanubaVideoEditor {
   public var draftActionType: BanubaVideoEditorSDK.DraftActionType {
     get
   }
-  public init?(token: Swift.String, isCameraEnabled: Swift.Bool = true, configuration: BanubaVideoEditorSDK.VideoEditorConfig, externalViewControllerFactory: (any BanubaVideoEditorSDK.ExternalViewControllerFactory)? = nil)
+  public init?(token: Swift.String, arguments: [Swift.String : Any] = [:], isCameraEnabled: Swift.Bool = true, configuration: BanubaVideoEditorSDK.VideoEditorConfig, externalViewControllerFactory: (any BanubaVideoEditorSDK.ExternalViewControllerFactory)? = nil)
   @objc deinit
   public func export(using configuration: VEExportSDK.ExportConfiguration, exportProgress: ((Swift.Float) -> Swift.Void)?, completion: @escaping ((_ error: (any Swift.Error)?, _ exportCoverImages: BanubaVideoEditorSDK.ExportCoverImages?) -> Swift.Void))
   public func stopExport()
@@ -182,6 +182,7 @@ public class BanubaVideoEditor {
   public func getVideoEditorNavigationController(withLaunchConfiguration configuration: BanubaVideoEditorSDK.VideoEditorLaunchConfig) -> UIKit.UINavigationController?
   public func presentVideoEditor(withLaunchConfiguration configuration: BanubaVideoEditorSDK.VideoEditorLaunchConfig, completion: (() -> Swift.Void)?)
   public func updateVideoEditorConfig(_ config: BanubaVideoEditorSDK.VideoEditorConfig)
+  public func updateVideoEditorArgs(_ arguments: [Swift.String : Any])
 }
 extension BanubaVideoEditorSDK.BanubaVideoEditor {
   public static func presentSharingViewController(from hostController: UIKit.UIViewController, configuration: BanubaVideoEditorSDK.SharingScreenConfiguration, mainVideoUrl: Foundation.URL, videoUrls: [Foundation.URL], previewImage: UIKit.UIImage, animated: Swift.Bool, completion: (() -> Swift.Void)?)
@@ -1601,9 +1602,8 @@ public struct FeatureConfiguration {
   public var openAutomaticallyPIPSettingsDropdown: Swift.Bool
   public var useTransitions: Swift.Bool
   public var isDraftSavedToastEnabled: Swift.Bool
-  public var enableRecordingWithoutMask: Swift.Bool
   public static let `default`: BanubaVideoEditorSDK.FeatureConfiguration
-  public init(isOverlayEditorEnabled: Swift.Bool, isDoubleTapForToggleCameraEnabled: Swift.Bool, isMuteCameraAudioEnabled: Swift.Bool, isVideoCoverSelectionEnabled: Swift.Bool, supportsTrimRecordedVideo: Swift.Bool, draftsConfig: BanubaVideoEditorSDK.DraftsFeatureConfig, isAspectsEnabled: Swift.Bool, isSpeedBarEnabled: Swift.Bool, isVideoFitsAspect: Swift.Bool, isBlurEnabled: Swift.Bool, isBlurEffectsExportable: Swift.Bool, openAutomaticallyPIPSettingsDropdown: Swift.Bool, useTransitions: Swift.Bool, isDraftSavedToastEnabled: Swift.Bool, enableRecordingWithoutMask: Swift.Bool)
+  public init(isOverlayEditorEnabled: Swift.Bool, isDoubleTapForToggleCameraEnabled: Swift.Bool, isMuteCameraAudioEnabled: Swift.Bool, isVideoCoverSelectionEnabled: Swift.Bool, supportsTrimRecordedVideo: Swift.Bool, draftsConfig: BanubaVideoEditorSDK.DraftsFeatureConfig, isAspectsEnabled: Swift.Bool, isSpeedBarEnabled: Swift.Bool, isVideoFitsAspect: Swift.Bool, isBlurEnabled: Swift.Bool, isBlurEffectsExportable: Swift.Bool, openAutomaticallyPIPSettingsDropdown: Swift.Bool, useTransitions: Swift.Bool, isDraftSavedToastEnabled: Swift.Bool)
 }
 public struct RecorderEffectsConfiguration {
   public var cornerRadius: CoreFoundation.CGFloat
