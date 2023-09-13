@@ -974,7 +974,7 @@ public struct OverlayItemConfiguration {
 }
 public protocol RecordButton : UIKit.UIView {
   var delegate: (any BanubaVideoEditorSDK.RecordButtonDelegate)? { get set }
-  var configuration: BanubaVideoEditorSDK.RecordButtonConfiguration? { get set }
+  var configuration: BanubaVideoEditorSDK.RecordButtonConfiguration { get set }
   func changeViewToIdleState()
   func changeViewToRecordingState()
 }
@@ -1181,9 +1181,10 @@ public struct RecordButtonConfiguration {
   public var circularTimeLineIdleWidth: CoreFoundation.CGFloat
   public var width: CoreFoundation.CGFloat
   public var height: CoreFoundation.CGFloat
-  public var defaultColorButton: UIKit.UIColor
-  public var videoRecordColorButton: UIKit.UIColor
-  public var takePhotoColorButton: UIKit.UIColor
+  public var defaultVideoRecordButtonColor: UIKit.UIColor
+  public var defaultTakePhotoButtonColor: UIKit.UIColor
+  public var videoRecordButtonColor: UIKit.UIColor
+  public var takePhotoButtonColor: UIKit.UIColor
   public var externalCircleFullColor: CoreGraphics.CGColor
   public var externalCircleStrokeColor: CoreGraphics.CGColor
 }
@@ -1490,9 +1491,7 @@ public struct PIPSelectableCellConfiguration {
   public var isRoundedImageView: Swift.Bool
   public var cornerRadius: CoreFoundation.CGFloat?
   public var backgroundColor: UIKit.UIColor
-  public var additionalButtonWidth: CoreFoundation.CGFloat
-  public var additionalButtonHeight: CoreFoundation.CGFloat
-  public init(identifier: BanubaSDKServicing.PIPPlayerLayoutSetting, switchCellConfiguration: BanubaVideoEditorSDK.PIPSwitchCellConfiguration?, croppingCellConfiguration: BanubaVideoEditorSDK.PIPCameraCellConfiguration? = nil, cameraCellConfiguration: BanubaVideoEditorSDK.PIPCameraCellConfiguration, textConfiguration: BanubaUtilities.TextConfiguration, imageConfiguration: BanubaVideoEditorSDK.ImageConfiguration, borderWidth: CoreFoundation.CGFloat, selectedBorderColor: CoreGraphics.CGColor, deselectedBorderColor: CoreGraphics.CGColor, isRoundedImageView: Swift.Bool, cornerRadius: CoreFoundation.CGFloat?, backgroundColor: UIKit.UIColor, additionalButtonWidth: CoreFoundation.CGFloat = 130, additionalButtonHeight: CoreFoundation.CGFloat = 32)
+  public init(identifier: BanubaSDKServicing.PIPPlayerLayoutSetting, switchCellConfiguration: BanubaVideoEditorSDK.PIPSwitchCellConfiguration?, croppingCellConfiguration: BanubaVideoEditorSDK.PIPCameraCellConfiguration? = nil, cameraCellConfiguration: BanubaVideoEditorSDK.PIPCameraCellConfiguration, textConfiguration: BanubaUtilities.TextConfiguration, imageConfiguration: BanubaVideoEditorSDK.ImageConfiguration, borderWidth: CoreFoundation.CGFloat, selectedBorderColor: CoreGraphics.CGColor, deselectedBorderColor: CoreGraphics.CGColor, isRoundedImageView: Swift.Bool, cornerRadius: CoreFoundation.CGFloat?, backgroundColor: UIKit.UIColor)
 }
 public struct SpeedBarButtonsConfiguration {
   public var imageHalf: BanubaVideoEditorSDK.ImageConfiguration?
