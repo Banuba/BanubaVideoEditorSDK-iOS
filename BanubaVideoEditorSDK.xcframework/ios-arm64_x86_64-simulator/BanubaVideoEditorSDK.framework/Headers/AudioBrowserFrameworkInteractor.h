@@ -6,8 +6,8 @@
 //  Copyright © 2021 Banuba. All rights reserved.
 //
 
-@import UIKit;
-@import Foundation;
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
 NS_ASSUME_NONNULL_BEGIN
 NS_SWIFT_NAME(AudioBrowserTrackWrapper)

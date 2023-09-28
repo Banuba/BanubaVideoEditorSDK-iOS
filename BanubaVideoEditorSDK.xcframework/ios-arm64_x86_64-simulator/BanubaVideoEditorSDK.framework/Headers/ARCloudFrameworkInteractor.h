@@ -6,7 +6,7 @@
 //  Copyright © 2021 Banuba. All rights reserved.
 //
 
-@import UIKit;
+#import <UIKit/UIKit.h>
 
 // MARK:- AREffectWrapper
 

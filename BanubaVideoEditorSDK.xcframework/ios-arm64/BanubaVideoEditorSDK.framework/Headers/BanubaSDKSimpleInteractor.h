@@ -7,8 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
-@import AVKit;
+#import <AVKit/AVKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
 NS_SWIFT_NAME(BanubaSDKSimpleInteractor)

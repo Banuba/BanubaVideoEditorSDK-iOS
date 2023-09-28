@@ -6,10 +6,10 @@
 //  Copyright © 2021 Banuba. All rights reserved.
 //
 
-@import AVKit;
+#import <AVKit/AVKit.h>
 
-#include "VisualClipVideo.h"
-#include "VisualClipListener.h"
+#include <BanubaVideoEditorSDK/VisualClipVideo.h>
+#include <BanubaVideoEditorSDK/VisualClipListener.h>
 
 NS_ASSUME_NONNULL_BEGIN
 NS_SWIFT_NAME(BanubaSDKFrameworkInteractor)
