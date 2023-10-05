@@ -274,7 +274,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		i/r06Ap6wJEysrgOwsrvEdxf5jg=
+		esZ5+9vSDBEW0LgsH/ATfh8ivM4=
 		</data>
 		<key>MainMusicViewController.storyboardc/BYZ-38-t0r-view-8bC-Xf-vdC.nib</key>
 		<data>
@@ -302,11 +302,11 @@
 		</data>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		4IyYzLuIY5QtSlW9sY5kDscsP0M=
+		sKhx1Dg2CArJBZdwyPvnsLBbzcQ=
 		</data>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		Jsfcy9t1Ey9LCyXHIfMBiL94xCs=
+		9MsvKXK98qwrIU/KKHSSKxRJRdI=
 		</data>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -314,19 +314,19 @@
 		</data>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		Jsfcy9t1Ey9LCyXHIfMBiL94xCs=
+		9MsvKXK98qwrIU/KKHSSKxRJRdI=
 		</data>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		TE0zp6NUw71djv6njeHrQju1Tso=
+		/N5GWKuDc+mNmupY/QCxp5P1Y/4=
 		</data>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		4IyYzLuIY5QtSlW9sY5kDscsP0M=
+		sKhx1Dg2CArJBZdwyPvnsLBbzcQ=
 		</data>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		tT+Xl1gYgmOJXE02i1uoD2tbxWE=
+		WGgTej6GjsbUqA5vyBZhbVAA05o=
 		</data>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -334,11 +334,11 @@
 		</data>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		tT+Xl1gYgmOJXE02i1uoD2tbxWE=
+		WGgTej6GjsbUqA5vyBZhbVAA05o=
 		</data>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		yPvXbPHKsm4MwNwvHn/7m5Fws3A=
+		K4bIU9+sLLZhHoakciVFaUbUeQQ=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -1014,14 +1014,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			CgutpksG0iu4i2TEGI/aJ42d4pEdKnwo8YAqvDp2qqM=
+			M7cLl2PfHWxDWRYWPkD96PgB9zbrPOQh9vZeKmiUzlg=
 			</data>
 		</dict>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			MwEwbAWAzKf5od1w9zTpB9yaPRjNxofqgrd2oy816pQ=
+			MefdRLdjmUq0id8XGpH+PjuWGLjjh9X/ccbAIOz/0A0=
 			</data>
 		</dict>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
@@ -1035,28 +1035,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			MwEwbAWAzKf5od1w9zTpB9yaPRjNxofqgrd2oy816pQ=
+			MefdRLdjmUq0id8XGpH+PjuWGLjjh9X/ccbAIOz/0A0=
 			</data>
 		</dict>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			RMPmQHlK5C3FZwe4QzCQ+dQs5RjtoppJag/VhbYzpGE=
+			ZWvJfz8ADo7nwUsqLajqYuTZ8SIaqzrTRvXl+ZlzYok=
 			</data>
 		</dict>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			CgutpksG0iu4i2TEGI/aJ42d4pEdKnwo8YAqvDp2qqM=
+			M7cLl2PfHWxDWRYWPkD96PgB9zbrPOQh9vZeKmiUzlg=
 			</data>
 		</dict>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			T/PYyVnk1u7QmAM8sllh4zswssofJQn6ZMSVBvq2b08=
+			PxXAxpU9mETk+kNVwg+ipM/4UEUh0Ambl3iicZOmV1A=
 			</data>
 		</dict>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -1070,14 +1070,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			T/PYyVnk1u7QmAM8sllh4zswssofJQn6ZMSVBvq2b08=
+			PxXAxpU9mETk+kNVwg+ipM/4UEUh0Ambl3iicZOmV1A=
 			</data>
 		</dict>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			XCcI4LhZycaCTabpFxPipxQjws0t+1lllkLXUl5pmB8=
+			kRYSx2Cv75HVJk3BTVP8VW8LnwwilNE8RQZt+rT7iZo=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
