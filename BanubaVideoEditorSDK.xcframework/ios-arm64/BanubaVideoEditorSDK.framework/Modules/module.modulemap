@@ -1,7 +1,7 @@
 framework module BanubaVideoEditorSDK {
   umbrella header "BanubaVideoEditorSDK.h"
-
   export *
+
   module * { export * }
 }
 
