@@ -274,7 +274,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		Ti6dTaj7C45Wg8wIfxNu6fRnD50=
+		lPsk5eA8/GoD+14LTJ39Q9yJqyc=
 		</data>
 		<key>MainMusicViewController.storyboardc/BYZ-38-t0r-view-8bC-Xf-vdC.nib</key>
 		<data>
@@ -302,11 +302,11 @@
 		</data>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		nClovVH3+E832VVn+zUz8KIR7NE=
+		7Si+g2Wqmto5a5RjoJWnBsEEOcs=
 		</data>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		rRMn3XWFKdHaUS1TRlZi96TYEzI=
+		50goYVsBM8dcXmbbqX7RaDPuH1k=
 		</data>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -314,19 +314,19 @@
 		</data>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		rRMn3XWFKdHaUS1TRlZi96TYEzI=
+		50goYVsBM8dcXmbbqX7RaDPuH1k=
 		</data>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		qlMmYIu39H6CtUlWdUvPohjk0ac=
+		GK/VpLycuWDiWlQmUGb1bsWcLFk=
 		</data>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		nClovVH3+E832VVn+zUz8KIR7NE=
+		7Si+g2Wqmto5a5RjoJWnBsEEOcs=
 		</data>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		TjP1n7QI+0aHd3cr5EiAm2xeAVQ=
+		7GrI6BbxqsuOhgUssB5n/zAkCps=
 		</data>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -334,11 +334,11 @@
 		</data>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		TjP1n7QI+0aHd3cr5EiAm2xeAVQ=
+		7GrI6BbxqsuOhgUssB5n/zAkCps=
 		</data>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		1eJVdg5kG4yiOoStQvEH5JPQUJc=
+		ZeeDXfBjLAjI8ewHVrgaoC0RfQs=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -386,7 +386,7 @@
 		</data>
 		<key>RecorderViewController.storyboardc/Tb8-4D-b1F-view-0y0-cp-WjI.nib</key>
 		<data>
-		+EMTrMGvrlJTBi8iL6NtBI3XYms=
+		fAD8NHi1/T7hf4+LQzKeVZ5QiG4=
 		</data>
 		<key>RecorderViewController.storyboardc/UIViewController-Tb8-4D-b1F.nib</key>
 		<data>
@@ -1014,14 +1014,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			b2t2czpR1jH67PbdLhjHeNEPh91JMzW/EZLkFcUeIKM=
+			b5BjfEzkZJOYcyuM8B+GsUV82l9uURuNUzMFnVP3D7w=
 			</data>
 		</dict>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ZLn9HpAVSgcR4AsHZ4AgZumezC551mOBjJ2sH21fhy0=
+			gB7+YC+7XW2dZulwrJ4PjjwOFqbu3flI5PWrJ/EnLJE=
 			</data>
 		</dict>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
@@ -1035,28 +1035,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			ZLn9HpAVSgcR4AsHZ4AgZumezC551mOBjJ2sH21fhy0=
+			gB7+YC+7XW2dZulwrJ4PjjwOFqbu3flI5PWrJ/EnLJE=
 			</data>
 		</dict>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ty3w091+05AT4wuOA1zBnPf3O1orTUZVEtQ8inu3G4s=
+			5BTHU5TpjORr4adRXuHbbS7ESekegy/EA4rx+dV2qA4=
 			</data>
 		</dict>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			b2t2czpR1jH67PbdLhjHeNEPh91JMzW/EZLkFcUeIKM=
+			b5BjfEzkZJOYcyuM8B+GsUV82l9uURuNUzMFnVP3D7w=
 			</data>
 		</dict>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ntCdOsZOnvwtJ19l0I4yV27IztIUPPEC6gFfjV8SJ4g=
+			6BQKavJSptRq8ra8KacP/HxJkDdtW7+6IegANP0+GKg=
 			</data>
 		</dict>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -1070,14 +1070,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			ntCdOsZOnvwtJ19l0I4yV27IztIUPPEC6gFfjV8SJ4g=
+			6BQKavJSptRq8ra8KacP/HxJkDdtW7+6IegANP0+GKg=
 			</data>
 		</dict>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			CfjSSmvLc7I9I29DOoaLza6MJ2IxWM2k62w2srxuFNA=
+			tNWjkj4j8GHnOniK3yUBQVWBRNF1r1NWSDVmNnFQ7zo=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -1161,7 +1161,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			mMEqtdgddEchS6xfg6SSJ+roDyTTErX8wg0pK2+XNCM=
+			5uc1qPMAD+IuS9K3STCq4Wynw3XWPOmid/SS/m9mVc0=
 			</data>
 		</dict>
 		<key>RecorderViewController.storyboardc/UIViewController-Tb8-4D-b1F.nib</key>

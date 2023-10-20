@@ -977,8 +977,8 @@ public struct OverlayItemConfiguration {
 public protocol RecordButton : UIKit.UIView {
   var delegate: (any BanubaVideoEditorSDK.RecordButtonDelegate)? { get set }
   var configuration: BanubaVideoEditorSDK.RecordButtonConfiguration { get set }
-  func changeViewToIdleState()
-  func changeViewToRecordingState()
+  func setCaptureButtonState(_ state: BanubaVideoEditorSDK.CaptureButtonViewState)
+  func setCaptureButtonMode(_ mode: BanubaVideoEditorSDK.CaptureButtonViewMode)
 }
 public protocol RecordButtonDelegate : AnyObject {
   var captureButtonMode: BanubaVideoEditorSDK.CaptureButtonViewMode { get }
@@ -992,6 +992,16 @@ public enum CaptureButtonViewMode {
   case video
   case photo
   public static func == (a: BanubaVideoEditorSDK.CaptureButtonViewMode, b: BanubaVideoEditorSDK.CaptureButtonViewMode) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum CaptureButtonViewState {
+  case idle
+  case recording
+  case takePhoto
+  public static func == (a: BanubaVideoEditorSDK.CaptureButtonViewState, b: BanubaVideoEditorSDK.CaptureButtonViewState) -> Swift.Bool
   public func hash(into hasher: inout Swift.Hasher)
   public var hashValue: Swift.Int {
     get
@@ -2308,6 +2318,8 @@ extension BanubaVideoEditorSDK.OverlayControlButtonConfig.`Type` : Swift.Hashabl
 extension BanubaVideoEditorSDK.OverlayControlButtonConfig.`Type` : Swift.RawRepresentable {}
 extension BanubaVideoEditorSDK.CaptureButtonViewMode : Swift.Equatable {}
 extension BanubaVideoEditorSDK.CaptureButtonViewMode : Swift.Hashable {}
+extension BanubaVideoEditorSDK.CaptureButtonViewState : Swift.Equatable {}
+extension BanubaVideoEditorSDK.CaptureButtonViewState : Swift.Hashable {}
 extension BanubaVideoEditorSDK.DraftActionType : Swift.Equatable {}
 extension BanubaVideoEditorSDK.DraftActionType : Swift.Hashable {}
 extension BanubaVideoEditorSDK.TrimVideoCompositionEditItem.TrimVideoCompositionEditItemType : Swift.Equatable {}
