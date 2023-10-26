@@ -37,6 +37,20 @@ public class EffectItem {
   public init(choosedEffect: BanubaVideoEditorSDK.EffectListItemConfiguration.`Type`, icon: (any BanubaUtilities.ImageConfigurationProtocol)?, text: BanubaUtilities.TextConfiguration, width: CoreFoundation.CGFloat, height: CoreFoundation.CGFloat, selectedColor: UIKit.UIColor)
   @objc deinit
 }
+@inlinable internal func distanceFrom(value: CoreFoundation.CGFloat, availableDistance: CoreFoundation.CGFloat, bounds: Swift.ClosedRange<CoreFoundation.CGFloat> = 0.0...1.0, leadingOffset: CoreFoundation.CGFloat = 0, trailingOffset: CoreFoundation.CGFloat = 0) -> CoreFoundation.CGFloat {
+  guard availableDistance > leadingOffset + trailingOffset else { return 0 }
+  let boundsLenght = bounds.upperBound - bounds.lowerBound
+  let relativeValue = (value - bounds.lowerBound) / boundsLenght
+  let offset = (leadingOffset - ((leadingOffset + trailingOffset) * relativeValue))
+  return offset + (availableDistance * relativeValue)
+}
+@inlinable internal func valueFrom(distance: CoreFoundation.CGFloat, availableDistance: CoreFoundation.CGFloat, bounds: Swift.ClosedRange<CoreFoundation.CGFloat> = 0.0...1.0, step: CoreFoundation.CGFloat = 0.001, leadingOffset: CoreFoundation.CGFloat = 0, trailingOffset: CoreFoundation.CGFloat = 0) -> CoreFoundation.CGFloat {
+  let relativeValue = (distance - leadingOffset) / (availableDistance - (leadingOffset + trailingOffset))
+  let newValue = bounds.lowerBound + (relativeValue * (bounds.upperBound - bounds.lowerBound))
+  let steppedNewValue = (round(newValue / step) * step)
+  let validatedValue = min(bounds.upperBound, max(bounds.lowerBound, steppedNewValue))
+  return validatedValue
+}
 @objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class FullscreenActivityView : UIKit.UIView {
   @_Concurrency.MainActor(unsafe) public var text: Swift.String? {
     get
@@ -772,8 +786,9 @@ public struct ColorParams : Swift.Codable {
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct TextParams : Swift.Codable {
-  public init(text: Swift.String?, textFont: Swift.String?, fontName: Swift.String?, fontSize: CoreFoundation.CGFloat?, textAlignment: Swift.Int?, textColor: BanubaVideoEditorSDK.ColorParams?, backgroundColor: BanubaVideoEditorSDK.ColorParams?)
+  public init(text: Swift.String?, link: Swift.String?, textFont: Swift.String?, fontName: Swift.String?, fontSize: CoreFoundation.CGFloat?, textAlignment: Swift.Int?, textColor: BanubaVideoEditorSDK.ColorParams?, backgroundColor: BanubaVideoEditorSDK.ColorParams?)
   public let text: Swift.String?
+  public let link: Swift.String?
   public let textFont: Swift.String?
   public let fontName: Swift.String?
   public let fontSize: CoreFoundation.CGFloat?
@@ -1083,8 +1098,9 @@ public struct VideoEditorConfig {
   public var progressViewConfiguration: BanubaVideoEditorSDK.ProgressViewConfiguration
   public var captionsConfiguration: BanubaVideoEditorSDK.CaptionsConfiguration
   public var autoCutConfiguration: BanubaVideoEditorSDK.AutoCutConfiguration
+  public var beautyIntensityConfiguration: BanubaVideoEditorSDK.BeautyIntensityConfiguration
   public init()
-  public init(videoResolutionConfiguration: BanubaUtilities.VideoResolutionConfiguration, recorderConfiguration: BanubaVideoEditorSDK.RecorderConfiguration, editorConfiguration: BanubaVideoEditorSDK.EditorConfiguration, textEditorConfiguration: BanubaVideoEditorSDK.TextEditorConfiguration, toastConfiguration: BanubaUtilities.ToastConfiguration, fullScreenActivityConfiguration: BanubaVideoEditorSDK.FullScreenActivityConfiguration, smallActivityIndicatorConfiguration: BanubaUtilities.SmallActivityIndicatorConfiguration, albumsConfiguration: BanubaUtilities.AlbumsConfiguration, videoOverlayConfiguration: BanubaVideoEditorSDK.VideoOverlayConfiguration, videoDurationConfiguration: BanubaVideoEditorSDK.VideoEditorDurationConfig, gifPickerConfiguration: BanubaVideoEditorSDK.GifPickerConfiguration, combinedGalleryConfiguration: BanubaUtilities.GalleryConfiguration, trimVideosConfiguration: BanubaVideoEditorSDK.TrimVideosConfiguration, trimVideoConfiguration: BanubaVideoEditorSDK.TrimVideoConfiguration, filterConfiguration: BanubaVideoEditorSDK.FilterConfiguration, extendedVideoCoverSelectionConfiguration: BanubaVideoEditorSDK.VideoCoverSelectionConfiguration, musicEditorConfiguration: BanubaVideoEditorSDK.MusicEditorConfig, overlayEditorConfiguration: BanubaVideoEditorSDK.OverlayEditorConfiguration, featureConfiguration: BanubaVideoEditorSDK.FeatureConfiguration, watermarkConfiguration: VideoEditor.WatermarkConfiguration?, alertViewConfiguration: BanubaUtilities.AlertViewConfiguration, popoverAlertViewConfiguration: BanubaUtilities.PopoverAlertViewConfiguration, handsfreeConfiguration: BanubaVideoEditorSDK.HandsfreeConfiguration?, pipSettingsConfiguration: BanubaVideoEditorSDK.PIPSettingsConfiguration?, sharingScreenConfiguration: BanubaVideoEditorSDK.SharingScreenConfiguration, draftsConfiguration: BanubaVideoEditorSDK.DraftsConfiguration, aspectsConfiguration: BanubaVideoEditorSDK.EffectsListConfiguration, transitionsConfiguration: BanubaVideoEditorSDK.EffectsListConfiguration, progressViewConfiguration: BanubaVideoEditorSDK.ProgressViewConfiguration, captionsConfiguration: BanubaVideoEditorSDK.CaptionsConfiguration, autoCutConfiguration: BanubaVideoEditorSDK.AutoCutConfiguration)
+  public init(videoResolutionConfiguration: BanubaUtilities.VideoResolutionConfiguration, recorderConfiguration: BanubaVideoEditorSDK.RecorderConfiguration, editorConfiguration: BanubaVideoEditorSDK.EditorConfiguration, textEditorConfiguration: BanubaVideoEditorSDK.TextEditorConfiguration, toastConfiguration: BanubaUtilities.ToastConfiguration, fullScreenActivityConfiguration: BanubaVideoEditorSDK.FullScreenActivityConfiguration, smallActivityIndicatorConfiguration: BanubaUtilities.SmallActivityIndicatorConfiguration, albumsConfiguration: BanubaUtilities.AlbumsConfiguration, videoOverlayConfiguration: BanubaVideoEditorSDK.VideoOverlayConfiguration, videoDurationConfiguration: BanubaVideoEditorSDK.VideoEditorDurationConfig, gifPickerConfiguration: BanubaVideoEditorSDK.GifPickerConfiguration, combinedGalleryConfiguration: BanubaUtilities.GalleryConfiguration, trimVideosConfiguration: BanubaVideoEditorSDK.TrimVideosConfiguration, trimVideoConfiguration: BanubaVideoEditorSDK.TrimVideoConfiguration, filterConfiguration: BanubaVideoEditorSDK.FilterConfiguration, extendedVideoCoverSelectionConfiguration: BanubaVideoEditorSDK.VideoCoverSelectionConfiguration, musicEditorConfiguration: BanubaVideoEditorSDK.MusicEditorConfig, overlayEditorConfiguration: BanubaVideoEditorSDK.OverlayEditorConfiguration, featureConfiguration: BanubaVideoEditorSDK.FeatureConfiguration, watermarkConfiguration: VideoEditor.WatermarkConfiguration?, alertViewConfiguration: BanubaUtilities.AlertViewConfiguration, popoverAlertViewConfiguration: BanubaUtilities.PopoverAlertViewConfiguration, handsfreeConfiguration: BanubaVideoEditorSDK.HandsfreeConfiguration?, pipSettingsConfiguration: BanubaVideoEditorSDK.PIPSettingsConfiguration?, sharingScreenConfiguration: BanubaVideoEditorSDK.SharingScreenConfiguration, draftsConfiguration: BanubaVideoEditorSDK.DraftsConfiguration, aspectsConfiguration: BanubaVideoEditorSDK.EffectsListConfiguration, transitionsConfiguration: BanubaVideoEditorSDK.EffectsListConfiguration, progressViewConfiguration: BanubaVideoEditorSDK.ProgressViewConfiguration, captionsConfiguration: BanubaVideoEditorSDK.CaptionsConfiguration, autoCutConfiguration: BanubaVideoEditorSDK.AutoCutConfiguration, beautyIntensityConfiguration: BanubaVideoEditorSDK.BeautyIntensityConfiguration)
   public mutating func setupColorsPalette(_ colorsPalette: BanubaVideoEditorSDK.VideoEditorColorsPalette)
   public mutating func applyFont(_ font: UIKit.UIFont)
   public mutating func updateAlertFonts(_ font: UIKit.UIFont)
@@ -1429,6 +1445,11 @@ public class ProgressViewConfiguration {
   public var progressBarCornerRadius: CoreFoundation.CGFloat
   public init(messageConfiguration: BanubaUtilities.TextConfiguration, tooltipMessageConfiguration: BanubaUtilities.TextConfiguration, cancelButtonTextConfiguration: BanubaUtilities.TextButtonConfiguration, cancelButtonBorderConfiguration: BanubaUtilities.BorderButtonConfiguration, cancelButtonBackgroundConfiguration: BanubaUtilities.BackgroundConfiguration, backgroundConfiguration: BanubaUtilities.BackgroundConfiguration, backgroundViewBlurStyle: UIKit.UIBlurEffect.Style, progressBarColor: UIKit.UIColor, progressBarHeight: CoreFoundation.CGFloat, progressBarCornerRadius: CoreFoundation.CGFloat)
   @objc deinit
+}
+public struct BeautyIntensityConfiguration {
+  public var sliderThumbSize: CoreFoundation.CGFloat
+  public var sliderTintColor: UIKit.UIColor
+  public init(sliderThumbSize: CoreFoundation.CGFloat, sliderTintColor: UIKit.UIColor)
 }
 public protocol ExternalViewControllerFactory {
   var musicEditorFactory: (any BanubaVideoEditorSDK.MusicEditorExternalViewControllerFactory)? { get set }
