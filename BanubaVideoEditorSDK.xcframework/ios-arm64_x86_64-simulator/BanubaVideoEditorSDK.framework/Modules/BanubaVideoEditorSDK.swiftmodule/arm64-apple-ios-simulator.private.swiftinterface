@@ -216,6 +216,17 @@ extension BanubaVideoEditorSDK.BanubaVideoEditor {
 extension BanubaVideoEditorSDK.BanubaVideoEditor {
   public func getLicenseState(completion: @escaping ((Swift.Bool) -> Swift.Void))
 }
+extension BanubaVideoEditorSDK.BanubaVideoEditor {
+  public struct TextLink : BanubaVideoEditorSDK.ReflectedStringConvertible {
+    public let title: Swift.String
+    public let link: Swift.String
+    public let start: Foundation.TimeInterval
+    public let end: Foundation.TimeInterval
+  }
+  public var textLinks: [BanubaVideoEditorSDK.BanubaVideoEditor.TextLink] {
+    get
+  }
+}
 public struct MainMusicViewControllerConfig {
   public var editButtons: [BanubaVideoEditorSDK.EditButtonConfig]
   public var editButtonsHeight: CoreFoundation.CGFloat
@@ -709,6 +720,7 @@ public struct EffectOnVideoMetadata : Swift.Codable {
 }
 public struct TextOnVideoMetadata : Swift.Codable {
   public let id: Swift.String
+  public let imageDataName: Swift.String
   public let imageData: Foundation.Data?
   public let textParams: BanubaVideoEditorSDK.TextParams
   public let startTime: BanubaVideoEditorSDK.TimeMetadata
@@ -717,7 +729,7 @@ public struct TextOnVideoMetadata : Swift.Codable {
   public let order: Swift.Int
   public let textColorDestinationId: Swift.Int
   public let linePositionOrderNumber: Swift.Int?
-  public init(id: Swift.String, imageData: Foundation.Data?, textParams: BanubaVideoEditorSDK.TextParams, startTime: BanubaVideoEditorSDK.TimeMetadata, endTime: BanubaVideoEditorSDK.TimeMetadata, coordinatesParams: BanubaVideoEditorSDK.CoordinatesParams, order: Swift.Int, textColorDestinationId: Swift.Int, linePositionOrderNumber: Swift.Int?)
+  public init(id: Swift.String, imageDataName: Swift.String, textParams: BanubaVideoEditorSDK.TextParams, startTime: BanubaVideoEditorSDK.TimeMetadata, endTime: BanubaVideoEditorSDK.TimeMetadata, coordinatesParams: BanubaVideoEditorSDK.CoordinatesParams, order: Swift.Int, textColorDestinationId: Swift.Int, linePositionOrderNumber: Swift.Int?)
   public init(from decoder: any Swift.Decoder) throws
   public func encode(to encoder: any Swift.Encoder) throws
 }
@@ -760,14 +772,15 @@ public struct BlurOnVideoMetadata : Swift.Codable {
 }
 public struct GIFOnVideoMetadata : Swift.Codable {
   public let id: Swift.String
+  public let imageDataName: Swift.String
   public let imageData: Foundation.Data?
   public let startTime: BanubaVideoEditorSDK.TimeMetadata
   public let endTime: BanubaVideoEditorSDK.TimeMetadata
   public let coordinatesParams: BanubaVideoEditorSDK.CoordinatesParams
   public let order: Swift.Int
-  public init(id: Swift.String, imageData: Foundation.Data?, startTime: BanubaVideoEditorSDK.TimeMetadata, endTime: BanubaVideoEditorSDK.TimeMetadata, coordinatesParams: BanubaVideoEditorSDK.CoordinatesParams, order: Swift.Int)
-  public func encode(to encoder: any Swift.Encoder) throws
+  public init(id: Swift.String, imageDataName: Swift.String, startTime: BanubaVideoEditorSDK.TimeMetadata, endTime: BanubaVideoEditorSDK.TimeMetadata, coordinatesParams: BanubaVideoEditorSDK.CoordinatesParams, order: Swift.Int)
   public init(from decoder: any Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
 }
 public struct CoordinatesParams : Swift.Codable {
   public let transform: CoreFoundation.CGAffineTransform
@@ -2141,6 +2154,13 @@ public enum VideoTextAlignment : Swift.Int {
   public init?(rawValue: Swift.Int)
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
+    get
+  }
+}
+public protocol ReflectedStringConvertible : Swift.CustomStringConvertible {
+}
+extension BanubaVideoEditorSDK.ReflectedStringConvertible {
+  public var description: Swift.String {
     get
   }
 }

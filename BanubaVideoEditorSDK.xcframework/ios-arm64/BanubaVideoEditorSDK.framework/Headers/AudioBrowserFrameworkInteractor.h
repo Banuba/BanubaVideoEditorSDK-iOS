@@ -39,7 +39,9 @@ __attribute__((weak_import)) @interface AudioBrowserFrameworkInteractor : NSObje
 + (void)setMubertKeys: (NSString *)license token:(NSString*)token;
 
 - (instancetype)initWithSelectedTrack: (AudioBrowserTrackWrapper * _Nullable) selectedTrack
-                  isNewBrowserEnabled:(BOOL)isNewBrowserEnabled
+                isMusicLibraryEnabled:(BOOL)isMusicLibraryEnabled
+                 isSoundstripeEnabled:(BOOL)isSoundstripeEnabled
+                                token:(NSString*)token
           isAudioPartSelectionEnabled:(BOOL)isAudioPartSelectionEnabled
                         videoDuration:(double)videoDuration;
 
