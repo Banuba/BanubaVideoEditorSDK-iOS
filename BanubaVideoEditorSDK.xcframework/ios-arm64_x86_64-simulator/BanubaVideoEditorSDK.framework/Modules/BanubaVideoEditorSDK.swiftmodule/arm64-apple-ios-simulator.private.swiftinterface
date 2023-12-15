@@ -4,6 +4,7 @@
 // swift-module-flags-ignorable: -enable-bare-slash-regex
 import AVFoundation
 import AVKit
+import Accelerate
 import BanubaLicenseServicingSDK
 import BanubaSDKServicing
 import BanubaUtilities
@@ -705,7 +706,8 @@ public struct CaptionsMetadata : Swift.Codable {
   public let styleParams: BanubaVideoEditorSDK.TextParams
   public let styleTextColorDestinationId: Swift.Int
   public let languageCode: Swift.String?
-  public init(existingCaptionIds: [Swift.String], styleParams: BanubaVideoEditorSDK.TextParams, styleTextColorDestinationId: Swift.Int, languageCode: Swift.String?)
+  public let predefinedStyleId: Swift.Int?
+  public init(existingCaptionIds: [Swift.String], styleParams: BanubaVideoEditorSDK.TextParams, styleTextColorDestinationId: Swift.Int, languageCode: Swift.String?, predefinedStyleId: Swift.Int?)
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
@@ -720,8 +722,6 @@ public struct EffectOnVideoMetadata : Swift.Codable {
 }
 public struct TextOnVideoMetadata : Swift.Codable {
   public let id: Swift.String
-  public let imageDataName: Swift.String
-  public let imageData: Foundation.Data?
   public let textParams: BanubaVideoEditorSDK.TextParams
   public let startTime: BanubaVideoEditorSDK.TimeMetadata
   public let endTime: BanubaVideoEditorSDK.TimeMetadata
@@ -729,7 +729,8 @@ public struct TextOnVideoMetadata : Swift.Codable {
   public let order: Swift.Int
   public let textColorDestinationId: Swift.Int
   public let linePositionOrderNumber: Swift.Int?
-  public init(id: Swift.String, imageDataName: Swift.String, textParams: BanubaVideoEditorSDK.TextParams, startTime: BanubaVideoEditorSDK.TimeMetadata, endTime: BanubaVideoEditorSDK.TimeMetadata, coordinatesParams: BanubaVideoEditorSDK.CoordinatesParams, order: Swift.Int, textColorDestinationId: Swift.Int, linePositionOrderNumber: Swift.Int?)
+  public let predefinedStyleId: Swift.Int?
+  public init(id: Swift.String, textParams: BanubaVideoEditorSDK.TextParams, startTime: BanubaVideoEditorSDK.TimeMetadata, endTime: BanubaVideoEditorSDK.TimeMetadata, coordinatesParams: BanubaVideoEditorSDK.CoordinatesParams, order: Swift.Int, textColorDestinationId: Swift.Int, linePositionOrderNumber: Swift.Int?, predefinedStyleId: Swift.Int?)
   public init(from decoder: any Swift.Decoder) throws
   public func encode(to encoder: any Swift.Encoder) throws
 }
@@ -954,6 +955,7 @@ public struct OverlayAddButtonConfig {
 public struct OverlayEditButtonConfig {
   public enum `Type` : Swift.String {
     case edit
+    case style
     case delete
     public init?(rawValue: Swift.String)
     public typealias RawValue = Swift.String
