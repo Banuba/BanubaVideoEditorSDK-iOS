@@ -531,7 +531,7 @@ public struct ColorPair : Swift.Equatable {
   public let background: UIKit.UIColor
   public let foreground: UIKit.UIColor
   public init(background: UIKit.UIColor, foreground: UIKit.UIColor)
-  public static func == (a: BanubaVideoEditorSDK.ColorPair, b: BanubaVideoEditorSDK.ColorPair) -> Swift.Bool
+  public static func == (lhs: BanubaVideoEditorSDK.ColorPair, rhs: BanubaVideoEditorSDK.ColorPair) -> Swift.Bool
 }
 public struct VideoTextColorPair : Swift.Equatable {
   public let foreground: BanubaVideoEditorSDK.ColorPair
