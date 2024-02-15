@@ -18,7 +18,7 @@
 		</data>
 		<key>Assets.car</key>
 		<data>
-		/MdvinQl+UPcxQITIgJLvtv01lY=
+		Pjd5blSzSYpgSnvELp5BBOfqcX4=
 		</data>
 		<key>AudioEditingView.nib</key>
 		<data>
@@ -30,7 +30,7 @@
 		</data>
 		<key>AudioRecorderViewController.storyboardc/DBC-5T-daX-view-sLy-RQ-lTd.nib</key>
 		<data>
-		0a9PIrOe5zskIVBZdbCImSKSbMo=
+		1Zd6q2xfAntNf4kk2EJXCHlTAn4=
 		</data>
 		<key>AudioRecorderViewController.storyboardc/Info.plist</key>
 		<data>
@@ -274,7 +274,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		WU6JBzD2g798pKWW85L/jAW5unw=
+		lC6Ye8nhtPJO4NZtwMmjMLhfuHc=
 		</data>
 		<key>MainMusicViewController.storyboardc/BYZ-38-t0r-view-8bC-Xf-vdC.nib</key>
 		<data>
@@ -302,7 +302,7 @@
 		</data>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		CL0JOGuajRQ5ij9qYM3gSdGsZWo=
+		KKBKteIvuUSrrlaVe3ULIiBGtNM=
 		</data>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -318,11 +318,11 @@
 		</data>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		f5J2QWabou/byJ1hzpdqaheCv44=
+		tT5bvyaBf1Jzo9zqvM8alcYXNLA=
 		</data>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		CL0JOGuajRQ5ij9qYM3gSdGsZWo=
+		KKBKteIvuUSrrlaVe3ULIiBGtNM=
 		</data>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -338,7 +338,7 @@
 		</data>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		S+rNd49FtY15eroblcAeeqieJic=
+		AxDfg81nKfQQIK5OB5xc8xuF2Qs=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -374,7 +374,7 @@
 		</data>
 		<key>PrivacyInfo.xcprivacy</key>
 		<data>
-		moN/BAmHapvEWO80JVzkTVU644I=
+		ni0hhaElcM/V2s9i6ULJXN6kzYY=
 		</data>
 		<key>ProgressViewController.storyboardc/Info.plist</key>
 		<data>
@@ -532,7 +532,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			MSTU4tzPzX07gtvNIRENuWU3fYEz5p45YUgQ1zKvxrY=
+			a+YVSv1v3h6iw7FOkZm2f+37E7HR3OpAI7Y6WyaCHXY=
 			</data>
 		</dict>
 		<key>AudioEditingView.nib</key>
@@ -553,7 +553,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			+9bdtRtGaSK9SNpxIJiaiMUr+Tu413UrCih/238ocIU=
+			t8Xwx8RMFemKQX/r/hDUlYABGPiH8Y3XWFUjDLyrV4k=
 			</data>
 		</dict>
 		<key>AudioRecorderViewController.storyboardc/Info.plist</key>
@@ -1022,7 +1022,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			CxBIq79o/z+qcgNUUtUPl2P7W9VmGWMmTVJzzXEx58M=
+			G7MO1kcCnLcJaTyTgdnyoU4bpq4UAZDWK0yfjWnmRQk=
 			</data>
 		</dict>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
@@ -1050,14 +1050,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			RMmC/2eIFP0iIdnz7+argVtH1Np9dSrnStfi3W6TiVA=
+			fdXHS2awsJWIiXbWqrQ+/jCwmzMmlARIYOsqobz1uWo=
 			</data>
 		</dict>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			CxBIq79o/z+qcgNUUtUPl2P7W9VmGWMmTVJzzXEx58M=
+			G7MO1kcCnLcJaTyTgdnyoU4bpq4UAZDWK0yfjWnmRQk=
 			</data>
 		</dict>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
@@ -1085,7 +1085,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			MHvgyv5nZVsda1SdQn8spSCmGakRV72lmEIBuqxRjwA=
+			oPSe/6vFoIeC8FeDR33K7kUak/FDsZ5ZL1WFMu0zdxY=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -1148,7 +1148,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			ofD9RqvcxDIN1gxJ65zMDaUfMeMWJlG65Ht9oyrnmfQ=
+			jlzqIt+C4UMEv2UC9Nnf09uk5ZKlx9xeVuSlyYLrXLg=
 			</data>
 		</dict>
 		<key>ProgressViewController.storyboardc/Info.plist</key>
