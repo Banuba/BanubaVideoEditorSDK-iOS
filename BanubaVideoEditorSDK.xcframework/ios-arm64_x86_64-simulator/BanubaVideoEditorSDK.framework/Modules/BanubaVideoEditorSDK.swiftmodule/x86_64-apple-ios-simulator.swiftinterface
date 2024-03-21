@@ -1,6 +1,6 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.9 (swiftlang-5.9.0.128.108 clang-1500.0.40.1)
-// swift-module-flags: -target x86_64-apple-ios14.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=unchecked -O -module-name BanubaVideoEditorSDK
+// swift-compiler-version: Apple Swift version 5.9.2 (swiftlang-5.9.2.2.56 clang-1500.1.0.2.5)
+// swift-module-flags: -target x86_64-apple-ios15.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=unchecked -O -module-name BanubaVideoEditorSDK
 // swift-module-flags-ignorable: -enable-bare-slash-regex
 import AVFoundation
 import AVKit
@@ -1243,6 +1243,7 @@ public struct RecorderConfiguration {
   public var videoDurationButtonConfiguration: BanubaVideoEditorSDK.BanubaButtonConfiguration
   public var isVideoDurationButtonHidden: Swift.Bool
   public var previewScalingMode: BanubaVideoEditorSDK.RecorderPreviewScalingMode
+  public var supportsAudioForPhoto: Swift.Bool
 }
 public struct RecordButtonConfiguration {
   public var strokeColor: CoreGraphics.CGColor
@@ -1347,13 +1348,13 @@ public struct EditorConfiguration {
   public var preferredStatusBarStyle: UIKit.UIStatusBarStyle
 }
 public struct SharingScreenConfiguration {
-  public let backgroundConfiguration: BanubaUtilities.BackgroundConfiguration
-  public let videoImageViewCornerRadius: CoreFoundation.CGFloat
-  public let sharingVideoTextConfiguration: BanubaUtilities.TextConfiguration
-  public let closeButtonConfiguration: BanubaUtilities.RoundedButtonConfiguration
-  public let sharingModels: [BanubaVideoEditorSDK.SharingServiceModel]
-  public let sharingCellConfiguration: BanubaVideoEditorSDK.SharingCellConfiguration
-  public let facebookId: Swift.String
+  public var backgroundConfiguration: BanubaUtilities.BackgroundConfiguration
+  public var videoImageViewCornerRadius: CoreFoundation.CGFloat
+  public var sharingVideoTextConfiguration: BanubaUtilities.TextConfiguration
+  public var closeButtonConfiguration: BanubaUtilities.RoundedButtonConfiguration
+  public var sharingModels: [BanubaVideoEditorSDK.SharingServiceModel]
+  public var sharingCellConfiguration: BanubaVideoEditorSDK.SharingCellConfiguration
+  public var facebookId: Swift.String
   public init(sharingModels: [BanubaVideoEditorSDK.SharingServiceModel], videoImageViewCornerRadius: CoreFoundation.CGFloat, sharingVideoTextConfiguration: BanubaUtilities.TextConfiguration, backgroundConfiguration: BanubaUtilities.BackgroundConfiguration, sharingCellConfiguration: BanubaVideoEditorSDK.SharingCellConfiguration, closeButtonConfiguration: BanubaUtilities.RoundedButtonConfiguration, facebookId: Swift.String)
 }
 public struct SharingCellConfiguration {
@@ -2093,7 +2094,8 @@ extension BanubaVideoEditorSDK.FeedbackAlertViewController {
   @_Concurrency.MainActor(unsafe) public static func makeAlertViewController() -> BanubaVideoEditorSDK.FeedbackAlertViewController
 }
 @_hasMissingDesignatedInitializers public class SliderRounderCalculator {
-  public static func getRoundedVolumeValue(_ volume: Swift.Float, wasChanged: Swift.Bool) -> (rounded: Swift.Float, displayed: Swift.String)
+  public typealias Result = (rounded: Swift.Float, displayed: Swift.String)
+  public static func getRoundedVolumeValue(_ volume: Swift.Float, wasChanged: Swift.Bool) -> BanubaVideoEditorSDK.SliderRounderCalculator.Result
   @objc deinit
 }
 public typealias Result<T> = Swift.Result<T, any Swift.Error>
