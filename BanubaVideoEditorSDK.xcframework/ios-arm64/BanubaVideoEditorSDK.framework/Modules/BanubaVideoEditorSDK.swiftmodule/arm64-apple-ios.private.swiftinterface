@@ -177,6 +177,10 @@ public class BanubaVideoEditor {
     get
     set
   }
+  public var externalLogListener: (any BanubaUtilities.ExternalLogListener)? {
+    get
+    set
+  }
   public var musicTrack: BanubaUtilities.MediaTrack? {
     get
   }
@@ -863,6 +867,21 @@ extension BanubaVideoEditorSDK.EffectOnVideoMetadata {
 }
 public protocol ProgressViewControllerFactory {
   func makeProgressViewController() -> any BanubaVideoEditorSDK.BanubaProgressViewController
+}
+public enum CaptionsLanguage : Swift.String, Swift.CaseIterable {
+  case english
+  case mandarin
+  case portuguese
+  case spanish
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [BanubaVideoEditorSDK.CaptionsLanguage]
+  public typealias RawValue = Swift.String
+  public static var allCases: [BanubaVideoEditorSDK.CaptionsLanguage] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
 }
 public protocol BanubaProgressViewController : UIKit.UIViewController {
   var message: Swift.String { get set }
@@ -2161,6 +2180,7 @@ public struct CaptionsConfiguration {
   public var apiKey: Swift.String?
   public var progressBarColor: UIKit.UIColor
   public var progressBarBackgroundColor: UIKit.UIColor
+  public var supportedLanguages: [BanubaVideoEditorSDK.CaptionsLanguage]
   public var languageConfiguration: BanubaVideoEditorSDK.CaptionLanguageConfiguration
 }
 public protocol ExternalMaskProviding {
@@ -2389,6 +2409,9 @@ extension BanubaVideoEditorSDK.SDKEventName : Swift.RawRepresentable {}
 extension BanubaVideoEditorSDK.VideoSequenceEditingStep : Swift.Equatable {}
 extension BanubaVideoEditorSDK.VideoSequenceEditingStep : Swift.Hashable {}
 extension BanubaVideoEditorSDK.VideoSequenceEditingStep : Swift.RawRepresentable {}
+extension BanubaVideoEditorSDK.CaptionsLanguage : Swift.Equatable {}
+extension BanubaVideoEditorSDK.CaptionsLanguage : Swift.Hashable {}
+extension BanubaVideoEditorSDK.CaptionsLanguage : Swift.RawRepresentable {}
 extension BanubaVideoEditorSDK.OverlayAddButtonConfig.`Type` : Swift.Equatable {}
 extension BanubaVideoEditorSDK.OverlayAddButtonConfig.`Type` : Swift.Hashable {}
 extension BanubaVideoEditorSDK.OverlayAddButtonConfig.`Type` : Swift.RawRepresentable {}
