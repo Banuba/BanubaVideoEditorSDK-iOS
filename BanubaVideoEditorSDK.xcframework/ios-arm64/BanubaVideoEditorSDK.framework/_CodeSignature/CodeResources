@@ -282,7 +282,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		71rs08ThdUJbHEdzu5Q6KhY4Ex0=
+		+JaaN9PIDvL19FGkvwIqDQRhMvk=
 		</data>
 		<key>MainMusicViewController.storyboardc/BYZ-38-t0r-view-8bC-Xf-vdC.nib</key>
 		<data>
@@ -310,7 +310,7 @@
 		</data>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		t6q2MzgnrKgBd7/BHBrdjLZEzko=
+		t+BJd5m5Skj4bJoomXHl25ph7JY=
 		</data>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
@@ -326,7 +326,7 @@
 		</data>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		+F7RCDrVeZJH2U8y6CuGQtTK6EI=
+		LG5bjz/nbFwpqNEQvTkI7RQm7vQ=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -382,7 +382,7 @@
 		</data>
 		<key>RecorderViewController.storyboardc/Tb8-4D-b1F-view-0y0-cp-WjI.nib</key>
 		<data>
-		NzXyFotxsH1gXZd5DhKrqBAT9rw=
+		QT+Hq2rKHzJS4tgc44N/jCUxKIQ=
 		</data>
 		<key>RecorderViewController.storyboardc/UIViewController-Tb8-4D-b1F.nib</key>
 		<data>
@@ -1024,7 +1024,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			PNfaJvWAG8wkIf01dPAvu7aN1FkRNWFJFF3RUev00G4=
+			5xTnXkg1IyKFi4oJVfEhuYjVeIRXfwmKOv+owrp0xe0=
 			</data>
 		</dict>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
@@ -1052,7 +1052,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			U+5LWsaSsMMPhTocdBXObb+v063qxES59/Flcaz2h3w=
+			Hv4SiZ8yU5a+UGbbXVf9Fi5a/q91manGfn65e4CeaXQ=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -1150,7 +1150,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			6kGmvgmSqH01iEP/d5YifP4ZkQXVhNo+iaFHneQuSV0=
+			8YGBFlX3MxZ045JclVlfxjvqLDsKXYO2XObQSOOV94M=
 			</data>
 		</dict>
 		<key>RecorderViewController.storyboardc/UIViewController-Tb8-4D-b1F.nib</key>
