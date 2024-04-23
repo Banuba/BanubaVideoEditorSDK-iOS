@@ -1362,6 +1362,11 @@ public struct EditorConfiguration {
   public var editDraftBackButton: BanubaUtilities.BackButtonConfiguration
   public var openTrimButton: BanubaVideoEditorSDK.AdditionalEffectsButtonConfiguration
   public var musicPanelConfiguration: BanubaVideoEditorSDK.MusicPanelConfiguration
+  public enum AddToDraftsFlow {
+    case alert
+    case button(_: BanubaUtilities.RoundedButtonConfiguration)
+  }
+  public var addToDraftsFlow: BanubaVideoEditorSDK.EditorConfiguration.AddToDraftsFlow
   public var isVideoAspectFillEnabled: Swift.Bool
   public var backgroundColor: UIKit.UIColor
   public var preferredStatusBarStyle: UIKit.UIStatusBarStyle
