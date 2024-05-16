@@ -432,11 +432,27 @@ SWIFT_CLASS("_TtC20BanubaVideoEditorSDK25TrimTimeLineConfiguration")
 
 
 
+
+SWIFT_CLASS("_TtC20BanubaVideoEditorSDK33VideoEditorEffectsManagementPanel")
+@interface VideoEditorEffectsManagementPanel : UIView
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
+@end
+
+
 /// The video editor launch configuration
 SWIFT_CLASS("_TtC20BanubaVideoEditorSDK23VideoEditorLaunchConfig")
 @interface VideoEditorLaunchConfig : NSObject
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
+SWIFT_CLASS("_TtC20BanubaVideoEditorSDK21VideoEditorToolsPanel")
+@interface VideoEditorToolsPanel : UIView
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
+- (void)layoutSubviews;
 @end
 
 #endif
