@@ -29,8 +29,7 @@ useHEVCCodecIfPossibleForRecorder:(BOOL) useHEVCCodecIfPossibleForRecorder
 + (id _Nullable) getMaskPostprocessingServiceWithVideoSize:(CGSize) videoSize;
 
 + (nullable NSArray<NSString *> *)createAutoCutVideosWithMusicPath:(NSString *)musicDbPath
-                                                     visualEffects:(NSArray<NSString *> *)visualEffects
-                                                 transitionEffects:(NSArray<NSString *> *)transitionEffects
+                                              effectsTemplatesPath:(NSString *)effectsTemplatesPath
                                                             videos:(NSArray<VisualClipVideo *> *)videos
                                                          numFrames:(int32_t)numFrames
                                                         resultSize:(int32_t)resultSize
