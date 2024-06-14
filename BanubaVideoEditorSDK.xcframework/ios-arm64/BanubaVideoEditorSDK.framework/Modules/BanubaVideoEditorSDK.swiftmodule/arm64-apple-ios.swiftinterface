@@ -1377,6 +1377,7 @@ public struct EditorConfiguration {
   public var isVideoAspectFillEnabled: Swift.Bool
   public var backgroundColor: UIKit.UIColor
   public var preferredStatusBarStyle: UIKit.UIStatusBarStyle
+  public var audioPartSelectionViewConfiguration: BanubaUtilities.AudioPartSelectionViewConfiguration
 }
 public class VideoEditorViewConfiguration {
   public var backButtonConfiguration: BanubaVideoEditorSDK.ImageButtonConfiguration
