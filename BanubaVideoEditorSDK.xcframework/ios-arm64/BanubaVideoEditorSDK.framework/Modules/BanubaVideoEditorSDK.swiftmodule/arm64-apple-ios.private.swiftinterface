@@ -628,7 +628,9 @@ public struct VideoSequenceItemMetadata : Swift.Codable {
   public var transition: BanubaVideoEditorSDK.TransitionEffectMetadata
   public var aspectRatio: BanubaUtilities.AspectRatio
   public var speed: Swift.Double
-  public init(videoName: Swift.String, order: Swift.Int, imageData: Foundation.Data? = nil, trimTimeRange: BanubaVideoEditorSDK.TrimTimeRangeMetadata, isGalleryAsset: Swift.Bool, isSlideShow: Swift.Bool, isPIP: Swift.Bool = false, transition: BanubaVideoEditorSDK.TransitionEffectMetadata, aspectRatio: BanubaUtilities.AspectRatio, speed: Swift.Double)
+  public var cropFrame: CoreFoundation.CGRect?
+  public var crop: VideoEditor.AssetCrop?
+  public init(videoName: Swift.String, order: Swift.Int, imageData: Foundation.Data? = nil, trimTimeRange: BanubaVideoEditorSDK.TrimTimeRangeMetadata, isGalleryAsset: Swift.Bool, isSlideShow: Swift.Bool, isPIP: Swift.Bool = false, transition: BanubaVideoEditorSDK.TransitionEffectMetadata, aspectRatio: BanubaUtilities.AspectRatio, speed: Swift.Double, cropFrame: CoreFoundation.CGRect?, crop: VideoEditor.AssetCrop?)
   public init(from decoder: any Swift.Decoder) throws
   public func encode(to encoder: any Swift.Encoder) throws
 }
@@ -2342,10 +2344,6 @@ public class DefaultExposureViewFactory : BanubaVideoEditorSDK.AnimatableViewFac
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func draw(_ rect: CoreFoundation.CGRect)
   @_Concurrency.MainActor(unsafe) public func start(completion: @escaping (Swift.Bool) -> Swift.Void)
   @_Concurrency.MainActor(unsafe) public func stop()
-  @objc deinit
-}
-@_hasMissingDesignatedInitializers public class VideoEditorTrackRotationCalculator {
-  public static func getTrackRotation(_ track: VideoEditor.VideoEditorAssetTrackInfo) -> VideoEditor.AssetRotation
   @objc deinit
 }
 public protocol SequencesServicing {
