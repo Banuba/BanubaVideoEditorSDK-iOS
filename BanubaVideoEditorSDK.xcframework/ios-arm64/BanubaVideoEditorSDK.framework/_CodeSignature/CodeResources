@@ -286,7 +286,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		qzkfpqKcU/gvvjz3NeVqzY8/pII=
+		KWkBJ3cR4Rd+eaR6w3LN8FZ+JpI=
 		</data>
 		<key>MainMusicViewController.storyboardc/BYZ-38-t0r-view-8bC-Xf-vdC.nib</key>
 		<data>
@@ -322,11 +322,11 @@
 		</data>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		lxSRBWuHIevP76eUnnD+oZ3zL90=
+		J4wSsf/66shHxPzXz4EXbXUXoxc=
 		</data>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		/ltmK0E0ldN1ARgphLjSd0ZAS2k=
+		Jjw7Luu0Q+hY+fTH/GOrrXz4vAo=
 		</data>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
@@ -334,15 +334,27 @@
 		</data>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		/ltmK0E0ldN1ARgphLjSd0ZAS2k=
+		Jjw7Luu0Q+hY+fTH/GOrrXz4vAo=
 		</data>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		aEjUI3qcm8f8pDkcgxN5au46EPw=
+		5Y8mvcM/hEaCb7/UplZ1RxLafao=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
 		PbArgJyFqvMpTOtb01Oz2PCs8FU=
+		</data>
+		<key>MultiCamRecorderViewController.storyboardc/Info.plist</key>
+		<data>
+		TpvkOhjfl/Qj+TWPgLT1lWQXSr0=
+		</data>
+		<key>MultiCamRecorderViewController.storyboardc/Tb8-4D-b1F-view-0y0-cp-WjI.nib</key>
+		<data>
+		UWYLS/dSjSY6u/UvXXyPHzPZUIQ=
+		</data>
+		<key>MultiCamRecorderViewController.storyboardc/UIViewController-Tb8-4D-b1F.nib</key>
+		<data>
+		8J/dvUWgTXdFkcqdPcf+Q1gCX7I=
 		</data>
 		<key>PIPCameraSettingsCollectionViewCell.nib</key>
 		<data>
@@ -1097,14 +1109,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Tf2Yj/tqcwVznvTSdUBplVLWbw78nF4RTjvVr+rE7Qs=
+			EZ4nd+/eLbA53rfannz5xA5puL6d7yQcKMyddBV1ZFM=
 			</data>
 		</dict>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			i6rsVRiNBsIf9uRY+pjy8zhjAus6JlZevgld1PUFKdo=
+			ahT5kiPDCukuaLu9/nUZ42aIbixsVsl0JadkU6jkncM=
 			</data>
 		</dict>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
@@ -1118,14 +1130,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			i6rsVRiNBsIf9uRY+pjy8zhjAus6JlZevgld1PUFKdo=
+			ahT5kiPDCukuaLu9/nUZ42aIbixsVsl0JadkU6jkncM=
 			</data>
 		</dict>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			xFHWyUSfbaDTCHOp5zBFPsf4pUNFMLjsUj0Jx7LAYUc=
+			KAxjSZOvPu8knk5wIoaB434ezHM40MwO31iu/fv1SQs=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -1133,6 +1145,27 @@
 			<key>hash2</key>
 			<data>
 			ysgJgs/Ebj57+cYt5MMISlJ1Pp4DxL4keNlb0dFl41c=
+			</data>
+		</dict>
+		<key>MultiCamRecorderViewController.storyboardc/Info.plist</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			38ce0mV1GOWGiPJ+6CyjMeeZKyd9Zog5m+/QuoFO+vI=
+			</data>
+		</dict>
+		<key>MultiCamRecorderViewController.storyboardc/Tb8-4D-b1F-view-0y0-cp-WjI.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			tw4iW6agimB/CkGdKjmd6qdRE4Btij8ZFpgr2n7QUEw=
+			</data>
+		</dict>
+		<key>MultiCamRecorderViewController.storyboardc/UIViewController-Tb8-4D-b1F.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			ljlvifeVDZw9RdRUm813E8aiFUQ83RGqbFf57/PxPoE=
 			</data>
 		</dict>
 		<key>PIPCameraSettingsCollectionViewCell.nib</key>
