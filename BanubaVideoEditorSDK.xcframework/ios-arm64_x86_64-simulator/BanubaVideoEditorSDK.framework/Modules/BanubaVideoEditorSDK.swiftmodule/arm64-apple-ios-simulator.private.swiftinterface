@@ -1,7 +1,6 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.9.2 (swiftlang-5.9.2.2.56 clang-1500.1.0.2.5)
-// swift-module-flags: -target arm64-apple-ios15.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=unchecked -O -module-name BanubaVideoEditorSDK
-// swift-module-flags-ignorable: -enable-bare-slash-regex
+// swift-compiler-version: Apple Swift version 5.10 (swiftlang-5.10.0.13 clang-1500.3.9.4)
+// swift-module-flags: -target arm64-apple-ios15.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=unchecked -O -enable-bare-slash-regex -module-name BanubaVideoEditorSDK
 import AVFoundation
 import AVKit
 import Accelerate
@@ -606,8 +605,8 @@ public struct SDKExportEvent : Swift.Codable {
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct CameraSessionMetadata : Swift.Codable {
-  public var isFrontCamera: Swift.Bool
-  public init(isFrontCamera: Swift.Bool)
+  public let appliedEffects: [Swift.String : [Swift.String]]
+  public init(appliedEffects: [Swift.String : [Swift.String]])
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
@@ -1165,8 +1164,9 @@ public struct VideoEditorConfig {
   public var autoCutConfiguration: BanubaVideoEditorSDK.AutoCutConfiguration
   public var beautyIntensityConfiguration: BanubaVideoEditorSDK.BeautyIntensityConfiguration
   public var videoPreviewConfiguration: BanubaVideoEditorSDK.VideoPreviewConfiguration
+  public var greenScreenBackgroundPickerConfiguration: BanubaVideoEditorSDK.GreenScreenBackgroundPickerConfiguration
   public init()
-  public init(videoResolutionConfiguration: BanubaUtilities.VideoResolutionConfiguration, recorderConfiguration: BanubaVideoEditorSDK.RecorderConfiguration, editorConfiguration: BanubaVideoEditorSDK.EditorConfiguration, textEditorConfiguration: BanubaVideoEditorSDK.TextEditorConfiguration, toastConfiguration: BanubaUtilities.ToastConfiguration, fullScreenActivityConfiguration: BanubaVideoEditorSDK.FullScreenActivityConfiguration, smallActivityIndicatorConfiguration: BanubaUtilities.SmallActivityIndicatorConfiguration, albumsConfiguration: BanubaUtilities.AlbumsConfiguration, videoOverlayConfiguration: BanubaVideoEditorSDK.VideoOverlayConfiguration, videoDurationConfiguration: BanubaVideoEditorSDK.VideoEditorDurationConfig, gifPickerConfiguration: BanubaVideoEditorSDK.GifPickerConfiguration, combinedGalleryConfiguration: BanubaUtilities.GalleryConfiguration, trimVideosConfiguration: BanubaVideoEditorSDK.TrimVideosConfiguration, trimVideoConfiguration: BanubaVideoEditorSDK.TrimVideoConfiguration, filterConfiguration: BanubaVideoEditorSDK.FilterConfiguration, extendedVideoCoverSelectionConfiguration: BanubaVideoEditorSDK.VideoCoverSelectionConfiguration, musicEditorConfiguration: BanubaVideoEditorSDK.MusicEditorConfig, overlayEditorConfiguration: BanubaVideoEditorSDK.OverlayEditorConfiguration, featureConfiguration: BanubaVideoEditorSDK.FeatureConfiguration, watermarkConfiguration: VideoEditor.WatermarkConfiguration?, alertViewConfiguration: BanubaUtilities.AlertViewConfiguration, popoverAlertViewConfiguration: BanubaUtilities.PopoverAlertViewConfiguration, handsfreeConfiguration: BanubaVideoEditorSDK.HandsfreeConfiguration?, pipSettingsConfiguration: BanubaVideoEditorSDK.PIPSettingsConfiguration?, sharingScreenConfiguration: BanubaVideoEditorSDK.SharingScreenConfiguration, draftsConfiguration: BanubaVideoEditorSDK.DraftsConfiguration, aspectsConfiguration: BanubaVideoEditorSDK.EffectsListConfiguration, transitionsConfiguration: BanubaVideoEditorSDK.EffectsListConfiguration, progressViewConfiguration: BanubaVideoEditorSDK.ProgressViewConfiguration, captionsConfiguration: BanubaVideoEditorSDK.CaptionsConfiguration, autoCutConfiguration: BanubaVideoEditorSDK.AutoCutConfiguration, beautyIntensityConfiguration: BanubaVideoEditorSDK.BeautyIntensityConfiguration, videoPreviewConfiguration: BanubaVideoEditorSDK.VideoPreviewConfiguration)
+  public init(videoResolutionConfiguration: BanubaUtilities.VideoResolutionConfiguration, recorderConfiguration: BanubaVideoEditorSDK.RecorderConfiguration, editorConfiguration: BanubaVideoEditorSDK.EditorConfiguration, textEditorConfiguration: BanubaVideoEditorSDK.TextEditorConfiguration, toastConfiguration: BanubaUtilities.ToastConfiguration, fullScreenActivityConfiguration: BanubaVideoEditorSDK.FullScreenActivityConfiguration, smallActivityIndicatorConfiguration: BanubaUtilities.SmallActivityIndicatorConfiguration, albumsConfiguration: BanubaUtilities.AlbumsConfiguration, videoOverlayConfiguration: BanubaVideoEditorSDK.VideoOverlayConfiguration, videoDurationConfiguration: BanubaVideoEditorSDK.VideoEditorDurationConfig, gifPickerConfiguration: BanubaVideoEditorSDK.GifPickerConfiguration, combinedGalleryConfiguration: BanubaUtilities.GalleryConfiguration, trimVideosConfiguration: BanubaVideoEditorSDK.TrimVideosConfiguration, trimVideoConfiguration: BanubaVideoEditorSDK.TrimVideoConfiguration, filterConfiguration: BanubaVideoEditorSDK.FilterConfiguration, extendedVideoCoverSelectionConfiguration: BanubaVideoEditorSDK.VideoCoverSelectionConfiguration, musicEditorConfiguration: BanubaVideoEditorSDK.MusicEditorConfig, overlayEditorConfiguration: BanubaVideoEditorSDK.OverlayEditorConfiguration, featureConfiguration: BanubaVideoEditorSDK.FeatureConfiguration, watermarkConfiguration: VideoEditor.WatermarkConfiguration?, alertViewConfiguration: BanubaUtilities.AlertViewConfiguration, popoverAlertViewConfiguration: BanubaUtilities.PopoverAlertViewConfiguration, handsfreeConfiguration: BanubaVideoEditorSDK.HandsfreeConfiguration?, pipSettingsConfiguration: BanubaVideoEditorSDK.PIPSettingsConfiguration?, sharingScreenConfiguration: BanubaVideoEditorSDK.SharingScreenConfiguration, draftsConfiguration: BanubaVideoEditorSDK.DraftsConfiguration, aspectsConfiguration: BanubaVideoEditorSDK.EffectsListConfiguration, transitionsConfiguration: BanubaVideoEditorSDK.EffectsListConfiguration, progressViewConfiguration: BanubaVideoEditorSDK.ProgressViewConfiguration, captionsConfiguration: BanubaVideoEditorSDK.CaptionsConfiguration, autoCutConfiguration: BanubaVideoEditorSDK.AutoCutConfiguration, beautyIntensityConfiguration: BanubaVideoEditorSDK.BeautyIntensityConfiguration, videoPreviewConfiguration: BanubaVideoEditorSDK.VideoPreviewConfiguration, greenScreenBackgroundPickerConfiguration: BanubaVideoEditorSDK.GreenScreenBackgroundPickerConfiguration)
   public mutating func setupColorsPalette(_ colorsPalette: BanubaVideoEditorSDK.VideoEditorColorsPalette)
   public mutating func applyFont(_ font: UIKit.UIFont)
   public mutating func updateAlertFonts(_ font: UIKit.UIFont)
@@ -1712,7 +1712,9 @@ public struct AdditionalEffectsButtonConfiguration {
     case trimDraft
     case captions
     case autoCut
-    case multicam
+    case additionalCamera
+    case the3DObjects
+    case greenScreen
     public init?(rawValue: Swift.String)
     public typealias RawValue = Swift.String
     public var rawValue: Swift.String {
@@ -2044,6 +2046,21 @@ public class AspectsService : BanubaVideoEditorSDK.AspectsServicing {
 public struct CaptionLanguageConfiguration {
   public var selectedIcon: any BanubaUtilities.ImageConfigurationProtocol
 }
+public struct GreenScreenBackgroundPickerConfiguration {
+  public struct ItemConfiguration {
+    public var normalImage: BanubaVideoEditorSDK.ImageConfiguration
+    public var cornerRadius: CoreFoundation.CGFloat
+    public var borderWidth: CoreFoundation.CGFloat
+    public var defaultBorderColor: UIKit.UIColor
+    public var selectedBorderColor: UIKit.UIColor
+    public var durationLabel: BanubaUtilities.TextConfiguration
+    public var activityConfiguration: BanubaUtilities.SmallActivityIndicatorConfiguration
+  }
+  public var title: BanubaUtilities.TextConfiguration
+  public var itemConfiguration: BanubaVideoEditorSDK.GreenScreenBackgroundPickerConfiguration.ItemConfiguration
+  public var selectGalleryButtonConfiguration: BanubaVideoEditorSDK.BanubaButtonConfiguration
+  public var customBackgroundsURL: Foundation.URL?
+}
 public enum EffectType {
   case mask
   case effect
@@ -2093,11 +2110,12 @@ public protocol SDKCameraChangedDelegate : AnyObject {
 public protocol SDKCameraServicing {
   var videoRecordSpeed: BanubaVideoEditorSDK.VideoRecordSpeed { get set }
   var cameraChangedDelegate: (any BanubaVideoEditorSDK.SDKCameraChangedDelegate)? { get set }
+  func setupCameraChangedDelegate(_ delegate: (any BanubaVideoEditorSDK.SDKCameraChangedDelegate)?)
   var renderQueue: Dispatch.DispatchQueue? { get }
   var autoStart: Swift.Bool { get set }
   var allowProcessing: Swift.Bool { get set }
   var isLoaded: Swift.Bool { get }
-  func effectsPaths(includeBeautyEffect: Swift.Bool) -> [Swift.String]
+  func effectsPaths() -> [Swift.String]
   func setupCamera()
   func setupPostprocessing()
   func destroy()
@@ -2114,7 +2132,10 @@ public protocol SDKCameraServicing {
   func unloadMask()
   func setRenderTarget(view: UIKit.UIView)
   func removeRenderTarget()
+  @discardableResult
   func toggleBeautification() -> Swift.Bool
+  func enableGreenScreen(completion: @escaping () -> Swift.Void)
+  func disableGreenScreen()
   func discardAppliedChanges()
   func setupDefaultState()
   func configurePhotoModeIfNeeded(isFrontCamera: Swift.Bool, isEnableTorch: Swift.Bool)
@@ -2148,6 +2169,7 @@ extension BanubaVideoEditorSDK.SDKCameraService {
   public func setupCamera()
   public func setupPostprocessing()
   public func destroy()
+  public func setupCameraChangedDelegate(_ delegate: (any BanubaVideoEditorSDK.SDKCameraChangedDelegate)?)
 }
 extension BanubaVideoEditorSDK.SDKCameraService {
   public func configurePhotoModeIfNeeded(isFrontCamera: Swift.Bool, isEnableTorch: Swift.Bool)
@@ -2162,13 +2184,15 @@ extension BanubaVideoEditorSDK.SDKCameraService {
   public func takeSnapshot(handler: @escaping (UIKit.UIImage?) -> Swift.Void)
 }
 extension BanubaVideoEditorSDK.SDKCameraService {
-  public func effectsPaths(includeBeautyEffect: Swift.Bool) -> [Swift.String]
+  public func effectsPaths() -> [Swift.String]
   public func applyFilter(_ filter: BanubaSDKServicing.EffectModel)
   public func removeFilter(_ filter: BanubaSDKServicing.EffectModel)
   public func removeAllFilters()
   public func loadMask(name: Swift.String, synchronous: Swift.Bool)
   public func unloadMask()
   public func toggleBeautification() -> Swift.Bool
+  public func enableGreenScreen(completion: @escaping () -> Swift.Void)
+  public func disableGreenScreen()
   public func discardAppliedChanges()
   public func setupDefaultState()
 }
@@ -2180,7 +2204,7 @@ extension BanubaVideoEditorSDK.SDKCameraService {
   public func getRendererView() -> UIKit.UIView
   public func addFPSListener(_ listener: ((_ fpsInfo: Foundation.NSAttributedString) -> Swift.Void)?)
 }
-@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class FeedbackAlertViewController : UIKit.UIViewController {
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) final public class FeedbackAlertViewController : UIKit.UIViewController {
   public enum ActionTypes {
     case agree
     case refuse
@@ -2191,8 +2215,8 @@ extension BanubaVideoEditorSDK.SDKCameraService {
       get
     }
   }
-  @_Concurrency.MainActor(unsafe) public var actionHandler: ((BanubaVideoEditorSDK.FeedbackAlertViewController.ActionTypes) -> Swift.Void)?
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) final public var actionHandler: ((BanubaVideoEditorSDK.FeedbackAlertViewController.ActionTypes) -> Swift.Void)?
+  @_Concurrency.MainActor(unsafe) @objc override final public func viewWillAppear(_ animated: Swift.Bool)
   @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
   @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
   @objc deinit
