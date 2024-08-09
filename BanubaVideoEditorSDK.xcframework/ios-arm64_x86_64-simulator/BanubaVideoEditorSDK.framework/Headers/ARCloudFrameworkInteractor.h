@@ -45,7 +45,7 @@ __attribute__((weak_import)) @interface ARCloudFrameworkInteractor : NSObject
 + (BOOL)isFrameworkAvailable;
 
 - (instancetype)init: (NSString *) arCloudUrl
-   embeddedEffectURLs: (NSArray<NSURL *> * _Nullable) embeddedEffectsURLs;
+   effectsFolderURL: (NSURL *) effectsFolderURL;
 
 - (void) getAREffects: (getAREffectsCompletion) completion;
 - (void) cancelDownloadingEffect: (NSUInteger) requestId;
@@ -56,8 +56,6 @@ __attribute__((weak_import)) @interface ARCloudFrameworkInteractor : NSObject
 - (NSUInteger) downloadArEffect: (AREffectWrapper * _Nonnull) effect
                downloadProgress: (downloadProgress) downloadProgress
                      completion: (downloadArEffectCompletion) completion;
-
-+ (NSURL * _Nullable) getEffectFolderURL;
 @end
 
 NS_ASSUME_NONNULL_END

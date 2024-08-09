@@ -22,7 +22,7 @@
 		</data>
 		<key>Assets.car</key>
 		<data>
-		UcvuCleQB6+UcNFr6xnzMz/25Zc=
+		PSat5732kNxZCGdBn9UrTsxK++s=
 		</data>
 		<key>AudioEditingController.nib</key>
 		<data>
@@ -79,6 +79,10 @@
 		<key>BackgroundPickerViewController.nib</key>
 		<data>
 		Cdlap1BO+Fi0f8chq4KQ1WwUWh8=
+		</data>
+		<key>BeautyIntensityViewController.nib</key>
+		<data>
+		2mMh47McsQI8GTpNjrBNU5LSE0Q=
 		</data>
 		<key>CaptionsViewController.nib</key>
 		<data>
@@ -250,7 +254,7 @@
 		</data>
 		<key>Headers/ARCloudFrameworkInteractor.h</key>
 		<data>
-		qxLN1gDrxGE8PW7TsDPCWvCbJ1g=
+		5GLSD8v8Kgj8/ZpWRs3qsxCgUMw=
 		</data>
 		<key>Headers/AudioBrowserFrameworkInteractor.h</key>
 		<data>
@@ -258,7 +262,7 @@
 		</data>
 		<key>Headers/BanubaSDKFrameworkInteractor.h</key>
 		<data>
-		iEfXn9YWX314DUZRc9tNJkO/puc=
+		0mivjOcIXllvCm8WjLIbcxZ1DuE=
 		</data>
 		<key>Headers/BanubaSDKSimpleInteractor.h</key>
 		<data>
@@ -286,7 +290,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		cePJhUHzkMTS0nxTF4bcUIoL5w8=
+		3oH15zKgYQEcVm/jIvD3DOqts7M=
 		</data>
 		<key>MainMusicViewController.storyboardc/BYZ-38-t0r-view-8bC-Xf-vdC.nib</key>
 		<data>
@@ -322,23 +326,23 @@
 		</data>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		+ozoLOmZGSIbVubHj+2A9EOgxNg=
+		1iKLb+HyuoI8qoeInBJrRI8vDH8=
 		</data>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		CIexqhUHrDTmlm5YUnFefL6E9OM=
+		z62HzT78j6QD576Kdc8jIzKZv+U=
 		</data>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		Rl0F41PT/vN7pScyXXxYJHGcxbA=
+		lnh8EnLw2lRd5ftCZtQlOBDRehs=
 		</data>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		CIexqhUHrDTmlm5YUnFefL6E9OM=
+		z62HzT78j6QD576Kdc8jIzKZv+U=
 		</data>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		lGgcVXKj/m8u5OFtjFO23Kx+pXM=
+		Pr36S2gM9aAyFYg1TAyyFrHYfZ0=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -450,7 +454,7 @@
 		</data>
 		<key>The3DObjectPickerCollectionViewCell.nib</key>
 		<data>
-		3SDTm5lExR/32RJ+9aygpDnCp/k=
+		0rBdUXrYx+IlfolzcQC9rdOT7e4=
 		</data>
 		<key>The3DObjectsPickerViewController.storyboardc/Info.plist</key>
 		<data>
@@ -462,7 +466,7 @@
 		</data>
 		<key>The3DObjectsPickerViewController.storyboardc/vSI-jT-m46-view-ILs-65-bXW.nib</key>
 		<data>
-		13BV4/nuVwHLpPBPA3bNmTeU5kc=
+		CK7JxGluzte40gxJhTVBU66JJik=
 		</data>
 		<key>TimelineViewController.nib</key>
 		<data>
@@ -607,7 +611,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			x0YShoS66HSu0VctEpzwwnrURLFjYpb8N5ipyqcTPko=
+			Vwn8ZmdHU3dGa1ZEnDteP5xuj+Tpw5PNRiKEK2ODgrM=
 			</data>
 		</dict>
 		<key>AudioEditingController.nib</key>
@@ -706,6 +710,13 @@
 			<key>hash2</key>
 			<data>
 			5ZhqQyCs9V7U9UN6UBpFaMjuqG+T3n9KQdZLZ16Cq8E=
+			</data>
+		</dict>
+		<key>BeautyIntensityViewController.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			mRD5NOFsGqWlxJaHFmmYURRKKIFDiKvhUL/C+Di9zLY=
 			</data>
 		</dict>
 		<key>CaptionsViewController.nib</key>
@@ -1006,7 +1017,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			K1JLjP8l9zhv7xh33HPs/d1jVq7/vTlaXshU/gykJjU=
+			jxgZ9fylyuH5mobrFpQ/13ZUQTqXoF323XeTjiLshfY=
 			</data>
 		</dict>
 		<key>Headers/AudioBrowserFrameworkInteractor.h</key>
@@ -1020,7 +1031,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			CyHqCybUibk68p7g4Pm//Whd4DgP2C9+1jrKW7q7eFI=
+			sbIwCcVRt9SdvGLvQAkXWTHtDs6Q5jxzWS1ZSNtfV8o=
 			</data>
 		</dict>
 		<key>Headers/BanubaSDKSimpleInteractor.h</key>
@@ -1125,35 +1136,35 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			yEBF37+ABzMiqphTJabE7tCr9OuRKJNSd7g2ArdX7eQ=
+			MbfBq4C3sXwmudStTnpiTXwlEVeLw6W24FanPw6Y0fo=
 			</data>
 		</dict>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			dD+DS87bjTfb4RNrE3xHL8KtgaZ4GtBvrHuhFyacPm8=
+			ADrSe1wtB9UwSKhskaAEVPMr1WMN0E86ri9tbm1qeEA=
 			</data>
 		</dict>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			40bg6+PYwBiBrwKbphmOptMXi55uXAaODH25+VhwF50=
+			xBBs+7P+Ya1fagqZaDkNUiDjr9Ls7D5H7ZYrs2yyVog=
 			</data>
 		</dict>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			dD+DS87bjTfb4RNrE3xHL8KtgaZ4GtBvrHuhFyacPm8=
+			ADrSe1wtB9UwSKhskaAEVPMr1WMN0E86ri9tbm1qeEA=
 			</data>
 		</dict>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			QsFn4liRoZZhW9I7ZwC2F822jycNzm+VkrEIGZj6isc=
+			G73w4ypaniK7vIzCXlWHGAxUvek6YcH6qUV6ehkO/gI=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -1349,7 +1360,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			i4LbflSIkaw4L7mmv6XZwbqQnooxxwjxNde5l9134Ss=
+			nZLl5j9b8jkdDoi1FF7I/tN+iPTZu80b63bmb1GeDYk=
 			</data>
 		</dict>
 		<key>The3DObjectsPickerViewController.storyboardc/Info.plist</key>
@@ -1370,7 +1381,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			8MnGv4zjGGJx1BV/XTJavRGOfZ8QvQNr2wFqKjj/o80=
+			r5Ith01SBQp5gkINEEL2bs345oYBcvWp3G74Tlwl//g=
 			</data>
 		</dict>
 		<key>TimelineViewController.nib</key>

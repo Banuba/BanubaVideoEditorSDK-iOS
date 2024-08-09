@@ -23,7 +23,7 @@ __attribute__((weak_import)) @interface BanubaSDKFrameworkInteractor : NSObject
                       videoSize:(CGSize) videoSize
                     videoPreset:(AVCaptureSessionPreset _Nonnull) videoPreset
 useHEVCCodecIfPossibleForRecorder:(BOOL) useHEVCCodecIfPossibleForRecorder
-                    arCloudPath:(NSString * _Nullable) arCloudPath;
+        additionalEffectsPaths:(NSArray<NSString * > *_Nullable) additionalEffectsPaths;
 
 + (id _Nullable) getCameraModuleInstance;
 + (id _Nullable) getMaskPostprocessingServiceWithVideoSize:(CGSize) videoSize;
