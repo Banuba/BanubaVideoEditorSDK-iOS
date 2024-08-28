@@ -863,6 +863,8 @@ public enum CaptionsLanguage : Swift.String, Swift.CaseIterable {
   case mandarin
   case portuguese
   case spanish
+  case arabicGulf
+  case arabic
   public init?(rawValue: Swift.String)
   public typealias AllCases = [BanubaVideoEditorSDK.CaptionsLanguage]
   public typealias RawValue = Swift.String
@@ -2059,6 +2061,7 @@ public struct GreenScreenBackgroundPickerConfiguration {
 public struct The3DObjectsConfiguration {
   public var itemConfiguration: BanubaVideoEditorSDK.The3DObjectPickerItemConfiguration
   public var the3DObjectsARCloudURL: Swift.String?
+  public var genderTileFont: UIKit.UIFont
 }
 public enum EffectType {
   case mask
