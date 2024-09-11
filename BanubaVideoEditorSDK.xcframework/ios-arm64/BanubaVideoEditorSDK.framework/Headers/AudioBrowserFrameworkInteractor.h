@@ -41,6 +41,7 @@ __attribute__((weak_import)) @interface AudioBrowserFrameworkInteractor : NSObje
 - (instancetype)initWithSelectedTrack: (AudioBrowserTrackWrapper * _Nullable) selectedTrack
                 isMusicLibraryEnabled:(BOOL)isMusicLibraryEnabled
                  isSoundstripeEnabled:(BOOL)isSoundstripeEnabled
+                 isBanubaMusicEnabled:(BOOL)isBanubaMusicEnabled
                                 token:(NSString*)token
           isAudioPartSelectionEnabled:(BOOL)isAudioPartSelectionEnabled
                         videoDuration:(double)videoDuration;

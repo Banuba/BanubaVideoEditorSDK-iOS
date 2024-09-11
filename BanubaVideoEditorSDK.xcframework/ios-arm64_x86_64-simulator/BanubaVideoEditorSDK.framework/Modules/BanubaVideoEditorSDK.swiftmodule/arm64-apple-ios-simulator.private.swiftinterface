@@ -863,8 +863,8 @@ public enum CaptionsLanguage : Swift.String, Swift.CaseIterable {
   case mandarin
   case portuguese
   case spanish
-  case arabicGulf
   case arabic
+  case arabicGulf
   public init?(rawValue: Swift.String)
   public typealias AllCases = [BanubaVideoEditorSDK.CaptionsLanguage]
   public typealias RawValue = Swift.String
@@ -1116,7 +1116,6 @@ public struct TimelineEffectColorsPalette {
   }
 }
 public struct The3DObjectPickerItemConfiguration {
-  public var imagePlaceholder: any BanubaUtilities.ImageConfigurationProtocol
   public var downloadIconConfiguration: any BanubaUtilities.ImageConfigurationProtocol
   public var progressColor: UIKit.UIColor
   public var progressWidth: CoreFoundation.CGFloat
@@ -1395,7 +1394,8 @@ public class VideoEditorViewConfiguration {
   public var addGalleryVideoImageButtonConfiguration: BanubaVideoEditorSDK.ImageButtonConfiguration
   public var appearingBottomViewBackgroundColor: UIKit.UIColor
   public var appearingViewNavBarConfiguration: BanubaVideoEditorSDK.AppearingViewNavigationViewConfiguration
-  public init(backButtonConfiguration: BanubaVideoEditorSDK.ImageButtonConfiguration, nextButtonConfiguration: BanubaVideoEditorSDK.BanubaButtonConfiguration, playerControlConfiguration: BanubaUtilities.PlayerControlConfiguration, previewButtonConfiguration: BanubaVideoEditorSDK.ImageButtonConfiguration, backgroundColor: UIKit.UIColor, effectsBackgroundColor: UIKit.UIColor, timelineConfiguration: BanubaVideoEditorSDK.CompositionTimelineConfiguration, timeLabelsConfiguration: BanubaUtilities.TextConfiguration, toolsPanelConfiguration: BanubaVideoEditorSDK.VideoEditorToolsPanel.Configuration, effectsManagementPanelConfiguration: BanubaVideoEditorSDK.VideoEditorEffectsManagementPanel.Configuration, primaryAspectRatio: BanubaUtilities.AspectRatio, preferredLutsOrder: [Swift.String], preferredMasksOrder: [Swift.String], preferredVideoEffectOrderAndSet: [VEEffectsSDK.VisualEffectApplicatorType], addGalleryVideoButtonBackgroundConfiguration: BanubaUtilities.BackgroundConfiguration, addGalleryVideoImageButtonConfiguration: BanubaVideoEditorSDK.ImageButtonConfiguration, appearingBottomViewBackgroundColor: UIKit.UIColor, appearingViewNavBarConfiguration: BanubaVideoEditorSDK.AppearingViewNavigationViewConfiguration)
+  public var transitions: [BanubaVideoEditorSDK.TransitionEffect]
+  public init(backButtonConfiguration: BanubaVideoEditorSDK.ImageButtonConfiguration, nextButtonConfiguration: BanubaVideoEditorSDK.BanubaButtonConfiguration, playerControlConfiguration: BanubaUtilities.PlayerControlConfiguration, previewButtonConfiguration: BanubaVideoEditorSDK.ImageButtonConfiguration, backgroundColor: UIKit.UIColor, effectsBackgroundColor: UIKit.UIColor, timelineConfiguration: BanubaVideoEditorSDK.CompositionTimelineConfiguration, timeLabelsConfiguration: BanubaUtilities.TextConfiguration, toolsPanelConfiguration: BanubaVideoEditorSDK.VideoEditorToolsPanel.Configuration, effectsManagementPanelConfiguration: BanubaVideoEditorSDK.VideoEditorEffectsManagementPanel.Configuration, primaryAspectRatio: BanubaUtilities.AspectRatio, preferredLutsOrder: [Swift.String], preferredMasksOrder: [Swift.String], preferredVideoEffectOrderAndSet: [VEEffectsSDK.VisualEffectApplicatorType], addGalleryVideoButtonBackgroundConfiguration: BanubaUtilities.BackgroundConfiguration, addGalleryVideoImageButtonConfiguration: BanubaVideoEditorSDK.ImageButtonConfiguration, appearingBottomViewBackgroundColor: UIKit.UIColor, appearingViewNavBarConfiguration: BanubaVideoEditorSDK.AppearingViewNavigationViewConfiguration, transitions: [BanubaVideoEditorSDK.TransitionEffect])
   @objc deinit
 }
 public struct SharingScreenConfiguration {
@@ -1684,9 +1684,10 @@ public struct AdditionalEffectsButtonConfiguration {
   public var defaultTitleAlpha: CoreFoundation.CGFloat?
   public var selectedTitleAlpha: CoreFoundation.CGFloat?
   public var cornerRadius: CoreFoundation.CGFloat
+  public var backgroundMode: BanubaUtilities.BackgroundMode
   public var backgroundColor: UIKit.UIColor
   public var contentInsets: CoreFoundation.CGFloat
-  public init(identifier: BanubaVideoEditorSDK.AdditionalEffectsButtonConfiguration.ButtonType, imageConfiguration: BanubaVideoEditorSDK.ImageConfiguration, selectedImageConfiguration: BanubaVideoEditorSDK.ImageConfiguration?, title: BanubaUtilities.TextButtonConfiguration? = nil, titlePosition: BanubaVideoEditorSDK.TitlePosition? = nil, width: CoreFoundation.CGFloat = 50, height: CoreFoundation.CGFloat = 50, position: BanubaVideoEditorSDK.AdditionalEffectsButtonConfiguration.Position? = nil, imageTitleSpacing: CoreFoundation.CGFloat? = nil, defaultTitleAlpha: CoreFoundation.CGFloat? = nil, selectedTitleAlpha: CoreFoundation.CGFloat? = nil, cornerRadius: CoreFoundation.CGFloat = .zero, backgroundColor: UIKit.UIColor = .clear, contentInsets: CoreFoundation.CGFloat = 8.5)
+  public init(identifier: BanubaVideoEditorSDK.AdditionalEffectsButtonConfiguration.ButtonType, imageConfiguration: BanubaVideoEditorSDK.ImageConfiguration, selectedImageConfiguration: BanubaVideoEditorSDK.ImageConfiguration?, title: BanubaUtilities.TextButtonConfiguration? = nil, titlePosition: BanubaVideoEditorSDK.TitlePosition? = nil, width: CoreFoundation.CGFloat = 50, height: CoreFoundation.CGFloat = 50, position: BanubaVideoEditorSDK.AdditionalEffectsButtonConfiguration.Position? = nil, imageTitleSpacing: CoreFoundation.CGFloat? = nil, defaultTitleAlpha: CoreFoundation.CGFloat? = nil, selectedTitleAlpha: CoreFoundation.CGFloat? = nil, cornerRadius: CoreFoundation.CGFloat = .zero, backgroundMode: BanubaUtilities.BackgroundMode = .color, backgroundColor: UIKit.UIColor = .clear, contentInsets: CoreFoundation.CGFloat = 8.5)
   public enum ButtonType : Swift.String {
     case link
     case color
@@ -2052,6 +2053,7 @@ public struct GreenScreenBackgroundPickerConfiguration {
     public var selectedBorderColor: UIKit.UIColor
     public var durationLabel: BanubaUtilities.TextConfiguration
     public var activityConfiguration: BanubaUtilities.SmallActivityIndicatorConfiguration
+    public var selectionCornerRadiusMultiplier: CoreFoundation.CGFloat
   }
   public var title: BanubaUtilities.TextConfiguration
   public var itemConfiguration: BanubaVideoEditorSDK.GreenScreenBackgroundPickerConfiguration.ItemConfiguration
@@ -2492,6 +2494,12 @@ extension VideoEditor.VideoEditorFilterModel : BanubaVideoEditorSDK.EffectViewMo
   public var title: Swift.String {
     get
   }
+}
+public struct TransitionEffect : Swift.Equatable {
+  public let type: BanubaUtilities.TransitionType
+  public let icon: any BanubaUtilities.ImageConfigurationProtocol
+  public let title: Swift.String
+  public static func == (lhs: BanubaVideoEditorSDK.TransitionEffect, rhs: BanubaVideoEditorSDK.TransitionEffect) -> Swift.Bool
 }
 public struct MusicEditorConfig {
   public var mainMusicViewControllerConfig: BanubaVideoEditorSDK.MainMusicViewControllerConfig
