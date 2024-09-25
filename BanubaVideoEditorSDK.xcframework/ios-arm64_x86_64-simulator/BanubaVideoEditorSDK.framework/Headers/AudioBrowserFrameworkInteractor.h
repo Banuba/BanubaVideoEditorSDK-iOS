@@ -43,6 +43,7 @@ __attribute__((weak_import)) @interface AudioBrowserFrameworkInteractor : NSObje
                  isSoundstripeEnabled:(BOOL)isSoundstripeEnabled
                  isBanubaMusicEnabled:(BOOL)isBanubaMusicEnabled
                                 token:(NSString*)token
+                       isAutocutAudio:(BOOL)isAutocutAudio
           isAudioPartSelectionEnabled:(BOOL)isAudioPartSelectionEnabled
                         videoDuration:(double)videoDuration;
 

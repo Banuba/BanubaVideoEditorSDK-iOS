@@ -451,29 +451,29 @@ public class TextEditSelectionBorderAnimationBehavior : BanubaVideoEditorSDK.Tex
   public func setColorView(_ colorView: UIKit.UIView, selected: Swift.Bool, animated: Swift.Bool)
   @objc deinit
 }
-@_hasMissingDesignatedInitializers public class DefaultCountdownAnimatableView : BanubaVideoEditorSDK.CountdownTimerViewFactory {
-  public func makeCountdownTimerView() -> any BanubaUtilities.CountdownTimerAnimatableView
+@_hasMissingDesignatedInitializers final public class DefaultCountdownAnimatableView : BanubaVideoEditorSDK.CountdownTimerViewFactory {
+  final public func makeCountdownTimerView() -> any BanubaUtilities.CountdownTimerAnimatableView
   @objc deinit
 }
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class CountdownView : UIKit.UIView, BanubaUtilities.CountdownTimerAnimatableView {
-  @_Concurrency.MainActor(unsafe) public var font: UIKit.UIFont {
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) final public class CountdownView : UIKit.UIView, BanubaUtilities.CountdownTimerAnimatableView {
+  @_Concurrency.MainActor(unsafe) final public var font: UIKit.UIFont {
     get
     set
   }
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public func draw(_ rect: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc override final public func draw(_ rect: CoreFoundation.CGRect)
   @objc deinit
 }
 extension BanubaVideoEditorSDK.CountdownView {
-  @_Concurrency.MainActor(unsafe) public var countdownDigit: Swift.Int {
+  @_Concurrency.MainActor(unsafe) final public var countdownDigit: Swift.Int {
     get
     set
   }
-  @_Concurrency.MainActor(unsafe) public var digitColor: UIKit.UIColor {
+  @_Concurrency.MainActor(unsafe) final public var digitColor: UIKit.UIColor {
     get
     set
   }
-  @_Concurrency.MainActor(unsafe) public func start(completion: @escaping (Swift.Bool) -> Swift.Void)
-  @_Concurrency.MainActor(unsafe) public func stop()
+  @_Concurrency.MainActor(unsafe) final public func start(completion: @escaping (Swift.Bool) -> Swift.Void)
+  @_Concurrency.MainActor(unsafe) final public func stop()
 }
 public struct VideoAspectRatio {
   public static var minFillAspectRatio: CoreFoundation.CGFloat {
@@ -1039,39 +1039,6 @@ public struct BanubaVideoEditorSwiftUIView : SwiftUI.UIViewControllerRepresentab
   public typealias Coordinator = Swift.Void
   public typealias UIViewControllerType = UIKit.UIViewController
 }
-public protocol RecordButton : UIKit.UIView {
-  var delegate: (any BanubaVideoEditorSDK.RecordButtonDelegate)? { get set }
-  var configuration: BanubaVideoEditorSDK.RecordButtonConfiguration { get set }
-  func setCaptureButtonState(_ state: BanubaVideoEditorSDK.CaptureButtonViewState)
-  func setCaptureButtonMode(_ mode: BanubaVideoEditorSDK.CaptureButtonViewMode)
-}
-public protocol RecordButtonDelegate : AnyObject {
-  var captureButtonMode: BanubaVideoEditorSDK.CaptureButtonViewMode { get }
-  func recordButtonDidTakePhoto(_ recordButton: any BanubaVideoEditorSDK.RecordButton)
-  func recordButtonDidCancelTakePhoto(_ recordButton: any BanubaVideoEditorSDK.RecordButton)
-  func recordButtonDidStartVideoRecording(_ recordButton: any BanubaVideoEditorSDK.RecordButton)
-  func recordButtonDidStopVideoRecording(_ recordButton: any BanubaVideoEditorSDK.RecordButton)
-  func recordButtonDidZoomingVideoRecording(_ recordButton: any BanubaVideoEditorSDK.RecordButton, recognizer: UIKit.UILongPressGestureRecognizer)
-}
-public enum CaptureButtonViewMode {
-  case video
-  case photo
-  public static func == (a: BanubaVideoEditorSDK.CaptureButtonViewMode, b: BanubaVideoEditorSDK.CaptureButtonViewMode) -> Swift.Bool
-  public func hash(into hasher: inout Swift.Hasher)
-  public var hashValue: Swift.Int {
-    get
-  }
-}
-public enum CaptureButtonViewState {
-  case idle
-  case recording
-  case takePhoto
-  public static func == (a: BanubaVideoEditorSDK.CaptureButtonViewState, b: BanubaVideoEditorSDK.CaptureButtonViewState) -> Swift.Bool
-  public func hash(into hasher: inout Swift.Hasher)
-  public var hashValue: Swift.Int {
-    get
-  }
-}
 public enum DraftActionType {
   case save
   case update
@@ -1230,7 +1197,7 @@ public struct RecorderConfiguration {
   public var progressLabelConfiguration: BanubaUtilities.TextConfiguration?
   public var floatingLineViewConfiguration: BanubaUtilities.TextConfiguration?
   public var floatingLineViewWidth: CoreFoundation.CGFloat?
-  public var captureButtonModes: Swift.Set<BanubaVideoEditorSDK.CaptureButtonViewMode>
+  public var captureButtonModes: [BanubaVideoEditorSDK.CaptureButtonViewMode]
   public var recordButtonConfiguration: BanubaVideoEditorSDK.RecordButtonConfiguration
   public var recordButtonProvider: (any BanubaVideoEditorSDK.RecordButtonProvider)?
   public var additionalEffectsButtons: [BanubaVideoEditorSDK.AdditionalEffectsButtonConfiguration]
@@ -1270,6 +1237,7 @@ public struct RecordButtonConfiguration {
   public var strokeColor: CoreGraphics.CGColor
   public var gradientColors: [CoreGraphics.CGColor]
   public var circularTimeLineIdleWidth: CoreFoundation.CGFloat
+  public var circularTimeLineCapturingWidth: CoreFoundation.CGFloat
   public var width: CoreFoundation.CGFloat
   public var height: CoreFoundation.CGFloat
   public var defaultVideoRecordButtonColor: UIKit.UIColor
@@ -1557,7 +1525,8 @@ public class ProgressViewConfiguration {
 public struct BeautyIntensityConfiguration {
   public var sliderThumbImageName: Swift.String
   public var sliderTintColor: UIKit.UIColor
-  public init(sliderThumbImageName: Swift.String, sliderTintColor: UIKit.UIColor)
+  public var backgroundConfiguration: BanubaUtilities.BackgroundConfiguration
+  public init(sliderThumbImageName: Swift.String, sliderTintColor: UIKit.UIColor, backgroundConfiguration: BanubaUtilities.BackgroundConfiguration)
 }
 public protocol ExternalViewControllerFactory {
   var musicEditorFactory: (any BanubaVideoEditorSDK.MusicEditorExternalViewControllerFactory)? { get set }
@@ -2044,6 +2013,43 @@ public class AspectsService : BanubaVideoEditorSDK.AspectsServicing {
 public struct CaptionLanguageConfiguration {
   public var selectedIcon: any BanubaUtilities.ImageConfigurationProtocol
 }
+public protocol RecordButton : UIKit.UIView {
+  var delegate: (any BanubaVideoEditorSDK.RecordButtonDelegate)? { get set }
+  var configuration: BanubaVideoEditorSDK.RecordButtonConfiguration { get set }
+  func setCaptureButtonState(_ state: BanubaVideoEditorSDK.CaptureButtonViewState)
+  func setCaptureButtonMode(_ mode: BanubaVideoEditorSDK.CaptureButtonViewMode)
+  func updateVideoRecordingProgress(_ progress: Swift.Double)
+  func addCheckMark(at progress: Swift.Double)
+  func removeLaskCheckMark()
+  func removeAllCheckMarks()
+}
+public enum CaptureButtonViewState {
+  case idle
+  case recording
+  case takePhoto
+  public static func == (a: BanubaVideoEditorSDK.CaptureButtonViewState, b: BanubaVideoEditorSDK.CaptureButtonViewState) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum CaptureButtonViewMode {
+  case video
+  case photo
+  public static func == (a: BanubaVideoEditorSDK.CaptureButtonViewMode, b: BanubaVideoEditorSDK.CaptureButtonViewMode) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public protocol RecordButtonDelegate : AnyObject {
+  var captureButtonMode: BanubaVideoEditorSDK.CaptureButtonViewMode { get }
+  func recordButtonDidTakePhoto(_ recordButton: any BanubaVideoEditorSDK.RecordButton)
+  func recordButtonDidCancelTakePhoto(_ recordButton: any BanubaVideoEditorSDK.RecordButton)
+  func recordButtonDidStartVideoRecording(_ recordButton: any BanubaVideoEditorSDK.RecordButton)
+  func recordButtonDidStopVideoRecording(_ recordButton: any BanubaVideoEditorSDK.RecordButton)
+  func recordButtonDidZoomingVideoRecording(_ recordButton: any BanubaVideoEditorSDK.RecordButton, recognizer: UIKit.UILongPressGestureRecognizer)
+}
 public struct GreenScreenBackgroundPickerConfiguration {
   public struct ItemConfiguration {
     public var normalImage: BanubaVideoEditorSDK.ImageConfiguration
@@ -2405,11 +2411,11 @@ public struct AppearingViewNavigationViewConfiguration {
 public protocol ProgressAnimatableViewFactory {
   func makeProgressAnimatableView() -> any BanubaUtilities.ProgressAnimatableView
 }
-public class CircularProgressViewFactory : BanubaVideoEditorSDK.ProgressAnimatableViewFactory {
-  public var progressColor: UIKit.UIColor
+final public class CircularProgressViewFactory : BanubaVideoEditorSDK.ProgressAnimatableViewFactory {
+  final public var progressColor: UIKit.UIColor
   final public let shadowColor: UIKit.UIColor
   public init(progressColor: UIKit.UIColor = .white, shadowColor: UIKit.UIColor = UIColor(white: 0, alpha: 0.25))
-  public func makeProgressAnimatableView() -> any BanubaUtilities.ProgressAnimatableView
+  final public func makeProgressAnimatableView() -> any BanubaUtilities.ProgressAnimatableView
   @objc deinit
 }
 public enum GiphyResolution {
@@ -2501,6 +2507,11 @@ public struct TransitionEffect : Swift.Equatable {
   public let title: Swift.String
   public static func == (lhs: BanubaVideoEditorSDK.TransitionEffect, rhs: BanubaVideoEditorSDK.TransitionEffect) -> Swift.Bool
 }
+final public class CircularProgressRecordButtonProvider : BanubaVideoEditorSDK.RecordButtonProvider {
+  public init()
+  final public func getButton() -> any BanubaVideoEditorSDK.RecordButton
+  @objc deinit
+}
 public struct MusicEditorConfig {
   public var mainMusicViewControllerConfig: BanubaVideoEditorSDK.MainMusicViewControllerConfig
   public var videoTrackLineEditControllerConfig: BanubaVideoEditorSDK.VideoTrackLineEditViewControllerConfig
@@ -2551,10 +2562,6 @@ extension BanubaVideoEditorSDK.OverlayEditButtonConfig.`Type` : Swift.RawReprese
 extension BanubaVideoEditorSDK.OverlayControlButtonConfig.`Type` : Swift.Equatable {}
 extension BanubaVideoEditorSDK.OverlayControlButtonConfig.`Type` : Swift.Hashable {}
 extension BanubaVideoEditorSDK.OverlayControlButtonConfig.`Type` : Swift.RawRepresentable {}
-extension BanubaVideoEditorSDK.CaptureButtonViewMode : Swift.Equatable {}
-extension BanubaVideoEditorSDK.CaptureButtonViewMode : Swift.Hashable {}
-extension BanubaVideoEditorSDK.CaptureButtonViewState : Swift.Equatable {}
-extension BanubaVideoEditorSDK.CaptureButtonViewState : Swift.Hashable {}
 extension BanubaVideoEditorSDK.DraftActionType : Swift.Equatable {}
 extension BanubaVideoEditorSDK.DraftActionType : Swift.Hashable {}
 extension BanubaVideoEditorSDK.RecorderPreviewScalingMode : Swift.Equatable {}
@@ -2577,6 +2584,10 @@ extension BanubaVideoEditorSDK.FilterControlButtonConfig.`Type` : Swift.Hashable
 extension BanubaVideoEditorSDK.FilterControlButtonConfig.`Type` : Swift.RawRepresentable {}
 extension BanubaVideoEditorSDK.DraftMenuItemType : Swift.Equatable {}
 extension BanubaVideoEditorSDK.DraftMenuItemType : Swift.Hashable {}
+extension BanubaVideoEditorSDK.CaptureButtonViewState : Swift.Equatable {}
+extension BanubaVideoEditorSDK.CaptureButtonViewState : Swift.Hashable {}
+extension BanubaVideoEditorSDK.CaptureButtonViewMode : Swift.Equatable {}
+extension BanubaVideoEditorSDK.CaptureButtonViewMode : Swift.Hashable {}
 extension BanubaVideoEditorSDK.EffectType : Swift.Equatable {}
 extension BanubaVideoEditorSDK.EffectType : Swift.Hashable {}
 extension BanubaVideoEditorSDK.VideoRecordSpeed : Swift.Equatable {}
