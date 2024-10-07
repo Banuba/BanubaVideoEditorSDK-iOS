@@ -136,10 +136,14 @@ public protocol BanubaVideoEditorDelegate : AnyObject {
   func videoEditorDone(_ videoEditor: BanubaVideoEditorSDK.BanubaVideoEditor)
   func videoEditor(_ videoEditor: BanubaVideoEditorSDK.BanubaVideoEditor, shouldProcessMediaUrls urls: [Foundation.URL]) -> Swift.Bool
   func videoEditor(_ videoEditor: BanubaVideoEditorSDK.BanubaVideoEditor, didSaveDraft draft: BanubaVideoEditorSDK.ExternalDraft)
+  func videoEditor(_ videoEditor: BanubaVideoEditorSDK.BanubaVideoEditor, didSaveCurrentSession session: BanubaVideoEditorSDK.ExternalDraft)
+  func videoEditorDidRequestDrafts(_ videoEditor: BanubaVideoEditorSDK.BanubaVideoEditor)
 }
 extension BanubaVideoEditorSDK.BanubaVideoEditorDelegate {
   public func videoEditor(_ videoEditor: BanubaVideoEditorSDK.BanubaVideoEditor, shouldProcessMediaUrls urls: [Foundation.URL]) -> Swift.Bool
   public func videoEditor(_ videoEditor: BanubaVideoEditorSDK.BanubaVideoEditor, didSaveDraft draft: BanubaVideoEditorSDK.ExternalDraft)
+  public func videoEditor(_ videoEditor: BanubaVideoEditorSDK.BanubaVideoEditor, didSaveCurrentSession session: BanubaVideoEditorSDK.ExternalDraft)
+  public func videoEditorDidRequestDrafts(_ videoEditor: BanubaVideoEditorSDK.BanubaVideoEditor)
 }
 public class BanubaVideoEditor {
   weak public var delegate: (any BanubaVideoEditorSDK.BanubaVideoEditorDelegate)?
@@ -693,9 +697,10 @@ public struct FilterOnVideoMetadata : Swift.Codable {
   public let title: Swift.String
   public let startTime: BanubaVideoEditorSDK.TimeMetadata
   public let endTime: BanubaVideoEditorSDK.TimeMetadata
-  public init(title: Swift.String, startTime: BanubaVideoEditorSDK.TimeMetadata, endTime: BanubaVideoEditorSDK.TimeMetadata)
-  public func encode(to encoder: any Swift.Encoder) throws
+  public let linePositionOrderNumber: Swift.Int?
+  public init(title: Swift.String, startTime: BanubaVideoEditorSDK.TimeMetadata, endTime: BanubaVideoEditorSDK.TimeMetadata, linePositionOrderNumber: Swift.Int?)
   public init(from decoder: any Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
 }
 public struct CaptionsMetadata : Swift.Codable {
   public let existingCaptionIds: [Swift.String]
@@ -712,9 +717,10 @@ public struct EffectOnVideoMetadata : Swift.Codable {
   public let endTime: BanubaVideoEditorSDK.TimeMetadata
   public let effectId: Swift.UInt
   public let tokenId: Swift.String
-  public init(startTime: BanubaVideoEditorSDK.TimeMetadata, endTime: BanubaVideoEditorSDK.TimeMetadata, effectId: Swift.UInt, tokenId: Swift.String)
-  public func encode(to encoder: any Swift.Encoder) throws
+  public let linePositionOrderNumber: Swift.Int?
+  public init(startTime: BanubaVideoEditorSDK.TimeMetadata, endTime: BanubaVideoEditorSDK.TimeMetadata, effectId: Swift.UInt, tokenId: Swift.String, linePositionOrderNumber: Swift.Int?)
   public init(from decoder: any Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
 }
 public struct TextOnVideoMetadata : Swift.Codable {
   public let id: Swift.String
@@ -724,9 +730,10 @@ public struct TextOnVideoMetadata : Swift.Codable {
   public let coordinatesParams: BanubaVideoEditorSDK.CoordinatesParams
   public let order: Swift.Int
   public let textColorDestinationId: Swift.Int
-  public let linePositionOrderNumber: Swift.Int?
+  public let linePosition: Swift.Int?
   public let predefinedStyleId: Swift.Int?
-  public init(id: Swift.String, textParams: BanubaVideoEditorSDK.TextParams, startTime: BanubaVideoEditorSDK.TimeMetadata, endTime: BanubaVideoEditorSDK.TimeMetadata, coordinatesParams: BanubaVideoEditorSDK.CoordinatesParams, order: Swift.Int, textColorDestinationId: Swift.Int, linePositionOrderNumber: Swift.Int?, predefinedStyleId: Swift.Int?)
+  public let position: Swift.Int?
+  public init(id: Swift.String, textParams: BanubaVideoEditorSDK.TextParams, startTime: BanubaVideoEditorSDK.TimeMetadata, endTime: BanubaVideoEditorSDK.TimeMetadata, coordinatesParams: BanubaVideoEditorSDK.CoordinatesParams, order: Swift.Int, textColorDestinationId: Swift.Int, linePosition: Swift.Int?, predefinedStyleId: Swift.Int?, position: Swift.Int?)
   public init(from decoder: any Swift.Decoder) throws
   public func encode(to encoder: any Swift.Encoder) throws
 }
@@ -853,7 +860,7 @@ public struct Params : Swift.Codable {
   public init(from decoder: any Swift.Decoder) throws
 }
 extension BanubaVideoEditorSDK.EffectOnVideoMetadata {
-  public init(from editorCompositionEffect: any VideoEditor.EditorCompositionEditableEffectProtocol)
+  public init(from editorCompositionEffect: any VideoEditor.EditorCompositionEditableEffectProtocol, linePosition: Swift.Int?)
 }
 public protocol ProgressViewControllerFactory {
   func makeProgressViewController() -> any BanubaVideoEditorSDK.BanubaProgressViewController

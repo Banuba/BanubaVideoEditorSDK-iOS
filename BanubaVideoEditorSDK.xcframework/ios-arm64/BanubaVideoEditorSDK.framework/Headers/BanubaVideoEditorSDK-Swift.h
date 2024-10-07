@@ -433,6 +433,7 @@ SWIFT_CLASS("_TtC20BanubaVideoEditorSDK25TrimTimeLineConfiguration")
 
 
 
+
 SWIFT_CLASS("_TtC20BanubaVideoEditorSDK33VideoEditorEffectsManagementPanel")
 @interface VideoEditorEffectsManagementPanel : UIView
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;

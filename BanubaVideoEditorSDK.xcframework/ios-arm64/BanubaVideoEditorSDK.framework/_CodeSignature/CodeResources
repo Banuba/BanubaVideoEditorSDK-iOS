@@ -22,7 +22,7 @@
 		</data>
 		<key>Assets.car</key>
 		<data>
-		6itYmGCW3RvuYK6fQV9SkSHuhFM=
+		OU8bnWr8N4+0kced2P5Gr74+0Vg=
 		</data>
 		<key>AudioEditingController.nib</key>
 		<data>
@@ -78,7 +78,7 @@
 		</data>
 		<key>BackgroundPickerViewController.nib</key>
 		<data>
-		sL4++0zR7ws8kq0QsfvgP0CFDoo=
+		hxF3zOBvYu2V5RftxPFZk2dPZyY=
 		</data>
 		<key>BeautyIntensityViewController.nib</key>
 		<data>
@@ -126,7 +126,7 @@
 		</data>
 		<key>EditVolumeView.nib</key>
 		<data>
-		rJgCovM7Z+hxBwWwt8l32hRWQLw=
+		2Alsno1j7T8HTcMo2UjWAY1eVns=
 		</data>
 		<key>EditorAutoCutSoundPartSelectionViewController.storyboardc/EditorAutoCutSoundPartSelectionViewController.nib</key>
 		<data>
@@ -274,7 +274,7 @@
 		</data>
 		<key>Headers/BanubaVideoEditorSDK-Swift.h</key>
 		<data>
-		sBmIZvPZFYoARK7+CF846pKln8I=
+		RyGrfxP1OjEIxPtHXTpSs12vqjw=
 		</data>
 		<key>Headers/BanubaVideoEditorSDK.h</key>
 		<data>
@@ -290,7 +290,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		eOYa+qe9lukDlynqe0qmuJaNJ+U=
+		jDZYs8UWchwwqDSYXZvTRONbOgk=
 		</data>
 		<key>MainMusicViewController.storyboardc/BYZ-38-t0r-view-8bC-Xf-vdC.nib</key>
 		<data>
@@ -322,27 +322,27 @@
 		</data>
 		<key>MenuViewController.nib</key>
 		<data>
-		rO1/TQY7Rg05QGjVDlQ+ywzlSBA=
+		KSzf61/85BiPSJXw1CAq0gzulS0=
 		</data>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		WL0fSNmgV/28pyDaL7Q1t4S7hCU=
+		mA6PU0TN5uQfyM/EGFUMhdXoYaY=
 		</data>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		aJzInZIndgkbPik+Mp8ZCPtZ/Ic=
+		4jT1mkoYeTCRTIvbeFjFQLNpno0=
 		</data>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		nVqXnf6CSxy2z6Q/gAHBrCUD6/c=
+		LmvVfD4EIQoeze/nohLMQJaA6ZA=
 		</data>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		aJzInZIndgkbPik+Mp8ZCPtZ/Ic=
+		4jT1mkoYeTCRTIvbeFjFQLNpno0=
 		</data>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		HrvWMsU1/kKdEwMx5cY/d+qSvw4=
+		Suz08ZeXvXtsYI5AJC0v+8aDGK0=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -354,7 +354,7 @@
 		</data>
 		<key>MultiCamRecorderViewController.storyboardc/Tb8-4D-b1F-view-0y0-cp-WjI.nib</key>
 		<data>
-		CaDLeTyshERX6PlnEpv8hPWjQjk=
+		Gv8XzD7h7O+EOyor25QFms+g8Nk=
 		</data>
 		<key>MultiCamRecorderViewController.storyboardc/UIViewController-Tb8-4D-b1F.nib</key>
 		<data>
@@ -538,7 +538,7 @@
 		</data>
 		<key>VideoEditorViewController.nib</key>
 		<data>
-		fm3tWiUQNqwAta9O4xaqk19VkL4=
+		2vT5jcBT9zKiWfJvudckBpQeYOI=
 		</data>
 		<key>VideoOrderItemCollectionViewCell.nib</key>
 		<data>
@@ -558,7 +558,7 @@
 		</data>
 		<key>VideoSpeedView.nib</key>
 		<data>
-		f6hwPIsQWkARxU8IFl1ZX9EezJs=
+		rnb71fRvRKy0YERR96f+nSC8rGI=
 		</data>
 		<key>VideoTextEditorViewController.storyboardc/Info.plist</key>
 		<data>
@@ -619,7 +619,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			j7zJ9kphbwPxoE+F0MoEHkK3TeFIKcmMX6XY1Gz0qxM=
+			+wwuqtnouPKLOTRWudixXJ9mwDF/v44mq6M9dj0y8ck=
 			</data>
 		</dict>
 		<key>AudioEditingController.nib</key>
@@ -717,7 +717,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			bctiWqhseyx039/VSO0mN4JA4WDdjzLL3g0dBadr550=
+			GtdyjsRuH7R8cOgGiRkyI/Q9HE1gK1CKO7TAww4ocbg=
 			</data>
 		</dict>
 		<key>BeautyIntensityViewController.nib</key>
@@ -801,7 +801,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			PfsId2eVuwcQgEH2m0kRzRjXEYk5AmUJUSZHyaeN2b4=
+			m8/PjUpkoBuEcgggxXthueFWuQH2BDcPdA78VKap8hY=
 			</data>
 		</dict>
 		<key>EditorAutoCutSoundPartSelectionViewController.storyboardc/EditorAutoCutSoundPartSelectionViewController.nib</key>
@@ -1060,7 +1060,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			AdoAJdebReVO64mO094XjcTjxHNTg4uNNbA/XGdh+Oo=
+			wbrObvrvNRRbW7ID3VIuYzYHOk8Yaxh4EChmGDstHt0=
 			</data>
 		</dict>
 		<key>Headers/BanubaVideoEditorSDK.h</key>
@@ -1137,42 +1137,42 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			5aFgmVZAEsaIIkuM5yjndpdgCAId4nfAC6JO3NLqR8o=
+			vnJOTdzZdGjiQyY8NM2r8Ol0y8mAPlkryHT/WjCZyj0=
 			</data>
 		</dict>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/arm64-apple-ios.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			M8fSppkOVKRYNeQN0yLp2EeeluqJbkPh5U6kaiGzY+k=
+			uOjae9vHTVQKFQvez8iBosoc+VAI7ZZlbIhRrgzvfTg=
 			</data>
 		</dict>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ZnrBTB/dKAQHP2yV5GCUbecUXrIT8HN2+bgOrNfvqtk=
+			Vjnb7/tY9T/oXMxp1XLh3cLsTS00kQSPmsWvH3CVVsw=
 			</data>
 		</dict>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			+Ztxtn/Vs6b9RZzJOu91WCfsuieXeeRaCkXZ8jwF7r8=
+			WaCMFjDyr+i/BXO2TiJ9Ylyubg78IB61NzT5JyEQDJA=
 			</data>
 		</dict>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ZnrBTB/dKAQHP2yV5GCUbecUXrIT8HN2+bgOrNfvqtk=
+			Vjnb7/tY9T/oXMxp1XLh3cLsTS00kQSPmsWvH3CVVsw=
 			</data>
 		</dict>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			LNp3xgBjMwkUT4JqQAX0xzqmAPfg2ZabU8+43LcqZvE=
+			E4gPvJieY6SSXIBoWJdHyhWqC4bspm2XmhNflRAt8e0=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -1193,7 +1193,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			9n3ZsJB1qbEqChkt51Y1O/CpHem2SGqAClAhKxKb3C8=
+			lvFcIaVHjDQMW/s2UTLfsLHc51jKPhVkqqCmXXHphLU=
 			</data>
 		</dict>
 		<key>MultiCamRecorderViewController.storyboardc/UIViewController-Tb8-4D-b1F.nib</key>
@@ -1515,7 +1515,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			jFYtFKVHytD8k5sxLSO22y7UYMnKGlNWMAjrJwbKw0E=
+			XOILsnsJD6Mj8zElpay+7wKiRN2R0ivK/K5OwkQ5Qg8=
 			</data>
 		</dict>
 		<key>VideoOrderItemCollectionViewCell.nib</key>
@@ -1550,7 +1550,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Dw+4BWpP0Bf9+nmzFpkTTR+TT98qYwK7hb1iUffynVM=
+			PUWhxFqPwo0qoNHmOyafWaLAMQn9ZEkydr905EjbqSg=
 			</data>
 		</dict>
 		<key>VideoTextEditorViewController.storyboardc/Info.plist</key>
