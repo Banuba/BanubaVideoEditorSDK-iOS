@@ -2291,6 +2291,7 @@ public class VideoMetadataStorage {
   public func videoMetadata(forVideoSequence videoSequence: VideoEditor.VideoSequence?) -> BanubaVideoEditorSDK.VideoMetadata?
   public func videoEditorTrimMetadata(for videoSequence: VideoEditor.VideoSequence) -> BanubaVideoEditorSDK.VideoEditorTrimMetadata?
   public func videoCoverMetadata(forVideoSequence videoSequence: VideoEditor.VideoSequence?) -> BanubaVideoEditorSDK.VideoCoverMetadata?
+  public func cameraSessionMetadata(forVideoSequence videoSequence: VideoEditor.VideoSequence?) -> BanubaVideoEditorSDK.CameraSessionMetadata?
   public func replaceMetadata(ofVideoSequence destinationSequence: VideoEditor.VideoSequence, withVideoSequence sourceSequence: VideoEditor.VideoSequence)
   public func duplicateMetadata(ofVideoSequence sourceSequence: VideoEditor.VideoSequence, toVideoSequence destinationSequence: VideoEditor.VideoSequence)
 }
