@@ -2284,6 +2284,7 @@ public class VideoMetadataStorage {
   public func update(metadata: BanubaVideoEditorSDK.VideoEditorTrimMetadata)
   public func resetTrimMetadata()
   public func update(metadata: BanubaVideoEditorSDK.VideoMetadata)
+  public func update(metadata: BanubaVideoEditorSDK.VideoMetadata, for videoSequence: VideoEditor.VideoSequence)
   public func update(metadata: BanubaVideoEditorSDK.VideoEditorMetadata)
   public func update(metadata: BanubaVideoEditorSDK.VideoCoverMetadata)
   public func reset()
