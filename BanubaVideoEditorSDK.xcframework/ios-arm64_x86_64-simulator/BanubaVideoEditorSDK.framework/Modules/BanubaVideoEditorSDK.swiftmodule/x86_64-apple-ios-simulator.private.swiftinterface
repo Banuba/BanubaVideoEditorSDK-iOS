@@ -2456,6 +2456,7 @@ public protocol EffectViewModel : AnyObject {
   var downloadType: BanubaVideoEditorSDK.ContentLocationType { get }
   var lutFileName: Swift.String? { get }
   func isEqual(to model: any BanubaVideoEditorSDK.EffectViewModel) -> Swift.Bool
+  var isMaskModel: Swift.Bool { get }
 }
 extension BanubaSDKServicing.EffectModel : BanubaVideoEditorSDK.EffectViewModel {
   public var lutFileName: Swift.String? {
@@ -2474,6 +2475,9 @@ extension BanubaSDKServicing.EffectModel : BanubaVideoEditorSDK.EffectViewModel 
   }
   public func isEqual(to model: any BanubaVideoEditorSDK.EffectViewModel) -> Swift.Bool
   public var type: BanubaVideoEditorSDK.EffectType {
+    get
+  }
+  public var isMaskModel: Swift.Bool {
     get
   }
   public var image: UIKit.UIImage? {
@@ -2500,6 +2504,9 @@ extension VideoEditor.VideoEditorFilterModel : BanubaVideoEditorSDK.EffectViewMo
     set
   }
   public func isEqual(to model: any BanubaVideoEditorSDK.EffectViewModel) -> Swift.Bool
+  public var isMaskModel: Swift.Bool {
+    get
+  }
   public var type: BanubaVideoEditorSDK.EffectType {
     get
   }
