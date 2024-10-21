@@ -2408,6 +2408,7 @@ public protocol SequencesServicing {
   func replaceSequenceWithId(_ sequenceId: Swift.String, withVideoSequence: VideoEditor.VideoSequence)
   func setupWithVideoSequence(_ videoSequence: VideoEditor.VideoSequence)
   func setEditingStep(_ editingStep: BanubaVideoEditorSDK.VideoSequenceEditingStep, forSequence videoSequence: VideoEditor.VideoSequence)
+  func sequenceWithId(_ sequenceId: Swift.String) -> VideoEditor.VideoSequence?
 }
 extension BanubaVideoEditorSDK.SequencesServicing {
   public func createNewSequence(withMusicTrack musicTrack: BanubaUtilities.MediaTrack? = nil, isSlideShow: Swift.Bool = false, editingStep: BanubaVideoEditorSDK.VideoSequenceEditingStep = .camera, maxVideoDuration: Foundation.TimeInterval) -> VideoEditor.VideoSequence
