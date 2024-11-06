@@ -1361,16 +1361,16 @@ public class VideoEditorViewConfiguration {
   public var timeLabelsConfiguration: BanubaUtilities.TextConfiguration
   public var toolsPanelConfiguration: BanubaVideoEditorSDK.VideoEditorToolsPanel.Configuration
   public var effectsManagementPanelConfiguration: BanubaVideoEditorSDK.VideoEditorEffectsManagementPanel.Configuration
+  public var toolsBackgroundPanelConfiguration: BanubaUtilities.BackgroundConfiguration
   public var primaryAspectRatio: BanubaUtilities.AspectRatio
   public var preferredLutsOrder: [Swift.String]
   public var preferredMasksOrder: [Swift.String]
   public var preferredVideoEffectOrderAndSet: [VEEffectsSDK.VisualEffectApplicatorType]
   public var addGalleryVideoButtonBackgroundConfiguration: BanubaUtilities.BackgroundConfiguration
   public var addGalleryVideoImageButtonConfiguration: BanubaVideoEditorSDK.ImageButtonConfiguration
-  public var appearingBottomViewBackgroundColor: UIKit.UIColor
   public var appearingViewNavBarConfiguration: BanubaVideoEditorSDK.AppearingViewNavigationViewConfiguration
   public var transitions: [BanubaVideoEditorSDK.TransitionEffect]
-  public init(backButtonConfiguration: BanubaVideoEditorSDK.ImageButtonConfiguration, nextButtonConfiguration: BanubaVideoEditorSDK.BanubaButtonConfiguration, playerControlConfiguration: BanubaUtilities.PlayerControlConfiguration, previewButtonConfiguration: BanubaVideoEditorSDK.ImageButtonConfiguration, backgroundColor: UIKit.UIColor, effectsBackgroundColor: UIKit.UIColor, timelineConfiguration: BanubaVideoEditorSDK.CompositionTimelineConfiguration, timeLabelsConfiguration: BanubaUtilities.TextConfiguration, toolsPanelConfiguration: BanubaVideoEditorSDK.VideoEditorToolsPanel.Configuration, effectsManagementPanelConfiguration: BanubaVideoEditorSDK.VideoEditorEffectsManagementPanel.Configuration, primaryAspectRatio: BanubaUtilities.AspectRatio, preferredLutsOrder: [Swift.String], preferredMasksOrder: [Swift.String], preferredVideoEffectOrderAndSet: [VEEffectsSDK.VisualEffectApplicatorType], addGalleryVideoButtonBackgroundConfiguration: BanubaUtilities.BackgroundConfiguration, addGalleryVideoImageButtonConfiguration: BanubaVideoEditorSDK.ImageButtonConfiguration, appearingBottomViewBackgroundColor: UIKit.UIColor, appearingViewNavBarConfiguration: BanubaVideoEditorSDK.AppearingViewNavigationViewConfiguration, transitions: [BanubaVideoEditorSDK.TransitionEffect])
+  public init(backButtonConfiguration: BanubaVideoEditorSDK.ImageButtonConfiguration, nextButtonConfiguration: BanubaVideoEditorSDK.BanubaButtonConfiguration, playerControlConfiguration: BanubaUtilities.PlayerControlConfiguration, previewButtonConfiguration: BanubaVideoEditorSDK.ImageButtonConfiguration, backgroundColor: UIKit.UIColor, effectsBackgroundColor: UIKit.UIColor, timelineConfiguration: BanubaVideoEditorSDK.CompositionTimelineConfiguration, timeLabelsConfiguration: BanubaUtilities.TextConfiguration, toolsPanelConfiguration: BanubaVideoEditorSDK.VideoEditorToolsPanel.Configuration, effectsManagementPanelConfiguration: BanubaVideoEditorSDK.VideoEditorEffectsManagementPanel.Configuration, toolsBackgroundPanelConfiguration: BanubaUtilities.BackgroundConfiguration, primaryAspectRatio: BanubaUtilities.AspectRatio, preferredLutsOrder: [Swift.String], preferredMasksOrder: [Swift.String], preferredVideoEffectOrderAndSet: [VEEffectsSDK.VisualEffectApplicatorType], addGalleryVideoButtonBackgroundConfiguration: BanubaUtilities.BackgroundConfiguration, addGalleryVideoImageButtonConfiguration: BanubaVideoEditorSDK.ImageButtonConfiguration, appearingViewNavBarConfiguration: BanubaVideoEditorSDK.AppearingViewNavigationViewConfiguration, transitions: [BanubaVideoEditorSDK.TransitionEffect])
   @objc deinit
 }
 public struct SharingScreenConfiguration {
@@ -1569,9 +1569,13 @@ extension BanubaVideoEditorSDK.ExternalViewControllerFactory {
   @objc deinit
 }
 public struct AutoCutConfiguration {
+  public enum MusicProvider {
+    case soundstripe(tracksURL: Foundation.URL)
+    case banubaMusic(tracksURL: Foundation.URL)
+  }
   public var embeddingsDownloadUrl: Swift.String?
-  public var musicApiSelectedTracksUrl: Swift.String?
-  public init(embeddingsDownloadUrl: Swift.String?, musicApiSelectedTracksUrl: Swift.String?)
+  public var musicProvider: BanubaVideoEditorSDK.AutoCutConfiguration.MusicProvider?
+  public init(embeddingsDownloadUrl: Swift.String?, musicProvider: BanubaVideoEditorSDK.AutoCutConfiguration.MusicProvider?)
 }
 public protocol MusicEditorExternalViewControllerFactory : AnyObject {
   func makeTrackSelectionViewController(selectedAudioItem: (any BanubaUtilities.AudioItem)?, isAudioPartSelectionEnabled: Swift.Bool) -> (any BanubaUtilities.TrackSelectionViewController)?
@@ -1975,16 +1979,18 @@ public struct VideoOverlayItemViewConfiguration {
 }
 public struct VideoEditorEffectItemConfiguration {
   public var noEffectImage: BanubaVideoEditorSDK.ImageConfiguration
+  public var noEffectDefaultBorderColor: UIKit.UIColor
   public var defaultTitleStyle: BanubaUtilities.TextConfiguration
   public var selectedTitleStyle: BanubaUtilities.TextConfiguration
   public var selectionColor: UIKit.UIColor
   public var borderWidth: CoreFoundation.CGFloat
+  public var borderPadding: CoreFoundation.CGFloat
   public var backgroundColor: UIKit.UIColor
   public var cornerRadius: CoreFoundation.CGFloat
   public var imagePlaceholder: BanubaVideoEditorSDK.ImageConfiguration?
   public var downloadIcon: BanubaVideoEditorSDK.ImageConfiguration?
   public var progressViewFactory: any BanubaVideoEditorSDK.ProgressAnimatableViewFactory
-  public init(noEffectImage: BanubaVideoEditorSDK.ImageConfiguration, defaultTitleStyle: BanubaUtilities.TextConfiguration, selectedTitleStyle: BanubaUtilities.TextConfiguration, selectionColor: UIKit.UIColor, borderWidth: CoreFoundation.CGFloat, backgroundColor: UIKit.UIColor, cornerRadius: CoreFoundation.CGFloat, imagePlaceholder: BanubaVideoEditorSDK.ImageConfiguration? = nil, downloadIcon: BanubaVideoEditorSDK.ImageConfiguration? = nil, progressViewFactory: any BanubaVideoEditorSDK.ProgressAnimatableViewFactory = CircularProgressViewFactory())
+  public init(noEffectImage: BanubaVideoEditorSDK.ImageConfiguration, noEffectDefaultBorderColor: UIKit.UIColor, defaultTitleStyle: BanubaUtilities.TextConfiguration, selectedTitleStyle: BanubaUtilities.TextConfiguration, selectionColor: UIKit.UIColor, borderWidth: CoreFoundation.CGFloat, borderPadding: CoreFoundation.CGFloat, backgroundColor: UIKit.UIColor, cornerRadius: CoreFoundation.CGFloat, imagePlaceholder: BanubaVideoEditorSDK.ImageConfiguration? = nil, downloadIcon: BanubaVideoEditorSDK.ImageConfiguration? = nil, progressViewFactory: any BanubaVideoEditorSDK.ProgressAnimatableViewFactory = CircularProgressViewFactory())
 }
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) final public class VideoEditorToolsPanel : UIKit.UIView {
   public struct Configuration {
@@ -2293,6 +2299,7 @@ public class VideoMetadataStorage {
   public func videoEditorTrimMetadata(for videoSequence: VideoEditor.VideoSequence) -> BanubaVideoEditorSDK.VideoEditorTrimMetadata?
   public func videoCoverMetadata(forVideoSequence videoSequence: VideoEditor.VideoSequence?) -> BanubaVideoEditorSDK.VideoCoverMetadata?
   public func cameraSessionMetadata(forVideoSequence videoSequence: VideoEditor.VideoSequence?) -> BanubaVideoEditorSDK.CameraSessionMetadata?
+  public func isVideoSequenceContainsAutocutMetadata(for videoSequence: VideoEditor.VideoSequence) -> Swift.Bool
   public func replaceMetadata(ofVideoSequence destinationSequence: VideoEditor.VideoSequence, withVideoSequence sourceSequence: VideoEditor.VideoSequence)
   public func duplicateMetadata(ofVideoSequence sourceSequence: VideoEditor.VideoSequence, toVideoSequence destinationSequence: VideoEditor.VideoSequence)
 }
