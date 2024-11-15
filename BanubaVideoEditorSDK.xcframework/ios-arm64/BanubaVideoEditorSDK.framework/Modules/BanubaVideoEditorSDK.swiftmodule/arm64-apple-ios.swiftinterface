@@ -1,6 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.10 (swiftlang-5.10.0.13 clang-1500.3.9.4)
+// swift-compiler-version: Apple Swift version 6.0.2 effective-5.10 (swiftlang-6.0.2.1.2 clang-1600.0.26.4)
 // swift-module-flags: -target arm64-apple-ios15.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=unchecked -O -enable-bare-slash-regex -module-name BanubaVideoEditorSDK
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface
 import AVFoundation
 import AVKit
 import Accelerate
@@ -40,21 +41,21 @@ public class EffectItem {
   public init(choosedEffect: BanubaVideoEditorSDK.EffectListItemConfiguration.`Type`, icon: (any BanubaUtilities.ImageConfigurationProtocol)?, text: BanubaUtilities.TextConfiguration, width: CoreFoundation.CGFloat, height: CoreFoundation.CGFloat, selectedColor: UIKit.UIColor)
   @objc deinit
 }
-@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class FullscreenActivityView : UIKit.UIView {
-  @_Concurrency.MainActor(unsafe) public var text: Swift.String? {
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency public class FullscreenActivityView : UIKit.UIView {
+  @_Concurrency.MainActor @preconcurrency public var text: Swift.String? {
     get
     set
   }
-  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var additionalButton: UIKit.UIButton?
-  @_Concurrency.MainActor(unsafe) public var configuration: BanubaVideoEditorSDK.FullScreenActivityConfiguration? {
+  @objc @IBOutlet @_Concurrency.MainActor @preconcurrency weak public var additionalButton: UIKit.UIButton?
+  @_Concurrency.MainActor @preconcurrency public var configuration: BanubaVideoEditorSDK.FullScreenActivityConfiguration? {
     get
     set
   }
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public func awakeFromNib()
-  @_Concurrency.MainActor(unsafe) public func applyVisibility(_ visible: Swift.Bool)
-  @_Concurrency.MainActor(unsafe) public static func loadFromNib() -> BanubaVideoEditorSDK.FullscreenActivityView
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
-  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func awakeFromNib()
+  @_Concurrency.MainActor @preconcurrency public func applyVisibility(_ visible: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency public static func loadFromNib() -> BanubaVideoEditorSDK.FullscreenActivityView
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
   @objc deinit
 }
 public enum AudioTrackLinePosition : Swift.Int, Swift.CaseIterable {
@@ -65,7 +66,7 @@ public enum AudioTrackLinePosition : Swift.Int, Swift.CaseIterable {
   public init?(rawValue: Swift.Int)
   public typealias AllCases = [BanubaVideoEditorSDK.AudioTrackLinePosition]
   public typealias RawValue = Swift.Int
-  public static var allCases: [BanubaVideoEditorSDK.AudioTrackLinePosition] {
+  nonisolated public static var allCases: [BanubaVideoEditorSDK.AudioTrackLinePosition] {
     get
   }
   public var rawValue: Swift.Int {
@@ -459,25 +460,25 @@ public class TextEditSelectionBorderAnimationBehavior : BanubaVideoEditorSDK.Tex
   final public func makeCountdownTimerView() -> any BanubaUtilities.CountdownTimerAnimatableView
   @objc deinit
 }
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) final public class CountdownView : UIKit.UIView, BanubaUtilities.CountdownTimerAnimatableView {
-  @_Concurrency.MainActor(unsafe) final public var font: UIKit.UIFont {
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency final public class CountdownView : UIKit.UIView, BanubaUtilities.CountdownTimerAnimatableView {
+  @_Concurrency.MainActor @preconcurrency final public var font: UIKit.UIFont {
     get
     set
   }
-  @_Concurrency.MainActor(unsafe) @objc override final public func draw(_ rect: CoreFoundation.CGRect)
+  @_Concurrency.MainActor @preconcurrency @objc override final public func draw(_ rect: CoreFoundation.CGRect)
   @objc deinit
 }
 extension BanubaVideoEditorSDK.CountdownView {
-  @_Concurrency.MainActor(unsafe) final public var countdownDigit: Swift.Int {
+  @_Concurrency.MainActor @preconcurrency final public var countdownDigit: Swift.Int {
     get
     set
   }
-  @_Concurrency.MainActor(unsafe) final public var digitColor: UIKit.UIColor {
+  @_Concurrency.MainActor @preconcurrency final public var digitColor: UIKit.UIColor {
     get
     set
   }
-  @_Concurrency.MainActor(unsafe) final public func start(completion: @escaping (Swift.Bool) -> Swift.Void)
-  @_Concurrency.MainActor(unsafe) final public func stop()
+  @_Concurrency.MainActor @preconcurrency final public func start(completion: @escaping (Swift.Bool) -> Swift.Void)
+  @_Concurrency.MainActor @preconcurrency final public func stop()
 }
 public struct VideoAspectRatio {
   public static var minFillAspectRatio: CoreFoundation.CGFloat {
@@ -875,7 +876,7 @@ public enum CaptionsLanguage : Swift.String, Swift.CaseIterable {
   public init?(rawValue: Swift.String)
   public typealias AllCases = [BanubaVideoEditorSDK.CaptionsLanguage]
   public typealias RawValue = Swift.String
-  public static var allCases: [BanubaVideoEditorSDK.CaptionsLanguage] {
+  nonisolated public static var allCases: [BanubaVideoEditorSDK.CaptionsLanguage] {
     get
   }
   public var rawValue: Swift.String {
@@ -889,36 +890,36 @@ public protocol BanubaProgressViewController : UIKit.UIViewController {
   var cancelHandler: (() -> Swift.Void)? { get set }
   func updateProgressView(with progress: Swift.Float)
 }
-@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class ProgressViewController : UIKit.UIViewController, BanubaVideoEditorSDK.BanubaProgressViewController {
-  @_Concurrency.MainActor(unsafe) public var message: Swift.String {
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency public class ProgressViewController : UIKit.UIViewController, BanubaVideoEditorSDK.BanubaProgressViewController {
+  @_Concurrency.MainActor @preconcurrency public var message: Swift.String {
     get
     set
   }
-  @_Concurrency.MainActor(unsafe) public var tooltipMessage: Swift.String {
+  @_Concurrency.MainActor @preconcurrency public var tooltipMessage: Swift.String {
     get
     set
   }
-  @_Concurrency.MainActor(unsafe) public var configuration: BanubaVideoEditorSDK.ProgressViewConfiguration? {
+  @_Concurrency.MainActor @preconcurrency public var configuration: BanubaVideoEditorSDK.ProgressViewConfiguration? {
     get
     set
   }
-  @_Concurrency.MainActor(unsafe) public var cancelHandler: (() -> Swift.Void)?
-  @_Concurrency.MainActor(unsafe) public var slideInTransitioningDelegate: (any UIKit.UIViewControllerTransitioningDelegate)? {
+  @_Concurrency.MainActor @preconcurrency public var cancelHandler: (() -> Swift.Void)?
+  @_Concurrency.MainActor @preconcurrency public var slideInTransitioningDelegate: (any UIKit.UIViewControllerTransitioningDelegate)? {
     get
     set
   }
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLoad()
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidDisappear(_ animated: Swift.Bool)
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLayoutSubviews()
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
-  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidDisappear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidLayoutSubviews()
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
   @objc deinit
 }
 extension BanubaVideoEditorSDK.ProgressViewController {
-  @_Concurrency.MainActor(unsafe) public func updateProgressView(with progress: Swift.Float)
+  @_Concurrency.MainActor @preconcurrency public func updateProgressView(with progress: Swift.Float)
 }
 extension BanubaVideoEditorSDK.ProgressViewController {
-  @_Concurrency.MainActor(unsafe) public static func makeViewController(presentationManager: BanubaUtilities.SlideInPresentationManager? = nil) -> BanubaVideoEditorSDK.ProgressViewController
+  @_Concurrency.MainActor @preconcurrency public static func makeViewController(presentationManager: BanubaUtilities.SlideInPresentationManager? = nil) -> BanubaVideoEditorSDK.ProgressViewController
 }
 public struct OverlayEditorConfiguration {
   public var mainOverlayViewControllerConfig: BanubaVideoEditorSDK.MainOverlayViewControllerConfig
@@ -1034,14 +1035,14 @@ public enum BanubaVideoEditorSwiftUIError : Swift.Error, Foundation.LocalizedErr
     get
   }
 }
-public struct BanubaVideoEditorSwiftUIView : SwiftUI.UIViewControllerRepresentable {
-  public init(token: Swift.String, launchConfig: BanubaVideoEditorSDK.VideoEditorLaunchConfig, configuration: BanubaVideoEditorSDK.VideoEditorConfig, exportConfiguration: VEExportSDK.ExportConfiguration)
-  @_Concurrency.MainActor(unsafe) public func makeUIViewController(context: BanubaVideoEditorSDK.BanubaVideoEditorSwiftUIView.Context) -> UIKit.UIViewController
-  @_Concurrency.MainActor(unsafe) public func updateUIViewController(_ uiViewController: UIKit.UIViewController, context: BanubaVideoEditorSDK.BanubaVideoEditorSwiftUIView.Context)
-  public func onDidCancel(_ closure: (() -> Swift.Void)?) -> BanubaVideoEditorSDK.BanubaVideoEditorSwiftUIView
-  public func onDidSave(_ closure: (([Foundation.URL]) -> Swift.Void)?) -> BanubaVideoEditorSDK.BanubaVideoEditorSwiftUIView
-  public func onUpdateProgress(_ closure: ((Swift.Float) -> Swift.Void)?) -> BanubaVideoEditorSDK.BanubaVideoEditorSwiftUIView
-  public func onDidFail(_ closure: ((BanubaVideoEditorSDK.BanubaVideoEditorSwiftUIError) -> Swift.Void)?) -> BanubaVideoEditorSDK.BanubaVideoEditorSwiftUIView
+@_Concurrency.MainActor @preconcurrency public struct BanubaVideoEditorSwiftUIView : SwiftUI.UIViewControllerRepresentable {
+  @_Concurrency.MainActor @preconcurrency public init(token: Swift.String, launchConfig: BanubaVideoEditorSDK.VideoEditorLaunchConfig, configuration: BanubaVideoEditorSDK.VideoEditorConfig, exportConfiguration: VEExportSDK.ExportConfiguration)
+  @_Concurrency.MainActor @preconcurrency public func makeUIViewController(context: BanubaVideoEditorSDK.BanubaVideoEditorSwiftUIView.Context) -> UIKit.UIViewController
+  @_Concurrency.MainActor @preconcurrency public func updateUIViewController(_ uiViewController: UIKit.UIViewController, context: BanubaVideoEditorSDK.BanubaVideoEditorSwiftUIView.Context)
+  @_Concurrency.MainActor @preconcurrency public func onDidCancel(_ closure: (() -> Swift.Void)?) -> BanubaVideoEditorSDK.BanubaVideoEditorSwiftUIView
+  @_Concurrency.MainActor @preconcurrency public func onDidSave(_ closure: (([Foundation.URL]) -> Swift.Void)?) -> BanubaVideoEditorSDK.BanubaVideoEditorSwiftUIView
+  @_Concurrency.MainActor @preconcurrency public func onUpdateProgress(_ closure: ((Swift.Float) -> Swift.Void)?) -> BanubaVideoEditorSDK.BanubaVideoEditorSwiftUIView
+  @_Concurrency.MainActor @preconcurrency public func onDidFail(_ closure: ((BanubaVideoEditorSDK.BanubaVideoEditorSwiftUIError) -> Swift.Void)?) -> BanubaVideoEditorSDK.BanubaVideoEditorSwiftUIView
   public typealias Body = Swift.Never
   public typealias Coordinator = Swift.Void
   public typealias UIViewControllerType = UIKit.UIViewController
@@ -1442,7 +1443,7 @@ public struct TrimVideoCompositionEditItem {
     public static func == (a: BanubaVideoEditorSDK.TrimVideoCompositionEditItem.TrimVideoCompositionEditItemType, b: BanubaVideoEditorSDK.TrimVideoCompositionEditItem.TrimVideoCompositionEditItemType) -> Swift.Bool
     public func hash(into hasher: inout Swift.Hasher)
     public typealias AllCases = [BanubaVideoEditorSDK.TrimVideoCompositionEditItem.TrimVideoCompositionEditItemType]
-    public static var allCases: [BanubaVideoEditorSDK.TrimVideoCompositionEditItem.TrimVideoCompositionEditItemType] {
+    nonisolated public static var allCases: [BanubaVideoEditorSDK.TrimVideoCompositionEditItem.TrimVideoCompositionEditItemType] {
       get
     }
     public var hashValue: Swift.Int {
@@ -1552,7 +1553,7 @@ extension BanubaVideoEditorSDK.ExternalViewControllerFactory {
     set
   }
 }
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) final public class VideoEditorEffectsManagementPanel : UIKit.UIView {
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency final public class VideoEditorEffectsManagementPanel : UIKit.UIView {
   public struct Configuration {
     public let addButton: BanubaVideoEditorSDK.VideoEditorEffectsManagementPanel.ButtonConfiguration
     public let editButton: BanubaVideoEditorSDK.VideoEditorEffectsManagementPanel.ButtonConfiguration
@@ -1722,7 +1723,7 @@ public protocol RecordButtonProvider {
   public init?(rawValue: Swift.Int)
   public typealias AllCases = [BanubaVideoEditorSDK.DraftsFeatureConfig]
   public typealias RawValue = Swift.Int
-  public static var allCases: [BanubaVideoEditorSDK.DraftsFeatureConfig] {
+  nonisolated public static var allCases: [BanubaVideoEditorSDK.DraftsFeatureConfig] {
     get
   }
   public var rawValue: Swift.Int {
@@ -1992,7 +1993,7 @@ public struct VideoEditorEffectItemConfiguration {
   public var progressViewFactory: any BanubaVideoEditorSDK.ProgressAnimatableViewFactory
   public init(noEffectImage: BanubaVideoEditorSDK.ImageConfiguration, noEffectDefaultBorderColor: UIKit.UIColor, defaultTitleStyle: BanubaUtilities.TextConfiguration, selectedTitleStyle: BanubaUtilities.TextConfiguration, selectionColor: UIKit.UIColor, borderWidth: CoreFoundation.CGFloat, borderPadding: CoreFoundation.CGFloat, backgroundColor: UIKit.UIColor, cornerRadius: CoreFoundation.CGFloat, imagePlaceholder: BanubaVideoEditorSDK.ImageConfiguration? = nil, downloadIcon: BanubaVideoEditorSDK.ImageConfiguration? = nil, progressViewFactory: any BanubaVideoEditorSDK.ProgressAnimatableViewFactory = CircularProgressViewFactory())
 }
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) final public class VideoEditorToolsPanel : UIKit.UIView {
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency final public class VideoEditorToolsPanel : UIKit.UIView {
   public struct Configuration {
     public let editButton: BanubaVideoEditorSDK.VideoEditorToolsPanel.ButtonConfiguration
     public let canvasButton: BanubaVideoEditorSDK.VideoEditorToolsPanel.ButtonConfiguration
@@ -2007,7 +2008,7 @@ public struct VideoEditorEffectItemConfiguration {
   public struct ButtonConfiguration {
     public let title: Swift.String
   }
-  @_Concurrency.MainActor(unsafe) @objc override final public func layoutSubviews()
+  @_Concurrency.MainActor @preconcurrency @objc override final public func layoutSubviews()
   @objc deinit
 }
 public protocol AspectsServicing {
@@ -2105,7 +2106,7 @@ public enum VideoRecordSpeed : Swift.Int, Swift.CaseIterable {
   public init?(rawValue: Swift.Int)
   public typealias AllCases = [BanubaVideoEditorSDK.VideoRecordSpeed]
   public typealias RawValue = Swift.Int
-  public static var allCases: [BanubaVideoEditorSDK.VideoRecordSpeed] {
+  nonisolated public static var allCases: [BanubaVideoEditorSDK.VideoRecordSpeed] {
     get
   }
   public var rawValue: Swift.Int {
@@ -2227,7 +2228,7 @@ extension BanubaVideoEditorSDK.SDKCameraService {
   public func getRendererView() -> UIKit.UIView
   public func addFPSListener(_ listener: ((_ fpsInfo: Foundation.NSAttributedString) -> Swift.Void)?)
 }
-@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) final public class FeedbackAlertViewController : UIKit.UIViewController {
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency final public class FeedbackAlertViewController : UIKit.UIViewController {
   public enum ActionTypes {
     case agree
     case refuse
@@ -2238,14 +2239,14 @@ extension BanubaVideoEditorSDK.SDKCameraService {
       get
     }
   }
-  @_Concurrency.MainActor(unsafe) final public var actionHandler: ((BanubaVideoEditorSDK.FeedbackAlertViewController.ActionTypes) -> Swift.Void)?
-  @_Concurrency.MainActor(unsafe) @objc override final public func viewWillAppear(_ animated: Swift.Bool)
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
-  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @_Concurrency.MainActor @preconcurrency final public var actionHandler: ((BanubaVideoEditorSDK.FeedbackAlertViewController.ActionTypes) -> Swift.Void)?
+  @_Concurrency.MainActor @preconcurrency @objc override final public func viewWillAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
   @objc deinit
 }
 extension BanubaVideoEditorSDK.FeedbackAlertViewController {
-  @_Concurrency.MainActor(unsafe) public static func makeAlertViewController() -> BanubaVideoEditorSDK.FeedbackAlertViewController
+  @_Concurrency.MainActor @preconcurrency public static func makeAlertViewController() -> BanubaVideoEditorSDK.FeedbackAlertViewController
 }
 @_hasMissingDesignatedInitializers public class SliderRounderCalculator {
   public typealias Result = (rounded: Swift.Float, displayed: Swift.String)
@@ -2393,11 +2394,11 @@ public class DefaultExposureViewFactory : BanubaVideoEditorSDK.AnimatableViewFac
   public func makeAnimatableView() -> any BanubaUtilities.AnimatableView
   @objc deinit
 }
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class ExposureAnimationView : UIKit.UIView, BanubaUtilities.AnimatableView {
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public func draw(_ rect: CoreFoundation.CGRect)
-  @_Concurrency.MainActor(unsafe) public func start(completion: @escaping (Swift.Bool) -> Swift.Void)
-  @_Concurrency.MainActor(unsafe) public func stop()
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency public class ExposureAnimationView : UIKit.UIView, BanubaUtilities.AnimatableView {
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func draw(_ rect: CoreFoundation.CGRect)
+  @_Concurrency.MainActor @preconcurrency public func start(completion: @escaping (Swift.Bool) -> Swift.Void)
+  @_Concurrency.MainActor @preconcurrency public func stop()
   @objc deinit
 }
 public protocol SequencesServicing {
@@ -2586,6 +2587,7 @@ extension BanubaVideoEditorSDK.OverlayEditButtonConfig.`Type` : Swift.RawReprese
 extension BanubaVideoEditorSDK.OverlayControlButtonConfig.`Type` : Swift.Equatable {}
 extension BanubaVideoEditorSDK.OverlayControlButtonConfig.`Type` : Swift.Hashable {}
 extension BanubaVideoEditorSDK.OverlayControlButtonConfig.`Type` : Swift.RawRepresentable {}
+extension BanubaVideoEditorSDK.BanubaVideoEditorSwiftUIView : Swift.Sendable {}
 extension BanubaVideoEditorSDK.DraftActionType : Swift.Equatable {}
 extension BanubaVideoEditorSDK.DraftActionType : Swift.Hashable {}
 extension BanubaVideoEditorSDK.RecorderPreviewScalingMode : Swift.Equatable {}
