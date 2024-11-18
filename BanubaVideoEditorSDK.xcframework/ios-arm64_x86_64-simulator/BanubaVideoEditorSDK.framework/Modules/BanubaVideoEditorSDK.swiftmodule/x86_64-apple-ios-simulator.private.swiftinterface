@@ -1312,7 +1312,7 @@ public struct TransitionActionConfiguration {
   public init(controlsColor: UIKit.UIColor, cursorColor: UIKit.UIColor, borderWidth: CoreFoundation.CGFloat, trimContentCornerRadius: CoreFoundation.CGFloat, timelineTopBottomInset: CoreFoundation.CGFloat, draggerConfiguration: BanubaVideoEditorSDK.DraggerConfiguration, transitionIcons: [BanubaUtilities.TransitionType : BanubaVideoEditorSDK.TransitionActionConfiguration]? = nil)
   @objc deinit
 }
-@objc public class CompositionTimelineConfiguration : ObjectiveC.NSObject {
+public struct CompositionTimelineConfiguration {
   public var controlsColor: UIKit.UIColor
   public var cursorColor: UIKit.UIColor
   public var borderWidth: CoreFoundation.CGFloat
@@ -1320,8 +1320,8 @@ public struct TransitionActionConfiguration {
   public var timelineTopBottomInset: CoreFoundation.CGFloat
   public var draggerConfiguration: BanubaVideoEditorSDK.DraggerConfiguration
   public var transitionIcons: [BanubaUtilities.TransitionType : BanubaVideoEditorSDK.TransitionActionConfiguration]?
-  public init(controlsColor: UIKit.UIColor, cursorColor: UIKit.UIColor, borderWidth: CoreFoundation.CGFloat, contentCornerRadius: CoreFoundation.CGFloat, timelineTopBottomInset: CoreFoundation.CGFloat, draggerConfiguration: BanubaVideoEditorSDK.DraggerConfiguration, transitionIcons: [BanubaUtilities.TransitionType : BanubaVideoEditorSDK.TransitionActionConfiguration]? = nil)
-  @objc deinit
+  public var isAddAudioEnabled: Swift.Bool
+  public init(controlsColor: UIKit.UIColor, cursorColor: UIKit.UIColor, borderWidth: CoreFoundation.CGFloat, contentCornerRadius: CoreFoundation.CGFloat, timelineTopBottomInset: CoreFoundation.CGFloat, draggerConfiguration: BanubaVideoEditorSDK.DraggerConfiguration, transitionIcons: [BanubaUtilities.TransitionType : BanubaVideoEditorSDK.TransitionActionConfiguration]? = nil, isAddAudioEnabled: Swift.Bool)
 }
 public struct DraggerConfiguration {
   public var backgroundConfiguraiton: BanubaUtilities.BackgroundConfiguration
@@ -1352,26 +1352,31 @@ public struct EditorConfiguration {
   public var audioPartSelectionViewConfiguration: BanubaUtilities.AudioPartSelectionViewConfiguration
 }
 public class VideoEditorViewConfiguration {
+  public struct AddGalleryVideoButtonConfiguration {
+    public var backgroundConfiguration: BanubaUtilities.BackgroundConfiguration
+    public var imageConfiguration: BanubaVideoEditorSDK.ImageButtonConfiguration
+  }
+  public struct EffectsPreferredOrderConfiguration {
+    public var luts: [Swift.String]
+    public var masks: [Swift.String]
+    public var videoEffectOrderAndSet: [VEEffectsSDK.VisualEffectApplicatorType]
+  }
   public var backButtonConfiguration: BanubaVideoEditorSDK.ImageButtonConfiguration
   public var nextButtonConfiguration: BanubaVideoEditorSDK.BanubaButtonConfiguration
   public var playerControlConfiguration: BanubaUtilities.PlayerControlConfiguration
-  public var previewButtonConfiguration: BanubaVideoEditorSDK.ImageButtonConfiguration
+  public var previewVideoButtonConfiguration: BanubaVideoEditorSDK.ImageButtonConfiguration
   public var backgroundColor: UIKit.UIColor
-  public var effectsBackgroundColor: UIKit.UIColor
   public var timelineConfiguration: BanubaVideoEditorSDK.CompositionTimelineConfiguration
   public var timeLabelsConfiguration: BanubaUtilities.TextConfiguration
+  public var addGalleryButtonConfiguration: BanubaVideoEditorSDK.VideoEditorViewConfiguration.AddGalleryVideoButtonConfiguration
   public var toolsPanelConfiguration: BanubaVideoEditorSDK.VideoEditorToolsPanel.Configuration
-  public var effectsManagementPanelConfiguration: BanubaVideoEditorSDK.VideoEditorEffectsManagementPanel.Configuration
-  public var toolsBackgroundPanelConfiguration: BanubaUtilities.BackgroundConfiguration
-  public var primaryAspectRatio: BanubaUtilities.AspectRatio
-  public var preferredLutsOrder: [Swift.String]
-  public var preferredMasksOrder: [Swift.String]
-  public var preferredVideoEffectOrderAndSet: [VEEffectsSDK.VisualEffectApplicatorType]
-  public var addGalleryVideoButtonBackgroundConfiguration: BanubaUtilities.BackgroundConfiguration
-  public var addGalleryVideoImageButtonConfiguration: BanubaVideoEditorSDK.ImageButtonConfiguration
   public var appearingViewNavBarConfiguration: BanubaVideoEditorSDK.AppearingViewNavigationViewConfiguration
+  public var effectsPanelConfiguration: BanubaVideoEditorSDK.VideoEditorEffectsManagementPanel.Configuration
+  public var primaryAspectRatio: BanubaUtilities.AspectRatio
+  public var effectsPreferredOrderConfiguration: BanubaVideoEditorSDK.VideoEditorViewConfiguration.EffectsPreferredOrderConfiguration
   public var transitions: [BanubaVideoEditorSDK.TransitionEffect]
-  public init(backButtonConfiguration: BanubaVideoEditorSDK.ImageButtonConfiguration, nextButtonConfiguration: BanubaVideoEditorSDK.BanubaButtonConfiguration, playerControlConfiguration: BanubaUtilities.PlayerControlConfiguration, previewButtonConfiguration: BanubaVideoEditorSDK.ImageButtonConfiguration, backgroundColor: UIKit.UIColor, effectsBackgroundColor: UIKit.UIColor, timelineConfiguration: BanubaVideoEditorSDK.CompositionTimelineConfiguration, timeLabelsConfiguration: BanubaUtilities.TextConfiguration, toolsPanelConfiguration: BanubaVideoEditorSDK.VideoEditorToolsPanel.Configuration, effectsManagementPanelConfiguration: BanubaVideoEditorSDK.VideoEditorEffectsManagementPanel.Configuration, toolsBackgroundPanelConfiguration: BanubaUtilities.BackgroundConfiguration, primaryAspectRatio: BanubaUtilities.AspectRatio, preferredLutsOrder: [Swift.String], preferredMasksOrder: [Swift.String], preferredVideoEffectOrderAndSet: [VEEffectsSDK.VisualEffectApplicatorType], addGalleryVideoButtonBackgroundConfiguration: BanubaUtilities.BackgroundConfiguration, addGalleryVideoImageButtonConfiguration: BanubaVideoEditorSDK.ImageButtonConfiguration, appearingViewNavBarConfiguration: BanubaVideoEditorSDK.AppearingViewNavigationViewConfiguration, transitions: [BanubaVideoEditorSDK.TransitionEffect])
+  public var isCameraCellInGalleryEnabled: Swift.Bool
+  public init(backButtonConfiguration: BanubaVideoEditorSDK.ImageButtonConfiguration, nextButtonConfiguration: BanubaVideoEditorSDK.BanubaButtonConfiguration, playerControlConfiguration: BanubaUtilities.PlayerControlConfiguration, previewVideoButtonConfiguration: BanubaVideoEditorSDK.ImageButtonConfiguration, backgroundColor: UIKit.UIColor, timelineConfiguration: BanubaVideoEditorSDK.CompositionTimelineConfiguration, timeLabelsConfiguration: BanubaUtilities.TextConfiguration, addGalleryButtonConfiguration: BanubaVideoEditorSDK.VideoEditorViewConfiguration.AddGalleryVideoButtonConfiguration, appearingViewNavBarConfiguration: BanubaVideoEditorSDK.AppearingViewNavigationViewConfiguration, toolsPanelConfiguration: BanubaVideoEditorSDK.VideoEditorToolsPanel.Configuration, effectsPanelConfiguration: BanubaVideoEditorSDK.VideoEditorEffectsManagementPanel.Configuration, primaryAspectRatio: BanubaUtilities.AspectRatio, effectsPreferredOrderConfiguration: BanubaVideoEditorSDK.VideoEditorViewConfiguration.EffectsPreferredOrderConfiguration, transitions: [BanubaVideoEditorSDK.TransitionEffect], isCameraCellInGalleryEnabled: Swift.Bool)
   @objc deinit
 }
 public struct SharingScreenConfiguration {
@@ -2004,6 +2009,7 @@ public struct VideoEditorEffectItemConfiguration {
     public let audioButton: BanubaVideoEditorSDK.VideoEditorToolsPanel.ButtonConfiguration
     public let filtersButton: BanubaVideoEditorSDK.VideoEditorToolsPanel.ButtonConfiguration
     public let blurButton: BanubaVideoEditorSDK.VideoEditorToolsPanel.ButtonConfiguration
+    public var backgroundConfiguration: BanubaUtilities.BackgroundConfiguration
   }
   public struct ButtonConfiguration {
     public let title: Swift.String
