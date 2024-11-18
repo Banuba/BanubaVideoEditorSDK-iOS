@@ -308,6 +308,15 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 
 
 
+
+/// The Composition Timeline configuration
+SWIFT_CLASS("_TtC20BanubaVideoEditorSDK32CompositionTimelineConfiguration")
+@interface CompositionTimelineConfiguration : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
 @class NSCoder;
 
 SWIFT_CLASS("_TtC20BanubaVideoEditorSDK13CountdownView")
