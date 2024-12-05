@@ -171,6 +171,10 @@ public class BanubaVideoEditor {
     get
     set
   }
+  public var greenScreenBackgroundProvider: (any BanubaVideoEditorSDK.GreenScreenBackgroundProvider)? {
+    get
+    set
+  }
   public var musicTrack: BanubaUtilities.MediaTrack? {
     get
   }
@@ -189,13 +193,13 @@ public class BanubaVideoEditor {
   public init?(token: Swift.String, arguments: [Swift.String : Any] = [:], isCameraEnabled: Swift.Bool = true, configuration: BanubaVideoEditorSDK.VideoEditorConfig, externalViewControllerFactory: (any BanubaVideoEditorSDK.ExternalViewControllerFactory)? = nil)
   @objc deinit
   public func export(using configuration: VEExportSDK.ExportConfiguration, exportProgress: ((Swift.Float) -> Swift.Void)?, completion: @escaping ((_ error: (any Swift.Error)?, _ exportCoverImages: BanubaVideoEditorSDK.ExportCoverImages?) -> Swift.Void))
-  public func stopExport()
+  @_Concurrency.MainActor public func stopExport()
   public func isExporting() -> Swift.Bool
   public func exportAudio(fileUrl: Foundation.URL, audioSettings: [Swift.String : Any] = VESettings.audio, completion: @escaping ((any Swift.Error)?) -> Swift.Void)
   public func clearSessionData()
-  public func dismissVideoEditor(animated: Swift.Bool, completion: (() -> Swift.Void)?)
-  public func getVideoEditorNavigationController(withLaunchConfiguration configuration: BanubaVideoEditorSDK.VideoEditorLaunchConfig) -> UIKit.UINavigationController?
-  public func presentVideoEditor(withLaunchConfiguration configuration: BanubaVideoEditorSDK.VideoEditorLaunchConfig, completion: (() -> Swift.Void)?)
+  @_Concurrency.MainActor public func dismissVideoEditor(animated: Swift.Bool, completion: (() -> Swift.Void)?)
+  @_Concurrency.MainActor public func getVideoEditorNavigationController(withLaunchConfiguration configuration: BanubaVideoEditorSDK.VideoEditorLaunchConfig) -> UIKit.UINavigationController?
+  @_Concurrency.MainActor public func presentVideoEditor(withLaunchConfiguration configuration: BanubaVideoEditorSDK.VideoEditorLaunchConfig, completion: (() -> Swift.Void)?)
   public func updateVideoEditorConfig(_ config: BanubaVideoEditorSDK.VideoEditorConfig)
   public func updateVideoEditorArgs(_ arguments: [Swift.String : Any])
 }
@@ -784,8 +788,9 @@ public struct GIFOnVideoMetadata : Swift.Codable {
   public let endTime: BanubaVideoEditorSDK.TimeMetadata
   public let coordinatesParams: BanubaVideoEditorSDK.CoordinatesParams
   public let order: Swift.Int
+  public let isAnimated: Swift.Bool
   public let linePositionOrderNumber: Swift.Int?
-  public init(id: Swift.String, imageDataName: Swift.String, startTime: BanubaVideoEditorSDK.TimeMetadata, endTime: BanubaVideoEditorSDK.TimeMetadata, coordinatesParams: BanubaVideoEditorSDK.CoordinatesParams, order: Swift.Int, linePositionOrderNumber: Swift.Int?)
+  public init(id: Swift.String, imageDataName: Swift.String, startTime: BanubaVideoEditorSDK.TimeMetadata, endTime: BanubaVideoEditorSDK.TimeMetadata, coordinatesParams: BanubaVideoEditorSDK.CoordinatesParams, order: Swift.Int, isAnimated: Swift.Bool, linePositionOrderNumber: Swift.Int?)
   public init(from decoder: any Swift.Decoder) throws
   public func encode(to encoder: any Swift.Encoder) throws
 }
@@ -921,6 +926,14 @@ extension BanubaVideoEditorSDK.ProgressViewController {
 extension BanubaVideoEditorSDK.ProgressViewController {
   @_Concurrency.MainActor @preconcurrency public static func makeViewController(presentationManager: BanubaUtilities.SlideInPresentationManager? = nil) -> BanubaVideoEditorSDK.ProgressViewController
 }
+public struct BodyRegion : Swift.Equatable {
+  public var id: Swift.String
+  public var title: Swift.String?
+  public var thumbnailUrl: Foundation.URL?
+  public var cover: BanubaVideoEditorSDK.Illustration?
+  public init(id: Swift.String, title: Swift.String? = nil, thumbnailUrl: Foundation.URL? = nil, cover: BanubaVideoEditorSDK.Illustration? = nil)
+  public static func == (a: BanubaVideoEditorSDK.BodyRegion, b: BanubaVideoEditorSDK.BodyRegion) -> Swift.Bool
+}
 public struct OverlayEditorConfiguration {
   public var mainOverlayViewControllerConfig: BanubaVideoEditorSDK.MainOverlayViewControllerConfig
 }
@@ -957,6 +970,7 @@ public struct OverlayAddButtonConfig {
     case sticker
     case blur
     case captions
+    case image
     public var editorEffectType: VideoEditor.EditorEffectType {
       get
     }
@@ -1085,7 +1099,8 @@ public struct TimelineEffectColorsPalette {
   public let pixelationColor: UIKit.UIColor
   public let audioTracksColor: UIKit.UIColor
   public let voiceOversColor: UIKit.UIColor
-  public init(stickersColor: UIKit.UIColor, textsColor: UIKit.UIColor, captionsColor: UIKit.UIColor, pixelationColor: UIKit.UIColor, audioTracksColor: UIKit.UIColor, voiceOversColor: UIKit.UIColor)
+  public let imagesColor: UIKit.UIColor
+  public init(stickersColor: UIKit.UIColor, textsColor: UIKit.UIColor, captionsColor: UIKit.UIColor, pixelationColor: UIKit.UIColor, audioTracksColor: UIKit.UIColor, voiceOversColor: UIKit.UIColor, imagesColor: UIKit.UIColor)
   public static var `default`: BanubaVideoEditorSDK.TimelineEffectColorsPalette {
     get
   }
@@ -1592,6 +1607,13 @@ public protocol MusicEditorCountdownAnimatableView : UIKit.UIView {
   func start(completion: @escaping (Swift.Bool) -> Swift.Void)
   func stop()
 }
+public protocol GreenScreenBackgroundProvider {
+  func bodyRegions(cursor: Swift.String?) async throws -> BanubaVideoEditorSDK.Page<BanubaVideoEditorSDK.BodyRegion>
+  func bodySystems(cursor: Swift.String?) async throws -> BanubaVideoEditorSDK.Page<BanubaVideoEditorSDK.BodySystem>
+  func illustrations(searchTerm: Swift.String?) async throws -> BanubaVideoEditorSDK.Page<BanubaVideoEditorSDK.Illustration>
+  func illustrations(bodyRegionId: Swift.String, pageSize: Swift.Int, cursor: Swift.String?) async throws -> BanubaVideoEditorSDK.Page<BanubaVideoEditorSDK.Illustration>
+  func illustrations(bodySystemId: Swift.String, pageSize: Swift.Int, cursor: Swift.String?) async throws -> BanubaVideoEditorSDK.Page<BanubaVideoEditorSDK.Illustration>
+}
 public struct PIPSwitchCellConfiguration {
   public var identifier: BanubaSDKServicing.PIPSwitchLayoutSetting
   public var selectedIdentifier: BanubaSDKServicing.PIPSwitchLayoutSetting
@@ -2004,6 +2026,7 @@ public struct VideoEditorEffectItemConfiguration {
     public let audioButton: BanubaVideoEditorSDK.VideoEditorToolsPanel.ButtonConfiguration
     public let filtersButton: BanubaVideoEditorSDK.VideoEditorToolsPanel.ButtonConfiguration
     public let blurButton: BanubaVideoEditorSDK.VideoEditorToolsPanel.ButtonConfiguration
+    public let anatomyButton: BanubaVideoEditorSDK.VideoEditorToolsPanel.ButtonConfiguration
   }
   public struct ButtonConfiguration {
     public let title: Swift.String
@@ -2158,7 +2181,7 @@ public protocol SDKCameraServicing {
   func removeRenderTarget()
   @discardableResult
   func toggleBeautification() -> Swift.Bool
-  func enableGreenScreen(completion: @escaping () -> Swift.Void)
+  func enableGreenScreen() async
   func disableGreenScreen()
   func discardAppliedChanges()
   func setupDefaultState()
@@ -2215,7 +2238,7 @@ extension BanubaVideoEditorSDK.SDKCameraService {
   public func loadMask(name: Swift.String, synchronous: Swift.Bool)
   public func unloadMask()
   public func toggleBeautification() -> Swift.Bool
-  public func enableGreenScreen(completion: @escaping () -> Swift.Void)
+  public func enableGreenScreen() async
   public func disableGreenScreen()
   public func discardAppliedChanges()
   public func setupDefaultState()
@@ -2389,6 +2412,16 @@ public struct VideoPreviewConfiguration {
 public protocol TextEditSelectionColorBehavior {
   func setColorView(_ view: UIKit.UIView, selected: Swift.Bool, animated: Swift.Bool)
 }
+public struct Illustration : Swift.Equatable {
+  public var id: Swift.String
+  public var title: Swift.String?
+  public var originalHeight: Swift.Int?
+  public var originalWidth: Swift.Int?
+  public var thumbnailUrl: Foundation.URL?
+  public var illustrationUrl: Foundation.URL?
+  public init(id: Swift.String, title: Swift.String? = nil, originalHeight: Swift.Int? = nil, originalWidth: Swift.Int? = nil, thumbnailUrl: Foundation.URL? = nil, illustrationUrl: Foundation.URL? = nil)
+  public static func == (a: BanubaVideoEditorSDK.Illustration, b: BanubaVideoEditorSDK.Illustration) -> Swift.Bool
+}
 public class DefaultExposureViewFactory : BanubaVideoEditorSDK.AnimatableViewFactory {
   public init()
   public func makeAnimatableView() -> any BanubaUtilities.AnimatableView
@@ -2400,6 +2433,14 @@ public class DefaultExposureViewFactory : BanubaVideoEditorSDK.AnimatableViewFac
   @_Concurrency.MainActor @preconcurrency public func start(completion: @escaping (Swift.Bool) -> Swift.Void)
   @_Concurrency.MainActor @preconcurrency public func stop()
   @objc deinit
+}
+public struct BodySystem : Swift.Equatable {
+  public var id: Swift.String
+  public var name: Swift.String?
+  public var thumbnailUrl: Foundation.URL?
+  public var cover: BanubaVideoEditorSDK.Illustration?
+  public init(id: Swift.String, name: Swift.String? = nil, thumbnailUrl: Foundation.URL? = nil, cover: BanubaVideoEditorSDK.Illustration? = nil)
+  public static func == (a: BanubaVideoEditorSDK.BodySystem, b: BanubaVideoEditorSDK.BodySystem) -> Swift.Bool
 }
 public protocol SequencesServicing {
   var aspectRatio: BanubaUtilities.AspectRatio { get }
@@ -2444,6 +2485,12 @@ public enum GiphyResolution {
   public var hashValue: Swift.Int {
     get
   }
+}
+public struct Page<Item> {
+  public var items: [Item]
+  public var hasNext: Swift.Bool
+  public var endCursor: Swift.String?
+  public init(items: [Item], hasNext: Swift.Bool, endCursor: Swift.String? = nil)
 }
 public enum ContentLocationType : Swift.Int {
   case remote

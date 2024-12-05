@@ -409,6 +409,7 @@ SWIFT_CLASS("_TtC20BanubaVideoEditorSDK22ProgressViewController")
 
 
 
+
 /// The Time line configuration
 SWIFT_CLASS("_TtC20BanubaVideoEditorSDK25TrimTimeLineConfiguration")
 @interface TrimTimeLineConfiguration : NSObject
