@@ -529,6 +529,9 @@ public struct SharingServiceModel {
 public protocol CountdownTimerViewFactory {
   func makeCountdownTimerView() -> any BanubaUtilities.CountdownTimerAnimatableView
 }
+public protocol ExternalSDKAnalyticsEventsListener : AnyObject {
+  func track(eventName: Swift.String, eventProperties: [Swift.String : Any]?)
+}
 public struct ColorPair : Swift.Equatable {
   public let background: UIKit.UIColor
   public let foreground: UIKit.UIColor
@@ -547,57 +550,6 @@ public struct VideoTextFont : Swift.Equatable {
   public var name: Swift.String
   public init(font: UIKit.UIFont?, name: Swift.String)
   public static func == (a: BanubaVideoEditorSDK.VideoTextFont, b: BanubaVideoEditorSDK.VideoTextFont) -> Swift.Bool
-}
-public protocol ExternalSDKAnalyticsEventsListener : AnyObject {
-  func onVideoEditorSDKEvent(_ event: Swift.String)
-}
-public enum SDKEventScreen : Swift.String, Swift.Codable {
-  case camera
-  case editor
-  public init?(rawValue: Swift.String)
-  public typealias RawValue = Swift.String
-  public var rawValue: Swift.String {
-    get
-  }
-}
-public enum SDKEventName : Swift.String {
-  case maskDownloaded
-  case maskApplied
-  case maskCancelled
-  case exportVideo
-  public init?(rawValue: Swift.String)
-  public typealias RawValue = Swift.String
-  public var rawValue: Swift.String {
-    get
-  }
-}
-public struct SDKEffectEvent : Swift.Codable {
-  public let name: Swift.String
-  public let data: BanubaVideoEditorSDK.SDKEventEffectData
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
-}
-public struct SDKEventEffectData : Swift.Codable, Swift.Hashable {
-  public let name: Swift.String
-  public let screen: BanubaVideoEditorSDK.SDKEventScreen?
-  public func hash(into hasher: inout Swift.Hasher)
-  public static func == (a: BanubaVideoEditorSDK.SDKEventEffectData, b: BanubaVideoEditorSDK.SDKEventEffectData) -> Swift.Bool
-  public func encode(to encoder: any Swift.Encoder) throws
-  public var hashValue: Swift.Int {
-    get
-  }
-  public init(from decoder: any Swift.Decoder) throws
-}
-public struct SDKExportEvent : Swift.Codable {
-  public let name: Swift.String
-  public let data: BanubaVideoEditorSDK.SDKExportEvent.SDKExportEventData
-  public struct SDKExportEventData : Swift.Codable {
-    public let masks: [Swift.String]
-    public func encode(to encoder: any Swift.Encoder) throws
-    public init(from decoder: any Swift.Decoder) throws
-  }
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
 }
 public struct CameraSessionMetadata : Swift.Codable {
   public let appliedEffects: [Swift.String : [Swift.String]]
@@ -2613,12 +2565,6 @@ extension BanubaVideoEditorSDK.VoiceEffectType : Swift.Hashable {}
 extension BanubaVideoEditorSDK.VoiceEffectType : Swift.RawRepresentable {}
 extension BanubaVideoEditorSDK.SharingServiceModel.SharingType : Swift.Equatable {}
 extension BanubaVideoEditorSDK.SharingServiceModel.SharingType : Swift.Hashable {}
-extension BanubaVideoEditorSDK.SDKEventScreen : Swift.Equatable {}
-extension BanubaVideoEditorSDK.SDKEventScreen : Swift.Hashable {}
-extension BanubaVideoEditorSDK.SDKEventScreen : Swift.RawRepresentable {}
-extension BanubaVideoEditorSDK.SDKEventName : Swift.Equatable {}
-extension BanubaVideoEditorSDK.SDKEventName : Swift.Hashable {}
-extension BanubaVideoEditorSDK.SDKEventName : Swift.RawRepresentable {}
 extension BanubaVideoEditorSDK.VideoSequenceEditingStep : Swift.Equatable {}
 extension BanubaVideoEditorSDK.VideoSequenceEditingStep : Swift.Hashable {}
 extension BanubaVideoEditorSDK.VideoSequenceEditingStep : Swift.RawRepresentable {}
