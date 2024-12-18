@@ -12,26 +12,6 @@
 		<data>
 		nbzEDDBaCVq/HOZvwz6o7wKKDNg=
 		</data>
-		<key>AnatomyImageCell.nib</key>
-		<data>
-		0iIhFlCycs1DJs+vTMqpTDhMMHM=
-		</data>
-		<key>AnatomyImagePickerViewController.nib</key>
-		<data>
-		eZM+V9KY2+R4oSnzw083KFe0Ry0=
-		</data>
-		<key>AnatomyImagesCategoryHeader.nib</key>
-		<data>
-		XIVXxDgeEfEy+bma2ne1AtiSZhA=
-		</data>
-		<key>AnatomyImagesCategoryViewController.nib</key>
-		<data>
-		r4N973qATVDqlYx76r3bfwrCH+A=
-		</data>
-		<key>AnatomyImagesLoadingFooterView.nib</key>
-		<data>
-		LHCxjBy8P8T7GucUXVTL4SFI+64=
-		</data>
 		<key>AppearingViewNavigationView.nib</key>
 		<data>
 		lEuzdKqc5iOe515Z+Y7w5ypwnQ4=
@@ -42,7 +22,7 @@
 		</data>
 		<key>Assets.car</key>
 		<data>
-		Mkac14MBqMNT7JXzCWaukCrNovw=
+		WIFDO+fE5gctPXZtSnwja1i9wXM=
 		</data>
 		<key>AudioEditingController.nib</key>
 		<data>
@@ -260,10 +240,6 @@
 		<data>
 		JJDHtYuMhMuiES9DkxPCkqkwPTU=
 		</data>
-		<key>GenericBackgroundCell.nib</key>
-		<data>
-		4vV2DWjkbNIXvNO9CMrY4lyDOtI=
-		</data>
 		<key>HandsFreeViewController.storyboardc/Info.plist</key>
 		<data>
 		XokLd+BUZMclY9DSylM9QRNXxTk=
@@ -298,7 +274,7 @@
 		</data>
 		<key>Headers/BanubaVideoEditorSDK-Swift.h</key>
 		<data>
-		CNu1QsmJ/785BCVR3AUYt0p7ZSc=
+		jlqBuShuAwNG9bcdokdn3fIiwMg=
 		</data>
 		<key>Headers/BanubaVideoEditorSDK.h</key>
 		<data>
@@ -314,7 +290,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		BebPSAZ1yoKLZcIi1JOgUtHoAcM=
+		4AukUY1PiPW12PGohkPbNMyjrH4=
 		</data>
 		<key>MainMusicViewController.storyboardc/BYZ-38-t0r-view-8bC-Xf-vdC.nib</key>
 		<data>
@@ -350,43 +326,43 @@
 		</data>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		vUYYZb3arb0ZW5EQDiPovmGyQFM=
+		Wy6bEu6YMvHyCG1X5T0EHeaotb8=
 		</data>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		RcoixCFLVdFwjuFyv9lG2mrzUQQ=
+		B2mpyQnN3pu3ybPcS2Ao4uxiKVU=
 		</data>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		tblmCQlwCBK42pGWL0pxvPJVUAw=
+		NwTZJx7d/oCB5XPk+ZUFMWs73/s=
 		</data>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		RcoixCFLVdFwjuFyv9lG2mrzUQQ=
+		B2mpyQnN3pu3ybPcS2Ao4uxiKVU=
 		</data>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		7MeXZqh6U1BUHl1EzSU2vXqthfA=
+		UoJg1nh1tKsqPh/6bUWb+fw1bGc=
 		</data>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		vUYYZb3arb0ZW5EQDiPovmGyQFM=
+		Wy6bEu6YMvHyCG1X5T0EHeaotb8=
 		</data>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		uyqNiZabFHUJ8Sj9lq00nRYq5Kk=
+		5eFtp2Fixl399k9cXwoLOeH8Uuo=
 		</data>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		Jatte6Sv9ReCpAlDOpuFEzUMHjo=
+		YOEcyJrODgDrFJWXZpBPvOLw8FM=
 		</data>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		uyqNiZabFHUJ8Sj9lq00nRYq5Kk=
+		5eFtp2Fixl399k9cXwoLOeH8Uuo=
 		</data>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		c6LHiyKkV59d8MNXNc0/0gruvko=
+		EEFl71wAgIAd5aT0bKs407Kjz2U=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -582,7 +558,7 @@
 		</data>
 		<key>VideoEditorViewController.nib</key>
 		<data>
-		Kl4ptauww5AV9P/M1Eqw1k00xjY=
+		xJgA/Ju88sCnbvussnWgtww4HUw=
 		</data>
 		<key>VideoOrderItemCollectionViewCell.nib</key>
 		<data>
@@ -645,41 +621,6 @@
 			PH2jFY0YxC0qWPbcuWf23Xyo6IEgOw4bG6fdZb1UUqM=
 			</data>
 		</dict>
-		<key>AnatomyImageCell.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			l9CNi6EKCdBt+RtlxkJK3j4XZDH8lLqXZ64dJvebaqI=
-			</data>
-		</dict>
-		<key>AnatomyImagePickerViewController.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			om4BRWv0oD1Ihq3JvDmr5d9TNHJZwCCeHDMzxJHfLTs=
-			</data>
-		</dict>
-		<key>AnatomyImagesCategoryHeader.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			ZWljgGROOKABS+lLT2UGqBuJd/MqNHk2wtx4IlB85tg=
-			</data>
-		</dict>
-		<key>AnatomyImagesCategoryViewController.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			atlc5NHA203tcQWlSlbLTgj4vD0aMzHBc0PcFzMCc8Q=
-			</data>
-		</dict>
-		<key>AnatomyImagesLoadingFooterView.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			XOn0GtJRWU2NHP2ibWg5TglRim00sMuLIm9v4LfBaPA=
-			</data>
-		</dict>
 		<key>AppearingViewNavigationView.nib</key>
 		<dict>
 			<key>hash2</key>
@@ -698,7 +639,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			5nHYBlQ+PVF/QjxqvVZg3pQOKpPG9SYzl1BHg/kvN7I=
+			x1InZE4hM7QYzGrwVz/xy+Z6VTtG5QQyGRlHqfKx0yw=
 			</data>
 		</dict>
 		<key>AudioEditingController.nib</key>
@@ -1079,13 +1020,6 @@
 			k1M6KqP8IYVYkVcnFNkTqGn8wnipdJkxsZe3z1Ko9BA=
 			</data>
 		</dict>
-		<key>GenericBackgroundCell.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			CtbhfDLPdnWRJkl76PjYxnJdNWXSE4ZkNH8A23M53+s=
-			</data>
-		</dict>
 		<key>HandsFreeViewController.storyboardc/Info.plist</key>
 		<dict>
 			<key>hash2</key>
@@ -1146,7 +1080,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			kxqNW1ie9m/0lk7oVv1KrvLVzA09sJAZSPvWVmlMg0Q=
+			sIevWGSTidirOc8zA6yT35clowvzvq9TJ1OtMxfxeMY=
 			</data>
 		</dict>
 		<key>Headers/BanubaVideoEditorSDK.h</key>
@@ -1230,70 +1164,70 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			GZQUT00PYroBeMpqLXcBf5/JsKP399pce3hhLkD0VCE=
+			1NZRvAV4PMAbvWcwxXBn8C5ssC9tuECqsokxKUltTbA=
 			</data>
 		</dict>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			PGvKhO3Ba2lacBflTGD7H+EAc4Rew3Akm0qf44zVlpU=
+			0XeawBG3ufI+jX5+SV9t4tG8XOXypbRceBXYeGW8Th0=
 			</data>
 		</dict>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			dbWOrF2aIGduGtRQbuKC/TBDQ3VkHXo9SVJGtscTJcY=
+			KN8HrGSmJvRq8zvSQtoOglUE8WRtWLi0tf8Li9eHFw0=
 			</data>
 		</dict>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			PGvKhO3Ba2lacBflTGD7H+EAc4Rew3Akm0qf44zVlpU=
+			0XeawBG3ufI+jX5+SV9t4tG8XOXypbRceBXYeGW8Th0=
 			</data>
 		</dict>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			GAPhIMyAh0b7C/rjYEAwb1Vy0PoPwh4WKO0Lk1rlYvg=
+			USwTmKosw1ggn70so2abztHCLD/VNWGfsryrSMqZ/0E=
 			</data>
 		</dict>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			GZQUT00PYroBeMpqLXcBf5/JsKP399pce3hhLkD0VCE=
+			1NZRvAV4PMAbvWcwxXBn8C5ssC9tuECqsokxKUltTbA=
 			</data>
 		</dict>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			IqVendqwezGFQNsNWNbtAnjNagnVvOqydeQi4NylRKQ=
+			jGtENhei91sJM4kH3/v1nqcUUi1XqKRfmZrab674PVQ=
 			</data>
 		</dict>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Sjwj8KdeqEDzRyHABUPQiIVUJfY7/6rNPsE/M3+gRHA=
+			mjQI3LxC5eWIftIiRNQyxKOzqzb6iu9h6nAtEIFIkM4=
 			</data>
 		</dict>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			IqVendqwezGFQNsNWNbtAnjNagnVvOqydeQi4NylRKQ=
+			jGtENhei91sJM4kH3/v1nqcUUi1XqKRfmZrab674PVQ=
 			</data>
 		</dict>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			sEectEPusfC5ay4MoLlDlRuQW/9uKA0NMgkzQMuO2U0=
+			AeM8Jl+nSgXXqv1TaQ1xl6ZbN1icTHDOFt4XjwrEoUE=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -1636,7 +1570,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			dubLabddno+VTAs0ESmv7uw/BRiVBWit833hr71nP80=
+			u4CI7duGsbhf73b3ddtswLn4PQagAxl56Ks+UtGXk4Y=
 			</data>
 		</dict>
 		<key>VideoOrderItemCollectionViewCell.nib</key>
