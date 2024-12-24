@@ -355,7 +355,6 @@ SWIFT_CLASS("_TtC20BanubaVideoEditorSDK27FeedbackAlertViewController")
 
 
 
-
 @class UIButton;
 
 SWIFT_CLASS("_TtC20BanubaVideoEditorSDK22FullscreenActivityView")

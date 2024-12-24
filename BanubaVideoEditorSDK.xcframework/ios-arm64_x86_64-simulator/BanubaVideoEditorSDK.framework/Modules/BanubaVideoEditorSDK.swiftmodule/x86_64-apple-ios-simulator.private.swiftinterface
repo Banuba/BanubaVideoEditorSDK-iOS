@@ -1676,7 +1676,7 @@ public struct AdditionalEffectsButtonConfiguration {
   public init(identifier: BanubaVideoEditorSDK.AdditionalEffectsButtonConfiguration.ButtonType, imageConfiguration: BanubaVideoEditorSDK.ImageConfiguration, selectedImageConfiguration: BanubaVideoEditorSDK.ImageConfiguration?, title: BanubaUtilities.TextButtonConfiguration? = nil, titlePosition: BanubaVideoEditorSDK.TitlePosition? = nil, width: CoreFoundation.CGFloat = 50, height: CoreFoundation.CGFloat = 50, position: BanubaVideoEditorSDK.AdditionalEffectsButtonConfiguration.Position? = nil, imageTitleSpacing: CoreFoundation.CGFloat? = nil, defaultTitleAlpha: CoreFoundation.CGFloat? = nil, selectedTitleAlpha: CoreFoundation.CGFloat? = nil, cornerRadius: CoreFoundation.CGFloat = .zero, backgroundMode: BanubaUtilities.BackgroundMode = .color, backgroundColor: UIKit.UIColor = .clear, contentInsets: CoreFoundation.CGFloat = 8.5)
   public enum ButtonType : Swift.String {
     case link
-    case color
+    case colorEffects
     case sticker
     case text
     case time

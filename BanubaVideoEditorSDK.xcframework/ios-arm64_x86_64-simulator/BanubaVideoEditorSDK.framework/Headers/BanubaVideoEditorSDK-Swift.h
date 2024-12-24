@@ -355,7 +355,6 @@ SWIFT_CLASS("_TtC20BanubaVideoEditorSDK27FeedbackAlertViewController")
 
 
 
-
 @class UIButton;
 
 SWIFT_CLASS("_TtC20BanubaVideoEditorSDK22FullscreenActivityView")
@@ -811,7 +810,6 @@ SWIFT_CLASS("_TtC20BanubaVideoEditorSDK27FeedbackAlertViewController")
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end
-
 
 
 
