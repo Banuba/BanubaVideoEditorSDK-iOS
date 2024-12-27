@@ -696,7 +696,6 @@ public struct TextOnVideoMetadata : Swift.Codable {
 }
 public enum VideoSequenceEditingStep : Swift.Int, Swift.Codable {
   case camera
-  case trimmer
   case editor
   public init?(rawValue: Swift.Int)
   public typealias RawValue = Swift.Int
@@ -1097,13 +1096,12 @@ public struct VideoEditorConfig {
   public var transitionsConfiguration: BanubaVideoEditorSDK.EffectsListConfiguration
   public var progressViewConfiguration: BanubaVideoEditorSDK.ProgressViewConfiguration
   public var captionsConfiguration: BanubaVideoEditorSDK.CaptionsConfiguration
-  public var autoCutConfiguration: BanubaVideoEditorSDK.AutoCutConfiguration
   public var beautyIntensityConfiguration: BanubaVideoEditorSDK.BeautyIntensityConfiguration
   public var videoPreviewConfiguration: BanubaVideoEditorSDK.VideoPreviewConfiguration
   public var greenScreenBackgroundPickerConfiguration: BanubaVideoEditorSDK.GreenScreenBackgroundPickerConfiguration
   public var the3DObjectsPickerConfiguration: BanubaVideoEditorSDK.The3DObjectsConfiguration
   public init()
-  public init(videoResolutionConfiguration: BanubaUtilities.VideoResolutionConfiguration, recorderConfiguration: BanubaVideoEditorSDK.RecorderConfiguration, editorConfiguration: BanubaVideoEditorSDK.EditorConfiguration, textEditorConfiguration: BanubaVideoEditorSDK.TextEditorConfiguration, toastConfiguration: BanubaUtilities.ToastConfiguration, fullScreenActivityConfiguration: BanubaVideoEditorSDK.FullScreenActivityConfiguration, smallActivityIndicatorConfiguration: BanubaUtilities.SmallActivityIndicatorConfiguration, albumsConfiguration: BanubaUtilities.AlbumsConfiguration, videoOverlayConfiguration: BanubaVideoEditorSDK.VideoOverlayConfiguration, videoDurationConfiguration: BanubaVideoEditorSDK.VideoEditorDurationConfig, gifPickerConfiguration: BanubaVideoEditorSDK.GifPickerConfiguration, combinedGalleryConfiguration: BanubaUtilities.GalleryConfiguration, trimVideosConfiguration: BanubaVideoEditorSDK.TrimVideosConfiguration, trimVideoConfiguration: BanubaVideoEditorSDK.TrimVideoConfiguration, filterConfiguration: BanubaVideoEditorSDK.FilterConfiguration, extendedVideoCoverSelectionConfiguration: BanubaVideoEditorSDK.VideoCoverSelectionConfiguration, musicEditorConfiguration: BanubaVideoEditorSDK.MusicEditorConfig, overlayEditorConfiguration: BanubaVideoEditorSDK.OverlayEditorConfiguration, featureConfiguration: BanubaVideoEditorSDK.FeatureConfiguration, watermarkConfiguration: VideoEditor.WatermarkConfiguration?, alertViewConfiguration: BanubaUtilities.AlertViewConfiguration, popoverAlertViewConfiguration: BanubaUtilities.PopoverAlertViewConfiguration, handsfreeConfiguration: BanubaVideoEditorSDK.HandsfreeConfiguration?, pipSettingsConfiguration: BanubaVideoEditorSDK.PIPSettingsConfiguration?, sharingScreenConfiguration: BanubaVideoEditorSDK.SharingScreenConfiguration, draftsConfiguration: BanubaVideoEditorSDK.DraftsConfiguration, aspectsConfiguration: BanubaVideoEditorSDK.EffectsListConfiguration, transitionsConfiguration: BanubaVideoEditorSDK.EffectsListConfiguration, progressViewConfiguration: BanubaVideoEditorSDK.ProgressViewConfiguration, captionsConfiguration: BanubaVideoEditorSDK.CaptionsConfiguration, autoCutConfiguration: BanubaVideoEditorSDK.AutoCutConfiguration, beautyIntensityConfiguration: BanubaVideoEditorSDK.BeautyIntensityConfiguration, videoPreviewConfiguration: BanubaVideoEditorSDK.VideoPreviewConfiguration, greenScreenBackgroundPickerConfiguration: BanubaVideoEditorSDK.GreenScreenBackgroundPickerConfiguration, the3DObjectsPickerConfiguration: BanubaVideoEditorSDK.The3DObjectsConfiguration)
+  public init(videoResolutionConfiguration: BanubaUtilities.VideoResolutionConfiguration, recorderConfiguration: BanubaVideoEditorSDK.RecorderConfiguration, editorConfiguration: BanubaVideoEditorSDK.EditorConfiguration, textEditorConfiguration: BanubaVideoEditorSDK.TextEditorConfiguration, toastConfiguration: BanubaUtilities.ToastConfiguration, fullScreenActivityConfiguration: BanubaVideoEditorSDK.FullScreenActivityConfiguration, smallActivityIndicatorConfiguration: BanubaUtilities.SmallActivityIndicatorConfiguration, albumsConfiguration: BanubaUtilities.AlbumsConfiguration, videoOverlayConfiguration: BanubaVideoEditorSDK.VideoOverlayConfiguration, videoDurationConfiguration: BanubaVideoEditorSDK.VideoEditorDurationConfig, gifPickerConfiguration: BanubaVideoEditorSDK.GifPickerConfiguration, combinedGalleryConfiguration: BanubaUtilities.GalleryConfiguration, trimVideosConfiguration: BanubaVideoEditorSDK.TrimVideosConfiguration, trimVideoConfiguration: BanubaVideoEditorSDK.TrimVideoConfiguration, filterConfiguration: BanubaVideoEditorSDK.FilterConfiguration, extendedVideoCoverSelectionConfiguration: BanubaVideoEditorSDK.VideoCoverSelectionConfiguration, musicEditorConfiguration: BanubaVideoEditorSDK.MusicEditorConfig, overlayEditorConfiguration: BanubaVideoEditorSDK.OverlayEditorConfiguration, featureConfiguration: BanubaVideoEditorSDK.FeatureConfiguration, watermarkConfiguration: VideoEditor.WatermarkConfiguration?, alertViewConfiguration: BanubaUtilities.AlertViewConfiguration, popoverAlertViewConfiguration: BanubaUtilities.PopoverAlertViewConfiguration, handsfreeConfiguration: BanubaVideoEditorSDK.HandsfreeConfiguration?, pipSettingsConfiguration: BanubaVideoEditorSDK.PIPSettingsConfiguration?, sharingScreenConfiguration: BanubaVideoEditorSDK.SharingScreenConfiguration, draftsConfiguration: BanubaVideoEditorSDK.DraftsConfiguration, aspectsConfiguration: BanubaVideoEditorSDK.EffectsListConfiguration, transitionsConfiguration: BanubaVideoEditorSDK.EffectsListConfiguration, progressViewConfiguration: BanubaVideoEditorSDK.ProgressViewConfiguration, captionsConfiguration: BanubaVideoEditorSDK.CaptionsConfiguration, beautyIntensityConfiguration: BanubaVideoEditorSDK.BeautyIntensityConfiguration, videoPreviewConfiguration: BanubaVideoEditorSDK.VideoPreviewConfiguration, greenScreenBackgroundPickerConfiguration: BanubaVideoEditorSDK.GreenScreenBackgroundPickerConfiguration, the3DObjectsPickerConfiguration: BanubaVideoEditorSDK.The3DObjectsConfiguration)
   public mutating func setupColorsPalette(_ colorsPalette: BanubaVideoEditorSDK.VideoEditorColorsPalette)
   public mutating func applyFont(_ font: UIKit.UIFont)
   public mutating func updateAlertFonts(_ font: UIKit.UIFont)
@@ -1537,15 +1535,6 @@ extension BanubaVideoEditorSDK.ExternalViewControllerFactory {
   }
   @objc deinit
 }
-public struct AutoCutConfiguration {
-  public enum MusicProvider {
-    case soundstripe(tracksURL: Foundation.URL)
-    case banubaMusic(tracksURL: Foundation.URL)
-  }
-  public var embeddingsDownloadUrl: Swift.String?
-  public var musicProvider: BanubaVideoEditorSDK.AutoCutConfiguration.MusicProvider?
-  public init(embeddingsDownloadUrl: Swift.String?, musicProvider: BanubaVideoEditorSDK.AutoCutConfiguration.MusicProvider?)
-}
 public protocol MusicEditorExternalViewControllerFactory : AnyObject {
   func makeTrackSelectionViewController(selectedAudioItem: (any BanubaUtilities.AudioItem)?, isAudioPartSelectionEnabled: Swift.Bool) -> (any BanubaUtilities.TrackSelectionViewController)?
   func makeEffectSelectionViewController(selectedAudioItem: (any BanubaUtilities.AudioItem)?) -> (any BanubaUtilities.EffectSelectionViewController)?
@@ -1712,7 +1701,6 @@ public struct FeatureConfiguration {
   public var isDoubleTapForToggleCameraEnabled: Swift.Bool
   public var isMuteCameraAudioEnabled: Swift.Bool
   public var isVideoCoverSelectionEnabled: Swift.Bool
-  public var supportsTrimRecordedVideo: Swift.Bool
   public var draftsConfig: BanubaVideoEditorSDK.DraftsFeatureConfig
   public var isAspectsEnabled: Swift.Bool
   public var isSpeedBarEnabled: Swift.Bool
@@ -2276,7 +2264,6 @@ public class VideoMetadataStorage {
   public func videoEditorTrimMetadata(for videoSequence: VideoEditor.VideoSequence) -> BanubaVideoEditorSDK.VideoEditorTrimMetadata?
   public func videoCoverMetadata(forVideoSequence videoSequence: VideoEditor.VideoSequence?) -> BanubaVideoEditorSDK.VideoCoverMetadata?
   public func cameraSessionMetadata(forVideoSequence videoSequence: VideoEditor.VideoSequence?) -> BanubaVideoEditorSDK.CameraSessionMetadata?
-  public func isVideoSequenceContainsAutocutMetadata(for videoSequence: VideoEditor.VideoSequence) -> Swift.Bool
   public func replaceMetadata(ofVideoSequence destinationSequence: VideoEditor.VideoSequence, withVideoSequence sourceSequence: VideoEditor.VideoSequence)
   public func duplicateMetadata(ofVideoSequence sourceSequence: VideoEditor.VideoSequence, toVideoSequence destinationSequence: VideoEditor.VideoSequence)
 }
