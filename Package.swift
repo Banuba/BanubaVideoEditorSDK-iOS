@@ -12,12 +12,7 @@ let package = Package(
   products: [
     .library(
       name: "BanubaVideoEditorSDK",
-      targets: [
-        "BanubaVideoEditorSDK",
-        "BanubaUtilities",
-        "BanubaVideoEditorCore",
-        "BanubaLicenseServicingSDK"
-      ]
+      targets: ["BanubaVideoEditorSDKTarget"]
     )
   ],
   dependencies: [
@@ -26,21 +21,26 @@ let package = Package(
     .package(url: "https://github.com/Banuba/BanubaLicenseServicingSDK.git", utilsVersionRange),
   ],
   targets: [
+    .target(
+      name: "BanubaVideoEditorSDKWrapper",
+      dependencies: [
+        "BanubaVideoEditorSDK",
+        .product(name: "BanubaUtilities", package: "BanubaUtilities-iOS"),
+        .product(name: "BanubaVideoEditorCore", package: "BanubaVideoEditorCore-iOS"),
+        .product(name: "BanubaLicenseServicingSDK", package: "BanubaLicenseServicingSDK")
+      ],
+      path: "BanubaVideoEditorSDKWrapper"
+    ),
+    .target(
+      name: "BanubaVideoEditorSDKTarget",
+      dependencies: [
+        .target(name: "BanubaVideoEditorSDKWrapper")
+      ],
+      path: "BanubaVideoEditorSDKTarget"
+    ),
     .binaryTarget(
       name: "BanubaVideoEditorSDK",
       path: "BanubaVideoEditorSDK.xcframework"
-    ),
-    .binaryTarget(
-        name: "BanubaUtilities",
-        path: "BanubaUtilities.xcframework"
-    ),
-    .binaryTarget(
-        name: "BanubaVideoEditorCore",
-        path: "BanubaVideoEditorCore.xcframework"
-    ),
-    .binaryTarget(
-        name: "BanubaLicenseServicingSDK",
-        path: "BanubaLicenseServicingSDK.xcframework"
-    ),
+    )
   ]
 )
