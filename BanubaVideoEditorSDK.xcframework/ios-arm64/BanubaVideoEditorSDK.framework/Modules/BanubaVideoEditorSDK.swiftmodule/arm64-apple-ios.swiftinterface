@@ -2140,7 +2140,6 @@ public protocol SDKCameraServicing {
   var isLoaded: Swift.Bool { get }
   func effectsPaths() -> [Swift.String]
   func setupCamera()
-  func setupPostprocessing()
   func destroy()
   func start(completion: @escaping () -> Swift.Void)
   func stop()
@@ -2185,12 +2184,11 @@ public class SDKCameraService : BanubaVideoEditorSDK.SDKCameraServicing {
     get
   }
   public var appliedFilter: BanubaVideoEditorCore.EffectModel?
-  required public init(cameraModule: any BanubaVideoEditorCore.CameraModule, masksPostprocessingServicing: (any BanubaVideoEditorCore.SDKMaskPostprocessServicing)?)
+  required public init(cameraModule: any BanubaVideoEditorCore.CameraModule)
   @objc deinit
 }
 extension BanubaVideoEditorSDK.SDKCameraService {
   public func setupCamera()
-  public func setupPostprocessing()
   public func destroy()
   public func setupCameraChangedDelegate(_ delegate: (any BanubaVideoEditorSDK.SDKCameraChangedDelegate)?)
 }

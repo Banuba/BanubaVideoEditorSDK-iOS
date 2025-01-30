@@ -2,7 +2,7 @@
 
 import PackageDescription
 
-let utilsVersionRange: Range<Version> = "1.40.0"..<"1.49.99"
+let version: Version = "1.40.1"
 
 let package = Package(
   name: "BanubaVideoEditorSDK",
@@ -16,9 +16,9 @@ let package = Package(
     )
   ],
   dependencies: [
-    .package(url: "https://github.com/Banuba/BanubaUtilities-iOS.git", utilsVersionRange),
-    .package(url: "https://github.com/Banuba/BanubaVideoEditorCore-iOS.git", utilsVersionRange),
-    .package(url: "https://github.com/Banuba/BanubaLicenseServicingSDK.git", utilsVersionRange),
+    .package(url: "https://github.com/Banuba/BanubaUtilities-iOS.git", exact: version),
+    .package(url: "https://github.com/Banuba/BanubaVideoEditorCore-iOS.git", exact: version),
+    .package(url: "https://github.com/Banuba/BanubaLicenseServicingSDK.git", exact: version),
   ],
   targets: [
     .target(
