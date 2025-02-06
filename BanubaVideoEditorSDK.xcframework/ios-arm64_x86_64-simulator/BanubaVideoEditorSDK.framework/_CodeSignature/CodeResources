@@ -326,7 +326,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		2WRr0N8gL80Ba/48GPhlxoybt9Q=
+		uXR21vMHfm1kJuB/8cGbH4DCcNQ=
 		</data>
 		<key>MainMusicViewController.storyboardc/BYZ-38-t0r-view-8bC-Xf-vdC.nib</key>
 		<data>
@@ -362,7 +362,7 @@
 		</data>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		ihMY0q+M7Z7qSnf5J/ZJWbidboA=
+		UeonxMENr6Zs2lEdTe2mWgbCKwA=
 		</data>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -378,11 +378,11 @@
 		</data>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		4NvyqZ5W+65C5wuc8e7nh6YeQbc=
+		LAziv8RTsGjx4vvHG1kJUb3lFPE=
 		</data>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		ihMY0q+M7Z7qSnf5J/ZJWbidboA=
+		UeonxMENr6Zs2lEdTe2mWgbCKwA=
 		</data>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -398,7 +398,7 @@
 		</data>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		4I1gAZWqQmU4Hy6AxPqcO8Z+8Lk=
+		A8aQT5ZK6nbIZOLqlFzZr9hG/30=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -1235,7 +1235,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			d2lDf/oVzt+tDHUUlAL5fznSJCFqbBtT2WjwKp2uYaM=
+			vmYS7fQdyOnGK22q4Cpcbji7whikhnhH+OB6ZdMQLkE=
 			</data>
 		</dict>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
@@ -1263,14 +1263,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			KV+qG4s8bEq2NIOkz5gld3MmX2WWvrsOo1IAHbKqMWA=
+			hmNWtbyjf1UiLA1I9x5NpCa6E1nJ5Q2LrYBg9jLDWTU=
 			</data>
 		</dict>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			d2lDf/oVzt+tDHUUlAL5fznSJCFqbBtT2WjwKp2uYaM=
+			vmYS7fQdyOnGK22q4Cpcbji7whikhnhH+OB6ZdMQLkE=
 			</data>
 		</dict>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
@@ -1298,7 +1298,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			v5sxPEDhAIEN38G9DxSmi8Rf7TifVhKzDlzC0x1Ye+w=
+			LRJ0KxqtEennN6YxGn8Hbovk8jU5RRUg6f0B0fX04fU=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
