@@ -26,7 +26,7 @@
 		</data>
 		<key>Assets.car</key>
 		<data>
-		DPae0z29FL0nty/0J4KuLrOu5S8=
+		XSwYmadZxB1UIGwo9Yb+4H2ZZYw=
 		</data>
 		<key>AudioEditingController.nib</key>
 		<data>
@@ -72,9 +72,9 @@
 		<data>
 		0Sdb2gOANbKYEp87/FgUu0kBeac=
 		</data>
-		<key>AutoCutThemeSelectionViewController.nib</key>
+		<key>AutoCutThemeEditorViewController.nib</key>
 		<data>
-		OJ5rWU2e+7hlmGZNueXxHVebdxc=
+		b6i3GbbvntEbOh/p1Bx14KFWhLI=
 		</data>
 		<key>BackgroundPickerCollectionViewCell.nib</key>
 		<data>
@@ -134,7 +134,7 @@
 		</data>
 		<key>EditVolumeView.nib</key>
 		<data>
-		2Alsno1j7T8HTcMo2UjWAY1eVns=
+		eOTFc4nZeggORVDZvPrPSX7KTa8=
 		</data>
 		<key>EditorAutoCutSoundPartSelectionViewController.storyboardc/EditorAutoCutSoundPartSelectionViewController.nib</key>
 		<data>
@@ -162,15 +162,11 @@
 		</data>
 		<key>EditorAutoCutSoundsViewController.nib</key>
 		<data>
-		N1/hOuyssyUA4Lt3Vvk4AdPXBGQ=
-		</data>
-		<key>EditorAutoCutThemesViewController.nib</key>
-		<data>
-		53zMGStjAfuwukTNmyZoANvLEFk=
+		3ERIxvAsOeoRzDSXwttnVjJ3d8w=
 		</data>
 		<key>EditorViewController.storyboardc/Ffw-ny-sfW-view-8GI-rz-chm.nib</key>
 		<data>
-		l4nJcVjE2gTO0Axxrb81No2/6RI=
+		zbUW1EddNK1ZtajuWUOdB9ZK6Dw=
 		</data>
 		<key>EditorViewController.storyboardc/Info.plist</key>
 		<data>
@@ -246,7 +242,7 @@
 		</data>
 		<key>GIFPickerViewController.storyboardc/vSI-jT-m46-view-ILs-65-bXW.nib</key>
 		<data>
-		JJDHtYuMhMuiES9DkxPCkqkwPTU=
+		sj1aSK/HAhZkHaaGA3yGw0D5Huc=
 		</data>
 		<key>GalleryAlbumsViewController.storyboardc/Cuu-Bg-WfJ-view-X1r-6A-jFF.nib</key>
 		<data>
@@ -326,7 +322,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		S4+ZU3kuwAIOM3Vq/IjkN3RaS+0=
+		JU/NHSaLRmT0j+3jQPI4w/sL5Ic=
 		</data>
 		<key>MainMusicViewController.storyboardc/BYZ-38-t0r-view-8bC-Xf-vdC.nib</key>
 		<data>
@@ -362,23 +358,23 @@
 		</data>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		OcobXbKrzDWC5gVQQ9ius03fsqM=
+		L2p9q3rs76B9zkN2+zfpH+Uo3HE=
 		</data>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		cvsgQJ2yz4+nodmGzQWjfYH3ftE=
+		2TUxz17uXT1DUHQccopwtLMoZR4=
 		</data>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		LvyLVVRKfOSC7xa8AD6VrOusAt8=
+		UQa8Ub3Qwt4rhkzqLjHK3YEPXRI=
 		</data>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		cvsgQJ2yz4+nodmGzQWjfYH3ftE=
+		2TUxz17uXT1DUHQccopwtLMoZR4=
 		</data>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		vqtscx6BQgFr+CqLUeKkmNDdzpA=
+		081sCFqB91t78xzTMvFFfsA56DE=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -542,7 +538,7 @@
 		</data>
 		<key>VideoEditorGalleryViewController.nib</key>
 		<data>
-		EPsclFcEiXP0yQfs09YuVAazlls=
+		9aG5EwOZSwqqRvRSczCfiX8KRuo=
 		</data>
 		<key>VideoEditorViewController.nib</key>
 		<data>
@@ -634,7 +630,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			lGmvaO2yKarlEfs7m19aJaBlRIqqge26eBCpqgf4hyM=
+			HrWXdC2UiXCaKH/6k6A5nIFoF1V6ghSAgEB238L7ELY=
 			</data>
 		</dict>
 		<key>AudioEditingController.nib</key>
@@ -714,11 +710,11 @@
 			Z/2vF7UDK00dnyeSz2BHvi6wHgyWI3/TvKks7w6m1nM=
 			</data>
 		</dict>
-		<key>AutoCutThemeSelectionViewController.nib</key>
+		<key>AutoCutThemeEditorViewController.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			dmAA/wIQsZaeMPRPAflOvuYVVo5Fr6zhCm3azXF6K8k=
+			sLEZOCiV+4QV/9M6bH6Z8oVRIL/t1Ratghk162y10mI=
 			</data>
 		</dict>
 		<key>BackgroundPickerCollectionViewCell.nib</key>
@@ -823,7 +819,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			m8/PjUpkoBuEcgggxXthueFWuQH2BDcPdA78VKap8hY=
+			SwAK9XYeY2O0eiuDa2rO6Ni3Pu39Q/y7OYhM9zdzwqw=
 			</data>
 		</dict>
 		<key>EditorAutoCutSoundPartSelectionViewController.storyboardc/EditorAutoCutSoundPartSelectionViewController.nib</key>
@@ -872,21 +868,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			z7wSxMzzK9F7tEZ/GuF7DuuI6D/5k2funJKYLbrmbjc=
-			</data>
-		</dict>
-		<key>EditorAutoCutThemesViewController.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			n3Xth/mmj2jtj8dxAN3foIiZUmrbTWPRv6/cRhd/v0s=
+			wA1yEGa27Vj4q6/JISyK+k2DyfXvVpLD3QgXMRmufog=
 			</data>
 		</dict>
 		<key>EditorViewController.storyboardc/Ffw-ny-sfW-view-8GI-rz-chm.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			U2XWiG2GGuaeoWlr9b0sfxa7u5nBcZCxacYc1NJtZuQ=
+			8w+EkXX/2JdOFwyFMrbjQry0RADpO9JC/8PSmiEjRvc=
 			</data>
 		</dict>
 		<key>EditorViewController.storyboardc/Info.plist</key>
@@ -1019,7 +1008,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			k1M6KqP8IYVYkVcnFNkTqGn8wnipdJkxsZe3z1Ko9BA=
+			hc4mMWLzhy0yIwr0vg0lw7NtknbUJTHSozIHQA4lcdA=
 			</data>
 		</dict>
 		<key>GalleryAlbumsViewController.storyboardc/Cuu-Bg-WfJ-view-X1r-6A-jFF.nib</key>
@@ -1215,35 +1204,35 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			7xqNQoFDjrOiuTWzjmug0qMmFnSYpeKuX+TA67LRaVY=
+			+XLy1t6qVq15lb+M4lNWYdZ37sI5Jsqtm9Z5KjQCMvI=
 			</data>
 		</dict>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Wy/Dvw5n9PQQ0tmWBvBl+fpShOjjF9EYSyUCZQTA+3o=
+			/x045t+oLKIOyQPA/YUOxCiHmpqbhswww75DXnUZjok=
 			</data>
 		</dict>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			xb3an1gsQ0/qKImUi+TW2/MQJFkROehe2VoCHx6YfCs=
+			9IixF2+/lmsPr+lAMK8mqnx6wQTjG6DCx4y9Cr8g2/Y=
 			</data>
 		</dict>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Wy/Dvw5n9PQQ0tmWBvBl+fpShOjjF9EYSyUCZQTA+3o=
+			/x045t+oLKIOyQPA/YUOxCiHmpqbhswww75DXnUZjok=
 			</data>
 		</dict>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			qQLExr5286RKexFktyaqpOqKofSeCgFaJ50/MHTt1yI=
+			U7k3nJ2CNwI5MgTiNaWdCux3KGYTyy3orLPXikFRJLE=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -1530,7 +1519,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			edsVLNtjx0Ne4+XbXwJew3ncZUjmZnA3hPeG3IdLIJw=
+			O3dlSXUj/fXRcPz+rCwZeU3Y7tGXu+sf/IJHwvFdjQU=
 			</data>
 		</dict>
 		<key>VideoEditorViewController.nib</key>

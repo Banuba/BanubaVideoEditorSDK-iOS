@@ -526,15 +526,16 @@ public protocol CountdownTimerViewFactory {
   func makeCountdownTimerView() -> any BanubaUtilities.CountdownTimerAnimatableView
 }
 public struct ColorPair : Swift.Equatable {
+  public let cursor: UIKit.UIColor
   public let background: UIKit.UIColor
   public let foreground: UIKit.UIColor
-  public init(background: UIKit.UIColor, foreground: UIKit.UIColor)
+  public init(cursor: UIKit.UIColor, background: UIKit.UIColor, foreground: UIKit.UIColor)
   public static func == (lhs: BanubaVideoEditorSDK.ColorPair, rhs: BanubaVideoEditorSDK.ColorPair) -> Swift.Bool
 }
 public struct VideoTextColorPair : Swift.Equatable {
   public let foreground: BanubaVideoEditorSDK.ColorPair
   public let background: BanubaVideoEditorSDK.ColorPair
-  public init(colors: (UIKit.UIColor, UIKit.UIColor, UIKit.UIColor, UIKit.UIColor))
+  public init(colors: (UIKit.UIColor, UIKit.UIColor, UIKit.UIColor, UIKit.UIColor, UIKit.UIColor, UIKit.UIColor))
   public init(foreground: BanubaVideoEditorSDK.ColorPair, background: BanubaVideoEditorSDK.ColorPair)
   public static func == (lhs: BanubaVideoEditorSDK.VideoTextColorPair, rhs: BanubaVideoEditorSDK.VideoTextColorPair) -> Swift.Bool
 }
@@ -742,6 +743,7 @@ public enum VideoSequenceEditingStep : Swift.Int, Swift.Codable {
   case camera
   case trimmer
   case editor
+  case aiClipping
   public init?(rawValue: Swift.Int)
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
@@ -1087,6 +1089,13 @@ public struct TimelineEffectColorsPalette {
   public let voiceOversColor: UIKit.UIColor
   public init(stickersColor: UIKit.UIColor, textsColor: UIKit.UIColor, captionsColor: UIKit.UIColor, pixelationColor: UIKit.UIColor, audioTracksColor: UIKit.UIColor, voiceOversColor: UIKit.UIColor)
   public static var `default`: BanubaVideoEditorSDK.TimelineEffectColorsPalette {
+    get
+  }
+}
+public enum AutoCutMode {
+  case enabled(isNextButtonVisible: Swift.Bool)
+  case disabled
+  public var isAutoCutEnabled: Swift.Bool {
     get
   }
 }
@@ -1694,7 +1703,6 @@ public struct AdditionalEffectsButtonConfiguration {
     case blur
     case trimDraft
     case captions
-    case autoCut
     case additionalCamera
     case greenScreen
     public init?(rawValue: Swift.String)

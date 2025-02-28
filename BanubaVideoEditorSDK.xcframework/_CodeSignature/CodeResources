@@ -26,7 +26,7 @@
 		</data>
 		<key>ios-arm64/BanubaVideoEditorSDK.framework/Assets.car</key>
 		<data>
-		DPae0z29FL0nty/0J4KuLrOu5S8=
+		XSwYmadZxB1UIGwo9Yb+4H2ZZYw=
 		</data>
 		<key>ios-arm64/BanubaVideoEditorSDK.framework/AudioEditingController.nib</key>
 		<data>
@@ -72,9 +72,9 @@
 		<data>
 		0Sdb2gOANbKYEp87/FgUu0kBeac=
 		</data>
-		<key>ios-arm64/BanubaVideoEditorSDK.framework/AutoCutThemeSelectionViewController.nib</key>
+		<key>ios-arm64/BanubaVideoEditorSDK.framework/AutoCutThemeEditorViewController.nib</key>
 		<data>
-		OJ5rWU2e+7hlmGZNueXxHVebdxc=
+		b6i3GbbvntEbOh/p1Bx14KFWhLI=
 		</data>
 		<key>ios-arm64/BanubaVideoEditorSDK.framework/BackgroundPickerCollectionViewCell.nib</key>
 		<data>
@@ -86,7 +86,7 @@
 		</data>
 		<key>ios-arm64/BanubaVideoEditorSDK.framework/BanubaVideoEditorSDK</key>
 		<data>
-		N/kVUbEW36AkffesI52b4oKZvXE=
+		df2NcxaXyj13SFlOIya/zoaURbo=
 		</data>
 		<key>ios-arm64/BanubaVideoEditorSDK.framework/BeautyIntensityViewController.nib</key>
 		<data>
@@ -138,7 +138,7 @@
 		</data>
 		<key>ios-arm64/BanubaVideoEditorSDK.framework/EditVolumeView.nib</key>
 		<data>
-		2Alsno1j7T8HTcMo2UjWAY1eVns=
+		eOTFc4nZeggORVDZvPrPSX7KTa8=
 		</data>
 		<key>ios-arm64/BanubaVideoEditorSDK.framework/EditorAutoCutSoundPartSelectionViewController.storyboardc/EditorAutoCutSoundPartSelectionViewController.nib</key>
 		<data>
@@ -166,15 +166,11 @@
 		</data>
 		<key>ios-arm64/BanubaVideoEditorSDK.framework/EditorAutoCutSoundsViewController.nib</key>
 		<data>
-		N1/hOuyssyUA4Lt3Vvk4AdPXBGQ=
-		</data>
-		<key>ios-arm64/BanubaVideoEditorSDK.framework/EditorAutoCutThemesViewController.nib</key>
-		<data>
-		53zMGStjAfuwukTNmyZoANvLEFk=
+		3ERIxvAsOeoRzDSXwttnVjJ3d8w=
 		</data>
 		<key>ios-arm64/BanubaVideoEditorSDK.framework/EditorViewController.storyboardc/Ffw-ny-sfW-view-8GI-rz-chm.nib</key>
 		<data>
-		l4nJcVjE2gTO0Axxrb81No2/6RI=
+		zbUW1EddNK1ZtajuWUOdB9ZK6Dw=
 		</data>
 		<key>ios-arm64/BanubaVideoEditorSDK.framework/EditorViewController.storyboardc/Info.plist</key>
 		<data>
@@ -250,7 +246,7 @@
 		</data>
 		<key>ios-arm64/BanubaVideoEditorSDK.framework/GIFPickerViewController.storyboardc/vSI-jT-m46-view-ILs-65-bXW.nib</key>
 		<data>
-		JJDHtYuMhMuiES9DkxPCkqkwPTU=
+		sj1aSK/HAhZkHaaGA3yGw0D5Huc=
 		</data>
 		<key>ios-arm64/BanubaVideoEditorSDK.framework/GalleryAlbumsViewController.storyboardc/Cuu-Bg-WfJ-view-X1r-6A-jFF.nib</key>
 		<data>
@@ -330,7 +326,7 @@
 		</data>
 		<key>ios-arm64/BanubaVideoEditorSDK.framework/Info.plist</key>
 		<data>
-		S4+ZU3kuwAIOM3Vq/IjkN3RaS+0=
+		JU/NHSaLRmT0j+3jQPI4w/sL5Ic=
 		</data>
 		<key>ios-arm64/BanubaVideoEditorSDK.framework/MainMusicViewController.storyboardc/BYZ-38-t0r-view-8bC-Xf-vdC.nib</key>
 		<data>
@@ -366,19 +362,19 @@
 		</data>
 		<key>ios-arm64/BanubaVideoEditorSDK.framework/Modules/BanubaVideoEditorSDK.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		OcobXbKrzDWC5gVQQ9ius03fsqM=
+		L2p9q3rs76B9zkN2+zfpH+Uo3HE=
 		</data>
 		<key>ios-arm64/BanubaVideoEditorSDK.framework/Modules/BanubaVideoEditorSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		cvsgQJ2yz4+nodmGzQWjfYH3ftE=
+		2TUxz17uXT1DUHQccopwtLMoZR4=
 		</data>
 		<key>ios-arm64/BanubaVideoEditorSDK.framework/Modules/BanubaVideoEditorSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		LvyLVVRKfOSC7xa8AD6VrOusAt8=
+		UQa8Ub3Qwt4rhkzqLjHK3YEPXRI=
 		</data>
 		<key>ios-arm64/BanubaVideoEditorSDK.framework/Modules/BanubaVideoEditorSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		cvsgQJ2yz4+nodmGzQWjfYH3ftE=
+		2TUxz17uXT1DUHQccopwtLMoZR4=
 		</data>
 		<key>ios-arm64/BanubaVideoEditorSDK.framework/Modules/module.modulemap</key>
 		<data>
@@ -542,7 +538,7 @@
 		</data>
 		<key>ios-arm64/BanubaVideoEditorSDK.framework/VideoEditorGalleryViewController.nib</key>
 		<data>
-		EPsclFcEiXP0yQfs09YuVAazlls=
+		9aG5EwOZSwqqRvRSczCfiX8KRuo=
 		</data>
 		<key>ios-arm64/BanubaVideoEditorSDK.framework/VideoEditorViewController.nib</key>
 		<data>
@@ -594,19 +590,19 @@
 		</data>
 		<key>ios-arm64/BanubaVideoEditorSDK.framework/_CodeSignature/CodeResources</key>
 		<data>
-		94X1nfggZ+TGsCGFt4yVUl0BBuw=
+		qaY0szY+FJinHjy3/Z020gYuTKk=
 		</data>
 		<key>ios-arm64/dSYMs/BanubaVideoEditorSDK.framework.dSYM/Contents/Info.plist</key>
 		<data>
-		2cQYOXlssBVloOHtK75Ep9HsvcI=
+		+uE/1gru65r1gTSD6ucJJ5zox0g=
 		</data>
 		<key>ios-arm64/dSYMs/BanubaVideoEditorSDK.framework.dSYM/Contents/Resources/DWARF/BanubaVideoEditorSDK</key>
 		<data>
-		wKybe7M0iQ51RlCB8HGnsGTVb3M=
+		1cdl/AHcdn5E3aewZUJcCyhI4U4=
 		</data>
 		<key>ios-arm64/dSYMs/BanubaVideoEditorSDK.framework.dSYM/Contents/Resources/Relocations/aarch64/BanubaVideoEditorSDK.yml</key>
 		<data>
-		WGzIV7tUwpPvxGvrlLCq9Hgdrzc=
+		CQBX7etaYKHUW44DkZMW45gmlTk=
 		</data>
 		<key>ios-arm64_x86_64-simulator/BanubaVideoEditorSDK.framework/ActionCollectionViewCell.nib</key>
 		<data>
@@ -630,7 +626,7 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/BanubaVideoEditorSDK.framework/Assets.car</key>
 		<data>
-		DPae0z29FL0nty/0J4KuLrOu5S8=
+		XSwYmadZxB1UIGwo9Yb+4H2ZZYw=
 		</data>
 		<key>ios-arm64_x86_64-simulator/BanubaVideoEditorSDK.framework/AudioEditingController.nib</key>
 		<data>
@@ -676,9 +672,9 @@
 		<data>
 		0Sdb2gOANbKYEp87/FgUu0kBeac=
 		</data>
-		<key>ios-arm64_x86_64-simulator/BanubaVideoEditorSDK.framework/AutoCutThemeSelectionViewController.nib</key>
+		<key>ios-arm64_x86_64-simulator/BanubaVideoEditorSDK.framework/AutoCutThemeEditorViewController.nib</key>
 		<data>
-		OJ5rWU2e+7hlmGZNueXxHVebdxc=
+		b6i3GbbvntEbOh/p1Bx14KFWhLI=
 		</data>
 		<key>ios-arm64_x86_64-simulator/BanubaVideoEditorSDK.framework/BackgroundPickerCollectionViewCell.nib</key>
 		<data>
@@ -690,7 +686,7 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/BanubaVideoEditorSDK.framework/BanubaVideoEditorSDK</key>
 		<data>
-		pxTqzgA5933w0jbdS8G0XidQ034=
+		n1mhH2Z6niPzmIMB9yETWLhKXy0=
 		</data>
 		<key>ios-arm64_x86_64-simulator/BanubaVideoEditorSDK.framework/BeautyIntensityViewController.nib</key>
 		<data>
@@ -742,7 +738,7 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/BanubaVideoEditorSDK.framework/EditVolumeView.nib</key>
 		<data>
-		2Alsno1j7T8HTcMo2UjWAY1eVns=
+		eOTFc4nZeggORVDZvPrPSX7KTa8=
 		</data>
 		<key>ios-arm64_x86_64-simulator/BanubaVideoEditorSDK.framework/EditorAutoCutSoundPartSelectionViewController.storyboardc/EditorAutoCutSoundPartSelectionViewController.nib</key>
 		<data>
@@ -770,15 +766,11 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/BanubaVideoEditorSDK.framework/EditorAutoCutSoundsViewController.nib</key>
 		<data>
-		N1/hOuyssyUA4Lt3Vvk4AdPXBGQ=
-		</data>
-		<key>ios-arm64_x86_64-simulator/BanubaVideoEditorSDK.framework/EditorAutoCutThemesViewController.nib</key>
-		<data>
-		53zMGStjAfuwukTNmyZoANvLEFk=
+		3ERIxvAsOeoRzDSXwttnVjJ3d8w=
 		</data>
 		<key>ios-arm64_x86_64-simulator/BanubaVideoEditorSDK.framework/EditorViewController.storyboardc/Ffw-ny-sfW-view-8GI-rz-chm.nib</key>
 		<data>
-		l4nJcVjE2gTO0Axxrb81No2/6RI=
+		zbUW1EddNK1ZtajuWUOdB9ZK6Dw=
 		</data>
 		<key>ios-arm64_x86_64-simulator/BanubaVideoEditorSDK.framework/EditorViewController.storyboardc/Info.plist</key>
 		<data>
@@ -854,7 +846,7 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/BanubaVideoEditorSDK.framework/GIFPickerViewController.storyboardc/vSI-jT-m46-view-ILs-65-bXW.nib</key>
 		<data>
-		JJDHtYuMhMuiES9DkxPCkqkwPTU=
+		sj1aSK/HAhZkHaaGA3yGw0D5Huc=
 		</data>
 		<key>ios-arm64_x86_64-simulator/BanubaVideoEditorSDK.framework/GalleryAlbumsViewController.storyboardc/Cuu-Bg-WfJ-view-X1r-6A-jFF.nib</key>
 		<data>
@@ -934,7 +926,7 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/BanubaVideoEditorSDK.framework/Info.plist</key>
 		<data>
-		NR3gbm6ymCS6Gcqzf+A/V+PASkM=
+		c4r/VMAzPxJf7ez7Z6sX7JO++Fo=
 		</data>
 		<key>ios-arm64_x86_64-simulator/BanubaVideoEditorSDK.framework/MainMusicViewController.storyboardc/BYZ-38-t0r-view-8bC-Xf-vdC.nib</key>
 		<data>
@@ -970,35 +962,35 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/BanubaVideoEditorSDK.framework/Modules/BanubaVideoEditorSDK.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		9rVc79MG/mEVhvQWpgnM4oZ3aVI=
+		ywsoIORIZzagO7VtYc1nq9b1rAs=
 		</data>
 		<key>ios-arm64_x86_64-simulator/BanubaVideoEditorSDK.framework/Modules/BanubaVideoEditorSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		BB4E82Jvf2jrSls5P7+TD6siYtc=
+		gdI1VsvrrKxUJfKjuRkXRerkvTM=
 		</data>
 		<key>ios-arm64_x86_64-simulator/BanubaVideoEditorSDK.framework/Modules/BanubaVideoEditorSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		J8yecedracQlA1W2V9jJKfK4/1U=
+		biWXTY0KRjfIlDr2RMxQwUndZtc=
 		</data>
 		<key>ios-arm64_x86_64-simulator/BanubaVideoEditorSDK.framework/Modules/BanubaVideoEditorSDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		BB4E82Jvf2jrSls5P7+TD6siYtc=
+		gdI1VsvrrKxUJfKjuRkXRerkvTM=
 		</data>
 		<key>ios-arm64_x86_64-simulator/BanubaVideoEditorSDK.framework/Modules/BanubaVideoEditorSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		9rVc79MG/mEVhvQWpgnM4oZ3aVI=
+		ywsoIORIZzagO7VtYc1nq9b1rAs=
 		</data>
 		<key>ios-arm64_x86_64-simulator/BanubaVideoEditorSDK.framework/Modules/BanubaVideoEditorSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		i/fLRLq8r0+TTFkzWpuXJakfJdQ=
+		2s4wY82r2PJgEP0Z1siFPsQzNM0=
 		</data>
 		<key>ios-arm64_x86_64-simulator/BanubaVideoEditorSDK.framework/Modules/BanubaVideoEditorSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		TG1wFk3hhJC1hO+tvbpLcbRql1w=
+		fzy2X6vhBubkvV08yjj3PzPZLBo=
 		</data>
 		<key>ios-arm64_x86_64-simulator/BanubaVideoEditorSDK.framework/Modules/BanubaVideoEditorSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		i/fLRLq8r0+TTFkzWpuXJakfJdQ=
+		2s4wY82r2PJgEP0Z1siFPsQzNM0=
 		</data>
 		<key>ios-arm64_x86_64-simulator/BanubaVideoEditorSDK.framework/Modules/module.modulemap</key>
 		<data>
@@ -1162,7 +1154,7 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/BanubaVideoEditorSDK.framework/VideoEditorGalleryViewController.nib</key>
 		<data>
-		EPsclFcEiXP0yQfs09YuVAazlls=
+		9aG5EwOZSwqqRvRSczCfiX8KRuo=
 		</data>
 		<key>ios-arm64_x86_64-simulator/BanubaVideoEditorSDK.framework/VideoEditorViewController.nib</key>
 		<data>
@@ -1214,23 +1206,23 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/BanubaVideoEditorSDK.framework/_CodeSignature/CodeResources</key>
 		<data>
-		N2s5iaD9mUqsJHAmgOSgFQhqrbQ=
+		LMZT6vK4+HsvRSAs5YRKbtOvD2A=
 		</data>
 		<key>ios-arm64_x86_64-simulator/dSYMs/BanubaVideoEditorSDK.framework.dSYM/Contents/Info.plist</key>
 		<data>
-		2cQYOXlssBVloOHtK75Ep9HsvcI=
+		+uE/1gru65r1gTSD6ucJJ5zox0g=
 		</data>
 		<key>ios-arm64_x86_64-simulator/dSYMs/BanubaVideoEditorSDK.framework.dSYM/Contents/Resources/DWARF/BanubaVideoEditorSDK</key>
 		<data>
-		FhUNDsFl0yskAsfP3TGzqvcEhiI=
+		X00tko0UYXZmSbQwDI97fZGF9bU=
 		</data>
 		<key>ios-arm64_x86_64-simulator/dSYMs/BanubaVideoEditorSDK.framework.dSYM/Contents/Resources/Relocations/aarch64/BanubaVideoEditorSDK.yml</key>
 		<data>
-		JM6z+JQ1uMtGzO9HYJkDbEb/5yA=
+		8zqdm8Jv4m6EitrYmLI7c88SJcI=
 		</data>
 		<key>ios-arm64_x86_64-simulator/dSYMs/BanubaVideoEditorSDK.framework.dSYM/Contents/Resources/Relocations/x86_64/BanubaVideoEditorSDK.yml</key>
 		<data>
-		aZt3z3j3bpA7I2BBkmxZqi585fM=
+		I9VELI/H0iNewvf/5CXnG2wr7x8=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -1294,11 +1286,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			DPae0z29FL0nty/0J4KuLrOu5S8=
+			XSwYmadZxB1UIGwo9Yb+4H2ZZYw=
 			</data>
 			<key>hash2</key>
 			<data>
-			lGmvaO2yKarlEfs7m19aJaBlRIqqge26eBCpqgf4hyM=
+			HrWXdC2UiXCaKH/6k6A5nIFoF1V6ghSAgEB238L7ELY=
 			</data>
 		</dict>
 		<key>ios-arm64/BanubaVideoEditorSDK.framework/AudioEditingController.nib</key>
@@ -1422,15 +1414,15 @@
 			Z/2vF7UDK00dnyeSz2BHvi6wHgyWI3/TvKks7w6m1nM=
 			</data>
 		</dict>
-		<key>ios-arm64/BanubaVideoEditorSDK.framework/AutoCutThemeSelectionViewController.nib</key>
+		<key>ios-arm64/BanubaVideoEditorSDK.framework/AutoCutThemeEditorViewController.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			OJ5rWU2e+7hlmGZNueXxHVebdxc=
+			b6i3GbbvntEbOh/p1Bx14KFWhLI=
 			</data>
 			<key>hash2</key>
 			<data>
-			dmAA/wIQsZaeMPRPAflOvuYVVo5Fr6zhCm3azXF6K8k=
+			sLEZOCiV+4QV/9M6bH6Z8oVRIL/t1Ratghk162y10mI=
 			</data>
 		</dict>
 		<key>ios-arm64/BanubaVideoEditorSDK.framework/BackgroundPickerCollectionViewCell.nib</key>
@@ -1459,11 +1451,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			N/kVUbEW36AkffesI52b4oKZvXE=
+			df2NcxaXyj13SFlOIya/zoaURbo=
 			</data>
 			<key>hash2</key>
 			<data>
-			lxmDDYrBBFRq1e3IZIiJcIGSZGrQlMeLZTELJlFyr3E=
+			p5W+o2KFNnn0K3Ai6wUl62nvNT6Ed9jur7qm96diVwQ=
 			</data>
 		</dict>
 		<key>ios-arm64/BanubaVideoEditorSDK.framework/BeautyIntensityViewController.nib</key>
@@ -1602,11 +1594,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			2Alsno1j7T8HTcMo2UjWAY1eVns=
+			eOTFc4nZeggORVDZvPrPSX7KTa8=
 			</data>
 			<key>hash2</key>
 			<data>
-			m8/PjUpkoBuEcgggxXthueFWuQH2BDcPdA78VKap8hY=
+			SwAK9XYeY2O0eiuDa2rO6Ni3Pu39Q/y7OYhM9zdzwqw=
 			</data>
 		</dict>
 		<key>ios-arm64/BanubaVideoEditorSDK.framework/EditorAutoCutSoundPartSelectionViewController.storyboardc/EditorAutoCutSoundPartSelectionViewController.nib</key>
@@ -1679,33 +1671,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			N1/hOuyssyUA4Lt3Vvk4AdPXBGQ=
+			3ERIxvAsOeoRzDSXwttnVjJ3d8w=
 			</data>
 			<key>hash2</key>
 			<data>
-			z7wSxMzzK9F7tEZ/GuF7DuuI6D/5k2funJKYLbrmbjc=
-			</data>
-		</dict>
-		<key>ios-arm64/BanubaVideoEditorSDK.framework/EditorAutoCutThemesViewController.nib</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			53zMGStjAfuwukTNmyZoANvLEFk=
-			</data>
-			<key>hash2</key>
-			<data>
-			n3Xth/mmj2jtj8dxAN3foIiZUmrbTWPRv6/cRhd/v0s=
+			wA1yEGa27Vj4q6/JISyK+k2DyfXvVpLD3QgXMRmufog=
 			</data>
 		</dict>
 		<key>ios-arm64/BanubaVideoEditorSDK.framework/EditorViewController.storyboardc/Ffw-ny-sfW-view-8GI-rz-chm.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			l4nJcVjE2gTO0Axxrb81No2/6RI=
+			zbUW1EddNK1ZtajuWUOdB9ZK6Dw=
 			</data>
 			<key>hash2</key>
 			<data>
-			U2XWiG2GGuaeoWlr9b0sfxa7u5nBcZCxacYc1NJtZuQ=
+			8w+EkXX/2JdOFwyFMrbjQry0RADpO9JC/8PSmiEjRvc=
 			</data>
 		</dict>
 		<key>ios-arm64/BanubaVideoEditorSDK.framework/EditorViewController.storyboardc/Info.plist</key>
@@ -1910,11 +1891,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			JJDHtYuMhMuiES9DkxPCkqkwPTU=
+			sj1aSK/HAhZkHaaGA3yGw0D5Huc=
 			</data>
 			<key>hash2</key>
 			<data>
-			k1M6KqP8IYVYkVcnFNkTqGn8wnipdJkxsZe3z1Ko9BA=
+			hc4mMWLzhy0yIwr0vg0lw7NtknbUJTHSozIHQA4lcdA=
 			</data>
 		</dict>
 		<key>ios-arm64/BanubaVideoEditorSDK.framework/GalleryAlbumsViewController.storyboardc/Cuu-Bg-WfJ-view-X1r-6A-jFF.nib</key>
@@ -2130,11 +2111,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			S4+ZU3kuwAIOM3Vq/IjkN3RaS+0=
+			JU/NHSaLRmT0j+3jQPI4w/sL5Ic=
 			</data>
 			<key>hash2</key>
 			<data>
-			w/mxOI5qQDqdDn9q5MHMciKpq3LZOvkb49yACHFzc1s=
+			j75jtZ7Td3rb0Rg8ypB+YanZ+I8iA5exVPv3FAWmCdg=
 			</data>
 		</dict>
 		<key>ios-arm64/BanubaVideoEditorSDK.framework/MainMusicViewController.storyboardc/BYZ-38-t0r-view-8bC-Xf-vdC.nib</key>
@@ -2229,44 +2210,44 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			OcobXbKrzDWC5gVQQ9ius03fsqM=
+			L2p9q3rs76B9zkN2+zfpH+Uo3HE=
 			</data>
 			<key>hash2</key>
 			<data>
-			7xqNQoFDjrOiuTWzjmug0qMmFnSYpeKuX+TA67LRaVY=
+			+XLy1t6qVq15lb+M4lNWYdZ37sI5Jsqtm9Z5KjQCMvI=
 			</data>
 		</dict>
 		<key>ios-arm64/BanubaVideoEditorSDK.framework/Modules/BanubaVideoEditorSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			cvsgQJ2yz4+nodmGzQWjfYH3ftE=
+			2TUxz17uXT1DUHQccopwtLMoZR4=
 			</data>
 			<key>hash2</key>
 			<data>
-			Wy/Dvw5n9PQQ0tmWBvBl+fpShOjjF9EYSyUCZQTA+3o=
+			/x045t+oLKIOyQPA/YUOxCiHmpqbhswww75DXnUZjok=
 			</data>
 		</dict>
 		<key>ios-arm64/BanubaVideoEditorSDK.framework/Modules/BanubaVideoEditorSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			LvyLVVRKfOSC7xa8AD6VrOusAt8=
+			UQa8Ub3Qwt4rhkzqLjHK3YEPXRI=
 			</data>
 			<key>hash2</key>
 			<data>
-			xb3an1gsQ0/qKImUi+TW2/MQJFkROehe2VoCHx6YfCs=
+			9IixF2+/lmsPr+lAMK8mqnx6wQTjG6DCx4y9Cr8g2/Y=
 			</data>
 		</dict>
 		<key>ios-arm64/BanubaVideoEditorSDK.framework/Modules/BanubaVideoEditorSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			cvsgQJ2yz4+nodmGzQWjfYH3ftE=
+			2TUxz17uXT1DUHQccopwtLMoZR4=
 			</data>
 			<key>hash2</key>
 			<data>
-			Wy/Dvw5n9PQQ0tmWBvBl+fpShOjjF9EYSyUCZQTA+3o=
+			/x045t+oLKIOyQPA/YUOxCiHmpqbhswww75DXnUZjok=
 			</data>
 		</dict>
 		<key>ios-arm64/BanubaVideoEditorSDK.framework/Modules/module.modulemap</key>
@@ -2713,11 +2694,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			EPsclFcEiXP0yQfs09YuVAazlls=
+			9aG5EwOZSwqqRvRSczCfiX8KRuo=
 			</data>
 			<key>hash2</key>
 			<data>
-			edsVLNtjx0Ne4+XbXwJew3ncZUjmZnA3hPeG3IdLIJw=
+			O3dlSXUj/fXRcPz+rCwZeU3Y7tGXu+sf/IJHwvFdjQU=
 			</data>
 		</dict>
 		<key>ios-arm64/BanubaVideoEditorSDK.framework/VideoEditorViewController.nib</key>
@@ -2856,44 +2837,44 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			94X1nfggZ+TGsCGFt4yVUl0BBuw=
+			qaY0szY+FJinHjy3/Z020gYuTKk=
 			</data>
 			<key>hash2</key>
 			<data>
-			cGX6tJzFx+ZsIpwIm79JAPZqOV0qcD9vrMOAkvR7JCY=
+			sEPIy0P0Ecc+SZi0tT8vPoq/pubLOucW++l7F5yblG0=
 			</data>
 		</dict>
 		<key>ios-arm64/dSYMs/BanubaVideoEditorSDK.framework.dSYM/Contents/Info.plist</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			2cQYOXlssBVloOHtK75Ep9HsvcI=
+			+uE/1gru65r1gTSD6ucJJ5zox0g=
 			</data>
 			<key>hash2</key>
 			<data>
-			kVsxahwky6SLz/urzhY1wGskxYTwTlsvnrpf1vLM7QM=
+			PGH0H8ooRCPVUQ09WmsozNUSKl1cyBJi4WrLtvyQwG8=
 			</data>
 		</dict>
 		<key>ios-arm64/dSYMs/BanubaVideoEditorSDK.framework.dSYM/Contents/Resources/DWARF/BanubaVideoEditorSDK</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			wKybe7M0iQ51RlCB8HGnsGTVb3M=
+			1cdl/AHcdn5E3aewZUJcCyhI4U4=
 			</data>
 			<key>hash2</key>
 			<data>
-			sF6V3SRXnc6ccPGn//ksESFd1E8FteeqGLlpK6+BpoY=
+			O0jT/sD2smzCFlv6v2eoo/DvB2FHaAZfqlQUVRahpy8=
 			</data>
 		</dict>
 		<key>ios-arm64/dSYMs/BanubaVideoEditorSDK.framework.dSYM/Contents/Resources/Relocations/aarch64/BanubaVideoEditorSDK.yml</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			WGzIV7tUwpPvxGvrlLCq9Hgdrzc=
+			CQBX7etaYKHUW44DkZMW45gmlTk=
 			</data>
 			<key>hash2</key>
 			<data>
-			oWr2AUDtL+MYM8CJWV/FMoPjYvppEP9/b5gDTNhoDsU=
+			folsudO8zQZwJjCtRpL93Cyz0102V2GFKPjgF7+Yf7c=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/BanubaVideoEditorSDK.framework/ActionCollectionViewCell.nib</key>
@@ -2955,11 +2936,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			DPae0z29FL0nty/0J4KuLrOu5S8=
+			XSwYmadZxB1UIGwo9Yb+4H2ZZYw=
 			</data>
 			<key>hash2</key>
 			<data>
-			lGmvaO2yKarlEfs7m19aJaBlRIqqge26eBCpqgf4hyM=
+			HrWXdC2UiXCaKH/6k6A5nIFoF1V6ghSAgEB238L7ELY=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/BanubaVideoEditorSDK.framework/AudioEditingController.nib</key>
@@ -3083,15 +3064,15 @@
 			Z/2vF7UDK00dnyeSz2BHvi6wHgyWI3/TvKks7w6m1nM=
 			</data>
 		</dict>
-		<key>ios-arm64_x86_64-simulator/BanubaVideoEditorSDK.framework/AutoCutThemeSelectionViewController.nib</key>
+		<key>ios-arm64_x86_64-simulator/BanubaVideoEditorSDK.framework/AutoCutThemeEditorViewController.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			OJ5rWU2e+7hlmGZNueXxHVebdxc=
+			b6i3GbbvntEbOh/p1Bx14KFWhLI=
 			</data>
 			<key>hash2</key>
 			<data>
-			dmAA/wIQsZaeMPRPAflOvuYVVo5Fr6zhCm3azXF6K8k=
+			sLEZOCiV+4QV/9M6bH6Z8oVRIL/t1Ratghk162y10mI=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/BanubaVideoEditorSDK.framework/BackgroundPickerCollectionViewCell.nib</key>
@@ -3120,11 +3101,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			pxTqzgA5933w0jbdS8G0XidQ034=
+			n1mhH2Z6niPzmIMB9yETWLhKXy0=
 			</data>
 			<key>hash2</key>
 			<data>
-			kVASAYGYPL69nRqZBYxDTXoM6Y/d9PJfM3/LA/zzT8g=
+			eFPiV8iuNM7+AzKzuAF7xxSkxVoz/tFnl1VGTksOdsQ=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/BanubaVideoEditorSDK.framework/BeautyIntensityViewController.nib</key>
@@ -3263,11 +3244,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			2Alsno1j7T8HTcMo2UjWAY1eVns=
+			eOTFc4nZeggORVDZvPrPSX7KTa8=
 			</data>
 			<key>hash2</key>
 			<data>
-			m8/PjUpkoBuEcgggxXthueFWuQH2BDcPdA78VKap8hY=
+			SwAK9XYeY2O0eiuDa2rO6Ni3Pu39Q/y7OYhM9zdzwqw=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/BanubaVideoEditorSDK.framework/EditorAutoCutSoundPartSelectionViewController.storyboardc/EditorAutoCutSoundPartSelectionViewController.nib</key>
@@ -3340,33 +3321,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			N1/hOuyssyUA4Lt3Vvk4AdPXBGQ=
+			3ERIxvAsOeoRzDSXwttnVjJ3d8w=
 			</data>
 			<key>hash2</key>
 			<data>
-			z7wSxMzzK9F7tEZ/GuF7DuuI6D/5k2funJKYLbrmbjc=
-			</data>
-		</dict>
-		<key>ios-arm64_x86_64-simulator/BanubaVideoEditorSDK.framework/EditorAutoCutThemesViewController.nib</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			53zMGStjAfuwukTNmyZoANvLEFk=
-			</data>
-			<key>hash2</key>
-			<data>
-			n3Xth/mmj2jtj8dxAN3foIiZUmrbTWPRv6/cRhd/v0s=
+			wA1yEGa27Vj4q6/JISyK+k2DyfXvVpLD3QgXMRmufog=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/BanubaVideoEditorSDK.framework/EditorViewController.storyboardc/Ffw-ny-sfW-view-8GI-rz-chm.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			l4nJcVjE2gTO0Axxrb81No2/6RI=
+			zbUW1EddNK1ZtajuWUOdB9ZK6Dw=
 			</data>
 			<key>hash2</key>
 			<data>
-			U2XWiG2GGuaeoWlr9b0sfxa7u5nBcZCxacYc1NJtZuQ=
+			8w+EkXX/2JdOFwyFMrbjQry0RADpO9JC/8PSmiEjRvc=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/BanubaVideoEditorSDK.framework/EditorViewController.storyboardc/Info.plist</key>
@@ -3571,11 +3541,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			JJDHtYuMhMuiES9DkxPCkqkwPTU=
+			sj1aSK/HAhZkHaaGA3yGw0D5Huc=
 			</data>
 			<key>hash2</key>
 			<data>
-			k1M6KqP8IYVYkVcnFNkTqGn8wnipdJkxsZe3z1Ko9BA=
+			hc4mMWLzhy0yIwr0vg0lw7NtknbUJTHSozIHQA4lcdA=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/BanubaVideoEditorSDK.framework/GalleryAlbumsViewController.storyboardc/Cuu-Bg-WfJ-view-X1r-6A-jFF.nib</key>
@@ -3791,11 +3761,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			NR3gbm6ymCS6Gcqzf+A/V+PASkM=
+			c4r/VMAzPxJf7ez7Z6sX7JO++Fo=
 			</data>
 			<key>hash2</key>
 			<data>
-			EgadLjyusGlj9aLLIgj65/JTt1/ggvr75PDuTd9LRjI=
+			7MvVJBqIC/j72cLLgLYxtvWjRHWNLrVzDyFmgaI9/Ow=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/BanubaVideoEditorSDK.framework/MainMusicViewController.storyboardc/BYZ-38-t0r-view-8bC-Xf-vdC.nib</key>
@@ -3890,88 +3860,88 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			9rVc79MG/mEVhvQWpgnM4oZ3aVI=
+			ywsoIORIZzagO7VtYc1nq9b1rAs=
 			</data>
 			<key>hash2</key>
 			<data>
-			j81kG2BX3fi1Fws+bnguoSX37PlKzERj3nl9AIPmLAI=
+			rDmB94eC2hmunkWKo+BTcF+GbWFT5/n7V8nrAmN4z0U=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/BanubaVideoEditorSDK.framework/Modules/BanubaVideoEditorSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			BB4E82Jvf2jrSls5P7+TD6siYtc=
+			gdI1VsvrrKxUJfKjuRkXRerkvTM=
 			</data>
 			<key>hash2</key>
 			<data>
-			MNz+DFKn3eHjoi0oKzy7a/D50VHXNW8VskJtSSz/3W8=
+			Sb5HeVSEfabnfRu+lY3TyB/0BP4nJYmtojIDgdpO5Os=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/BanubaVideoEditorSDK.framework/Modules/BanubaVideoEditorSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			J8yecedracQlA1W2V9jJKfK4/1U=
+			biWXTY0KRjfIlDr2RMxQwUndZtc=
 			</data>
 			<key>hash2</key>
 			<data>
-			Tchsn+SFL9aQoEIJbPnBqHcIXeXfHBMjOxLDFXCvmuw=
+			K2QBqMMgfJFhnduAKGKSqB1jkwCYjRNaAW8fwMLZ3d4=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/BanubaVideoEditorSDK.framework/Modules/BanubaVideoEditorSDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			BB4E82Jvf2jrSls5P7+TD6siYtc=
+			gdI1VsvrrKxUJfKjuRkXRerkvTM=
 			</data>
 			<key>hash2</key>
 			<data>
-			MNz+DFKn3eHjoi0oKzy7a/D50VHXNW8VskJtSSz/3W8=
+			Sb5HeVSEfabnfRu+lY3TyB/0BP4nJYmtojIDgdpO5Os=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/BanubaVideoEditorSDK.framework/Modules/BanubaVideoEditorSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			9rVc79MG/mEVhvQWpgnM4oZ3aVI=
+			ywsoIORIZzagO7VtYc1nq9b1rAs=
 			</data>
 			<key>hash2</key>
 			<data>
-			j81kG2BX3fi1Fws+bnguoSX37PlKzERj3nl9AIPmLAI=
+			rDmB94eC2hmunkWKo+BTcF+GbWFT5/n7V8nrAmN4z0U=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/BanubaVideoEditorSDK.framework/Modules/BanubaVideoEditorSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			i/fLRLq8r0+TTFkzWpuXJakfJdQ=
+			2s4wY82r2PJgEP0Z1siFPsQzNM0=
 			</data>
 			<key>hash2</key>
 			<data>
-			G6FAoXPcxIqBFnv9qDPos/zXH5n1WwKT/kXS68pcx5U=
+			LDEg99gE+1/arRtscpjmvwipnWv0/iaNTnOklM0C+hQ=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/BanubaVideoEditorSDK.framework/Modules/BanubaVideoEditorSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			TG1wFk3hhJC1hO+tvbpLcbRql1w=
+			fzy2X6vhBubkvV08yjj3PzPZLBo=
 			</data>
 			<key>hash2</key>
 			<data>
-			AWS2Eio2HOa6bIZYd24PrWuW7yORw0wUJKufQ10IovU=
+			n+1g8PsyoJT6+OVAnozjlvIRQDMlzQs0OkpYlMDMxWU=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/BanubaVideoEditorSDK.framework/Modules/BanubaVideoEditorSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			i/fLRLq8r0+TTFkzWpuXJakfJdQ=
+			2s4wY82r2PJgEP0Z1siFPsQzNM0=
 			</data>
 			<key>hash2</key>
 			<data>
-			G6FAoXPcxIqBFnv9qDPos/zXH5n1WwKT/kXS68pcx5U=
+			LDEg99gE+1/arRtscpjmvwipnWv0/iaNTnOklM0C+hQ=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/BanubaVideoEditorSDK.framework/Modules/module.modulemap</key>
@@ -4418,11 +4388,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			EPsclFcEiXP0yQfs09YuVAazlls=
+			9aG5EwOZSwqqRvRSczCfiX8KRuo=
 			</data>
 			<key>hash2</key>
 			<data>
-			edsVLNtjx0Ne4+XbXwJew3ncZUjmZnA3hPeG3IdLIJw=
+			O3dlSXUj/fXRcPz+rCwZeU3Y7tGXu+sf/IJHwvFdjQU=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/BanubaVideoEditorSDK.framework/VideoEditorViewController.nib</key>
@@ -4561,55 +4531,55 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			N2s5iaD9mUqsJHAmgOSgFQhqrbQ=
+			LMZT6vK4+HsvRSAs5YRKbtOvD2A=
 			</data>
 			<key>hash2</key>
 			<data>
-			DPoCMt1DF1ZtZJG66mHWgxqjI4KvwRHA20WTnLGOXWc=
+			sSBOkXHEkWEe0ic9Pd+M4YLgJKC/Y9Zqggjs70Sugl8=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/dSYMs/BanubaVideoEditorSDK.framework.dSYM/Contents/Info.plist</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			2cQYOXlssBVloOHtK75Ep9HsvcI=
+			+uE/1gru65r1gTSD6ucJJ5zox0g=
 			</data>
 			<key>hash2</key>
 			<data>
-			kVsxahwky6SLz/urzhY1wGskxYTwTlsvnrpf1vLM7QM=
+			PGH0H8ooRCPVUQ09WmsozNUSKl1cyBJi4WrLtvyQwG8=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/dSYMs/BanubaVideoEditorSDK.framework.dSYM/Contents/Resources/DWARF/BanubaVideoEditorSDK</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			FhUNDsFl0yskAsfP3TGzqvcEhiI=
+			X00tko0UYXZmSbQwDI97fZGF9bU=
 			</data>
 			<key>hash2</key>
 			<data>
-			FU9lI5YZ5MxpLjz5XgFYZOg7xBGE3isNrl7UEhkGQdE=
+			jBuCeQFPOewUY/w39xtZ97XgLujjNENFPtVsCPg6dbA=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/dSYMs/BanubaVideoEditorSDK.framework.dSYM/Contents/Resources/Relocations/aarch64/BanubaVideoEditorSDK.yml</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			JM6z+JQ1uMtGzO9HYJkDbEb/5yA=
+			8zqdm8Jv4m6EitrYmLI7c88SJcI=
 			</data>
 			<key>hash2</key>
 			<data>
-			dWZLOvXKcshaPJtMujv3BHSs9GlhFCecG3s7edLDvgs=
+			nZtDX89xqoiZAtFVLWW/+vLiAUufXZnrNY+sywWAQsA=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/dSYMs/BanubaVideoEditorSDK.framework.dSYM/Contents/Resources/Relocations/x86_64/BanubaVideoEditorSDK.yml</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			aZt3z3j3bpA7I2BBkmxZqi585fM=
+			I9VELI/H0iNewvf/5CXnG2wr7x8=
 			</data>
 			<key>hash2</key>
 			<data>
-			pEzUv2ZZHctZxqnDlw8mY5Px62w/AP9SguTG6orrbSI=
+			+X8gx7/ozTIs65nSp+TrNyXWT1GcsA/dAUeHIgB2KOI=
 			</data>
 		</dict>
 	</dict>
