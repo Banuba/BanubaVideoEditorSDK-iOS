@@ -516,15 +516,16 @@ public protocol ExternalSDKAnalyticsEventsListener : AnyObject {
   func track(eventName: Swift.String, eventProperties: [Swift.String : Any]?)
 }
 public struct ColorPair : Swift.Equatable {
+  public let cursor: UIKit.UIColor
   public let background: UIKit.UIColor
   public let foreground: UIKit.UIColor
-  public init(background: UIKit.UIColor, foreground: UIKit.UIColor)
+  public init(cursor: UIKit.UIColor, background: UIKit.UIColor, foreground: UIKit.UIColor)
   public static func == (lhs: BanubaVideoEditorSDK.ColorPair, rhs: BanubaVideoEditorSDK.ColorPair) -> Swift.Bool
 }
 public struct VideoTextColorPair : Swift.Equatable {
   public let foreground: BanubaVideoEditorSDK.ColorPair
   public let background: BanubaVideoEditorSDK.ColorPair
-  public init(colors: (UIKit.UIColor, UIKit.UIColor, UIKit.UIColor, UIKit.UIColor))
+  public init(colors: (UIKit.UIColor, UIKit.UIColor, UIKit.UIColor, UIKit.UIColor, UIKit.UIColor, UIKit.UIColor))
   public init(foreground: BanubaVideoEditorSDK.ColorPair, background: BanubaVideoEditorSDK.ColorPair)
   public static func == (lhs: BanubaVideoEditorSDK.VideoTextColorPair, rhs: BanubaVideoEditorSDK.VideoTextColorPair) -> Swift.Bool
 }
