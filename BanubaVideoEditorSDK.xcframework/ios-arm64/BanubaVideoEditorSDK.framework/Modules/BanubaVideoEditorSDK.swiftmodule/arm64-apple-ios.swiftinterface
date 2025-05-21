@@ -130,7 +130,7 @@ final public class ApplicationInformation {
   @objc deinit
 }
 public struct ExportCoverImages {
-  public var coverImage: UIKit.UIImage?
+  public var coverImage: UIKit.UIImage
   public var gifFileUrl: Foundation.URL?
 }
 public protocol BanubaVideoEditorDelegate : AnyObject {
@@ -189,7 +189,7 @@ public class BanubaVideoEditor {
   }
   public init?(token: Swift.String, arguments: [Swift.String : Any] = [:], isCameraEnabled: Swift.Bool = true, configuration: BanubaVideoEditorSDK.VideoEditorConfig, externalViewControllerFactory: (any BanubaVideoEditorSDK.ExternalViewControllerFactory)? = nil)
   @objc deinit
-  public func export(using configuration: VEExportSDK.ExportConfiguration, exportProgress: (@_Concurrency.MainActor (Swift.Float) -> Swift.Void)?, completion: @escaping (@_Concurrency.MainActor (_ error: (any Swift.Error)?, _ exportCoverImages: BanubaVideoEditorSDK.ExportCoverImages?) -> Swift.Void))
+  public func export(using configuration: VEExportSDK.ExportConfiguration, exportProgress: (@_Concurrency.MainActor (Swift.Float) -> Swift.Void)?, completion: @escaping (@_Concurrency.MainActor (_ result: BanubaVideoEditorSDK.Result<(BanubaVideoEditorSDK.ExportCoverImages, BanubaVideoEditorSDK.ExportedVideoAnalytics)>) -> Swift.Void))
   @_Concurrency.MainActor public func stopExport()
   public func isExporting() -> Swift.Bool
   public func exportAudio(fileUrl: Foundation.URL, audioSettings: [Swift.String : Any] = VESettings.audio, completion: @escaping ((any Swift.Error)?) -> Swift.Void)
@@ -692,11 +692,10 @@ public struct VideoMetadata : Swift.Codable {
   public var aspect: BanubaUtilities.AspectRatio
   public var modificationDate: Foundation.Date
   public var maxVideoDuration: Foundation.TimeInterval?
-  public let isSlideShow: Swift.Bool
   public var parentSequenceId: Swift.String?
   public var musicTrack: BanubaUtilities.MediaTrack?
   public var editingStep: BanubaVideoEditorSDK.VideoSequenceEditingStep
-  public init(isSlideShow: Swift.Bool = false, isDrafted: Swift.Bool = false, name: Swift.String, maxVideoDuration: Foundation.TimeInterval?, sequenceParentName: Swift.String? = nil, editingStep: BanubaVideoEditorSDK.VideoSequenceEditingStep = .camera, musicTrack: BanubaUtilities.MediaTrack? = nil, aspect: BanubaUtilities.AspectRatio, modificationDate: Foundation.Date = Date())
+  public init(isDrafted: Swift.Bool = false, name: Swift.String, maxVideoDuration: Foundation.TimeInterval?, sequenceParentName: Swift.String? = nil, editingStep: BanubaVideoEditorSDK.VideoSequenceEditingStep = .camera, musicTrack: BanubaUtilities.MediaTrack? = nil, aspect: BanubaUtilities.AspectRatio, modificationDate: Foundation.Date = Date())
   public init(from decoder: any Swift.Decoder) throws
   public func encode(to encoder: any Swift.Encoder) throws
 }
@@ -1465,6 +1464,12 @@ extension BanubaVideoEditorSDK.ExternalViewControllerFactory {
   }
   @objc deinit
 }
+public struct ExportedVideoAnalytics {
+  public let cameraVideosCount: Swift.Int
+  public let galleryVideosCount: Swift.Int
+  public let slideshowVideosCount: Swift.Int
+  public init(cameraVideosCount: Swift.Int, galleryVideosCount: Swift.Int, slideshowVideosCount: Swift.Int)
+}
 public protocol MusicEditorExternalViewControllerFactory : AnyObject {
   func makeTrackSelectionViewController(selectedAudioItem: (any BanubaUtilities.AudioItem)?, isAudioPartSelectionEnabled: Swift.Bool) -> (any BanubaUtilities.TrackSelectionViewController)?
   func makeEffectSelectionViewController(selectedAudioItem: (any BanubaUtilities.AudioItem)?) -> (any BanubaUtilities.EffectSelectionViewController)?
@@ -2167,23 +2172,13 @@ public typealias ExternalDraft = VideoEditor.VideoSequence
   public func getPreviewForVideoSequence(_ externalDraft: BanubaVideoEditorSDK.ExternalDraft, thumbnailHeight: CoreFoundation.CGFloat, completion: ((_ preview: UIKit.UIImage?) -> Swift.Void)?)
   @objc deinit
 }
-public struct AWSTranscribeConfiguration {
-  public let uploadUrl: Swift.String
-  public let transcribeUrl: Swift.String
-  public let apiKey: Swift.String
-  public init(uploadUrl: Swift.String, transcribeUrl: Swift.String, apiKey: Swift.String)
-}
 public struct SpeakAiConfiguration {
   public let uploadUrl: Swift.String
   public let transcribeUrl: Swift.String
   public init(uploadUrl: Swift.String, transcribeUrl: Swift.String)
 }
-public enum CaptionsProviderConfiguration {
-  case aws(BanubaVideoEditorSDK.AWSTranscribeConfiguration)
-  case speakAi(BanubaVideoEditorSDK.SpeakAiConfiguration)
-}
 public struct CaptionsConfiguration {
-  public var providerConfiguration: BanubaVideoEditorSDK.CaptionsProviderConfiguration?
+  public var providerConfiguration: BanubaVideoEditorSDK.SpeakAiConfiguration?
   public var progressBarColor: UIKit.UIColor
   public var progressBarBackgroundColor: UIKit.UIColor
   public var supportedLanguages: [BanubaVideoEditorSDK.CaptionsLanguage]
@@ -2291,7 +2286,7 @@ public protocol SequencesServicing {
   var lastModifiedSequenceInPreviousSession: VideoEditor.VideoSequence? { get }
   var sequences: [VideoEditor.VideoSequence] { get }
   var draftedSequences: [VideoEditor.VideoSequence] { get }
-  func createNewSequence(withMusicTrack musicTrack: BanubaUtilities.MediaTrack?, isSlideShow: Swift.Bool, editingStep: BanubaVideoEditorSDK.VideoSequenceEditingStep, maxVideoDuration: Foundation.TimeInterval) -> VideoEditor.VideoSequence
+  func createNewSequence(withMusicTrack musicTrack: BanubaUtilities.MediaTrack?, editingStep: BanubaVideoEditorSDK.VideoSequenceEditingStep, maxVideoDuration: Foundation.TimeInterval) -> VideoEditor.VideoSequence
   func cancelAndRemoveCurrentSequence()
   @discardableResult
   func removeSequence(_ videoSequence: VideoEditor.VideoSequence) -> Swift.Bool
@@ -2301,9 +2296,6 @@ public protocol SequencesServicing {
   func setupWithVideoSequence(_ videoSequence: VideoEditor.VideoSequence)
   func setEditingStep(_ editingStep: BanubaVideoEditorSDK.VideoSequenceEditingStep, forSequence videoSequence: VideoEditor.VideoSequence)
   func sequenceWithId(_ sequenceId: Swift.String) -> VideoEditor.VideoSequence?
-}
-extension BanubaVideoEditorSDK.SequencesServicing {
-  public func createNewSequence(withMusicTrack musicTrack: BanubaUtilities.MediaTrack? = nil, isSlideShow: Swift.Bool = false, editingStep: BanubaVideoEditorSDK.VideoSequenceEditingStep = .camera, maxVideoDuration: Foundation.TimeInterval) -> VideoEditor.VideoSequence
 }
 public struct AppearingViewNavigationViewConfiguration {
   public var cancelButton: BanubaUtilities.TextButtonConfiguration
