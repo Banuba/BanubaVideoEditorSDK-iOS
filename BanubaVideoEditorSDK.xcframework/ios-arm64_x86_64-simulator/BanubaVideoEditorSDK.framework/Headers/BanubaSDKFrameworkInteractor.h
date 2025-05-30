@@ -8,6 +8,9 @@
 
 #import <AVKit/AVKit.h>
 
+#include <BanubaVideoEditorSDK/VisualClipVideo.h>
+#include <BanubaVideoEditorSDK/VisualClipListener.h>
+
 NS_ASSUME_NONNULL_BEGIN
 NS_SWIFT_NAME(BanubaSDKFrameworkInteractor)
 
@@ -23,7 +26,14 @@ useHEVCCodecIfPossibleForRecorder:(BOOL) useHEVCCodecIfPossibleForRecorder
         additionalEffectsPaths:(NSArray<NSString * > *_Nullable) additionalEffectsPaths;
 
 + (id _Nullable) getCameraModuleInstance;
-+ (id _Nullable) getMaskPostprocessingServiceWithVideoSize:(CGSize) videoSize;
++ (id _Nullable) getMaskPostprocessingService;
+
++ (nullable NSArray<NSString *> *)createAutoCutVideosWithMusicPath:(NSString *)musicDbPath
+                                              effectsTemplatesPath:(NSString *)effectsTemplatesPath
+                                                            videos:(NSArray<VisualClipVideo *> *)videos
+                                                         numFrames:(int32_t)numFrames
+                                                        resultSize:(int32_t)resultSize
+                                                      cancellation:(BOOL (^)(double progress))cancellationBlock;
 
 @end
 NS_ASSUME_NONNULL_END
