@@ -1207,7 +1207,7 @@ public struct RecorderConfiguration {
   public var progressLabelConfiguration: BanubaUtilities.TextConfiguration?
   public var floatingLineViewConfiguration: BanubaUtilities.TextConfiguration?
   public var floatingLineViewWidth: CoreFoundation.CGFloat?
-  public var captureButtonModes: [BanubaVideoEditorSDK.CaptureButtonViewMode]
+  public var captureButtonModes: [BanubaVideoEditorSDK.RecordButtonViewMode]
   public var recordButtonConfiguration: BanubaVideoEditorSDK.RecordButtonConfiguration
   public var recordButtonProvider: (any BanubaVideoEditorSDK.RecordButtonProvider)?
   public var additionalEffectsButtons: [BanubaVideoEditorSDK.AdditionalEffectsButtonConfiguration]
@@ -1228,6 +1228,7 @@ public struct RecorderConfiguration {
   public var isMusicTitleFloatingLineEnabled: Swift.Bool
   public var useHEVCCodecIfPossible: Swift.Bool
   public var isPhotoSequenceAnimationEnabled: Swift.Bool
+  public var isFrontCameraOutputMirrored: Swift.Bool
   public var muteMicrophoneForPIP: Swift.Bool
   public var isAudioRateEqualsVideoSpeed: Swift.Bool
   public var isGalleryButtonHidden: Swift.Bool
@@ -1257,12 +1258,16 @@ public struct RecordButtonConfiguration {
   public var externalCircleFullColor: CoreGraphics.CGColor
   public var externalCircleStrokeColor: CoreGraphics.CGColor
 }
-public enum RecorderPreviewScalingMode {
+public enum RecorderPreviewScalingMode : Swift.Int, Swift.CaseIterable {
   case aspectFill
   case aspectFit
-  public static func == (a: BanubaVideoEditorSDK.RecorderPreviewScalingMode, b: BanubaVideoEditorSDK.RecorderPreviewScalingMode) -> Swift.Bool
-  public func hash(into hasher: inout Swift.Hasher)
-  public var hashValue: Swift.Int {
+  public init?(rawValue: Swift.Int)
+  public typealias AllCases = [BanubaVideoEditorSDK.RecorderPreviewScalingMode]
+  public typealias RawValue = Swift.Int
+  nonisolated public static var allCases: [BanubaVideoEditorSDK.RecorderPreviewScalingMode] {
+    get
+  }
+  public var rawValue: Swift.Int {
     get
   }
 }
@@ -1698,6 +1703,7 @@ public struct AdditionalEffectsButtonConfiguration {
     case captions
     case additionalCamera
     case greenScreen
+    case weatherman
     public init?(rawValue: Swift.String)
     public typealias RawValue = Swift.String
     public var rawValue: Swift.String {
@@ -2059,34 +2065,34 @@ public struct CaptionLanguageConfiguration {
 public protocol RecordButton : UIKit.UIView {
   var delegate: (any BanubaVideoEditorSDK.RecordButtonDelegate)? { get set }
   var configuration: BanubaVideoEditorSDK.RecordButtonConfiguration { get set }
-  func setCaptureButtonState(_ state: BanubaVideoEditorSDK.CaptureButtonViewState)
-  func setCaptureButtonMode(_ mode: BanubaVideoEditorSDK.CaptureButtonViewMode)
+  func setRecordButtonState(_ state: BanubaVideoEditorSDK.RecordButtonViewState)
+  func setRecordButtonMode(_ mode: BanubaVideoEditorSDK.RecordButtonViewMode)
   func updateVideoRecordingProgress(_ progress: Swift.Double)
   func addCheckMark(at progress: Swift.Double)
   func removeLaskCheckMark()
   func removeAllCheckMarks()
 }
-public enum CaptureButtonViewState {
+public enum RecordButtonViewState {
   case idle
   case recording
   case takePhoto
-  public static func == (a: BanubaVideoEditorSDK.CaptureButtonViewState, b: BanubaVideoEditorSDK.CaptureButtonViewState) -> Swift.Bool
+  public static func == (a: BanubaVideoEditorSDK.RecordButtonViewState, b: BanubaVideoEditorSDK.RecordButtonViewState) -> Swift.Bool
   public func hash(into hasher: inout Swift.Hasher)
   public var hashValue: Swift.Int {
     get
   }
 }
-public enum CaptureButtonViewMode {
+public enum RecordButtonViewMode {
   case video
   case photo
-  public static func == (a: BanubaVideoEditorSDK.CaptureButtonViewMode, b: BanubaVideoEditorSDK.CaptureButtonViewMode) -> Swift.Bool
+  public static func == (a: BanubaVideoEditorSDK.RecordButtonViewMode, b: BanubaVideoEditorSDK.RecordButtonViewMode) -> Swift.Bool
   public func hash(into hasher: inout Swift.Hasher)
   public var hashValue: Swift.Int {
     get
   }
 }
 public protocol RecordButtonDelegate : AnyObject {
-  var captureButtonMode: BanubaVideoEditorSDK.CaptureButtonViewMode { get }
+  var recordButtonMode: BanubaVideoEditorSDK.RecordButtonViewMode { get }
   func recordButtonDidTakePhoto(_ recordButton: any BanubaVideoEditorSDK.RecordButton)
   func recordButtonDidCancelTakePhoto(_ recordButton: any BanubaVideoEditorSDK.RecordButton)
   func recordButtonDidStartVideoRecording(_ recordButton: any BanubaVideoEditorSDK.RecordButton)
@@ -2145,6 +2151,7 @@ public struct CoverSelectionConfiguration {
   public var deleteGalleryImageButton: any BanubaUtilities.ImageButtonConfigurationProtocol
   public var currentTimeLabelConfiguration: BanubaUtilities.TextConfiguration
   public var selectGalleryButtonConfiguration: BanubaVideoEditorSDK.BanubaButtonConfiguration
+  public var isGalleryButtonHidden: Swift.Bool
   public var cursorBorderWidth: CoreFoundation.CGFloat
   public var cursorColor: UIKit.UIColor
   public var cursorCornerRadius: CoreFoundation.CGFloat
@@ -2324,6 +2331,10 @@ public class DefaultExposureViewFactory : BanubaVideoEditorSDK.AnimatableViewFac
   @_Concurrency.MainActor @preconcurrency public func start(completion: @escaping (Swift.Bool) -> Swift.Void)
   @_Concurrency.MainActor @preconcurrency public func stop()
   @objc deinit
+}
+public struct WeathermanHintConfiguration {
+  public var messageStyle: BanubaUtilities.TextConfiguration
+  public var tipStyle: BanubaUtilities.TextConfiguration
 }
 public class SlideshowVideoService {
   public init(exportSDK: BanubaVideoEditorCore.VEExport, videoResolution: BanubaUtilities.VideoResolution, duration: Foundation.TimeInterval, shouldUseImageEffect: Swift.Bool)
@@ -2547,6 +2558,7 @@ extension BanubaVideoEditorSDK.DraftActionType : Swift.Equatable {}
 extension BanubaVideoEditorSDK.DraftActionType : Swift.Hashable {}
 extension BanubaVideoEditorSDK.RecorderPreviewScalingMode : Swift.Equatable {}
 extension BanubaVideoEditorSDK.RecorderPreviewScalingMode : Swift.Hashable {}
+extension BanubaVideoEditorSDK.RecorderPreviewScalingMode : Swift.RawRepresentable {}
 extension BanubaVideoEditorSDK.TrimVideoCompositionEditItem.TrimVideoCompositionEditItemType : Swift.Equatable {}
 extension BanubaVideoEditorSDK.TrimVideoCompositionEditItem.TrimVideoCompositionEditItemType : Swift.Hashable {}
 extension BanubaVideoEditorSDK.AdditionalEffectsButtonConfiguration.Position : Swift.Equatable {}
@@ -2567,10 +2579,10 @@ extension BanubaVideoEditorSDK.DraftMenuItemType : Swift.Equatable {}
 extension BanubaVideoEditorSDK.DraftMenuItemType : Swift.Hashable {}
 extension BanubaVideoEditorSDK.VideoEditorToolsPanel.ToolType : Swift.Equatable {}
 extension BanubaVideoEditorSDK.VideoEditorToolsPanel.ToolType : Swift.Hashable {}
-extension BanubaVideoEditorSDK.CaptureButtonViewState : Swift.Equatable {}
-extension BanubaVideoEditorSDK.CaptureButtonViewState : Swift.Hashable {}
-extension BanubaVideoEditorSDK.CaptureButtonViewMode : Swift.Equatable {}
-extension BanubaVideoEditorSDK.CaptureButtonViewMode : Swift.Hashable {}
+extension BanubaVideoEditorSDK.RecordButtonViewState : Swift.Equatable {}
+extension BanubaVideoEditorSDK.RecordButtonViewState : Swift.Hashable {}
+extension BanubaVideoEditorSDK.RecordButtonViewMode : Swift.Equatable {}
+extension BanubaVideoEditorSDK.RecordButtonViewMode : Swift.Hashable {}
 extension BanubaVideoEditorSDK.EffectType : Swift.Equatable {}
 extension BanubaVideoEditorSDK.EffectType : Swift.Hashable {}
 extension BanubaVideoEditorSDK.VideoRecordSpeed : Swift.Equatable {}

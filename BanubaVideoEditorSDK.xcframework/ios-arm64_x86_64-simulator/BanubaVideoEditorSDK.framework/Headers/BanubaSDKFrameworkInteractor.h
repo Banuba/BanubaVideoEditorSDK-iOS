@@ -20,10 +20,11 @@ __attribute__((weak_import)) @interface BanubaSDKFrameworkInteractor : NSObject
 + (BOOL)isFrameworkAvailable;
 
 + (void) initializeCameraModule: (NSString * _Nonnull) token
-                      videoSize:(CGSize) videoSize
-                    videoPreset:(AVCaptureSessionPreset _Nonnull) videoPreset
+                        videoSize:(CGSize) videoSize
+                      videoPreset:(AVCaptureSessionPreset _Nonnull) videoPreset
 useHEVCCodecIfPossibleForRecorder:(BOOL) useHEVCCodecIfPossibleForRecorder
-        additionalEffectsPaths:(NSArray<NSString * > *_Nullable) additionalEffectsPaths;
+                       isMirrored:(BOOL) isMirrored
+           additionalEffectsPaths:(NSArray<NSString * > *_Nullable) additionalEffectsPaths;
 
 + (id _Nullable) getCameraModuleInstance;
 + (id _Nullable) getMaskPostprocessingService;
