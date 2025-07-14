@@ -1243,6 +1243,7 @@ public struct RecorderConfiguration {
   public var isVideoDurationButtonHidden: Swift.Bool
   public var previewScalingMode: BanubaVideoEditorSDK.RecorderPreviewScalingMode
   public var supportsAudioForPhoto: Swift.Bool
+  public var autoStartLocalMask: Swift.String?
 }
 public struct RecordButtonConfiguration {
   public var strokeColor: CoreGraphics.CGColor
