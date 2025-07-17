@@ -11,6 +11,7 @@ import BanubaVideoEditorCore
 @_exported import BanubaVideoEditorSDK
 import Combine
 import CoreGraphics
+import CoreImage
 import CoreMedia
 import DeveloperToolsSupport
 import Foundation
@@ -679,6 +680,7 @@ public struct VideoEditorMetadata : Swift.Codable {
   public var colorOnVideoMetadata: BanubaVideoEditorSDK.ColorOnVideoMetadata?
   public var textOnVideoMetadata: [BanubaVideoEditorSDK.TextOnVideoMetadata]?
   public var gifOnVideoMetadata: [BanubaVideoEditorSDK.GIFOnVideoMetadata]?
+  public var fingerDrawingVideoMetadata: [BanubaVideoEditorSDK.GIFOnVideoMetadata]?
   public var blurOnVideoMetadata: [BanubaVideoEditorSDK.BlurOnVideoMetadata]?
   public var filtersOnVideoMetadata: [BanubaVideoEditorSDK.FilterOnVideoMetadata]?
   public var analyticsMetadataJSON: Swift.String?
@@ -962,6 +964,7 @@ public struct OverlayAddButtonConfig {
     case sticker
     case blur
     case captions
+    case drawing
     public var editorEffectType: BanubaVideoEditorCore.EditorEffectType {
       get
     }
@@ -1577,6 +1580,7 @@ extension BanubaVideoEditorSDK.ExternalViewControllerFactory {
     public let squareButton: BanubaVideoEditorSDK.VideoEditorEffectsManagementPanel.ButtonConfiguration
     public let voiceEffectButton: BanubaVideoEditorSDK.VideoEditorEffectsManagementPanel.ButtonConfiguration
     public let adjustButton: BanubaVideoEditorSDK.VideoEditorEffectsManagementPanel.ButtonConfiguration
+    public let textStyleButton: BanubaVideoEditorSDK.VideoEditorEffectsManagementPanel.ButtonConfiguration
   }
   public struct ButtonConfiguration {
     public let title: Swift.String
@@ -2039,6 +2043,7 @@ public struct VideoEditorEffectItemConfiguration {
     case pixelate
     case captions
     case voice
+    case drawing
     public static func == (a: BanubaVideoEditorSDK.VideoEditorToolsPanel.ToolType, b: BanubaVideoEditorSDK.VideoEditorToolsPanel.ToolType) -> Swift.Bool
     public func hash(into hasher: inout Swift.Hasher)
     public var hashValue: Swift.Int {
