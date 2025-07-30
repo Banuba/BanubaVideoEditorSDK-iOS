@@ -1207,7 +1207,7 @@ public struct RecorderConfiguration {
   public var backButton: BanubaUtilities.BackButtonConfiguration
   public var removeButtonImageName: Swift.String
   public var removeMusicButtonConfiguration: BanubaVideoEditorSDK.ImageButtonConfiguration
-  public var progressLabelConfiguration: BanubaUtilities.TextConfiguration?
+  public var progressLabelCountingMode: BanubaVideoEditorSDK.RecorderProgressLabelCountingMode
   public var floatingLineViewConfiguration: BanubaUtilities.TextConfiguration?
   public var floatingLineViewWidth: CoreFoundation.CGFloat?
   public var captureButtonModes: [BanubaVideoEditorSDK.RecordButtonViewMode]
@@ -1274,6 +1274,11 @@ public enum RecorderPreviewScalingMode : Swift.Int, Swift.CaseIterable {
   public var rawValue: Swift.Int {
     get
   }
+}
+public enum RecorderProgressLabelCountingMode {
+  case disabled
+  case countUp(textConfiguration: BanubaUtilities.TextConfiguration)
+  case countDown(textConfiguration: BanubaUtilities.TextConfiguration)
 }
 public struct PIPSettingsConfiguration {
   public var backgroundConfiguration: BanubaUtilities.BackgroundConfiguration
