@@ -158,9 +158,6 @@ public class BanubaVideoEditor {
   public var videoMetadata: BanubaVideoEditorSDK.VideoMetadata? {
     get
   }
-  public var blurEffectsList: BanubaVideoEditorSDK.BlurList? {
-    get
-  }
   public var asset: AVFoundation.AVAsset? {
     get
   }
@@ -189,16 +186,27 @@ public class BanubaVideoEditor {
   }
   public init?(token: Swift.String, arguments: [BanubaVideoEditorSDK.VideoEditorArg : Any] = [:], isCameraEnabled: Swift.Bool = true, configuration: BanubaVideoEditorSDK.VideoEditorConfig, externalViewControllerFactory: (any BanubaVideoEditorSDK.ExternalViewControllerFactory)? = nil)
   @objc deinit
-  public func export(using configuration: BanubaVideoEditorCore.ExportConfiguration, exportProgress: ((Swift.Float) -> Swift.Void)?, completion: @escaping ((_ error: (any Swift.Error)?, _ exportCoverImages: BanubaVideoEditorSDK.ExportCoverImages?) -> Swift.Void))
-  public func stopExport()
-  public func isExporting() -> Swift.Bool
-  public func exportAudio(fileUrl: Foundation.URL, audioSettings: [Swift.String : Any] = VESettings.audio, completion: @escaping ((any Swift.Error)?) -> Swift.Void)
-  public func clearSessionData()
-  public func dismissVideoEditor(animated: Swift.Bool, completion: (() -> Swift.Void)?)
-  public func getVideoEditorNavigationController(withLaunchConfiguration configuration: BanubaVideoEditorSDK.VideoEditorLaunchConfig) -> UIKit.UINavigationController?
-  public func presentVideoEditor(withLaunchConfiguration configuration: BanubaVideoEditorSDK.VideoEditorLaunchConfig, completion: (() -> Swift.Void)?)
+}
+extension BanubaVideoEditorSDK.BanubaVideoEditor {
   public func updateVideoEditorConfig(_ config: BanubaVideoEditorSDK.VideoEditorConfig)
   public func updateVideoEditorArgs(_ arguments: [Swift.String : Any])
+  public func clearSessionData()
+}
+extension BanubaVideoEditorSDK.BanubaVideoEditor {
+  public func presentVideoEditor(withLaunchConfiguration configuration: BanubaVideoEditorSDK.VideoEditorLaunchConfig, completion: (() -> Swift.Void)?)
+  public func getVideoEditorNavigationController(withLaunchConfiguration configuration: BanubaVideoEditorSDK.VideoEditorLaunchConfig) -> UIKit.UINavigationController?
+  public func dismissVideoEditor(animated: Swift.Bool, completion: (() -> Swift.Void)?)
+}
+extension BanubaVideoEditorSDK.BanubaVideoEditor {
+  public var isExporting: Swift.Bool {
+    get
+  }
+  public func export(using configuration: BanubaVideoEditorCore.ExportConfiguration, exportProgress: ((Swift.Float) -> Swift.Void)?, completion: @escaping ((_ error: (any Swift.Error)?, _ exportCoverImages: BanubaVideoEditorSDK.ExportCoverImages?) -> Swift.Void))
+  public func stopExport()
+  public func exportAudio(fileUrl: Foundation.URL, audioSettings: [Swift.String : Any] = VESettings.audio, completion: @escaping ((any Swift.Error)?) -> Swift.Void)
+}
+extension BanubaVideoEditorSDK.BanubaVideoEditor {
+  public func getLicenseState(completion: @escaping ((Swift.Bool) -> Swift.Void))
 }
 extension BanubaVideoEditorSDK.BanubaVideoEditor {
   public static func presentSharingViewController(from hostController: UIKit.UIViewController, configuration: BanubaVideoEditorSDK.SharingScreenConfiguration, mainVideoUrl: Foundation.URL, videoUrls: [Foundation.URL], previewImage: UIKit.UIImage, animated: Swift.Bool, completion: (() -> Swift.Void)?)
@@ -212,9 +220,6 @@ extension BanubaVideoEditorSDK.BanubaVideoEditor {
 extension BanubaVideoEditorSDK.BanubaVideoEditor {
   public func exportExternalDraft(_ externalDraft: BanubaVideoEditorSDK.ExternalDraft) throws -> Foundation.URL
   public func importExternalDraft(fromZipUrl url: Foundation.URL) throws -> BanubaVideoEditorSDK.ExternalDraft
-}
-extension BanubaVideoEditorSDK.BanubaVideoEditor {
-  public func getLicenseState(completion: @escaping ((Swift.Bool) -> Swift.Void))
 }
 extension BanubaVideoEditorSDK.BanubaVideoEditor {
   public struct TextLink : BanubaVideoEditorSDK.ReflectedStringConvertible {
@@ -1044,7 +1049,7 @@ public enum BanubaVideoEditorSwiftUIError : Swift.Error, Foundation.LocalizedErr
   }
 }
 @_Concurrency.MainActor @preconcurrency public struct BanubaVideoEditorSwiftUIView : SwiftUI.UIViewControllerRepresentable {
-  @_Concurrency.MainActor @preconcurrency public init(token: Swift.String, launchConfig: BanubaVideoEditorSDK.VideoEditorLaunchConfig, configuration: BanubaVideoEditorSDK.VideoEditorConfig, exportConfiguration: BanubaVideoEditorCore.ExportConfiguration)
+  @_Concurrency.MainActor @preconcurrency public init(token: Swift.String, arguments: [BanubaVideoEditorSDK.VideoEditorArg : Any] = [:], launchConfig: BanubaVideoEditorSDK.VideoEditorLaunchConfig, configuration: BanubaVideoEditorSDK.VideoEditorConfig, exportConfiguration: BanubaVideoEditorCore.ExportConfiguration)
   @_Concurrency.MainActor @preconcurrency public func makeUIViewController(context: BanubaVideoEditorSDK.BanubaVideoEditorSwiftUIView.Context) -> UIKit.UIViewController
   @_Concurrency.MainActor @preconcurrency public func updateUIViewController(_ uiViewController: UIKit.UIViewController, context: BanubaVideoEditorSDK.BanubaVideoEditorSwiftUIView.Context)
   @_Concurrency.MainActor @preconcurrency public func onDidCancel(_ closure: (() -> Swift.Void)?) -> BanubaVideoEditorSDK.BanubaVideoEditorSwiftUIView
