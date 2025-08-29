@@ -876,6 +876,19 @@ extension BanubaVideoEditorSDK.EffectOnVideoMetadata {
 public protocol ProgressViewControllerFactory {
   func makeProgressViewController() -> any BanubaVideoEditorSDK.BanubaProgressViewController
 }
+public struct TextEditingViewConfiguration {
+  public var backgroundColor: UIKit.UIColor
+  public var doneButton: BanubaUtilities.RoundedButtonConfiguration
+  public var fontButton: BanubaVideoEditorSDK.ImageButtonConfiguration
+  public var colorButton: BanubaVideoEditorSDK.ImageButtonConfiguration
+  public var textBackgroundButton: BanubaVideoEditorSDK.ImageButtonConfiguration
+  public var alignmentImages: [BanubaVideoEditorSDK.VideoTextAlignment : BanubaVideoEditorSDK.ImageButtonConfiguration]
+  public var palette: [BanubaVideoEditorSDK.VideoTextColorPair]
+  public var fonts: [BanubaVideoEditorSDK.VideoTextFont]
+  public var colorItemConfiguration: BanubaVideoEditorSDK.TextEditColorItemConfiguration
+  public var fontItemConfiguration: BanubaVideoEditorSDK.TextEditFontItemConfiguration
+  public var isTextBackgroundColorAppliedByDefault: Swift.Bool
+}
 public enum CaptionsLanguage : Swift.String, Swift.CaseIterable {
   case english
   case mandarin
@@ -1398,7 +1411,8 @@ public class VideoEditorViewConfiguration {
   public var effectsPreferredOrderConfiguration: BanubaVideoEditorSDK.VideoEditorViewConfiguration.EffectsPreferredOrderConfiguration
   public var transitions: [BanubaVideoEditorSDK.TransitionEffect]
   public var isCameraCellInGalleryEnabled: Swift.Bool
-  public init(backButtonConfiguration: BanubaVideoEditorSDK.ImageButtonConfiguration, nextButtonConfiguration: BanubaVideoEditorSDK.BanubaButtonConfiguration, playerControlConfiguration: BanubaUtilities.PlayerControlConfiguration, previewVideoButtonConfiguration: BanubaVideoEditorSDK.ImageButtonConfiguration, backgroundColor: UIKit.UIColor, timelineConfiguration: BanubaVideoEditorSDK.CompositionTimelineConfiguration, timeLabelsConfiguration: BanubaUtilities.TextConfiguration, isAddGalleryVideoButtonHidden: Swift.Bool, addGalleryVideoButtonConfiguration: BanubaVideoEditorSDK.VideoEditorViewConfiguration.AddGalleryVideoButtonConfiguration, appearingViewNavBarConfiguration: BanubaVideoEditorSDK.AppearingViewNavigationViewConfiguration, toolsPanelConfiguration: BanubaVideoEditorSDK.VideoEditorToolsPanel.Configuration, effectsPanelConfiguration: BanubaVideoEditorSDK.VideoEditorEffectsManagementPanel.Configuration, primaryAspectRatio: BanubaUtilities.AspectRatio, effectsPreferredOrderConfiguration: BanubaVideoEditorSDK.VideoEditorViewConfiguration.EffectsPreferredOrderConfiguration, transitions: [BanubaVideoEditorSDK.TransitionEffect], isCameraCellInGalleryEnabled: Swift.Bool)
+  public var textEditingViewConfiguration: BanubaVideoEditorSDK.TextEditingViewConfiguration
+  public init(backButtonConfiguration: BanubaVideoEditorSDK.ImageButtonConfiguration, nextButtonConfiguration: BanubaVideoEditorSDK.BanubaButtonConfiguration, playerControlConfiguration: BanubaUtilities.PlayerControlConfiguration, previewVideoButtonConfiguration: BanubaVideoEditorSDK.ImageButtonConfiguration, backgroundColor: UIKit.UIColor, timelineConfiguration: BanubaVideoEditorSDK.CompositionTimelineConfiguration, timeLabelsConfiguration: BanubaUtilities.TextConfiguration, isAddGalleryVideoButtonHidden: Swift.Bool, addGalleryVideoButtonConfiguration: BanubaVideoEditorSDK.VideoEditorViewConfiguration.AddGalleryVideoButtonConfiguration, appearingViewNavBarConfiguration: BanubaVideoEditorSDK.AppearingViewNavigationViewConfiguration, toolsPanelConfiguration: BanubaVideoEditorSDK.VideoEditorToolsPanel.Configuration, effectsPanelConfiguration: BanubaVideoEditorSDK.VideoEditorEffectsManagementPanel.Configuration, primaryAspectRatio: BanubaUtilities.AspectRatio, effectsPreferredOrderConfiguration: BanubaVideoEditorSDK.VideoEditorViewConfiguration.EffectsPreferredOrderConfiguration, transitions: [BanubaVideoEditorSDK.TransitionEffect], isCameraCellInGalleryEnabled: Swift.Bool, textEditingViewConfiguration: BanubaVideoEditorSDK.TextEditingViewConfiguration)
   @objc deinit
 }
 public struct SharingScreenConfiguration {
@@ -1712,6 +1726,7 @@ public struct AdditionalEffectsButtonConfiguration {
     case beauty
     case masks
     case muteSound
+    case videoTemplates
     case pip
     case blur
     case trimDraft
