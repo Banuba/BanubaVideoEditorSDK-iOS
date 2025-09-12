@@ -1395,6 +1395,12 @@ public class VideoEditorViewConfiguration {
     public var masks: [Swift.String]
     public var videoEffectOrderAndSet: [BanubaVideoEditorCore.VisualEffectApplicatorType]
   }
+  public struct PredefinedTrackConfiguration {
+    public var url: Foundation.URL
+    public var title: Swift.String?
+    public var additionalTitle: Swift.String?
+    public init(url: Foundation.URL, title: Swift.String?, additionalTitle: Swift.String?)
+  }
   public var backButtonConfiguration: BanubaVideoEditorSDK.ImageButtonConfiguration
   public var nextButtonConfiguration: BanubaVideoEditorSDK.BanubaButtonConfiguration
   public var playerControlConfiguration: BanubaUtilities.PlayerControlConfiguration
@@ -1412,7 +1418,8 @@ public class VideoEditorViewConfiguration {
   public var transitions: [BanubaVideoEditorSDK.TransitionEffect]
   public var isCameraCellInGalleryEnabled: Swift.Bool
   public var textEditingViewConfiguration: BanubaVideoEditorSDK.TextEditingViewConfiguration
-  public init(backButtonConfiguration: BanubaVideoEditorSDK.ImageButtonConfiguration, nextButtonConfiguration: BanubaVideoEditorSDK.BanubaButtonConfiguration, playerControlConfiguration: BanubaUtilities.PlayerControlConfiguration, previewVideoButtonConfiguration: BanubaVideoEditorSDK.ImageButtonConfiguration, backgroundColor: UIKit.UIColor, timelineConfiguration: BanubaVideoEditorSDK.CompositionTimelineConfiguration, timeLabelsConfiguration: BanubaUtilities.TextConfiguration, isAddGalleryVideoButtonHidden: Swift.Bool, addGalleryVideoButtonConfiguration: BanubaVideoEditorSDK.VideoEditorViewConfiguration.AddGalleryVideoButtonConfiguration, appearingViewNavBarConfiguration: BanubaVideoEditorSDK.AppearingViewNavigationViewConfiguration, toolsPanelConfiguration: BanubaVideoEditorSDK.VideoEditorToolsPanel.Configuration, effectsPanelConfiguration: BanubaVideoEditorSDK.VideoEditorEffectsManagementPanel.Configuration, primaryAspectRatio: BanubaUtilities.AspectRatio, effectsPreferredOrderConfiguration: BanubaVideoEditorSDK.VideoEditorViewConfiguration.EffectsPreferredOrderConfiguration, transitions: [BanubaVideoEditorSDK.TransitionEffect], isCameraCellInGalleryEnabled: Swift.Bool, textEditingViewConfiguration: BanubaVideoEditorSDK.TextEditingViewConfiguration)
+  public var predefinedTrackConfiguration: BanubaVideoEditorSDK.VideoEditorViewConfiguration.PredefinedTrackConfiguration?
+  public init(backButtonConfiguration: BanubaVideoEditorSDK.ImageButtonConfiguration, nextButtonConfiguration: BanubaVideoEditorSDK.BanubaButtonConfiguration, playerControlConfiguration: BanubaUtilities.PlayerControlConfiguration, previewVideoButtonConfiguration: BanubaVideoEditorSDK.ImageButtonConfiguration, backgroundColor: UIKit.UIColor, timelineConfiguration: BanubaVideoEditorSDK.CompositionTimelineConfiguration, timeLabelsConfiguration: BanubaUtilities.TextConfiguration, isAddGalleryVideoButtonHidden: Swift.Bool, addGalleryVideoButtonConfiguration: BanubaVideoEditorSDK.VideoEditorViewConfiguration.AddGalleryVideoButtonConfiguration, appearingViewNavBarConfiguration: BanubaVideoEditorSDK.AppearingViewNavigationViewConfiguration, toolsPanelConfiguration: BanubaVideoEditorSDK.VideoEditorToolsPanel.Configuration, effectsPanelConfiguration: BanubaVideoEditorSDK.VideoEditorEffectsManagementPanel.Configuration, primaryAspectRatio: BanubaUtilities.AspectRatio, effectsPreferredOrderConfiguration: BanubaVideoEditorSDK.VideoEditorViewConfiguration.EffectsPreferredOrderConfiguration, transitions: [BanubaVideoEditorSDK.TransitionEffect], isCameraCellInGalleryEnabled: Swift.Bool, textEditingViewConfiguration: BanubaVideoEditorSDK.TextEditingViewConfiguration, predefinedTrackConfiguration: BanubaVideoEditorSDK.VideoEditorViewConfiguration.PredefinedTrackConfiguration? = nil)
   @objc deinit
 }
 public struct SharingScreenConfiguration {
@@ -2052,6 +2059,8 @@ public struct VideoEditorEffectItemConfiguration {
   public struct Configuration {
     public var buttons: [BanubaVideoEditorSDK.VideoEditorToolsPanel.ButtonConfiguration]
     public var backgroundConfiguration: BanubaUtilities.BackgroundConfiguration
+    public mutating func hideButtons(_ identifiers: BanubaVideoEditorSDK.VideoEditorToolsPanel.ToolType...)
+    public mutating func resetToDefault()
   }
   public struct ButtonConfiguration {
     public let identifier: BanubaVideoEditorSDK.VideoEditorToolsPanel.ToolType
