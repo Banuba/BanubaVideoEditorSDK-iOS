@@ -309,6 +309,13 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 
 
 
+/// The Composition Timeline configuration
+SWIFT_CLASS("_TtC20BanubaVideoEditorSDK32CompositionTimelineConfiguration")
+@interface CompositionTimelineConfiguration : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
 
 @class NSCoder;
 
@@ -343,19 +350,6 @@ SWIFT_CLASS("_TtC20BanubaVideoEditorSDK21ExposureAnimationView")
 - (void)drawRect:(CGRect)rect;
 @end
 
-@class NSString;
-@class NSBundle;
-
-SWIFT_CLASS("_TtC20BanubaVideoEditorSDK27FeedbackAlertViewController")
-@interface FeedbackAlertViewController : UIViewController
-- (void)viewWillAppear:(BOOL)animated;
-- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
-@end
-
-
-
-
 
 @class UIButton;
 
@@ -386,6 +380,9 @@ SWIFT_CLASS("_TtC20BanubaVideoEditorSDK18ImageConfiguration")
 
 
 
+@class NSString;
+@class NSBundle;
+
 SWIFT_CLASS("_TtC20BanubaVideoEditorSDK22ProgressViewController")
 @interface ProgressViewController : UIViewController
 - (void)viewDidLoad;
@@ -401,16 +398,13 @@ SWIFT_CLASS("_TtC20BanubaVideoEditorSDK22ProgressViewController")
 
 
 
+
 /// The Time line configuration
 SWIFT_CLASS("_TtC20BanubaVideoEditorSDK25TrimTimeLineConfiguration")
 @interface TrimTimeLineConfiguration : NSObject
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
-
-
-
-
 
 
 
@@ -452,14 +446,6 @@ SWIFT_CLASS("_TtC20BanubaVideoEditorSDK21VideoEditorToolsPanel")
 @interface VideoEditorToolsPanel : UIView
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
-@end
-
-
-SWIFT_CLASS("_TtC20BanubaVideoEditorSDK23VideoTemplateToolsPanel")
-@interface VideoTemplateToolsPanel : UIView
-- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
-- (void)layoutSubviews;
 @end
 
 #endif
@@ -781,6 +767,13 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 
 
 
+/// The Composition Timeline configuration
+SWIFT_CLASS("_TtC20BanubaVideoEditorSDK32CompositionTimelineConfiguration")
+@interface CompositionTimelineConfiguration : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
 
 @class NSCoder;
 
@@ -815,19 +808,6 @@ SWIFT_CLASS("_TtC20BanubaVideoEditorSDK21ExposureAnimationView")
 - (void)drawRect:(CGRect)rect;
 @end
 
-@class NSString;
-@class NSBundle;
-
-SWIFT_CLASS("_TtC20BanubaVideoEditorSDK27FeedbackAlertViewController")
-@interface FeedbackAlertViewController : UIViewController
-- (void)viewWillAppear:(BOOL)animated;
-- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
-@end
-
-
-
-
 
 @class UIButton;
 
@@ -858,6 +838,9 @@ SWIFT_CLASS("_TtC20BanubaVideoEditorSDK18ImageConfiguration")
 
 
 
+@class NSString;
+@class NSBundle;
+
 SWIFT_CLASS("_TtC20BanubaVideoEditorSDK22ProgressViewController")
 @interface ProgressViewController : UIViewController
 - (void)viewDidLoad;
@@ -873,16 +856,13 @@ SWIFT_CLASS("_TtC20BanubaVideoEditorSDK22ProgressViewController")
 
 
 
+
 /// The Time line configuration
 SWIFT_CLASS("_TtC20BanubaVideoEditorSDK25TrimTimeLineConfiguration")
 @interface TrimTimeLineConfiguration : NSObject
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
-
-
-
-
 
 
 
@@ -924,14 +904,6 @@ SWIFT_CLASS("_TtC20BanubaVideoEditorSDK21VideoEditorToolsPanel")
 @interface VideoEditorToolsPanel : UIView
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
-@end
-
-
-SWIFT_CLASS("_TtC20BanubaVideoEditorSDK23VideoTemplateToolsPanel")
-@interface VideoTemplateToolsPanel : UIView
-- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
-- (void)layoutSubviews;
 @end
 
 #endif
