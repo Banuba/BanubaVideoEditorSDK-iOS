@@ -80,6 +80,7 @@ public class AudioTrack : Swift.Equatable {
   public var trimmedTimeRange: CoreMedia.CMTimeRange
   public var compositionStart: CoreMedia.CMTime
   public var url: Foundation.URL
+  public var remoteURL: Foundation.URL?
   public var originalURL: Foundation.URL
   public var coverURL: Foundation.URL?
   public var title: Swift.String?
@@ -90,7 +91,7 @@ public class AudioTrack : Swift.Equatable {
   public var isCameraTrack: Swift.Bool
   public var isEditable: Swift.Bool
   public var position: BanubaVideoEditorSDK.AudioTrackLinePosition
-  required public init(url: Foundation.URL, coverURL: Foundation.URL?, originalURL: Foundation.URL, uuid: Foundation.UUID, id: Swift.Int32?, timeRange: CoreMedia.CMTimeRange, trimTimeRange: CoreMedia.CMTimeRange, compositionStart: CoreMedia.CMTime, avURLAsset: AVFoundation.AVURLAsset, isAudioRecord: Swift.Bool, isEditable: Swift.Bool, isCameraTrack: Swift.Bool, title: Swift.String?, additionalTitle: Swift.String?, appliedFilterId: Swift.Int?)
+  required public init(url: Foundation.URL, remoteURL: Foundation.URL?, coverURL: Foundation.URL?, originalURL: Foundation.URL, uuid: Foundation.UUID, id: Swift.Int32?, timeRange: CoreMedia.CMTimeRange, trimTimeRange: CoreMedia.CMTimeRange, compositionStart: CoreMedia.CMTime, avURLAsset: AVFoundation.AVURLAsset, isAudioRecord: Swift.Bool, isEditable: Swift.Bool, isCameraTrack: Swift.Bool, title: Swift.String?, additionalTitle: Swift.String?, appliedFilterId: Swift.Int?)
   public static func == (lhs: BanubaVideoEditorSDK.AudioTrack, rhs: BanubaVideoEditorSDK.AudioTrack) -> Swift.Bool
   public func resetFilter()
   @objc deinit
@@ -665,6 +666,7 @@ public struct MusicEditorTrack : Swift.Codable {
   public var url: Foundation.URL
   public var coverURL: Foundation.URL?
   public var originalURL: Foundation.URL
+  public var remoteURL: Foundation.URL?
   public var title: Swift.String
   public var additionalTitle: Swift.String?
   public var id: Swift.Int32
@@ -679,7 +681,7 @@ public struct MusicEditorTrack : Swift.Codable {
   public var isEditable: Swift.Bool
   public var applyedFilterId: Swift.Int?
   public var isCameraTrack: Swift.Bool
-  public init(url: Foundation.URL, coverURL: Foundation.URL?, originalURL: Foundation.URL, title: Swift.String, additionalTitle: Swift.String?, uuid: Foundation.UUID, id: Swift.Int32, volume: Swift.Float, position: Swift.Int, timeScale: Foundation.TimeInterval, compositionStart: Foundation.TimeInterval, timeRangeStart: Foundation.TimeInterval, timeRangeEnd: Foundation.TimeInterval, isAudioRecord: Swift.Bool, isEditable: Swift.Bool, applyedFilterId: Swift.Int? = nil, isCameraTrack: Swift.Bool)
+  public init(url: Foundation.URL, coverURL: Foundation.URL?, originalURL: Foundation.URL, remoteURL: Foundation.URL?, title: Swift.String, additionalTitle: Swift.String?, uuid: Foundation.UUID, id: Swift.Int32, volume: Swift.Float, position: Swift.Int, timeScale: Foundation.TimeInterval, compositionStart: Foundation.TimeInterval, timeRangeStart: Foundation.TimeInterval, timeRangeEnd: Foundation.TimeInterval, isAudioRecord: Swift.Bool, isEditable: Swift.Bool, applyedFilterId: Swift.Int? = nil, isCameraTrack: Swift.Bool)
   public init(from decoder: any Swift.Decoder) throws
   public func encode(to encoder: any Swift.Encoder) throws
 }
@@ -742,10 +744,11 @@ public struct TextOnVideoMetadata : Swift.Codable {
   public let coordinatesParams: BanubaVideoEditorSDK.CoordinatesParams
   public let order: Swift.Int
   public let textColorDestinationId: Swift.Int
+  public let isFontSizeLocked: Swift.Bool
   public let linePosition: Swift.Int?
   public let predefinedStyleId: Swift.Int?
   public let position: Swift.Int?
-  public init(id: Swift.String, textParams: BanubaVideoEditorSDK.TextParams, startTime: BanubaVideoEditorSDK.TimeMetadata, endTime: BanubaVideoEditorSDK.TimeMetadata, coordinatesParams: BanubaVideoEditorSDK.CoordinatesParams, order: Swift.Int, textColorDestinationId: Swift.Int, linePosition: Swift.Int?, predefinedStyleId: Swift.Int?, position: Swift.Int?)
+  public init(id: Swift.String, textParams: BanubaVideoEditorSDK.TextParams, startTime: BanubaVideoEditorSDK.TimeMetadata, endTime: BanubaVideoEditorSDK.TimeMetadata, coordinatesParams: BanubaVideoEditorSDK.CoordinatesParams, order: Swift.Int, textColorDestinationId: Swift.Int, isFontSizeLocked: Swift.Bool, linePosition: Swift.Int?, predefinedStyleId: Swift.Int?, position: Swift.Int?)
   public init(from decoder: any Swift.Decoder) throws
   public func encode(to encoder: any Swift.Encoder) throws
 }
@@ -1305,9 +1308,9 @@ public enum RecorderProgressLabelCountingMode {
 }
 public struct PIPSettingsConfiguration {
   public var backgroundConfiguration: BanubaUtilities.BackgroundConfiguration
-  public var dragIndicatorConfiguration: BanubaUtilities.RoundedButtonConfiguration
   public var titleConfiguration: BanubaUtilities.TextConfiguration
-  public var layoutSettingsButtonsConfiguration: [BanubaVideoEditorSDK.PIPSelectableCellConfiguration]
+  public var modesConfiguration: [BanubaVideoEditorSDK.PIPModeConfiguration]
+  public var selectFromGalleryButtonConfiguration: BanubaVideoEditorSDK.BanubaButtonConfiguration
 }
 public struct TrimVideoConfiguration {
   public var saveButton: BanubaVideoEditorSDK.ImageButtonConfiguration
@@ -1675,44 +1678,30 @@ public protocol MusicEditorCountdownAnimatableView : UIKit.UIView {
   func start(completion: @escaping (Swift.Bool) -> Swift.Void)
   func stop()
 }
-public struct PIPSwitchCellConfiguration {
-  public var identifier: BanubaVideoEditorCore.PIPSwitchLayoutSetting
-  public var selectedIdentifier: BanubaVideoEditorCore.PIPSwitchLayoutSetting
-  public var textConfiguration: BanubaUtilities.TextConfiguration
-  public var imageConfiguration: BanubaVideoEditorSDK.ImageConfiguration
-  public var borderWidth: CoreFoundation.CGFloat
-  public var borderColor: CoreGraphics.CGColor
-  public var cornerRadius: CoreFoundation.CGFloat?
-  public var backgroundColor: UIKit.UIColor
-  public init(identifier: BanubaVideoEditorCore.PIPSwitchLayoutSetting, selectedIdentifier: BanubaVideoEditorCore.PIPSwitchLayoutSetting, textConfiguration: BanubaUtilities.TextConfiguration, imageConfiguration: BanubaVideoEditorSDK.ImageConfiguration, borderWidth: CoreFoundation.CGFloat, borderColor: CoreGraphics.CGColor, cornerRadius: CoreFoundation.CGFloat?, backgroundColor: UIKit.UIColor)
+public enum PIPMode {
+  case react1
+  case react2
+  case react3
+  case react4
+  case landscape1
+  case landscape2
+  case portrait1
+  case portrait2
+  public static func == (a: BanubaVideoEditorSDK.PIPMode, b: BanubaVideoEditorSDK.PIPMode) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
 }
-public struct PIPCameraCellConfiguration {
-  public var identifier: BanubaVideoEditorCore.PIPCameraLayoutSetting
-  public var selectedIdentifier: BanubaVideoEditorCore.PIPCameraLayoutSetting
-  public var textConfiguration: BanubaUtilities.TextConfiguration
-  public var selectedTextConfiguration: BanubaUtilities.TextConfiguration
+public struct PIPModeConfiguration {
+  public var mode: BanubaVideoEditorSDK.PIPMode
   public var imageConfiguration: BanubaVideoEditorSDK.ImageConfiguration
-  public var selectedImageConfiguration: BanubaVideoEditorSDK.ImageConfiguration
-  public var borderWidth: CoreFoundation.CGFloat
-  public var borderColor: CoreGraphics.CGColor
-  public var cornerRadius: CoreFoundation.CGFloat?
-  public var backgroundColor: UIKit.UIColor
-  public init(identifier: BanubaVideoEditorCore.PIPCameraLayoutSetting, selectedIdentifier: BanubaVideoEditorCore.PIPCameraLayoutSetting, textConfiguration: BanubaUtilities.TextConfiguration, selectedTextConfiguration: BanubaUtilities.TextConfiguration, imageConfiguration: BanubaVideoEditorSDK.ImageConfiguration, selectedImageConfiguration: BanubaVideoEditorSDK.ImageConfiguration, borderWidth: CoreFoundation.CGFloat, borderColor: CoreGraphics.CGColor, cornerRadius: CoreFoundation.CGFloat?, backgroundColor: UIKit.UIColor)
-}
-public struct PIPSelectableCellConfiguration {
-  public var identifier: BanubaVideoEditorCore.PIPPlayerLayoutSetting
-  public var switchCellConfiguration: BanubaVideoEditorSDK.PIPSwitchCellConfiguration?
-  public var cameraCellConfiguration: BanubaVideoEditorSDK.PIPCameraCellConfiguration
-  public var croppingCellConfiguration: BanubaVideoEditorSDK.PIPCameraCellConfiguration?
   public var textConfiguration: BanubaUtilities.TextConfiguration
-  public var imageConfiguration: BanubaVideoEditorSDK.ImageConfiguration
   public var borderWidth: CoreFoundation.CGFloat
   public var selectedBorderColor: CoreGraphics.CGColor
   public var deselectedBorderColor: CoreGraphics.CGColor
-  public var isRoundedImageView: Swift.Bool
-  public var cornerRadius: CoreFoundation.CGFloat?
-  public var backgroundColor: UIKit.UIColor
-  public init(identifier: BanubaVideoEditorCore.PIPPlayerLayoutSetting, switchCellConfiguration: BanubaVideoEditorSDK.PIPSwitchCellConfiguration?, croppingCellConfiguration: BanubaVideoEditorSDK.PIPCameraCellConfiguration? = nil, cameraCellConfiguration: BanubaVideoEditorSDK.PIPCameraCellConfiguration, textConfiguration: BanubaUtilities.TextConfiguration, imageConfiguration: BanubaVideoEditorSDK.ImageConfiguration, borderWidth: CoreFoundation.CGFloat, selectedBorderColor: CoreGraphics.CGColor, deselectedBorderColor: CoreGraphics.CGColor, isRoundedImageView: Swift.Bool, cornerRadius: CoreFoundation.CGFloat?, backgroundColor: UIKit.UIColor)
+  public var cornerRadius: CoreFoundation.CGFloat
+  public init(mode: BanubaVideoEditorSDK.PIPMode, imageConfiguration: BanubaVideoEditorSDK.ImageConfiguration, textConfiguration: BanubaUtilities.TextConfiguration, borderWidth: CoreFoundation.CGFloat, selectedBorderColor: CoreGraphics.CGColor, deselectedBorderColor: CoreGraphics.CGColor, cornerRadius: CoreFoundation.CGFloat)
 }
 public struct SpeedBarButtonsConfiguration {
   public var imageHalf: BanubaVideoEditorSDK.ImageConfiguration?
@@ -1823,6 +1812,7 @@ public struct FeatureConfiguration {
   public var isAspectsEnabled: Swift.Bool
   public var isSpeedBarEnabled: Swift.Bool
   public var isVideoFitsAspect: Swift.Bool
+  @available(*, deprecated, message: "openAutomaticallyPIPSettingsDropdown is deprecated and will be removed in a future release.")
   public var openAutomaticallyPIPSettingsDropdown: Swift.Bool
   public var useTransitions: Swift.Bool
   public var isDraftSavedToastEnabled: Swift.Bool
@@ -2650,6 +2640,8 @@ extension BanubaVideoEditorSDK.DurationLabelConfiguration.Position : Swift.Equat
 extension BanubaVideoEditorSDK.DurationLabelConfiguration.Position : Swift.Hashable {}
 extension BanubaVideoEditorSDK.TrimVideoCompositionEditItem.TrimVideoCompositionEditItemType : Swift.Equatable {}
 extension BanubaVideoEditorSDK.TrimVideoCompositionEditItem.TrimVideoCompositionEditItemType : Swift.Hashable {}
+extension BanubaVideoEditorSDK.PIPMode : Swift.Equatable {}
+extension BanubaVideoEditorSDK.PIPMode : Swift.Hashable {}
 extension BanubaVideoEditorSDK.AdditionalEffectsButtonConfiguration.Position : Swift.Equatable {}
 extension BanubaVideoEditorSDK.AdditionalEffectsButtonConfiguration.Position : Swift.Hashable {}
 extension BanubaVideoEditorSDK.AdditionalEffectsButtonConfiguration.Position : Swift.RawRepresentable {}
