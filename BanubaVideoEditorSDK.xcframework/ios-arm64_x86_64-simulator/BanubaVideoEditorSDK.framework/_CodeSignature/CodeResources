@@ -330,7 +330,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		AYreIV9+TBB7wxhnAcLAwfoEW+E=
+		TxOsavItRz4npQ0bRCV7Eykrvg0=
 		</data>
 		<key>InfoView.nib</key>
 		<data>
@@ -374,7 +374,7 @@
 		</data>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		s/X8B7XRpGgOUXVzm5OPfDLJdgo=
+		cwNlETShWysJwIYAn+E6r0hyKYY=
 		</data>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -390,11 +390,11 @@
 		</data>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		y3XqtIa+d8NW0QnTz+WQgB0qWaU=
+		hvivxSliBZCsG7vzYX2qWTjYxBA=
 		</data>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		s/X8B7XRpGgOUXVzm5OPfDLJdgo=
+		cwNlETShWysJwIYAn+E6r0hyKYY=
 		</data>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -410,7 +410,7 @@
 		</data>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		PhDId07P3eVF/NgHklKSqvkwc0E=
+		ebcd419R+sM2XCTPhjLojJN7DVo=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -1284,7 +1284,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			ZpZKDGZvU3lnHSzgSLlfsiWTSB70beVP9AYy3f8okMc=
+			0ObwQaHMXAwTRm39C3EuVpOOOlPjrc+DWFf6XvH36wo=
 			</data>
 		</dict>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
@@ -1312,14 +1312,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			zqr3AlH3Smy/+pJn1vazB8V9TQ+ckbJj07Sfj4ngcA4=
+			72wLv3XNrXQxLtvOg96+LoUKkXyFVFk3/t/tYmKthvk=
 			</data>
 		</dict>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ZpZKDGZvU3lnHSzgSLlfsiWTSB70beVP9AYy3f8okMc=
+			0ObwQaHMXAwTRm39C3EuVpOOOlPjrc+DWFf6XvH36wo=
 			</data>
 		</dict>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
@@ -1347,7 +1347,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			V4bB7P9ILv4Mky/4AoaBoehPjYz+QF7JN6fjx0NZ1Po=
+			PgLfDBJQ8HaLTjuz8pAic+FJKSTRFo76OmYs9ppbe8s=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
