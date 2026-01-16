@@ -153,13 +153,11 @@ public protocol BanubaVideoEditorDelegate : AnyObject {
   func videoEditorDone(_ videoEditor: BanubaVideoEditorSDK.BanubaVideoEditor)
   func videoEditor(_ videoEditor: BanubaVideoEditorSDK.BanubaVideoEditor, shouldProcessMediaUrls urls: [Foundation.URL]) -> Swift.Bool
   func videoEditor(_ videoEditor: BanubaVideoEditorSDK.BanubaVideoEditor, didSaveDraft draft: BanubaVideoEditorSDK.ExternalDraft)
-  func videoEditor(_ videoEditor: BanubaVideoEditorSDK.BanubaVideoEditor, didSaveCurrentSession session: BanubaVideoEditorSDK.ExternalDraft)
   func videoEditorDidRequestDrafts(_ videoEditor: BanubaVideoEditorSDK.BanubaVideoEditor)
 }
 extension BanubaVideoEditorSDK.BanubaVideoEditorDelegate {
   public func videoEditor(_ videoEditor: BanubaVideoEditorSDK.BanubaVideoEditor, shouldProcessMediaUrls urls: [Foundation.URL]) -> Swift.Bool
   public func videoEditor(_ videoEditor: BanubaVideoEditorSDK.BanubaVideoEditor, didSaveDraft draft: BanubaVideoEditorSDK.ExternalDraft)
-  public func videoEditor(_ videoEditor: BanubaVideoEditorSDK.BanubaVideoEditor, didSaveCurrentSession session: BanubaVideoEditorSDK.ExternalDraft)
   public func videoEditorDidRequestDrafts(_ videoEditor: BanubaVideoEditorSDK.BanubaVideoEditor)
 }
 public typealias VideoEditorArg = Swift.String
