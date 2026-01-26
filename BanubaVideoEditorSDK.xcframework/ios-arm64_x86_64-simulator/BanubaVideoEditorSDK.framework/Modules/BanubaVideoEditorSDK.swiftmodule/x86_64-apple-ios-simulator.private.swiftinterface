@@ -163,6 +163,7 @@ extension BanubaVideoEditorSDK.BanubaVideoEditorDelegate {
 public typealias VideoEditorArg = Swift.String
 extension Swift.String {
   public static let useEditorV2: Swift.String
+  public static let customARCloudURL: Swift.String
 }
 public class BanubaVideoEditor {
   weak public var delegate: (any BanubaVideoEditorSDK.BanubaVideoEditorDelegate)?
