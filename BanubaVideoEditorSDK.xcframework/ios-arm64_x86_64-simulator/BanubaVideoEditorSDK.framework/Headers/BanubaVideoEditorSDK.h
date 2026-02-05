@@ -21,3 +21,4 @@ FOUNDATION_EXPORT const unsigned char BanubaVideoEditorSDKVersionString[];
 #import <BanubaVideoEditorSDK/VisualClipVideo.h>
 #import <BanubaUtilities/BanubaUtilities.h>
 #import <BanubaVideoEditorSDK/BanubaPhotoEditorInteractor.h>
+#import <BanubaVideoEditorSDK/BanubaGenAIVideosInteractor.h>

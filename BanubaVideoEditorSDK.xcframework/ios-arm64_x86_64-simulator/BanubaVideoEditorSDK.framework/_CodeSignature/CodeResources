@@ -6,7 +6,7 @@
 	<dict>
 		<key>AIClippingBottomView.nib</key>
 		<data>
-		FUqWD/gAfxN2PLNSO9clBxHNmzc=
+		f13Wbeq5G8tLWDBk3gvZXVDO8q4=
 		</data>
 		<key>ActionCollectionViewCell.nib</key>
 		<data>
@@ -16,9 +16,13 @@
 		<data>
 		nbzEDDBaCVq/HOZvwz6o7wKKDNg=
 		</data>
+		<key>AddGenAIVideoCollectionViewCell.nib</key>
+		<data>
+		W4ldJgB2+Jfrm5Bo1031mVaNsLw=
+		</data>
 		<key>AlbumsTableViewCell.nib</key>
 		<data>
-		GRwSMXFjXHjvZKuzKq7Kq/q66rg=
+		PVjJWBpWte6C1VTUOnlmVFP4u4Y=
 		</data>
 		<key>AppearingViewNavigationView.nib</key>
 		<data>
@@ -30,7 +34,7 @@
 		</data>
 		<key>Assets.car</key>
 		<data>
-		jSbNTEQIOQKjrZbzqYJeHGWqPHc=
+		ST8Ginct+2wJN5i+8xelVSxRoxE=
 		</data>
 		<key>AudioEditingController.nib</key>
 		<data>
@@ -62,7 +66,7 @@
 		</data>
 		<key>AutoCutActivityIndicator.nib</key>
 		<data>
-		3ULCQjXRbwSSJTNxcgfD7WPPR2s=
+		cVcjJBZKnwWRHwE3SOUKVePdFOE=
 		</data>
 		<key>AutoCutRecommendedSoundsViewController.nib</key>
 		<data>
@@ -90,7 +94,7 @@
 		</data>
 		<key>AutoCutThemeEditorViewController.nib</key>
 		<data>
-		U9IXSZo5/u6GWaXnolfBMKALFao=
+		sAnqLrDNyiFbZzyDc47Z2Aultx4=
 		</data>
 		<key>AutoCutVolumesViewController.storyboardc/AutoCutSoundVolumeViewController.nib</key>
 		<data>
@@ -110,7 +114,7 @@
 		</data>
 		<key>BackgroundPickerViewController.nib</key>
 		<data>
-		wY3W+yDDePNYdkRCdpGxfBuRyns=
+		+qrUy0g05TxmLT+NFylH8zDExHc=
 		</data>
 		<key>BeautyIntensityViewController.nib</key>
 		<data>
@@ -130,7 +134,7 @@
 		</data>
 		<key>CoverSelectionController.nib</key>
 		<data>
-		SgpvQsWlqo6VariC5rkqZdAhs8c=
+		1d52tZUgMGHVdVR4UNT8cj6JwW0=
 		</data>
 		<key>DraftCollectionViewCell.nib</key>
 		<data>
@@ -146,7 +150,7 @@
 		</data>
 		<key>EditCaptionTableViewCell.nib</key>
 		<data>
-		/R+8/m4Kc2xkqtUsOic6bX/ZdkE=
+		Uix49W8BA/HHtF0csoUjZTEMuOA=
 		</data>
 		<key>EditCaptionsStyleViewController.nib</key>
 		<data>
@@ -154,7 +158,7 @@
 		</data>
 		<key>EditCaptionsViewController.nib</key>
 		<data>
-		tnODxmOEPJ4LZSgN879YVb7RMC0=
+		uU7zykZ8iiz/KZxsigpqAtCSpDA=
 		</data>
 		<key>EditVideoControlItemCollectionViewCell.nib</key>
 		<data>
@@ -166,7 +170,7 @@
 		</data>
 		<key>EditorBottomView.nib</key>
 		<data>
-		Zj0NGFTMsP/FwOsJvH8kRHyoO1o=
+		MhY8CL/aurTNaSGnWoGejYI2pZw=
 		</data>
 		<key>EditorViewController.storyboardc/Ffw-ny-sfW-view-8GI-rz-chm.nib</key>
 		<data>
@@ -234,7 +238,7 @@
 		</data>
 		<key>FullscreenActivityView.nib</key>
 		<data>
-		KYjzIKJ7Vx+j+ZirKIcmwAyLzoo=
+		lYSKEQ1lsEk5bx0kykAJlY+ZKK4=
 		</data>
 		<key>GIFPickerViewController.storyboardc/Info.plist</key>
 		<data>
@@ -262,23 +266,7 @@
 		</data>
 		<key>GalleryCollectionViewCell.nib</key>
 		<data>
-		UFQ9mw+nz+VNQ+FQjMfzlhwa2tA=
-		</data>
-		<key>GalleryHeaderCollectionReusableView.nib</key>
-		<data>
-		eYZnZkAUDHgaDFqDrczuRHhqg7Q=
-		</data>
-		<key>GalleryItemPreviewView.storyboardc/GalleryItemPreviewView.nib</key>
-		<data>
-		hQUqVbDIDmlwJeFa0NAyMVDm6WU=
-		</data>
-		<key>GalleryItemPreviewView.storyboardc/Info.plist</key>
-		<data>
-		ucZIvUUwUTBT5Q5rG6NmwAHXL0Q=
-		</data>
-		<key>GalleryItemPreviewView.storyboardc/Y6W-OH-hqX-view-5EZ-qb-Rvc.nib</key>
-		<data>
-		QgcT5r0tuBHbvh7LUaRfBVRNztg=
+		1F7GNgARxJr2GwRlso/vg+5Aai8=
 		</data>
 		<key>HandsFreeViewController.storyboardc/Info.plist</key>
 		<data>
@@ -294,11 +282,15 @@
 		</data>
 		<key>Headers/ARCloudFrameworkInteractor.h</key>
 		<data>
-		5GLSD8v8Kgj8/ZpWRs3qsxCgUMw=
+		OyHoaVsItj0Rtku47kfR1TVczLU=
 		</data>
 		<key>Headers/AudioBrowserFrameworkInteractor.h</key>
 		<data>
 		cygB8THtOXXZG3WQJr5Y1DN+2F8=
+		</data>
+		<key>Headers/BanubaGenAIVideosInteractor.h</key>
+		<data>
+		2ouMxoGtT9XbNPWvwihsB4vkGEU=
 		</data>
 		<key>Headers/BanubaPhotoEditorInteractor.h</key>
 		<data>
@@ -314,11 +306,11 @@
 		</data>
 		<key>Headers/BanubaVideoEditorSDK-Swift.h</key>
 		<data>
-		Zzst0sz4sGrFvjp4o3OWrTmeF8k=
+		AayE9+XCp1fl8HprkCdZ3Cyoqt0=
 		</data>
 		<key>Headers/BanubaVideoEditorSDK.h</key>
 		<data>
-		Yi12z0SP/8R19Z7t4BcxUJpjKOw=
+		Fd34PHtJdb+KZ6f0gTD4a3tuAh4=
 		</data>
 		<key>Headers/VisualClipListener.h</key>
 		<data>
@@ -330,7 +322,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		jBDOMaA5QnQa4noVlpM0fS13pbY=
+		PEdcf7UP5y6RtzggoK1w5cSguZk=
 		</data>
 		<key>InfoView.nib</key>
 		<data>
@@ -338,7 +330,7 @@
 		</data>
 		<key>LowerThirdEditorViewController.nib</key>
 		<data>
-		U6cof5V/koF1xqHJrpy8FW1fDHQ=
+		xUicRPuRBV6dXacGnniJLRmPgAE=
 		</data>
 		<key>MainMusicViewController.storyboardc/BYZ-38-t0r-view-8bC-Xf-vdC.nib</key>
 		<data>
@@ -366,51 +358,51 @@
 		</data>
 		<key>MenuActionCell.nib</key>
 		<data>
-		zcr0CdLNJX6rmso52K1mUfJxUjw=
+		s5JmRcRCM39hrAzO8okc2s+rRJE=
 		</data>
 		<key>MenuViewController.nib</key>
 		<data>
-		KSzf61/85BiPSJXw1CAq0gzulS0=
+		LaFV7PdTmGC/xLnWHfVRpcjjBOg=
 		</data>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		CmBgaXDnZFEWZ3K7GuhiKOJNnrc=
+		3VlgBtsBhlbKMSWOnwkHU67U3hM=
 		</data>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		MKva1c/nu2QzV5sM0lbV36vAHF4=
+		KQacSWGbpIAoPvBkLXOQyo8NhBo=
 		</data>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		UvnNN3yqbfez5EQ+hbRDRKnp77E=
+		ZHH71yk4N0uLME0PuiCbtjgm4GI=
 		</data>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		MKva1c/nu2QzV5sM0lbV36vAHF4=
+		KQacSWGbpIAoPvBkLXOQyo8NhBo=
 		</data>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		MYGuWYdpcGQZeKlsy/HoVOsTqUM=
+		KnyAQlNQcY780orbjBI0IKGpwt0=
 		</data>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		CmBgaXDnZFEWZ3K7GuhiKOJNnrc=
+		3VlgBtsBhlbKMSWOnwkHU67U3hM=
 		</data>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		MsdY0TKCXJVEcU3lMnQnb84+EBQ=
+		ruBaLyFUatMSHsYsrfcOwK4fiDA=
 		</data>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		1zZlgNKTMo7yLa3NMge5NSCATWo=
+		KG/ihjv2WzKxgXP2EFJp+ecgdmQ=
 		</data>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		MsdY0TKCXJVEcU3lMnQnb84+EBQ=
+		ruBaLyFUatMSHsYsrfcOwK4fiDA=
 		</data>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		oHWdu/H6BsNQQKstqCPCXb+OBlE=
+		LBU06r3XvW8AqyCLxJfThWc7KK0=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -422,7 +414,7 @@
 		</data>
 		<key>PIPSettingsController.nib</key>
 		<data>
-		S1vUqKHv86+bUqfOWQiAnLKxUqI=
+		c5CELnLSkkuzeuWSLJya4wkKSSE=
 		</data>
 		<key>PredefinedTextStyleCollectionViewCell.nib</key>
 		<data>
@@ -454,7 +446,7 @@
 		</data>
 		<key>RecorderViewController.storyboardc/Tb8-4D-b1F-view-0y0-cp-WjI.nib</key>
 		<data>
-		dJPGrLt9f2W4grF2SFdBGqnK6JM=
+		E5tSEdjU3dT99WrZJSUuGGYh/3k=
 		</data>
 		<key>RecorderViewController.storyboardc/UIViewController-Tb8-4D-b1F.nib</key>
 		<data>
@@ -482,7 +474,7 @@
 		</data>
 		<key>TemplateBottomView.nib</key>
 		<data>
-		6E2GDS7MAf+Kek13U+IdeuLaciQ=
+		3jpk6bpWpiSms2jvVPVbX2bE7F4=
 		</data>
 		<key>TextEditColorCollectionViewCell.nib</key>
 		<data>
@@ -502,7 +494,7 @@
 		</data>
 		<key>TextEditingViewController.nib</key>
 		<data>
-		OUekIj3GrrQ+hpgaMIbI+oed4bg=
+		2eZTrr+/9OLy6yNjf5xzJhFcCdw=
 		</data>
 		<key>TimelineViewController.nib</key>
 		<data>
@@ -566,11 +558,11 @@
 		</data>
 		<key>VideoEditorGalleryViewController.nib</key>
 		<data>
-		DwQcMyfPjRrLKYTTNqjSV9O8Yqs=
+		9UUJ1QClk3GgL4SwCUm0FGobL0w=
 		</data>
 		<key>VideoEditorViewController.nib</key>
 		<data>
-		Qs2DOIJ6S/gLOtQpqzLF7nV7RJw=
+		6k4v281mwxCL8ad4X3VUI74Yqzk=
 		</data>
 		<key>VideoOrderItemCollectionViewCell.nib</key>
 		<data>
@@ -602,7 +594,7 @@
 		</data>
 		<key>VideoTemplateEditorViewController.nib</key>
 		<data>
-		Yznl0QRYwZRVmyt/3WKDa6rnQQg=
+		/U7sXqJGlXIvD01ZvDJKqVDK8MU=
 		</data>
 		<key>VideoTemplateHeaderView.nib</key>
 		<data>
@@ -610,11 +602,11 @@
 		</data>
 		<key>VideoTemplatePreviewViewController.nib</key>
 		<data>
-		t6NcD3qSpJ15pW/4TOqYxO20jL8=
+		tt8djRPQzf6LLikFLVS+MS6diZI=
 		</data>
 		<key>VideoTemplatesListViewController.nib</key>
 		<data>
-		KtqKEFwZk7w6fhtapCPPjBG3JQU=
+		KLBUWzFC6omMdvbqOoajByyM1Is=
 		</data>
 		<key>VideoTextEditorViewController.storyboardc/Info.plist</key>
 		<data>
@@ -626,7 +618,7 @@
 		</data>
 		<key>VideoTextEditorViewController.storyboardc/jbN-fu-PV9-view-CV7-2C-YDn.nib</key>
 		<data>
-		hQEAn6/KqwtN4e6i0E4aWmpAxjQ=
+		Q3hgQU9MJycGFTOSBzq3u8of/LM=
 		</data>
 		<key>VideoTrackLineEditViewController.storyboardc/Info.plist</key>
 		<data>
@@ -647,7 +639,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			spIuOALJ1myJXpHLoN0rVUGUKVO670wxgLgQjL8RSQM=
+			mQ8bgyOdu1W6yXYkwbLFNmaBFt11rfEdphD3MMBsJdY=
 			</data>
 		</dict>
 		<key>ActionCollectionViewCell.nib</key>
@@ -664,11 +656,18 @@
 			PH2jFY0YxC0qWPbcuWf23Xyo6IEgOw4bG6fdZb1UUqM=
 			</data>
 		</dict>
+		<key>AddGenAIVideoCollectionViewCell.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			oCbhOoyG23gITJzaKqOx52k8lNqml5Dy+QF+ZukdsLY=
+			</data>
+		</dict>
 		<key>AlbumsTableViewCell.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			06JxMHzhb/OiV+Irkkfh/Z15moFjRZosNmX4CXMa/I4=
+			WjzNTXr+5+CYvdNnoYYbJl3RukoFbzkTWey9SzlNcMg=
 			</data>
 		</dict>
 		<key>AppearingViewNavigationView.nib</key>
@@ -689,7 +688,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			9cFpG5IyFzUGWcxZ0xDBJOSrVsinzeDrBovBWMW44ns=
+			3LS9H4hw/OFs8FrmAawlun4WcecojwrKqvUbzWaUXd8=
 			</data>
 		</dict>
 		<key>AudioEditingController.nib</key>
@@ -745,7 +744,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			lRgQQou8vdmIM2vAT9SBBAoVYK62k85ystCrpE+WCpc=
+			5Vr8Z9XioX3f/Fd/GRebXpr+tLwODva3dsYWsr11i8c=
 			</data>
 		</dict>
 		<key>AutoCutRecommendedSoundsViewController.nib</key>
@@ -794,7 +793,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			t3sqG5BxtO2CNsKclIGZgurq0dkpGLcVR4/IrmuKDrk=
+			5PIKWg/O4NBtLKxbVH9vfAiXlR5DCnmT9vgHYDmpmlc=
 			</data>
 		</dict>
 		<key>AutoCutVolumesViewController.storyboardc/AutoCutSoundVolumeViewController.nib</key>
@@ -829,7 +828,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			j3YyEeoD1Q6Z1BAQhfYsIVn7zbk+0l15f+NNXaYPtS8=
+			tBtRZa07Pna9svXt8diEKT0SL/yC66tgGWV/MPwIw5Y=
 			</data>
 		</dict>
 		<key>BeautyIntensityViewController.nib</key>
@@ -864,7 +863,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			gQwB+b5BWQcxi+eZujImNfN3Cv5JKgZQHeMAMPRFGJQ=
+			eS7jb4zIA4WEqU3JkYN8X2ftNRAtsGEpA7Be2ysKFg0=
 			</data>
 		</dict>
 		<key>DraftCollectionViewCell.nib</key>
@@ -892,7 +891,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Fn8xNCCjlhZK2mB7N9nshXMmIrKUcH7sMJlhgjwUgbs=
+			ZbrGFALuiRsIasAPM9H15gTdudq6fmJC68bdMyvJ0Bk=
 			</data>
 		</dict>
 		<key>EditCaptionsStyleViewController.nib</key>
@@ -906,7 +905,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			ASD2Eo8GnHnCfyql00EK2PgHOfOl7b85EC/bXAruudo=
+			c3Igv4B3wZTAj09kwyZ8V2P2aVM/h6y+ffgeiqUx6Zo=
 			</data>
 		</dict>
 		<key>EditVideoControlItemCollectionViewCell.nib</key>
@@ -927,7 +926,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			9ARqL6S/XLrVY+B8Mt34vkkIx/GjVEX9Rr/+/XK/80Q=
+			PSnAspiVNfcZbCQZ5Xi6VFPP+p+KxXt3PS4v1Ow2RjE=
 			</data>
 		</dict>
 		<key>EditorViewController.storyboardc/Ffw-ny-sfW-view-8GI-rz-chm.nib</key>
@@ -1046,7 +1045,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			t5fiaRruGhyiuyxT8y0yWo+a2SjWzwsjldguYytQKdk=
+			xCMrLqRqc43uMfynKHVbEnLuwC1RA6FWK5eXmb/EJ7Y=
 			</data>
 		</dict>
 		<key>GIFPickerViewController.storyboardc/Info.plist</key>
@@ -1095,35 +1094,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			4UnB8mJs5Vcn1qOpxH3N5z0cHKbGdlbDFV4EAsOsQQc=
-			</data>
-		</dict>
-		<key>GalleryHeaderCollectionReusableView.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			QQqL2DeBCkBH8IvEtr2weQ+Vm1vyEExoBPeFpM5zpW4=
-			</data>
-		</dict>
-		<key>GalleryItemPreviewView.storyboardc/GalleryItemPreviewView.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			TScUqYSw1D751OePU76i5/ID67tEjlqGidHX80vCZo0=
-			</data>
-		</dict>
-		<key>GalleryItemPreviewView.storyboardc/Info.plist</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			fpvv4mr9cTIGBd8V2WEEEjjKLyBhi2ugpTLRLGI7cbs=
-			</data>
-		</dict>
-		<key>GalleryItemPreviewView.storyboardc/Y6W-OH-hqX-view-5EZ-qb-Rvc.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			O4osjBaSc1adKUTIbhzh7fMGkHHUMrTJoKqxJJNDKBA=
+			1hSExMuZ5xTmdq3jufTiBy4adLvAAf4NEETHO2fidmA=
 			</data>
 		</dict>
 		<key>HandsFreeViewController.storyboardc/Info.plist</key>
@@ -1151,7 +1122,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			jxgZ9fylyuH5mobrFpQ/13ZUQTqXoF323XeTjiLshfY=
+			WX1wVieQgwCUlWhfH/kT1L5bwxPWUAPfW+74Vz1AU/Y=
 			</data>
 		</dict>
 		<key>Headers/AudioBrowserFrameworkInteractor.h</key>
@@ -1159,6 +1130,13 @@
 			<key>hash2</key>
 			<data>
 			XqXa/gWVE3rsbAfOQk4mAG6q+MiOkWGFzkl99HvOqzY=
+			</data>
+		</dict>
+		<key>Headers/BanubaGenAIVideosInteractor.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			cyJPIEOw0bGUrzp0Kfq4L6eqLMmJnFQuH6Y/4np+h8Y=
 			</data>
 		</dict>
 		<key>Headers/BanubaPhotoEditorInteractor.h</key>
@@ -1186,14 +1164,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Hmr2tTvQnwKhzffo23vOukKxDUfGDrj7c8OPjItrW8Y=
+			htBHOKYCjEBRrz0vOfFTeGfY6vUpGKrrCIIe9bo24zc=
 			</data>
 		</dict>
 		<key>Headers/BanubaVideoEditorSDK.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			3VxzDvtQkNlsTDhhZDn0IWDqXXNhwRUUZQUkXHPa/YA=
+			s0VmCKj7kHnjwpsY94LK9+I4CNl34QjbzA66P6T6gYo=
 			</data>
 		</dict>
 		<key>Headers/VisualClipListener.h</key>
@@ -1221,7 +1199,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			1QvCDJ9NjPrURmTZ9DSYGAOpCHoqFPS9cWSgfO00esU=
+			aJtbOj8KsZ8Q9XIlNywX9dA/cT37etF+bL4d/ptG3fE=
 			</data>
 		</dict>
 		<key>MainMusicViewController.storyboardc/BYZ-38-t0r-view-8bC-Xf-vdC.nib</key>
@@ -1270,84 +1248,84 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Hx4kfvnkGmZdzZaD3gScuoraYchM7nWea/p/pYMuV4w=
+			CYzJ1UVAgPz5ydDzCThk7wxaCI5fDhV6Sm2R/U7FuAs=
 			</data>
 		</dict>
 		<key>MenuViewController.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			vnJOTdzZdGjiQyY8NM2r8Ol0y8mAPlkryHT/WjCZyj0=
+			puDQ+znvrBSROwRjXFtWZ38qQdHlge03ArRmEfmeVuA=
 			</data>
 		</dict>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			qDAvB96p8mi1hQk1XJqPyrS4NccREQfFyNk94Uc1e7M=
+			Aagz3xpvR2kg5Cb3dzwvole/PQlOqp5KXcdEdbxkakU=
 			</data>
 		</dict>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			YhubK7XlyG2hS7ESXm7hmuQnCDsR0rAUFprCralVnH8=
+			oeRuCF6pkkIKLN0CAQT1LaEYznQze6jlPhR5yqTthFM=
 			</data>
 		</dict>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Q/D1R7D2wc/RI7HKLRRTGA3byiBrLPQ9bnyMq/pqwp0=
+			THbzWBOjE7a25xeut3Bg0kIibpxofxtAS8xVmaXjfcY=
 			</data>
 		</dict>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			YhubK7XlyG2hS7ESXm7hmuQnCDsR0rAUFprCralVnH8=
+			oeRuCF6pkkIKLN0CAQT1LaEYznQze6jlPhR5yqTthFM=
 			</data>
 		</dict>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			MiajkRluCuGg5ucDcljz9D6tjFLOPiJDzmYUOm/N4PY=
+			tsjsy3Aboor2ypVm07HZCdvRdZyqqT0UBJNlkWI1WJ8=
 			</data>
 		</dict>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			qDAvB96p8mi1hQk1XJqPyrS4NccREQfFyNk94Uc1e7M=
+			Aagz3xpvR2kg5Cb3dzwvole/PQlOqp5KXcdEdbxkakU=
 			</data>
 		</dict>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			NW9TNAmMs/jvsXOiAQmouEs3+qQXLScqDpHyoKYRxoU=
+			7MTBtYyl2PBlUi9THrecXeCHKIeRMY7nABU/6HWIOtM=
 			</data>
 		</dict>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			1oHx0wmuLrYWXb69mp94Cm3Oyt6VTYQZ4sJ6QCCnbBA=
+			KXlbt/7cevGdDWjbcFsvIAaGWEvelHWrr3Z2gq/2TBM=
 			</data>
 		</dict>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			NW9TNAmMs/jvsXOiAQmouEs3+qQXLScqDpHyoKYRxoU=
+			7MTBtYyl2PBlUi9THrecXeCHKIeRMY7nABU/6HWIOtM=
 			</data>
 		</dict>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Lr5o4JO5tIYdPAT1no2PXNtL5w2g0lYpL5gQwYO9FXk=
+			5PBV1tZHwgyUXq1kpIzxKWyQOMjBAIiJmrTswqu7+gE=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -1368,7 +1346,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Iryqfxk6R7IDOOJ85YlOmfSPKWHAUR6Ks+iasVx/7mU=
+			BrI0EzH5/f0aEK+x7XH1SJ5pspJvFskLsBLp4W5XrYY=
 			</data>
 		</dict>
 		<key>PredefinedTextStyleCollectionViewCell.nib</key>
@@ -1424,7 +1402,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			ZdMXYA4A1HRSO99hu6rfQRO4TPJMA1FuEoGxJEyTCt4=
+			m6DgctvFbYNFShmbjLfYXLOJwMAKyLrK8LiqPBqn7bs=
 			</data>
 		</dict>
 		<key>RecorderViewController.storyboardc/UIViewController-Tb8-4D-b1F.nib</key>
@@ -1473,7 +1451,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			3sLlhTq2wrmKhyi+dU+eHr2c2pWVCad87Ymih4zDph0=
+			5pYA7X1WGz2Fc9Jm5Lzj/XgfBMVD7rjtRDbgNOx5+VM=
 			</data>
 		</dict>
 		<key>TextEditColorCollectionViewCell.nib</key>
@@ -1508,7 +1486,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			xX+RHoDu3Jw/8fOIqVzj8zwxK7H3wIpsl5cJLT7Mwvo=
+			SPBR/YV5S2NFds9i+EbuacLh0mE9aVptGPwamhCF7kA=
 			</data>
 		</dict>
 		<key>TimelineViewController.nib</key>
@@ -1620,14 +1598,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			gqn9AEZ8lMZGqAajq+YSyubUbbSWUkGMg7PgyhSk7Go=
+			QCYQweGb7ys65Xys8l2L7C8FDY8ZWIqxlmnHEH8jwSo=
 			</data>
 		</dict>
 		<key>VideoEditorViewController.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			wE5jxeNQCY+T2k9AUY31ijPv+dkiEvpkgT4+XksZOaM=
+			LnZiEvRQLmItS0LQXxldBdU7LlkkuX2GhwLlB8utNkA=
 			</data>
 		</dict>
 		<key>VideoOrderItemCollectionViewCell.nib</key>
@@ -1683,7 +1661,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			k590LAZun5Wm+d6wTCHeynRJNm3wRHzQWTHcuMd6ews=
+			KCOdVd450nhNzsh4K3xw2xToSEftRJVbzQcCkdd4luI=
 			</data>
 		</dict>
 		<key>VideoTemplateHeaderView.nib</key>
@@ -1697,14 +1675,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			FTfoUcSJLorfBivYbOib4dRJ/YiWu/um+ft6ygw/W4Y=
+			A5XRVbSJ1biDkvcx9WyfLc7dWacHQgvXt1y6BFmaTfM=
 			</data>
 		</dict>
 		<key>VideoTemplatesListViewController.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			deFQFLYlUdFmnxYG1w/Rbyl4fozO76We9P7ivqoDMJU=
+			/4+w0FeeCE+WenhmOFrZAChtdr7iTq+x9F7fcuBPQ+I=
 			</data>
 		</dict>
 		<key>VideoTextEditorViewController.storyboardc/Info.plist</key>
@@ -1725,7 +1703,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			AVm9W1YafgNTp3D3svQQWMtoGnFqQgKqIS2vzySrJVI=
+			7wgMValtkGyP8aUxfsSuBIcWcePRwWmpZ1NuhT39FH0=
 			</data>
 		</dict>
 		<key>VideoTrackLineEditViewController.storyboardc/Info.plist</key>
