@@ -57,9 +57,10 @@ __attribute__((weak_import)) @interface BanubaGenAIVideosInteractor : NSObject
 
 @property (nonatomic, weak, nullable) id<GenAIVideosSDKDelegate> delegate;
 
-- (instancetype)initWithToken:(NSString *)token genAISecret:(NSString *)genAISecret;
+- (instancetype)initWithToken:(NSString *)token genAISecret:(NSString *)genAISecret externalUserId:(NSString * _Nullable)externalUserId;
 - (UINavigationController *)getGenAIVideosController:(GenAIVideoEntryPoint)entryPoint;
 - (nonnull NSArray<GenAIVideo *> *)getGenAIVides;
+- (void)didDismissGenAIVideoController;
 
 // MARK: - Banner State Management
 - (BOOL)hasActiveGeneration;

@@ -665,7 +665,10 @@ public struct VideoTextFont : Swift.Equatable {
 }
 public struct GenAIConfiguration {
   public var secret: Swift.String
-  public init(secret: Swift.String = "")
+  public var externalUserId: Swift.String?
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init(secret: Swift.String = "", externalUserId: Swift.String? = nil)
+  #endif
 }
 public protocol ExternalSDKAnalyticsEventsListener : AnyObject {
   func onVideoEditorSDKEvent(_ event: Swift.String)
@@ -1082,6 +1085,16 @@ public enum CaptionsLanguage : Swift.String, Swift.CaseIterable {
     get
   }
 }
+final public class EffectPreviewImageProvider {
+  public static let shared: BanubaVideoEditorSDK.EffectPreviewImageProvider
+  public static func configure(searchMainBundleFirst: Swift.Bool)
+  final public var searchMainBundleFirst: Swift.Bool
+  public init(searchMainBundleFirst: Swift.Bool = false)
+  #if compiler(>=5.3) && $NonescapableTypes
+  final public func image(for name: Swift.String) -> UIKit.UIImage?
+  #endif
+  @objc deinit
+}
 public protocol BanubaProgressViewController : UIKit.UIViewController {
   var message: Swift.String { get set }
   var tooltipMessage: Swift.String { get set }
@@ -1370,9 +1383,10 @@ public struct VideoEditorConfig {
   public var greenScreenBackgroundPickerConfiguration: BanubaVideoEditorSDK.GreenScreenBackgroundPickerConfiguration
   public var videoCropViewConfiguration: BanubaVideoEditorSDK.VideoCropViewConfiguration
   public var genAIConfiguration: BanubaVideoEditorSDK.GenAIConfiguration
+  public var effectPreviewSearchInMainBundleFirst: Swift.Bool
   public init()
   #if compiler(>=5.3) && $NonescapableTypes
-  public init(videoResolutionConfiguration: BanubaUtilities.VideoResolutionConfiguration, recorderConfiguration: BanubaVideoEditorSDK.RecorderConfiguration, editorConfiguration: BanubaVideoEditorSDK.EditorConfiguration, textEditorConfiguration: BanubaVideoEditorSDK.TextEditorConfiguration, toastConfiguration: BanubaUtilities.ToastConfiguration, fullScreenActivityConfiguration: BanubaVideoEditorSDK.FullScreenActivityConfiguration, smallActivityIndicatorConfiguration: BanubaUtilities.SmallActivityIndicatorConfiguration, albumsConfiguration: BanubaUtilities.AlbumsConfiguration, videoOverlayConfiguration: BanubaVideoEditorSDK.VideoOverlayConfiguration, videoDurationConfiguration: BanubaVideoEditorSDK.VideoEditorDurationConfig, gifPickerConfiguration: BanubaVideoEditorSDK.GifPickerConfiguration, combinedGalleryConfiguration: BanubaUtilities.GalleryConfiguration, trimVideosConfiguration: BanubaVideoEditorSDK.TrimVideosConfiguration, trimVideoConfiguration: BanubaVideoEditorSDK.TrimVideoConfiguration, filterConfiguration: BanubaVideoEditorSDK.FilterConfiguration, extendedVideoCoverSelectionConfiguration: BanubaVideoEditorSDK.VideoCoverSelectionConfiguration, musicEditorConfiguration: BanubaVideoEditorSDK.MusicEditorConfig, overlayEditorConfiguration: BanubaVideoEditorSDK.OverlayEditorConfiguration, featureConfiguration: BanubaVideoEditorSDK.FeatureConfiguration, watermarkConfiguration: BanubaVideoEditorCore.WatermarkConfiguration?, alertViewConfiguration: BanubaUtilities.AlertViewConfiguration, popoverAlertViewConfiguration: BanubaUtilities.PopoverAlertViewConfiguration, handsfreeConfiguration: BanubaVideoEditorSDK.HandsfreeConfiguration?, pipSettingsConfiguration: BanubaVideoEditorSDK.PIPSettingsConfiguration?, sharingScreenConfiguration: BanubaVideoEditorSDK.SharingScreenConfiguration, draftsConfiguration: BanubaVideoEditorSDK.DraftsConfiguration, videoTemplatesListConfiguration: BanubaVideoEditorSDK.VideoTemplatesListConfiguration, videoTemplatesPreviewConfiguration: BanubaVideoEditorSDK.VideoTemplatesPreviewConfiguration, videoTemplatesEditorConfiguration: BanubaVideoEditorSDK.VideoTemplatesEditorConfiguration, aspectsConfiguration: BanubaVideoEditorSDK.EffectsListConfiguration, transitionsConfiguration: BanubaVideoEditorSDK.EffectsListConfiguration, progressViewConfiguration: BanubaVideoEditorSDK.ProgressViewConfiguration, captionsConfiguration: BanubaVideoEditorSDK.CaptionsConfiguration, aiClippingConfiguration: BanubaVideoEditorSDK.AIClippingConfiguration, beautyIntensityConfiguration: BanubaVideoEditorSDK.BeautyIntensityConfiguration, videoPreviewConfiguration: BanubaVideoEditorSDK.VideoPreviewConfiguration, greenScreenBackgroundPickerConfiguration: BanubaVideoEditorSDK.GreenScreenBackgroundPickerConfiguration, videoCropViewConfiguration: BanubaVideoEditorSDK.VideoCropViewConfiguration, genAIConfiguration: BanubaVideoEditorSDK.GenAIConfiguration)
+  public init(videoResolutionConfiguration: BanubaUtilities.VideoResolutionConfiguration, recorderConfiguration: BanubaVideoEditorSDK.RecorderConfiguration, editorConfiguration: BanubaVideoEditorSDK.EditorConfiguration, textEditorConfiguration: BanubaVideoEditorSDK.TextEditorConfiguration, toastConfiguration: BanubaUtilities.ToastConfiguration, fullScreenActivityConfiguration: BanubaVideoEditorSDK.FullScreenActivityConfiguration, smallActivityIndicatorConfiguration: BanubaUtilities.SmallActivityIndicatorConfiguration, albumsConfiguration: BanubaUtilities.AlbumsConfiguration, videoOverlayConfiguration: BanubaVideoEditorSDK.VideoOverlayConfiguration, videoDurationConfiguration: BanubaVideoEditorSDK.VideoEditorDurationConfig, gifPickerConfiguration: BanubaVideoEditorSDK.GifPickerConfiguration, combinedGalleryConfiguration: BanubaUtilities.GalleryConfiguration, trimVideosConfiguration: BanubaVideoEditorSDK.TrimVideosConfiguration, trimVideoConfiguration: BanubaVideoEditorSDK.TrimVideoConfiguration, filterConfiguration: BanubaVideoEditorSDK.FilterConfiguration, extendedVideoCoverSelectionConfiguration: BanubaVideoEditorSDK.VideoCoverSelectionConfiguration, musicEditorConfiguration: BanubaVideoEditorSDK.MusicEditorConfig, overlayEditorConfiguration: BanubaVideoEditorSDK.OverlayEditorConfiguration, featureConfiguration: BanubaVideoEditorSDK.FeatureConfiguration, watermarkConfiguration: BanubaVideoEditorCore.WatermarkConfiguration?, alertViewConfiguration: BanubaUtilities.AlertViewConfiguration, popoverAlertViewConfiguration: BanubaUtilities.PopoverAlertViewConfiguration, handsfreeConfiguration: BanubaVideoEditorSDK.HandsfreeConfiguration?, pipSettingsConfiguration: BanubaVideoEditorSDK.PIPSettingsConfiguration?, sharingScreenConfiguration: BanubaVideoEditorSDK.SharingScreenConfiguration, draftsConfiguration: BanubaVideoEditorSDK.DraftsConfiguration, videoTemplatesListConfiguration: BanubaVideoEditorSDK.VideoTemplatesListConfiguration, videoTemplatesPreviewConfiguration: BanubaVideoEditorSDK.VideoTemplatesPreviewConfiguration, videoTemplatesEditorConfiguration: BanubaVideoEditorSDK.VideoTemplatesEditorConfiguration, aspectsConfiguration: BanubaVideoEditorSDK.EffectsListConfiguration, transitionsConfiguration: BanubaVideoEditorSDK.EffectsListConfiguration, progressViewConfiguration: BanubaVideoEditorSDK.ProgressViewConfiguration, captionsConfiguration: BanubaVideoEditorSDK.CaptionsConfiguration, aiClippingConfiguration: BanubaVideoEditorSDK.AIClippingConfiguration, beautyIntensityConfiguration: BanubaVideoEditorSDK.BeautyIntensityConfiguration, videoPreviewConfiguration: BanubaVideoEditorSDK.VideoPreviewConfiguration, greenScreenBackgroundPickerConfiguration: BanubaVideoEditorSDK.GreenScreenBackgroundPickerConfiguration, videoCropViewConfiguration: BanubaVideoEditorSDK.VideoCropViewConfiguration, genAIConfiguration: BanubaVideoEditorSDK.GenAIConfiguration, effectPreviewSearchInMainBundleFirst: Swift.Bool = false)
   #endif
   public mutating func setupColorsPalette(_ colorsPalette: BanubaVideoEditorSDK.VideoEditorColorsPalette)
   public mutating func applyFont(_ font: UIKit.UIFont)
@@ -1446,7 +1460,9 @@ public struct RecorderConfiguration {
   public var captureButtonModes: [BanubaVideoEditorSDK.RecordButtonViewMode]
   public var recordButtonConfiguration: BanubaVideoEditorSDK.RecordButtonConfiguration
   public var recordButtonProvider: (any BanubaVideoEditorSDK.RecordButtonProvider)?
-  public var additionalEffectsButtons: [BanubaVideoEditorSDK.AdditionalEffectsButtonConfiguration]
+  public var topSoundFeatureButtonConfiguration: BanubaVideoEditorSDK.AdditionalEffectsButtonConfiguration?
+  public var leftFeatures: [BanubaVideoEditorSDK.AdditionalEffectsButtonConfiguration]
+  public var rightFeatures: [BanubaVideoEditorSDK.AdditionalEffectsButtonConfiguration]
   public var speedBarButtons: BanubaVideoEditorSDK.SpeedBarButtonsConfiguration
   public var galleryButton: BanubaUtilities.RoundedButtonConfiguration
   public var emptyGalleryImageName: Swift.String
@@ -1480,6 +1496,7 @@ public struct RecorderConfiguration {
   public var previewScalingMode: BanubaVideoEditorSDK.RecorderPreviewScalingMode
   public var supportsAudioForPhoto: Swift.Bool
   public var autoStartLocalMask: Swift.String?
+  public var hideFeatureButtonsTitleDelay: Foundation.TimeInterval?
 }
 public struct RecordButtonConfiguration {
   public var strokeColor: CoreGraphics.CGColor
@@ -1630,7 +1647,7 @@ public class VideoEditorViewConfiguration {
   public struct EffectsPreferredOrderConfiguration {
     public var luts: [Swift.String]
     public var masks: [Swift.String]
-    public var videoEffectOrderAndSet: [BanubaVideoEditorCore.VisualEffectApplicatorType]
+    public var videoEffectsOrderAndSet: [BanubaVideoEditorCore.VisualEffectApplicatorType]
   }
   public struct PredefinedTrackConfiguration {
     public var url: Foundation.URL
@@ -1976,18 +1993,6 @@ public struct SpeedBarButtonsConfiguration {
   #endif
 }
 public struct AdditionalEffectsButtonConfiguration {
-  public enum Position : Swift.Int {
-    case top
-    case bottom
-    case center
-    #if compiler(>=5.3) && $NonescapableTypes
-    public init?(rawValue: Swift.Int)
-    #endif
-    public typealias RawValue = Swift.Int
-    public var rawValue: Swift.Int {
-      get
-    }
-  }
   public var identifier: BanubaVideoEditorSDK.AdditionalEffectsButtonConfiguration.ButtonType
   public var imageConfiguration: BanubaVideoEditorSDK.ImageConfiguration
   public var selectedImageConfiguration: BanubaVideoEditorSDK.ImageConfiguration?
@@ -1995,7 +2000,6 @@ public struct AdditionalEffectsButtonConfiguration {
   public var titlePosition: BanubaVideoEditorSDK.TitlePosition?
   public var width: CoreFoundation.CGFloat
   public var height: CoreFoundation.CGFloat
-  public var position: BanubaVideoEditorSDK.AdditionalEffectsButtonConfiguration.Position?
   public var imageTitleSpacing: CoreFoundation.CGFloat?
   public var defaultTitleAlpha: CoreFoundation.CGFloat?
   public var selectedTitleAlpha: CoreFoundation.CGFloat?
@@ -2004,7 +2008,7 @@ public struct AdditionalEffectsButtonConfiguration {
   public var backgroundColor: UIKit.UIColor
   public var contentInsets: CoreFoundation.CGFloat
   #if compiler(>=5.3) && $NonescapableTypes
-  public init(identifier: BanubaVideoEditorSDK.AdditionalEffectsButtonConfiguration.ButtonType, imageConfiguration: BanubaVideoEditorSDK.ImageConfiguration, selectedImageConfiguration: BanubaVideoEditorSDK.ImageConfiguration?, title: BanubaUtilities.TextButtonConfiguration? = nil, titlePosition: BanubaVideoEditorSDK.TitlePosition? = nil, width: CoreFoundation.CGFloat = 50, height: CoreFoundation.CGFloat = 50, position: BanubaVideoEditorSDK.AdditionalEffectsButtonConfiguration.Position? = nil, imageTitleSpacing: CoreFoundation.CGFloat? = nil, defaultTitleAlpha: CoreFoundation.CGFloat? = nil, selectedTitleAlpha: CoreFoundation.CGFloat? = nil, cornerRadius: CoreFoundation.CGFloat = .zero, backgroundMode: BanubaUtilities.BackgroundMode = .color, backgroundColor: UIKit.UIColor = .clear, contentInsets: CoreFoundation.CGFloat = 8.5)
+  public init(identifier: BanubaVideoEditorSDK.AdditionalEffectsButtonConfiguration.ButtonType, imageConfiguration: BanubaVideoEditorSDK.ImageConfiguration, selectedImageConfiguration: BanubaVideoEditorSDK.ImageConfiguration?, title: BanubaUtilities.TextButtonConfiguration? = nil, titlePosition: BanubaVideoEditorSDK.TitlePosition? = nil, width: CoreFoundation.CGFloat = 50, height: CoreFoundation.CGFloat = 50, imageTitleSpacing: CoreFoundation.CGFloat? = nil, defaultTitleAlpha: CoreFoundation.CGFloat? = nil, selectedTitleAlpha: CoreFoundation.CGFloat? = nil, cornerRadius: CoreFoundation.CGFloat = .zero, backgroundMode: BanubaUtilities.BackgroundMode = .color, backgroundColor: UIKit.UIColor = .clear, contentInsets: CoreFoundation.CGFloat = 8.5)
   #endif
   public enum ButtonType : Swift.String {
     case link
@@ -2021,12 +2025,10 @@ public struct AdditionalEffectsButtonConfiguration {
     case beauty
     case masks
     case muteSound
-    case videoTemplates
     case pip
     case blur
     case trimDraft
     case captions
-    case additionalCamera
     case greenScreen
     case weatherman
     #if compiler(>=5.3) && $NonescapableTypes
@@ -2074,20 +2076,16 @@ public struct FeatureConfiguration {
   public var isBlurEffectsExportable: Swift.Bool
   public var isOverlayEditorEnabled: Swift.Bool
   public var isDoubleTapForToggleCameraEnabled: Swift.Bool
-  public var isMuteCameraAudioEnabled: Swift.Bool
   public var isVideoCoverSelectionEnabled: Swift.Bool
   public var supportsTrimRecordedVideo: Swift.Bool
   public var draftsConfig: BanubaVideoEditorSDK.DraftsFeatureConfig
   public var isAspectsEnabled: Swift.Bool
-  public var isSpeedBarEnabled: Swift.Bool
   public var isVideoFitsAspect: Swift.Bool
-  @available(*, deprecated, message: "openAutomaticallyPIPSettingsDropdown is deprecated and will be removed in a future release.")
-  public var openAutomaticallyPIPSettingsDropdown: Swift.Bool
   public var useTransitions: Swift.Bool
   public var isDraftSavedToastEnabled: Swift.Bool
   public var isPhotosEditingEnabled: Swift.Bool
   public static let `default`: BanubaVideoEditorSDK.FeatureConfiguration
-  public init(isOverlayEditorEnabled: Swift.Bool, isDoubleTapForToggleCameraEnabled: Swift.Bool, isMuteCameraAudioEnabled: Swift.Bool, isVideoCoverSelectionEnabled: Swift.Bool, supportsTrimRecordedVideo: Swift.Bool, draftsConfig: BanubaVideoEditorSDK.DraftsFeatureConfig, isAspectsEnabled: Swift.Bool, isSpeedBarEnabled: Swift.Bool, isVideoFitsAspect: Swift.Bool, isBlurEnabled: Swift.Bool, isBlurEffectsExportable: Swift.Bool, openAutomaticallyPIPSettingsDropdown: Swift.Bool, useTransitions: Swift.Bool, isDraftSavedToastEnabled: Swift.Bool, isPhotosEditingEnabled: Swift.Bool)
+  public init(isOverlayEditorEnabled: Swift.Bool, isDoubleTapForToggleCameraEnabled: Swift.Bool, isVideoCoverSelectionEnabled: Swift.Bool, supportsTrimRecordedVideo: Swift.Bool, draftsConfig: BanubaVideoEditorSDK.DraftsFeatureConfig, isAspectsEnabled: Swift.Bool, isVideoFitsAspect: Swift.Bool, isBlurEnabled: Swift.Bool, isBlurEffectsExportable: Swift.Bool, useTransitions: Swift.Bool, isDraftSavedToastEnabled: Swift.Bool, isPhotosEditingEnabled: Swift.Bool)
 }
 public struct RecorderEffectsConfiguration {
   public var cornerRadius: CoreFoundation.CGFloat
@@ -2721,6 +2719,12 @@ extension BanubaVideoEditorSDK.FullScreenActivityConfiguration {
     get
   }
 }
+extension BanubaVideoEditorSDK.RecorderConfiguration {
+  public mutating func disableMusicFeature()
+  public mutating func enableCameraV1LayoutFeatures()
+  public mutating func enableCameraV2LayoutFeatures()
+  public mutating func hideFeatures(_ identifiers: BanubaVideoEditorSDK.AdditionalEffectsButtonConfiguration.ButtonType...)
+}
 extension BanubaVideoEditorCore.WatermarkConfiguration {
   public static var config: BanubaVideoEditorCore.WatermarkConfiguration {
     get
@@ -2928,6 +2932,7 @@ public struct TransitionEffect : Swift.Equatable {
   public let icon: any BanubaUtilities.ImageConfigurationProtocol
   public let title: Swift.String
   public static func == (lhs: BanubaVideoEditorSDK.TransitionEffect, rhs: BanubaVideoEditorSDK.TransitionEffect) -> Swift.Bool
+  public init(type: BanubaUtilities.TransitionType, icon: any BanubaUtilities.ImageConfigurationProtocol, title: Swift.String)
 }
 final public class CircularProgressRecordButtonProvider : BanubaVideoEditorSDK.RecordButtonProvider {
   public init()
@@ -3024,9 +3029,6 @@ extension BanubaVideoEditorSDK.TrimVideoCompositionEditItem.TrimVideoComposition
 extension BanubaVideoEditorSDK.TrimVideoCompositionEditItem.TrimVideoCompositionEditItemType : Swift.Hashable {}
 extension BanubaVideoEditorSDK.PIPMode : Swift.Equatable {}
 extension BanubaVideoEditorSDK.PIPMode : Swift.Hashable {}
-extension BanubaVideoEditorSDK.AdditionalEffectsButtonConfiguration.Position : Swift.Equatable {}
-extension BanubaVideoEditorSDK.AdditionalEffectsButtonConfiguration.Position : Swift.Hashable {}
-extension BanubaVideoEditorSDK.AdditionalEffectsButtonConfiguration.Position : Swift.RawRepresentable {}
 extension BanubaVideoEditorSDK.AdditionalEffectsButtonConfiguration.ButtonType : Swift.Equatable {}
 extension BanubaVideoEditorSDK.AdditionalEffectsButtonConfiguration.ButtonType : Swift.Hashable {}
 extension BanubaVideoEditorSDK.AdditionalEffectsButtonConfiguration.ButtonType : Swift.RawRepresentable {}

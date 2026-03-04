@@ -34,7 +34,7 @@
 		</data>
 		<key>Assets.car</key>
 		<data>
-		ST8Ginct+2wJN5i+8xelVSxRoxE=
+		dorQGMI3UVt1NY9Vq7jPla6ts5I=
 		</data>
 		<key>AudioEditingController.nib</key>
 		<data>
@@ -290,7 +290,7 @@
 		</data>
 		<key>Headers/BanubaGenAIVideosInteractor.h</key>
 		<data>
-		2ouMxoGtT9XbNPWvwihsB4vkGEU=
+		OPKup1x5CYUcgOEeIzmhYMoDAwQ=
 		</data>
 		<key>Headers/BanubaPhotoEditorInteractor.h</key>
 		<data>
@@ -322,11 +322,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		HYyyg0z1wdfyz6HVXp1EhE1opEQ=
-		</data>
-		<key>InfoView.nib</key>
-		<data>
-		EpqOnz7T+n5cTEzf/T2i4rSN5CA=
+		payK739ABXjcToz2n8ozchExfAw=
 		</data>
 		<key>LowerThirdEditorViewController.nib</key>
 		<data>
@@ -366,43 +362,43 @@
 		</data>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		PP2fRnHkRLtYfdux0lELdUEdYlo=
+		SoMGsaET/pE00/bf9cvbiltiPIM=
 		</data>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		KQacSWGbpIAoPvBkLXOQyo8NhBo=
+		BUdUxuhsyNzbFVxCs0DXklfTLcw=
 		</data>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		ZHH71yk4N0uLME0PuiCbtjgm4GI=
+		RsUNc4O+IuuGGrHB+E5CpvjYXqA=
 		</data>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		KQacSWGbpIAoPvBkLXOQyo8NhBo=
+		BUdUxuhsyNzbFVxCs0DXklfTLcw=
 		</data>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		wVBredgoZXNKrdL3ozWS97Cqe30=
+		ab0AbDhOSYiB70qTW9DyOMOAjHs=
 		</data>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		PP2fRnHkRLtYfdux0lELdUEdYlo=
+		SoMGsaET/pE00/bf9cvbiltiPIM=
 		</data>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		ruBaLyFUatMSHsYsrfcOwK4fiDA=
+		AHYXZ1l8f2Lg0haylGF8uFO6jYA=
 		</data>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		KG/ihjv2WzKxgXP2EFJp+ecgdmQ=
+		uHBUIhfjXbfgzPoKrmtrkO8trTA=
 		</data>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		ruBaLyFUatMSHsYsrfcOwK4fiDA=
+		AHYXZ1l8f2Lg0haylGF8uFO6jYA=
 		</data>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		oH97ubkzSGEsMLM1LWwm1RCOvcw=
+		SshCHYIF7FOxFqtVRMlRObt9tCg=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -446,7 +442,7 @@
 		</data>
 		<key>RecorderViewController.storyboardc/Tb8-4D-b1F-view-0y0-cp-WjI.nib</key>
 		<data>
-		E5tSEdjU3dT99WrZJSUuGGYh/3k=
+		eM5KZVGBtj9ZDpovVjfGXwkokhs=
 		</data>
 		<key>RecorderViewController.storyboardc/UIViewController-Tb8-4D-b1F.nib</key>
 		<data>
@@ -470,7 +466,11 @@
 		</data>
 		<key>SharingScreenViewController.storyboardc/Y6W-OH-hqX-view-5EZ-qb-Rvc.nib</key>
 		<data>
-		crKHdfriDSOM4qemgpa52c/Uqvk=
+		JhQYPrSzMTpCNuxETSiQIAI0HJ0=
+		</data>
+		<key>SpeedSelectionBar.nib</key>
+		<data>
+		XDaP4RshKCYmkP2khFoFidZkBE0=
 		</data>
 		<key>TemplateBottomView.nib</key>
 		<data>
@@ -632,6 +632,106 @@
 		<data>
 		4WQVFytfXCefSxDWKQEbevJh6V8=
 		</data>
+		<key>luts/bright.png</key>
+		<data>
+		+5eB040Fq8EiREY6yZg+1uiysB8=
+		</data>
+		<key>luts/byers.png</key>
+		<data>
+		stfOg/4dvoFL40rVCXplpHnrrik=
+		</data>
+		<key>luts/canada.png</key>
+		<data>
+		Nm9xin84xg0zERYjb8LP5uQtsxk=
+		</data>
+		<key>luts/chile.png</key>
+		<data>
+		bK9ORNEWk/OEnkpCk1PViETd+h8=
+		</data>
+		<key>luts/chroma.png</key>
+		<data>
+		+kl44US5pHHHiMrMd9BNgZtUS6c=
+		</data>
+		<key>luts/egypt.png</key>
+		<data>
+		qXkLUeR+yPGnPw0otQhbd3J6ROY=
+		</data>
+		<key>luts/england.png</key>
+		<data>
+		aFhr7CNEF2BbUoeKS5Yrpu2ZSAE=
+		</data>
+		<key>luts/glitch.png</key>
+		<data>
+		RASvJSwePwdlTsDKAfnUeWAeZ54=
+		</data>
+		<key>luts/grunge.png</key>
+		<data>
+		oe4ErVbjKw+FPKgcT37Yzp4NqhA=
+		</data>
+		<key>luts/hyla.png</key>
+		<data>
+		Qa7TvxqOcNCGrnUVMyfGdJmsNTo=
+		</data>
+		<key>luts/instant.png</key>
+		<data>
+		HhS77894Bk9ryCvloZMeay0P11k=
+		</data>
+		<key>luts/japan.png</key>
+		<data>
+		DcQpNd1GHVwzj3UcbAs1qNYeitA=
+		</data>
+		<key>luts/korben.png</key>
+		<data>
+		64CQYXRyhLJfwNVOCQPUiE7Mry8=
+		</data>
+		<key>luts/lilac.png</key>
+		<data>
+		HYv/flz/tmSY4yryP/ynwxmgtdM=
+		</data>
+		<key>luts/lux.png</key>
+		<data>
+		2UScjB22Pkal5mloGUsfCJfRQH8=
+		</data>
+		<key>luts/neon.png</key>
+		<data>
+		6R8I77yy+49bX2XbAzvQ0caLb04=
+		</data>
+		<key>luts/norway.png</key>
+		<data>
+		AWauImdA1LoH9F9Q7UgIJFFqs1Y=
+		</data>
+		<key>luts/pinkvine.png</key>
+		<data>
+		UiAjacaDtvWoJqdo8/Ozk/bYypw=
+		</data>
+		<key>luts/remy.png</key>
+		<data>
+		L0OU5Y4zjrHolmjWU05qXGpqR9U=
+		</data>
+		<key>luts/retro.png</key>
+		<data>
+		IXzxfJcIiTWUjGskdmJ+OJpRXcs=
+		</data>
+		<key>luts/spark.png</key>
+		<data>
+		OimkN3hNzUQHG11yWnn7rKm7zyw=
+		</data>
+		<key>luts/sunny.png</key>
+		<data>
+		hsNphNu4ZX+RabQh3FyJQU4zav4=
+		</data>
+		<key>luts/sunset.png</key>
+		<data>
+		eIFYcqYbGCggYeNxywbXou0GuxU=
+		</data>
+		<key>luts/vinyl.png</key>
+		<data>
+		7M/bwe6fQ1n2lQJI8hx8b7wZIrk=
+		</data>
+		<key>luts/vivid.png</key>
+		<data>
+		fWO2B+JviiAkZMiYNUP8dY5dv4Y=
+		</data>
 	</dict>
 	<key>files2</key>
 	<dict>
@@ -688,7 +788,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			3LS9H4hw/OFs8FrmAawlun4WcecojwrKqvUbzWaUXd8=
+			F/yhthe/H00vNoTeC5MSTpUBnEEHxbGo494ujUldLnM=
 			</data>
 		</dict>
 		<key>AudioEditingController.nib</key>
@@ -1136,7 +1236,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			cyJPIEOw0bGUrzp0Kfq4L6eqLMmJnFQuH6Y/4np+h8Y=
+			rLm+A/0tKsikyGNI/ZjD5OLcRo2aJWKkQFp5T/dk65o=
 			</data>
 		</dict>
 		<key>Headers/BanubaPhotoEditorInteractor.h</key>
@@ -1186,13 +1286,6 @@
 			<key>hash2</key>
 			<data>
 			h0N3feANcrKkxVfXQSMjizK9oFq+PMoAS9O76IueA6c=
-			</data>
-		</dict>
-		<key>InfoView.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			oTBfkFj5lO+ajw1xeeZ7Sm/CCDDvoihgDI+8Gd/N/CE=
 			</data>
 		</dict>
 		<key>LowerThirdEditorViewController.nib</key>
@@ -1262,70 +1355,70 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Clw1Sg17JH6COIKOcQBCw6M4deK2UaefAgIDL7BhI1w=
+			WJGR7Sq6aN6wwMgpXyTd2GwaHMrtZd6P6SXJN9IPBR4=
 			</data>
 		</dict>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			oeRuCF6pkkIKLN0CAQT1LaEYznQze6jlPhR5yqTthFM=
+			u1h2BXzGmCfm1J6uCSXFbAb2aWFaRDYCGt4P6ANkZug=
 			</data>
 		</dict>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			THbzWBOjE7a25xeut3Bg0kIibpxofxtAS8xVmaXjfcY=
+			ZHQAYvTWMVG/l38TdHbgRSjU5dv65NR2Wx/3pv3MZa4=
 			</data>
 		</dict>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			oeRuCF6pkkIKLN0CAQT1LaEYznQze6jlPhR5yqTthFM=
+			u1h2BXzGmCfm1J6uCSXFbAb2aWFaRDYCGt4P6ANkZug=
 			</data>
 		</dict>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			tzrLDtZRITzn4GiwB8XExPm2lVIRyz/i7hkmf2Wftow=
+			xaiqi2XUnXYQ4odHRlfsCfePrC6fRJxkgb6b0k9uTf8=
 			</data>
 		</dict>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Clw1Sg17JH6COIKOcQBCw6M4deK2UaefAgIDL7BhI1w=
+			WJGR7Sq6aN6wwMgpXyTd2GwaHMrtZd6P6SXJN9IPBR4=
 			</data>
 		</dict>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			7MTBtYyl2PBlUi9THrecXeCHKIeRMY7nABU/6HWIOtM=
+			z0tLtWG0Y4BnkFCNQGnCN8aKa1JZ8f8Ez42JmIVfxHg=
 			</data>
 		</dict>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			KXlbt/7cevGdDWjbcFsvIAaGWEvelHWrr3Z2gq/2TBM=
+			o6tNITr/5VS46CKrn0LrzG3lCz6fuM9Crw8+lL0rMnY=
 			</data>
 		</dict>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			7MTBtYyl2PBlUi9THrecXeCHKIeRMY7nABU/6HWIOtM=
+			z0tLtWG0Y4BnkFCNQGnCN8aKa1JZ8f8Ez42JmIVfxHg=
 			</data>
 		</dict>
 		<key>Modules/BanubaVideoEditorSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			3VpuiJjwY04NisXgEr0CTrIYcI/RpS4HJhZ7kOboqL0=
+			z9if/vNoaLrV32M2dRjbNm+VxQy0Q2k8b7EWPJnaqiI=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -1402,7 +1495,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			m6DgctvFbYNFShmbjLfYXLOJwMAKyLrK8LiqPBqn7bs=
+			htZbjsZg+mdKJ2qXN0M1lrarUTFnhzW7TD1x8cs1l+c=
 			</data>
 		</dict>
 		<key>RecorderViewController.storyboardc/UIViewController-Tb8-4D-b1F.nib</key>
@@ -1444,7 +1537,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			I9nGZ2WW8Mk9xEm0HoHWmALeXRzk5h198eRi8j4ollg=
+			sXr9LecxT7/QrnajOketaFV4/RZ1cAeCFb2rAuIgXGQ=
+			</data>
+		</dict>
+		<key>SpeedSelectionBar.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			pFe9Ds0hihPAQlAIDqbbFRgyVhLW/h9fJ4FQqLUcvq0=
 			</data>
 		</dict>
 		<key>TemplateBottomView.nib</key>
@@ -1725,6 +1825,181 @@
 			<key>hash2</key>
 			<data>
 			IK9T+8oBUxJRi4Pp2HrxLOE6AmWYslYnJwgpPx9O1rI=
+			</data>
+		</dict>
+		<key>luts/bright.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			JDr+LeDS9LaQ1S/CTFYQecYRLlxg48WtksgrWAXRSMM=
+			</data>
+		</dict>
+		<key>luts/byers.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			HlDQo94fM3F3Z6t7gCJ7Wml/MiTqZPV7k4IBcg2zn5A=
+			</data>
+		</dict>
+		<key>luts/canada.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			bGIo5FjgF2oALLmKPCwfRQ93/0u3bSh3RsXWmatFlH4=
+			</data>
+		</dict>
+		<key>luts/chile.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			LwrXlDI7MvdDhsFZExvL1Oe9c9FvHUupdA45miFQis8=
+			</data>
+		</dict>
+		<key>luts/chroma.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			9Y98dJB9agwhepAPq7ts5SyL8HwyNqsO6fwI/uZYs8E=
+			</data>
+		</dict>
+		<key>luts/egypt.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			ObbxqXvvrMciJrUII2D6QWyi/4Gu9FfbbDvLY9On9lo=
+			</data>
+		</dict>
+		<key>luts/england.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			LOvaRlD/tu9A1LNsRCphoHT/2nO7SVuNp/UmRAtO3R4=
+			</data>
+		</dict>
+		<key>luts/glitch.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			OGqHrmzQrUeAjidwQYx8nrC/sqDxtzUvUDWfs+iqCAE=
+			</data>
+		</dict>
+		<key>luts/grunge.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			eoLE5LYUIzqHvEfcC4uF9cDiRs7iCQhXm7Z7ZRAZ/KE=
+			</data>
+		</dict>
+		<key>luts/hyla.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			czgeCFWmQc/1BS+ycMKH5erAhWdzcRr6KDpfzjPaVDg=
+			</data>
+		</dict>
+		<key>luts/instant.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			D86wT5Roqvbl+KPmqASJvHXldOqexXAAKJFdT0D/eUo=
+			</data>
+		</dict>
+		<key>luts/japan.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			XlzpsCIy6gROs01RazPycOf3jrPzsjrEGXfN6xaKOKQ=
+			</data>
+		</dict>
+		<key>luts/korben.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			LoDsMjcBXdS4slkxPN60gjMt5uNUOU0oCf2xr7og2Lo=
+			</data>
+		</dict>
+		<key>luts/lilac.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			Nd2C1YHTrWLDrnogmaJWS2dSXdtJlzlihbB2FLkI1SI=
+			</data>
+		</dict>
+		<key>luts/lux.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			ja0at/d6HueKTkXrEUpMCXsb3Pqbg+rcG/Dcr6uOHGE=
+			</data>
+		</dict>
+		<key>luts/neon.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			1wKuTn9mUD0PcJSYlH71+KSnN9kmt35qZ45wz1nj/f0=
+			</data>
+		</dict>
+		<key>luts/norway.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			V2HxOrdNaUsxWm4DaixSadjWhJo8I6jfRkdbT+6S394=
+			</data>
+		</dict>
+		<key>luts/pinkvine.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			Csn0e+qVr6H3VcGAD8FR1fkFtYIy5UGf+SuE4m7LMao=
+			</data>
+		</dict>
+		<key>luts/remy.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			A9D5Xqn0Tn9ZE+yzl17CZSUJO9G8BsjEBvwc5VuaVoQ=
+			</data>
+		</dict>
+		<key>luts/retro.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			izIJw0Z9OguSu3jQs5duqhRa3N4lQMmgr+AI7TBcNls=
+			</data>
+		</dict>
+		<key>luts/spark.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			QDZpyirRrvXiJkmdokdIGFe/wKdxoITWqF0dQQnrk+c=
+			</data>
+		</dict>
+		<key>luts/sunny.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			HiujJajZS5GlXhBrwShCOrvoD9Qlro8DWYdVaMKH84U=
+			</data>
+		</dict>
+		<key>luts/sunset.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			VDVVsm4ojZgRYd2jVVUesA++D+hKDR8npPscqxiB6H8=
+			</data>
+		</dict>
+		<key>luts/vinyl.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			1SUlzsLYEPoP9Z2f9aj+5EIIhy5YspRsC4nOW6ScHpc=
+			</data>
+		</dict>
+		<key>luts/vivid.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			ek2KQYV2gwvRBEJMo6wsoxZxL9Joq6e8LCzll0PMez4=
 			</data>
 		</dict>
 	</dict>
