@@ -27,6 +27,7 @@
 
 @required
 - (void)presentPhotoEditorForImage:(UIImage *_Nonnull)image fromViewController:(UIViewController *_Nonnull)vc;
+- (nullable UINavigationController *)getPhotoEditorNavigationControllerForImage:(UIImage *_Nonnull)image NS_SWIFT_NAME(getPhotoEditorNavigationController(for:));
 - (void)dismissPhotoEditorAnimated:(BOOL)animated completion:(void (^ _Nullable)(void))completion;
 
 @end
@@ -38,7 +39,9 @@ NS_SWIFT_NAME(BanubaPhotoEditorInteractor)
 __attribute__((weak_import)) @interface BanubaPhotoEditorInteractor : NSObject
 
 + (BOOL)isFrameworkAvailable;
-+ (nullable id<PhotoEditor>)getPhotoEditorInstance:(License *)license;
++ (nullable id<PhotoEditor>)getPhotoEditorInstance:(License *)license
+                                     beautyMaskURL:(NSURL * _Nullable)beautyMaskURL
+                          effectPlayerResourcesURL:(NSURL * _Nullable)effectPlayerResourcesURL;
 
 @end
 NS_ASSUME_NONNULL_END
