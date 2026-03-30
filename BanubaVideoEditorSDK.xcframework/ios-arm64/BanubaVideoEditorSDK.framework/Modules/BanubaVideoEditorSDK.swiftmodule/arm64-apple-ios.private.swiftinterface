@@ -2773,7 +2773,7 @@ public struct SafeAreaGuideLinesConfiguration {
   public static var `default`: BanubaVideoEditorSDK.SafeAreaGuideLinesConfiguration {
     get
   }
-  public init(edgeInsets: UIKit.UIEdgeInsets, thickness: CoreFoundation.CGFloat, treshold: CoreFoundation.CGFloat, color: UIKit.UIColor)
+  public init(edgeInsets: UIKit.UIEdgeInsets, thickness: CoreFoundation.CGFloat, threshold: CoreFoundation.CGFloat, color: UIKit.UIColor)
 }
 public struct VideoPreviewConfiguration {
   public struct TimeLabelConfiguration {
