@@ -2675,6 +2675,7 @@ public typealias ExternalDraft = BanubaVideoEditorCore.VideoSequence
 @_hasMissingDesignatedInitializers public class DraftsService {
   public func getDrafts() -> [BanubaVideoEditorSDK.ExternalDraft]
   public func removeExternalDraft(_ externalDraft: BanubaVideoEditorSDK.ExternalDraft) -> Swift.Bool
+  public func removeExternalDraft(id: Swift.String) -> Swift.Bool
   #if compiler(>=5.3) && $NonescapableTypes
   public func getPreviewForVideoSequence(_ externalDraft: BanubaVideoEditorSDK.ExternalDraft, thumbnailHeight: CoreFoundation.CGFloat, completion: ((_ preview: UIKit.UIImage?) -> Swift.Void)?)
   #endif
