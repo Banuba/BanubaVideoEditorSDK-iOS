@@ -263,6 +263,9 @@ extension BanubaVideoEditorSDK.BanubaVideoEditor {
   #if compiler(>=5.3) && $NonescapableTypes
   public func export(using configuration: BanubaVideoEditorCore.ExportConfiguration, exportProgress: ((Swift.Float) -> Swift.Void)?, completion: @escaping (_ error: (any Swift.Error)?, _ errorPayload: [Swift.String : Any]?, _ exportCoverImages: BanubaVideoEditorSDK.ExportCoverImages?) -> Swift.Void)
   #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func export(exportProgress: ((Swift.Float) -> Swift.Void)? = nil, completion: @escaping (_ videoUrl: Foundation.URL?, _ error: (any Swift.Error)?, _ exportCoverImages: BanubaVideoEditorSDK.ExportCoverImages?) -> Swift.Void)
+  #endif
   public func stopExport()
   #if compiler(>=5.3) && $NonescapableTypes
   public func exportAudio(fileUrl: Foundation.URL, audioSettings: [Swift.String : Any] = VESettings.audio, completion: @escaping ((any Swift.Error)?) -> Swift.Void)
@@ -913,6 +916,7 @@ public enum VideoSequenceEditingStep : Swift.Int, Swift.Codable {
   case editor
   case aiClipping
   case videoTemplate
+  case templateBuilder
   #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
   #endif
@@ -2105,8 +2109,9 @@ public struct FeatureConfiguration {
   public var useTransitions: Swift.Bool
   public var isDraftSavedToastEnabled: Swift.Bool
   public var isPhotosEditingEnabled: Swift.Bool
+  public var useHybridSegmentationPrototype: Swift.Bool
   public static let `default`: BanubaVideoEditorSDK.FeatureConfiguration
-  public init(isOverlayEditorEnabled: Swift.Bool, isDoubleTapForToggleCameraEnabled: Swift.Bool, isVideoCoverSelectionEnabled: Swift.Bool, supportsTrimRecordedVideo: Swift.Bool, draftsConfig: BanubaVideoEditorSDK.DraftsFeatureConfig, isAspectsEnabled: Swift.Bool, isVideoFitsAspect: Swift.Bool, isBlurEnabled: Swift.Bool, isBlurEffectsExportable: Swift.Bool, useTransitions: Swift.Bool, isDraftSavedToastEnabled: Swift.Bool, isPhotosEditingEnabled: Swift.Bool)
+  public init(isOverlayEditorEnabled: Swift.Bool, isDoubleTapForToggleCameraEnabled: Swift.Bool, isVideoCoverSelectionEnabled: Swift.Bool, supportsTrimRecordedVideo: Swift.Bool, draftsConfig: BanubaVideoEditorSDK.DraftsFeatureConfig, isAspectsEnabled: Swift.Bool, isVideoFitsAspect: Swift.Bool, isBlurEnabled: Swift.Bool, isBlurEffectsExportable: Swift.Bool, useTransitions: Swift.Bool, isDraftSavedToastEnabled: Swift.Bool, isPhotosEditingEnabled: Swift.Bool, useHybridSegmentationPrototype: Swift.Bool)
 }
 public struct RecorderEffectsConfiguration {
   public var cornerRadius: CoreFoundation.CGFloat
@@ -2303,6 +2308,7 @@ public struct VideoTemplatesConfiguration {
   public var listConfiguration: BanubaVideoEditorSDK.VideoTemplatesListConfiguration
   public var previewConfiguration: BanubaVideoEditorSDK.VideoTemplatesPreviewConfiguration
   public var editorConfiguration: BanubaVideoEditorSDK.VideoTemplatesEditorConfiguration
+  public var templateBuilderConfiguration: BanubaVideoEditorSDK.TemplateBuilderConfiguration
 }
 public struct VideoTemplatesListConfiguration {
   public var backButton: BanubaUtilities.BackButtonConfiguration
@@ -2318,6 +2324,9 @@ public struct VideoTemplatesEditorConfiguration {
   public var backButton: BanubaUtilities.BackButtonConfiguration
   public var nextButton: BanubaVideoEditorSDK.BanubaButtonConfiguration
   public var playerButtonConfiguration: BanubaUtilities.PlayerControlConfiguration
+}
+public struct TemplateBuilderConfiguration {
+  public var termsOfUseURL: Foundation.URL
 }
 public struct ActionMenuConfiguration {
   public var dragIndicatorColor: UIKit.UIColor
@@ -2764,6 +2773,9 @@ extension BanubaVideoEditorSDK.RecorderConfiguration {
   public mutating func enableCameraV1LayoutFeatures()
   public mutating func enableCameraV2LayoutFeatures()
   public mutating func hideFeatures(_ identifiers: BanubaVideoEditorSDK.AdditionalEffectsButtonConfiguration.ButtonType...)
+  public static var topSoundFeatureButtonConfiguration: BanubaVideoEditorSDK.AdditionalEffectsButtonConfiguration {
+    get
+  }
 }
 extension BanubaVideoEditorCore.WatermarkConfiguration {
   public static var `default`: BanubaVideoEditorCore.WatermarkConfiguration {
@@ -2782,7 +2794,6 @@ public struct VideoPreviewConfiguration {
     public var isMillisecondsEnabled: Swift.Bool
   }
   public var watermarkConfiguration: BanubaVideoEditorCore.WatermarkConfiguration?
-  public var exportVideoInfo: BanubaVideoEditorCore.ExportVideoInfo
   public var currentTimeLabelConfiguration: BanubaVideoEditorSDK.VideoPreviewConfiguration.TimeLabelConfiguration
 }
 public protocol TextEditSelectionColorBehavior {
@@ -3001,6 +3012,7 @@ final public class CircularProgressRecordButtonProvider : BanubaVideoEditorSDK.R
     case filters
     case effects
     case sticker
+    case transitions
     public static func == (a: BanubaVideoEditorSDK.VideoTemplateToolsPanel.ToolType, b: BanubaVideoEditorSDK.VideoTemplateToolsPanel.ToolType) -> Swift.Bool
     public func hash(into hasher: inout Swift.Hasher)
     public var hashValue: Swift.Int {
