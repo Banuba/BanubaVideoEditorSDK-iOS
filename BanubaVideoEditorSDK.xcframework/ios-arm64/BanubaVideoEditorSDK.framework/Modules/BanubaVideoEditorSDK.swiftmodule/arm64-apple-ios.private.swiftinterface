@@ -13,11 +13,13 @@ import Combine
 import CoreGraphics
 import CoreImage
 import CoreMedia
+import CryptoKit
 import DeveloperToolsSupport
 import Foundation
 import ImageIO
 import MobileCoreServices
 import Photos
+import Security
 import Swift
 import SwiftUI
 import UIKit
@@ -202,7 +204,7 @@ public class BanubaVideoEditor {
   }
   #endif
   #if compiler(>=5.3) && $NonescapableTypes
-  public var externalAnalyticsEventListener: (any BanubaVideoEditorSDK.ExternalSDKAnalyticsEventsListener)? {
+  public var externalAnalyticsEventListener: (any BanubaUtilities.ExternalSDKAnalyticsEventsListener)? {
     get
     set
   }
@@ -245,6 +247,9 @@ extension BanubaVideoEditorSDK.BanubaVideoEditor {
 extension BanubaVideoEditorSDK.BanubaVideoEditor {
   #if compiler(>=5.3) && $NonescapableTypes
   public func presentVideoEditor(withLaunchConfiguration configuration: BanubaVideoEditorSDK.VideoEditorLaunchConfig, completion: (() -> Swift.Void)?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func presentTemplatesCreator(from hostController: UIKit.UIViewController, animated: Swift.Bool = true, completion: (() -> Swift.Void)? = nil)
   #endif
   #if compiler(>=5.3) && $NonescapableTypes
   public func getVideoEditorNavigationController(withLaunchConfiguration configuration: BanubaVideoEditorSDK.VideoEditorLaunchConfig) -> UIKit.UINavigationController?
@@ -682,15 +687,23 @@ public struct VideoTextFont : Swift.Equatable {
   #endif
   public static func == (a: BanubaVideoEditorSDK.VideoTextFont, b: BanubaVideoEditorSDK.VideoTextFont) -> Swift.Bool
 }
+public struct GenAIVideosConfiguration {
+  public var maxGenerationsPerDay: Swift.Int
+  public var maxAudioRecordingDurationSeconds: Foundation.TimeInterval
+  public init(maxGenerationsPerDay: Swift.Int = 5, maxAudioRecordingDurationSeconds: Foundation.TimeInterval = 5)
+}
+extension BanubaVideoEditorSDK.GenAIVideosConfiguration {
+  public static var `default`: BanubaVideoEditorSDK.GenAIVideosConfiguration {
+    get
+  }
+}
 public struct GenAIConfiguration {
   public var secret: Swift.String
   public var externalUserId: Swift.String?
+  public var genAIVideosConfiguration: BanubaVideoEditorSDK.GenAIVideosConfiguration
   #if compiler(>=5.3) && $NonescapableTypes
-  public init(secret: Swift.String = "", externalUserId: Swift.String? = nil)
+  public init(secret: Swift.String = "", externalUserId: Swift.String? = nil, genAIVideosConfiguration: BanubaVideoEditorSDK.GenAIVideosConfiguration = .default)
   #endif
-}
-public protocol ExternalSDKAnalyticsEventsListener : AnyObject {
-  func onVideoEditorSDKEvent(_ event: Swift.String)
 }
 public enum SDKEventScreen : Swift.String, Swift.Codable {
   case camera
@@ -2303,12 +2316,43 @@ public struct DraftsConfiguration {
   public var emptyDraftsImage: BanubaVideoEditorSDK.ImageConfiguration
   public var emptyDraftsLabel: BanubaUtilities.TextConfiguration
 }
+public struct TemplateStoreConfiguration : Swift.Equatable {
+  public enum Environment : Swift.Equatable {
+    case test, production
+    public static func == (a: BanubaVideoEditorSDK.TemplateStoreConfiguration.Environment, b: BanubaVideoEditorSDK.TemplateStoreConfiguration.Environment) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public var environment: BanubaVideoEditorSDK.TemplateStoreConfiguration.Environment
+  public var clientSecret: Swift.String
+  public var externalUserId: Swift.String?
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init(environment: BanubaVideoEditorSDK.TemplateStoreConfiguration.Environment = .production, clientSecret: Swift.String, externalUserId: Swift.String? = nil)
+  #endif
+  public static func == (a: BanubaVideoEditorSDK.TemplateStoreConfiguration, b: BanubaVideoEditorSDK.TemplateStoreConfiguration) -> Swift.Bool
+}
 public struct VideoTemplatesConfiguration {
-  public var url: Foundation.URL
+  public enum CatalogSource : Swift.Equatable {
+    case staticCatalog(Foundation.URL)
+    case templateStore(BanubaVideoEditorSDK.TemplateStoreConfiguration)
+    public static func == (a: BanubaVideoEditorSDK.VideoTemplatesConfiguration.CatalogSource, b: BanubaVideoEditorSDK.VideoTemplatesConfiguration.CatalogSource) -> Swift.Bool
+  }
+  public var catalogSource: BanubaVideoEditorSDK.VideoTemplatesConfiguration.CatalogSource
   public var listConfiguration: BanubaVideoEditorSDK.VideoTemplatesListConfiguration
   public var previewConfiguration: BanubaVideoEditorSDK.VideoTemplatesPreviewConfiguration
   public var editorConfiguration: BanubaVideoEditorSDK.VideoTemplatesEditorConfiguration
   public var templateBuilderConfiguration: BanubaVideoEditorSDK.TemplateBuilderConfiguration
+  public init(catalogSource: BanubaVideoEditorSDK.VideoTemplatesConfiguration.CatalogSource, listConfiguration: BanubaVideoEditorSDK.VideoTemplatesListConfiguration, previewConfiguration: BanubaVideoEditorSDK.VideoTemplatesPreviewConfiguration, editorConfiguration: BanubaVideoEditorSDK.VideoTemplatesEditorConfiguration, templateBuilderConfiguration: BanubaVideoEditorSDK.TemplateBuilderConfiguration)
+}
+extension BanubaVideoEditorSDK.VideoTemplatesConfiguration {
+  public static let defaultStaticCatalogURL: Foundation.URL
+  @available(*, deprecated, message: "Use catalogSource with .staticCatalog(url)")
+  public var url: Foundation.URL {
+    get
+    set
+  }
 }
 public struct VideoTemplatesListConfiguration {
   public var backButton: BanubaUtilities.BackButtonConfiguration
@@ -2327,6 +2371,7 @@ public struct VideoTemplatesEditorConfiguration {
 }
 public struct TemplateBuilderConfiguration {
   public var termsOfUseURL: Foundation.URL
+  public var isShareTemplateActive: Swift.Bool
 }
 public struct ActionMenuConfiguration {
   public var dragIndicatorColor: UIKit.UIColor
@@ -3100,6 +3145,7 @@ extension BanubaVideoEditorSDK.DraftsFeatureConfig : Swift.RawRepresentable {}
 extension BanubaVideoEditorSDK.FilterControlButtonConfig.`Type` : Swift.Equatable {}
 extension BanubaVideoEditorSDK.FilterControlButtonConfig.`Type` : Swift.Hashable {}
 extension BanubaVideoEditorSDK.FilterControlButtonConfig.`Type` : Swift.RawRepresentable {}
+extension BanubaVideoEditorSDK.TemplateStoreConfiguration.Environment : Swift.Hashable {}
 extension BanubaVideoEditorSDK.DraftMenuItemType : Swift.Equatable {}
 extension BanubaVideoEditorSDK.DraftMenuItemType : Swift.Hashable {}
 extension BanubaVideoEditorSDK.VideoEditorToolsPanel.ToolType : Swift.Equatable {}

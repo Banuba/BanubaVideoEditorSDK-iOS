@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import <BanubaUtilities/BanubaUtilities.h>
 
 @class GenAIVideo;
 
@@ -57,7 +58,13 @@ __attribute__((weak_import)) @interface BanubaGenAIVideosInteractor : NSObject
 
 @property (nonatomic, weak, nullable) id<GenAIVideosSDKDelegate> delegate;
 
-- (instancetype)initWithToken:(NSString *)token genAISecret:(NSString *)genAISecret externalUserId:(NSString * _Nullable)externalUserId;
+- (instancetype)initWithToken:(NSString *)token
+                  genAISecret:(NSString *)genAISecret
+               externalUserId:(NSString * _Nullable)externalUserId
+         maxGenerationsPerDay:(NSInteger)maxGenerationsPerDay
+maxAudioRecordingDurationSeconds:(double)maxAudioRecordingDurationSeconds
+                     arguments:(NSDictionary<NSString *, id> * _Nullable)arguments
+externalAnalyticsEventListener:(id<ExternalSDKAnalyticsEventsListener> _Nullable)externalAnalyticsEventListener;
 - (UINavigationController *)getGenAIVideosController:(GenAIVideoEntryPoint)entryPoint;
 - (nonnull NSArray<GenAIVideo *> *)getGenAIVides;
 - (void)didDismissGenAIVideoController;
