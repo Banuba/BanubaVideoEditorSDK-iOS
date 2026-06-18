@@ -1846,16 +1846,6 @@
       },
       {
         "kind": "Import",
-        "name": "BanubaVideoEditorCore",
-        "printedName": "BanubaVideoEditorCore",
-        "declKind": "Import",
-        "moduleName": "BanubaVideoEditorSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
         "name": "UIKit",
         "printedName": "UIKit",
         "declKind": "Import",
@@ -2664,16 +2654,6 @@
         "kind": "Import",
         "name": "UIKit",
         "printedName": "UIKit",
-        "declKind": "Import",
-        "moduleName": "BanubaVideoEditorSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "BanubaUtilities",
-        "printedName": "BanubaUtilities",
         "declKind": "Import",
         "moduleName": "BanubaVideoEditorSDK",
         "declAttributes": [
@@ -96046,6 +96026,80 @@
           },
           {
             "kind": "Var",
+            "name": "landscape3",
+            "printedName": "landscape3",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(BanubaVideoEditorSDK.PIPMode.Type) -> BanubaVideoEditorSDK.PIPMode",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PIPMode",
+                    "printedName": "BanubaVideoEditorSDK.PIPMode",
+                    "usr": "s:20BanubaVideoEditorSDK7PIPModeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "BanubaVideoEditorSDK.PIPMode.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PIPMode",
+                        "printedName": "BanubaVideoEditorSDK.PIPMode",
+                        "usr": "s:20BanubaVideoEditorSDK7PIPModeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:20BanubaVideoEditorSDK7PIPModeO10landscape3yA2CmF",
+            "mangledName": "$s20BanubaVideoEditorSDK7PIPModeO10landscape3yA2CmF",
+            "moduleName": "BanubaVideoEditorSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "landscape4",
+            "printedName": "landscape4",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(BanubaVideoEditorSDK.PIPMode.Type) -> BanubaVideoEditorSDK.PIPMode",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PIPMode",
+                    "printedName": "BanubaVideoEditorSDK.PIPMode",
+                    "usr": "s:20BanubaVideoEditorSDK7PIPModeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "BanubaVideoEditorSDK.PIPMode.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PIPMode",
+                        "printedName": "BanubaVideoEditorSDK.PIPMode",
+                        "usr": "s:20BanubaVideoEditorSDK7PIPModeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:20BanubaVideoEditorSDK7PIPModeO10landscape4yA2CmF",
+            "mangledName": "$s20BanubaVideoEditorSDK7PIPModeO10landscape4yA2CmF",
+            "moduleName": "BanubaVideoEditorSDK"
+          },
+          {
+            "kind": "Var",
             "name": "portrait1",
             "printedName": "portrait1",
             "children": [
@@ -99951,43 +100005,6 @@
                 "declKind": "EnumElement",
                 "usr": "s:20BanubaVideoEditorSDK36AdditionalEffectsButtonConfigurationV0G4TypeO9muteSoundyA2EmF",
                 "mangledName": "$s20BanubaVideoEditorSDK36AdditionalEffectsButtonConfigurationV0G4TypeO9muteSoundyA2EmF",
-                "moduleName": "BanubaVideoEditorSDK"
-              },
-              {
-                "kind": "Var",
-                "name": "pip",
-                "printedName": "pip",
-                "children": [
-                  {
-                    "kind": "TypeFunc",
-                    "name": "Function",
-                    "printedName": "(BanubaVideoEditorSDK.AdditionalEffectsButtonConfiguration.ButtonType.Type) -> BanubaVideoEditorSDK.AdditionalEffectsButtonConfiguration.ButtonType",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "ButtonType",
-                        "printedName": "BanubaVideoEditorSDK.AdditionalEffectsButtonConfiguration.ButtonType",
-                        "usr": "s:20BanubaVideoEditorSDK36AdditionalEffectsButtonConfigurationV0G4TypeO"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Metatype",
-                        "printedName": "BanubaVideoEditorSDK.AdditionalEffectsButtonConfiguration.ButtonType.Type",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "ButtonType",
-                            "printedName": "BanubaVideoEditorSDK.AdditionalEffectsButtonConfiguration.ButtonType",
-                            "usr": "s:20BanubaVideoEditorSDK36AdditionalEffectsButtonConfigurationV0G4TypeO"
-                          }
-                        ]
-                      }
-                    ]
-                  }
-                ],
-                "declKind": "EnumElement",
-                "usr": "s:20BanubaVideoEditorSDK36AdditionalEffectsButtonConfigurationV0G4TypeO3pipyA2EmF",
-                "mangledName": "$s20BanubaVideoEditorSDK36AdditionalEffectsButtonConfigurationV0G4TypeO3pipyA2EmF",
                 "moduleName": "BanubaVideoEditorSDK"
               },
               {
@@ -121076,16 +121093,6 @@
       },
       {
         "kind": "Import",
-        "name": "BanubaUtilities",
-        "printedName": "BanubaUtilities",
-        "declKind": "Import",
-        "moduleName": "BanubaVideoEditorSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
         "name": "UIKit",
         "printedName": "UIKit",
         "declKind": "Import",
@@ -122944,16 +122951,6 @@
         "printedName": "BanubaUtilities",
         "declKind": "Import",
         "moduleName": "BanubaVideoEditorSDK"
-      },
-      {
-        "kind": "Import",
-        "name": "BanubaVideoEditorCore",
-        "printedName": "BanubaVideoEditorCore",
-        "declKind": "Import",
-        "moduleName": "BanubaVideoEditorSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
       },
       {
         "kind": "Import",
@@ -138107,6 +138104,16 @@
       },
       {
         "kind": "Import",
+        "name": "BanubaVideoEditorCore",
+        "printedName": "BanubaVideoEditorCore",
+        "declKind": "Import",
+        "moduleName": "BanubaVideoEditorSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "UIKit",
         "printedName": "UIKit",
         "declKind": "Import",
@@ -144202,140 +144209,203 @@
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/ViewControllers\/Recorder\/Components\/Layouts\/LayoutsViewController.swift",
       "kind": "Array",
-      "offset": 2491,
+      "offset": 3997,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/ViewControllers\/Recorder\/Components\/Layouts\/LayoutsViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 2910,
+      "offset": 4473,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/ViewControllers\/Recorder\/Components\/Layouts\/LayoutsViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 2941,
+      "offset": 4504,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/ViewControllers\/Recorder\/Components\/Layouts\/LayoutsViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 2977,
+      "offset": 4540,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/ViewControllers\/Recorder\/Components\/Layouts\/LayoutsViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 3088,
+      "offset": 4651,
       "length": 2,
       "value": "20"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/ViewControllers\/Recorder\/Components\/Layouts\/LayoutsViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 3143,
+      "offset": 4706,
       "length": 8,
       "value": "0x363636"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/ViewControllers\/Recorder\/Components\/Layouts\/LayoutsViewController.swift",
       "kind": "FloatLiteral",
-      "offset": 3156,
+      "offset": 4719,
       "length": 3,
       "value": "0.8"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/ViewControllers\/Recorder\/Components\/Layouts\/LayoutsViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 3329,
+      "offset": 4892,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/ViewControllers\/Recorder\/Components\/Layouts\/LayoutsViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 3426,
+      "offset": 4989,
       "length": 1,
       "value": "6"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/ViewControllers\/Recorder\/Components\/Layouts\/LayoutsViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 3601,
+      "offset": 5164,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/ViewControllers\/Recorder\/Components\/Layouts\/LayoutsViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 3699,
+      "offset": 5261,
       "length": 2,
       "value": "16"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/ViewControllers\/Recorder\/Components\/Layouts\/LayoutsViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 5437,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/ViewControllers\/Recorder\/Components\/Layouts\/LayoutsViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 5491,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/ViewControllers\/Recorder\/Components\/Layouts\/LayoutsViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 5537,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/ViewControllers\/Recorder\/Components\/Layouts\/LayoutsViewController.swift",
       "kind": "StringLiteral",
-      "offset": 3826,
+      "offset": 5667,
       "length": 17,
       "value": "\"layouts.pallete\""
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/ViewControllers\/Recorder\/Components\/Layouts\/LayoutsViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 4009,
+      "offset": 5850,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/ViewControllers\/Recorder\/Components\/Layouts\/LayoutsViewController.swift",
       "kind": "StringLiteral",
-      "offset": 4128,
+      "offset": 5981,
+      "length": 20,
+      "value": "\"layouts.swapCamera\""
+    },
+    {
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/ViewControllers\/Recorder\/Components\/Layouts\/LayoutsViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 6171,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/ViewControllers\/Recorder\/Components\/Layouts\/LayoutsViewController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 6397,
+      "length": 8,
+      "value": "0x363636"
+    },
+    {
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/ViewControllers\/Recorder\/Components\/Layouts\/LayoutsViewController.swift",
+      "kind": "FloatLiteral",
+      "offset": 6426,
+      "length": 4,
+      "value": "0.80"
+    },
+    {
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/ViewControllers\/Recorder\/Components\/Layouts\/LayoutsViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 6496,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/ViewControllers\/Recorder\/Components\/Layouts\/LayoutsViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 6619,
       "length": 14,
       "value": "\"layouts.none\""
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/ViewControllers\/Recorder\/Components\/Layouts\/LayoutsViewController.swift",
       "kind": "FloatLiteral",
-      "offset": 4228,
+      "offset": 6719,
       "length": 3,
       "value": "0.2"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/ViewControllers\/Recorder\/Components\/Layouts\/LayoutsViewController.swift",
+      "kind": "FloatLiteral",
+      "offset": 8067,
+      "length": 4,
+      "value": "16.0"
+    },
+    {
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/ViewControllers\/Recorder\/Components\/Layouts\/LayoutsViewController.swift",
       "kind": "Array",
-      "offset": 13666,
+      "offset": 20957,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/ViewControllers\/Recorder\/Components\/Layouts\/LayoutsViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 13731,
+      "offset": 21022,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/ViewControllers\/Recorder\/Components\/Layouts\/LayoutsViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 16818,
+      "offset": 24109,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/ViewControllers\/Recorder\/Components\/Layouts\/LayoutsViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 16932,
+      "offset": 24223,
       "length": 1,
       "value": "6"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/ViewControllers\/Recorder\/Components\/Layouts\/LayoutsViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 16991,
+      "offset": 24282,
       "length": 2,
       "value": "20"
     },
@@ -150173,35 +150243,35 @@
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/Configurations\/VideoEditorConfig.swift",
       "kind": "IntegerLiteral",
-      "offset": 33445,
+      "offset": 33419,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/Configurations\/VideoEditorConfig.swift",
       "kind": "IntegerLiteral",
-      "offset": 33530,
+      "offset": 33504,
       "length": 9,
       "value": "1"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/Configurations\/VideoEditorConfig.swift",
       "kind": "FloatLiteral",
-      "offset": 34566,
+      "offset": 34540,
       "length": 3,
       "value": "0.2"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/Configurations\/VideoEditorConfig.swift",
       "kind": "BooleanLiteral",
-      "offset": 47029,
+      "offset": 47003,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/Configurations\/VideoEditorConfig.swift",
       "kind": "BooleanLiteral",
-      "offset": 47117,
+      "offset": 47091,
       "length": 5,
       "value": "false"
     },
@@ -150355,14 +150425,14 @@
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/ViewControllers\/ViewControllerFactory.swift",
       "kind": "BooleanLiteral",
-      "offset": 16248,
+      "offset": 16206,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/ViewControllers\/ViewControllerFactory.swift",
       "kind": "BooleanLiteral",
-      "offset": 19096,
+      "offset": 19054,
       "length": 5,
       "value": "false"
     },
@@ -151356,259 +151426,238 @@
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/ViewControllers\/Recorder\/ViewControllers\/RecorderViewController.swift",
       "kind": "Array",
-      "offset": 6123,
+      "offset": 6071,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/ViewControllers\/Recorder\/ViewControllers\/RecorderViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 11440,
+      "offset": 11388,
       "length": 1,
       "value": "9"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/ViewControllers\/Recorder\/ViewControllers\/RecorderViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 11442,
+      "offset": 11390,
       "length": 2,
       "value": "16"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/ViewControllers\/Recorder\/ViewControllers\/RecorderViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 11824,
+      "offset": 11772,
       "length": 1,
       "value": "9"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/ViewControllers\/Recorder\/ViewControllers\/RecorderViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 11826,
+      "offset": 11774,
       "length": 2,
       "value": "16"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/ViewControllers\/Recorder\/ViewControllers\/RecorderViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 20949,
+      "offset": 20505,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/ViewControllers\/Recorder\/ViewControllers\/RecorderViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 66395,
+      "offset": 65926,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/ViewControllers\/Recorder\/ViewControllers\/RecorderViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 67029,
+      "offset": 66560,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/ViewControllers\/Recorder\/ViewControllers\/RecorderViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 79733,
+      "offset": 79401,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/ViewControllers\/Recorder\/ViewControllers\/RecorderViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 83849,
+      "offset": 83517,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/Configurations\/ConfigurationEntities.swift",
       "kind": "IntegerLiteral",
-      "offset": 5571,
+      "offset": 5607,
       "length": 2,
       "value": "50"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/Configurations\/ConfigurationEntities.swift",
       "kind": "IntegerLiteral",
-      "offset": 5597,
+      "offset": 5633,
       "length": 2,
       "value": "50"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/Configurations\/ConfigurationEntities.swift",
       "kind": "FloatLiteral",
-      "offset": 5867,
+      "offset": 5903,
       "length": 3,
       "value": "8.5"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/Configurations\/ConfigurationEntities.swift",
       "kind": "IntegerLiteral",
-      "offset": 7507,
+      "offset": 7530,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/Configurations\/ConfigurationEntities.swift",
       "kind": "IntegerLiteral",
-      "offset": 7667,
+      "offset": 7690,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/Configurations\/ConfigurationEntities.swift",
       "kind": "IntegerLiteral",
-      "offset": 7766,
+      "offset": 7789,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/Configurations\/ConfigurationEntities.swift",
       "kind": "IntegerLiteral",
-      "offset": 7883,
+      "offset": 7906,
       "length": 1,
       "value": "3"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/Configurations\/ConfigurationEntities.swift",
       "kind": "BooleanLiteral",
-      "offset": 9654,
+      "offset": 9677,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/Configurations\/ConfigurationEntities.swift",
       "kind": "BooleanLiteral",
-      "offset": 9699,
+      "offset": 9722,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/Configurations\/ConfigurationEntities.swift",
       "kind": "BooleanLiteral",
-      "offset": 9740,
+      "offset": 9763,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/Configurations\/ConfigurationEntities.swift",
       "kind": "BooleanLiteral",
-      "offset": 9777,
+      "offset": 9800,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/Configurations\/ConfigurationEntities.swift",
       "kind": "BooleanLiteral",
-      "offset": 9852,
+      "offset": 9875,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/Configurations\/ConfigurationEntities.swift",
       "kind": "BooleanLiteral",
-      "offset": 9881,
+      "offset": 9904,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/Configurations\/ConfigurationEntities.swift",
       "kind": "BooleanLiteral",
-      "offset": 9907,
+      "offset": 9930,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/Configurations\/ConfigurationEntities.swift",
       "kind": "BooleanLiteral",
-      "offset": 9942,
+      "offset": 9965,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/Configurations\/ConfigurationEntities.swift",
       "kind": "BooleanLiteral",
-      "offset": 9968,
+      "offset": 9991,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/Configurations\/ConfigurationEntities.swift",
       "kind": "BooleanLiteral",
-      "offset": 10004,
+      "offset": 10027,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/Configurations\/ConfigurationEntities.swift",
       "kind": "BooleanLiteral",
-      "offset": 10039,
+      "offset": 10062,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/Configurations\/ConfigurationEntities.swift",
       "kind": "BooleanLiteral",
-      "offset": 10082,
+      "offset": 10105,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/Configurations\/ConfigurationEntities.swift",
       "kind": "IntegerLiteral",
-      "offset": 23178,
+      "offset": 23201,
       "length": 2,
       "value": "50"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/Configurations\/ConfigurationEntities.swift",
       "kind": "IntegerLiteral",
-      "offset": 23204,
+      "offset": 23227,
       "length": 2,
       "value": "50"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/Configurations\/ConfigurationEntities.swift",
       "kind": "FloatLiteral",
-      "offset": 23333,
+      "offset": 23356,
       "length": 3,
       "value": "0.0"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/Configurations\/ConfigurationEntities.swift",
       "kind": "StringLiteral",
-      "offset": 36963,
+      "offset": 36986,
       "length": 53,
       "value": "\"https:\/\/d3uve8clp2gj44.cloudfront.net\/response.json\""
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/Configurations\/ConfigurationEntities.swift",
       "kind": "BooleanLiteral",
-      "offset": 38792,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/ViewControllers\/Recorder\/Components\/PIP\/UIComponents\/PIPModeCollectionViewCell.swift",
-      "kind": "FloatLiteral",
-      "offset": 260,
-      "length": 3,
-      "value": "0.7"
-    },
-    {
-      "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/ViewControllers\/Recorder\/Components\/PIP\/UIComponents\/PIPModeCollectionViewCell.swift",
-      "kind": "BooleanLiteral",
-      "offset": 741,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/ViewControllers\/Recorder\/Components\/PIP\/UIComponents\/PIPModeCollectionViewCell.swift",
-      "kind": "BooleanLiteral",
-      "offset": 791,
+      "offset": 38815,
       "length": 5,
       "value": "false"
     },
@@ -152096,20 +152145,6 @@
       "value": "true"
     },
     {
-      "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/ViewControllers\/Recorder\/Components\/PIP\/PIPSettingsInteractor.swift",
-      "kind": "BooleanLiteral",
-      "offset": 521,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/ViewControllers\/Recorder\/Components\/PIP\/PIPSettingsInteractor.swift",
-      "kind": "BooleanLiteral",
-      "offset": 3455,
-      "length": 5,
-      "value": "false"
-    },
-    {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/TemplateEditor\/CreateTemplates\/PickVideos\/PickTemplateExampleVideoInteractor.swift",
       "kind": "Array",
       "offset": 430,
@@ -152126,14 +152161,14 @@
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/ViewControllers\/Recorder\/ViewControllers\/RecorderViewControllerPresentable.swift",
       "kind": "BooleanLiteral",
-      "offset": 3050,
+      "offset": 3026,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/ViewControllers\/Recorder\/ViewControllers\/RecorderViewControllerPresentable.swift",
       "kind": "BooleanLiteral",
-      "offset": 3179,
+      "offset": 3155,
       "length": 4,
       "value": "true"
     },
@@ -156025,63 +156060,70 @@
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/ViewControllers\/Recorder\/Components\/Layouts\/LayoutsInteractor.swift",
       "kind": "FloatLiteral",
-      "offset": 813,
+      "offset": 923,
       "length": 3,
       "value": "0.1"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/ViewControllers\/Recorder\/Components\/Layouts\/LayoutsInteractor.swift",
       "kind": "FloatLiteral",
-      "offset": 821,
+      "offset": 931,
       "length": 3,
       "value": "0.1"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/ViewControllers\/Recorder\/Components\/Layouts\/LayoutsInteractor.swift",
       "kind": "FloatLiteral",
-      "offset": 833,
+      "offset": 943,
       "length": 3,
       "value": "0.4"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/ViewControllers\/Recorder\/Components\/Layouts\/LayoutsInteractor.swift",
       "kind": "FloatLiteral",
-      "offset": 846,
+      "offset": 956,
       "length": 3,
       "value": "0.4"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/ViewControllers\/Recorder\/Components\/Layouts\/LayoutsInteractor.swift",
       "kind": "FloatLiteral",
-      "offset": 902,
+      "offset": 1012,
       "length": 3,
       "value": "0.1"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/ViewControllers\/Recorder\/Components\/Layouts\/LayoutsInteractor.swift",
       "kind": "FloatLiteral",
-      "offset": 910,
+      "offset": 1020,
       "length": 3,
       "value": "0.5"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/ViewControllers\/Recorder\/Components\/Layouts\/LayoutsInteractor.swift",
       "kind": "FloatLiteral",
-      "offset": 922,
+      "offset": 1032,
       "length": 3,
       "value": "0.4"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/ViewControllers\/Recorder\/Components\/Layouts\/LayoutsInteractor.swift",
       "kind": "FloatLiteral",
-      "offset": 935,
+      "offset": 1045,
       "length": 3,
       "value": "0.4"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/ViewControllers\/Recorder\/Components\/Layouts\/LayoutsInteractor.swift",
       "kind": "BooleanLiteral",
-      "offset": 4166,
+      "offset": 7784,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/ViewControllers\/Recorder\/Components\/Layouts\/LayoutsInteractor.swift",
+      "kind": "BooleanLiteral",
+      "offset": 8795,
       "length": 5,
       "value": "false"
     },
@@ -156326,105 +156368,112 @@
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/ViewControllers\/Recorder\/RecorderControlsController.swift",
       "kind": "BooleanLiteral",
-      "offset": 3617,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/ViewControllers\/Recorder\/RecorderControlsController.swift",
-      "kind": "Array",
-      "offset": 3857,
-      "length": 2,
-      "value": "[]"
-    },
-    {
-      "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/ViewControllers\/Recorder\/RecorderControlsController.swift",
-      "kind": "Array",
-      "offset": 3869,
-      "length": 2,
-      "value": "[]"
-    },
-    {
-      "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/ViewControllers\/Recorder\/RecorderControlsController.swift",
-      "kind": "Array",
-      "offset": 3883,
-      "length": 2,
-      "value": "[]"
-    },
-    {
-      "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/ViewControllers\/Recorder\/RecorderControlsController.swift",
-      "kind": "BooleanLiteral",
-      "offset": 4062,
+      "offset": 3487,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/ViewControllers\/Recorder\/RecorderControlsController.swift",
       "kind": "BooleanLiteral",
-      "offset": 4128,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/ViewControllers\/Recorder\/RecorderControlsController.swift",
-      "kind": "BooleanLiteral",
-      "offset": 4189,
+      "offset": 3587,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/ViewControllers\/Recorder\/RecorderControlsController.swift",
       "kind": "Array",
-      "offset": 4822,
+      "offset": 3827,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/ViewControllers\/Recorder\/RecorderControlsController.swift",
+      "kind": "Array",
+      "offset": 3839,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/ViewControllers\/Recorder\/RecorderControlsController.swift",
+      "kind": "Array",
+      "offset": 3853,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/ViewControllers\/Recorder\/RecorderControlsController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 4032,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/ViewControllers\/Recorder\/RecorderControlsController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 4098,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/ViewControllers\/Recorder\/RecorderControlsController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 4159,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/ViewControllers\/Recorder\/RecorderControlsController.swift",
+      "kind": "Array",
+      "offset": 4795,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/ViewControllers\/Recorder\/RecorderControlsController.swift",
       "kind": "Dictionary",
-      "offset": 4937,
+      "offset": 4910,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/ViewControllers\/Recorder\/RecorderControlsController.swift",
       "kind": "BooleanLiteral",
-      "offset": 5004,
+      "offset": 4977,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/ViewControllers\/Recorder\/RecorderControlsController.swift",
       "kind": "BooleanLiteral",
-      "offset": 5114,
+      "offset": 5087,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/ViewControllers\/Recorder\/RecorderControlsController.swift",
       "kind": "BooleanLiteral",
-      "offset": 16373,
+      "offset": 16107,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/ViewControllers\/Recorder\/RecorderControlsController.swift",
       "kind": "BooleanLiteral",
-      "offset": 17332,
+      "offset": 17066,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/ViewControllers\/Recorder\/RecorderControlsController.swift",
       "kind": "BooleanLiteral",
-      "offset": 25874,
+      "offset": 25635,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/ViewControllers\/Recorder\/RecorderControlsController.swift",
       "kind": "BooleanLiteral",
-      "offset": 27576,
+      "offset": 27337,
       "length": 5,
       "value": "false"
     },
@@ -156830,133 +156879,133 @@
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/ViewControllers\/Recorder\/RecorderPresenter.swift",
       "kind": "FloatLiteral",
-      "offset": 1121,
+      "offset": 1133,
       "length": 3,
       "value": "1.0"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/ViewControllers\/Recorder\/RecorderPresenter.swift",
       "kind": "FloatLiteral",
-      "offset": 1189,
+      "offset": 1201,
       "length": 4,
       "value": "0.15"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/ViewControllers\/Recorder\/RecorderPresenter.swift",
       "kind": "IntegerLiteral",
-      "offset": 1226,
+      "offset": 1238,
       "length": 10,
       "value": "1000000000"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/ViewControllers\/Recorder\/RecorderPresenter.swift",
       "kind": "StringLiteral",
-      "offset": 1312,
+      "offset": 1324,
       "length": 35,
       "value": "\"com.banuba.recorder.isFrontCamera\""
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/ViewControllers\/Recorder\/RecorderPresenter.swift",
       "kind": "BooleanLiteral",
-      "offset": 2995,
+      "offset": 3007,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/ViewControllers\/Recorder\/RecorderPresenter.swift",
       "kind": "BooleanLiteral",
-      "offset": 3298,
+      "offset": 3310,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/ViewControllers\/Recorder\/RecorderPresenter.swift",
       "kind": "Array",
-      "offset": 3343,
+      "offset": 3355,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/ViewControllers\/Recorder\/RecorderPresenter.swift",
       "kind": "BooleanLiteral",
-      "offset": 3622,
+      "offset": 3634,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/ViewControllers\/Recorder\/RecorderPresenter.swift",
       "kind": "BooleanLiteral",
-      "offset": 3667,
+      "offset": 3679,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/ViewControllers\/Recorder\/RecorderPresenter.swift",
       "kind": "BooleanLiteral",
-      "offset": 3776,
+      "offset": 3788,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/ViewControllers\/Recorder\/RecorderPresenter.swift",
       "kind": "BooleanLiteral",
-      "offset": 3828,
+      "offset": 3840,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/ViewControllers\/Recorder\/RecorderPresenter.swift",
       "kind": "BooleanLiteral",
-      "offset": 3868,
+      "offset": 3880,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/ViewControllers\/Recorder\/RecorderPresenter.swift",
       "kind": "BooleanLiteral",
-      "offset": 3948,
+      "offset": 3960,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/ViewControllers\/Recorder\/RecorderPresenter.swift",
       "kind": "BooleanLiteral",
-      "offset": 3974,
+      "offset": 3986,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/ViewControllers\/Recorder\/RecorderPresenter.swift",
       "kind": "IntegerLiteral",
-      "offset": 4050,
+      "offset": 4062,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/ViewControllers\/Recorder\/RecorderPresenter.swift",
       "kind": "BooleanLiteral",
-      "offset": 4323,
+      "offset": 4335,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/ViewControllers\/Recorder\/RecorderPresenter.swift",
       "kind": "BooleanLiteral",
-      "offset": 24956,
+      "offset": 24982,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/ViewControllers\/Recorder\/RecorderPresenter.swift",
       "kind": "BooleanLiteral",
-      "offset": 24986,
+      "offset": 25012,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/ViewControllers\/Recorder\/RecorderPresenter.swift",
       "kind": "BooleanLiteral",
-      "offset": 28591,
+      "offset": 28611,
       "length": 4,
       "value": "true"
     },
@@ -157061,21 +157110,21 @@
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/ViewControllers\/Recorder\/RecorderInteractor.swift",
       "kind": "BooleanLiteral",
-      "offset": 1856,
+      "offset": 1798,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/ViewControllers\/Recorder\/RecorderInteractor.swift",
       "kind": "BooleanLiteral",
-      "offset": 2259,
+      "offset": 2201,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/ViewControllers\/Recorder\/RecorderInteractor.swift",
       "kind": "BooleanLiteral",
-      "offset": 2359,
+      "offset": 2301,
       "length": 4,
       "value": "true"
     },
@@ -157451,16 +157500,16 @@
       "value": "80.0"
     },
     {
-      "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/ViewControllers\/Recorder\/Components\/Layouts\/BackgroundStateManager.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/ViewControllers\/Recorder\/Components\/Layouts\/LayoutsManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 1814,
+      "offset": 2038,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/ViewControllers\/Recorder\/Components\/Layouts\/BackgroundStateManager.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorSDK\/BanubaVideoEditorSDK\/ViewControllers\/Recorder\/Components\/Layouts\/LayoutsManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 2267,
+      "offset": 2694,
       "length": 5,
       "value": "false"
     },
@@ -159245,1596 +159294,1561 @@
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 27935,
+      "offset": 27913,
+      "length": 20,
+      "value": "\"layouts.pip.bottom\""
+    },
+    {
+      "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 28089,
+      "length": 26,
+      "value": "\"layouts.pip.circleBottom\""
+    },
+    {
+      "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 28255,
+      "length": 18,
+      "value": "\"layouts.pip.left\""
+    },
+    {
+      "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 28435,
+      "length": 29,
+      "value": "\"layouts.pip.rectangleBottom\""
+    },
+    {
+      "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 28624,
+      "length": 28,
+      "value": "\"layouts.pip.twoThirdBottom\""
+    },
+    {
+      "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 28797,
+      "length": 20,
+      "value": "\"layouts.swapCamera\""
+    },
+    {
+      "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 28983,
       "length": 31,
       "value": "\"layouts.weatherman.bottomLeft\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 28124,
+      "offset": 29172,
       "length": 27,
       "value": "\"layouts.weatherman.center\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 28311,
+      "offset": 29359,
       "length": 28,
       "value": "\"layouts.weatherman.topLeft\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 28468,
+      "offset": 29516,
       "length": 12,
       "value": "\"left_arrow\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 28615,
+      "offset": 29663,
       "length": 15,
       "value": "\"lilac_preview\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 28761,
+      "offset": 29809,
       "length": 13,
       "value": "\"lux_preview\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 28914,
+      "offset": 29962,
       "length": 17,
       "value": "\"maskPlaceholder\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 29051,
+      "offset": 30099,
       "length": 7,
       "value": "\"minus\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 29191,
+      "offset": 30239,
       "length": 14,
       "value": "\"multicolor_1\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 29338,
+      "offset": 30386,
       "length": 14,
       "value": "\"multicolor_2\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 29485,
+      "offset": 30533,
       "length": 14,
       "value": "\"multicolor_3\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 29632,
+      "offset": 30680,
       "length": 14,
       "value": "\"multicolor_4\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 29779,
+      "offset": 30827,
       "length": 14,
       "value": "\"multicolor_5\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 29926,
+      "offset": 30974,
       "length": 14,
       "value": "\"multicolor_6\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 30076,
+      "offset": 31124,
       "length": 16,
       "value": "\"nav_back_arrow\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 30225,
+      "offset": 31273,
       "length": 14,
       "value": "\"neon_preview\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 30366,
+      "offset": 31414,
       "length": 11,
       "value": "\"no_drafts\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 30504,
+      "offset": 31552,
       "length": 11,
       "value": "\"no_effect\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 30650,
+      "offset": 31698,
       "length": 15,
       "value": "\"normal_slider\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 30802,
+      "offset": 31850,
       "length": 16,
       "value": "\"norway_preview\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 30959,
+      "offset": 32007,
       "length": 18,
       "value": "\"overlayItems.bin\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 31138,
+      "offset": 32186,
       "length": 29,
       "value": "\"overlay_editor.add_captions\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 31332,
+      "offset": 32380,
       "length": 31,
       "value": "\"overlay_editor.captions.apply\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 31574,
+      "offset": 32622,
       "length": 31,
       "value": "\"overlay_editor.captions.arrow\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 31783,
+      "offset": 32831,
       "length": 38,
       "value": "\"overlay_editor.captions.change_style\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 31986,
+      "offset": 33034,
       "length": 31,
       "value": "\"overlay_editor.captions.close\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 32184,
+      "offset": 33232,
       "length": 32,
       "value": "\"overlay_editor.captions.delete\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 32379,
+      "offset": 33427,
       "length": 30,
       "value": "\"overlay_editor.captions.edit\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 32581,
+      "offset": 33629,
       "length": 35,
       "value": "\"overlay_editor.captions.edit_play\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 32788,
+      "offset": 33836,
       "length": 35,
       "value": "\"overlay_editor.captions.edit_stop\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 33007,
+      "offset": 34055,
       "length": 41,
       "value": "\"overlay_editor.captions.normal_language\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 33213,
+      "offset": 34261,
       "length": 31,
       "value": "\"overlay_editor.captions.pause\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 33407,
+      "offset": 34455,
       "length": 30,
       "value": "\"overlay_editor.captions.play\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 33625,
+      "offset": 34673,
       "length": 43,
       "value": "\"overlay_editor.captions.selected_language\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 33844,
+      "offset": 34892,
       "length": 37,
       "value": "\"overlay_editor.captions.styles.font\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 34057,
+      "offset": 35105,
       "length": 37,
       "value": "\"overlay_editor.captions.text_styles\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 34276,
+      "offset": 35324,
       "length": 40,
       "value": "\"overlay_editor.styles.alignment_center\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 34494,
+      "offset": 35542,
       "length": 38,
       "value": "\"overlay_editor.styles.alignment_left\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 34712,
+      "offset": 35760,
       "length": 39,
       "value": "\"overlay_editor.styles.alignment_right\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 34935,
+      "offset": 35983,
       "length": 41,
       "value": "\"overlay_editor.styles.background_normal\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 35164,
+      "offset": 36212,
       "length": 43,
       "value": "\"overlay_editor.styles.background_selected\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 35363,
+      "offset": 36411,
       "length": 29,
       "value": "\"overlay_editor.styles.color\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 35533,
+      "offset": 36581,
       "length": 18,
       "value": "\"pinkvine_preview\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 35684,
-      "length": 14,
-      "value": "\"pip.centered\""
-    },
-    {
-      "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
-      "kind": "StringLiteral",
-      "offset": 35836,
-      "length": 17,
-      "value": "\"pip.landscape.1\""
-    },
-    {
-      "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
-      "kind": "StringLiteral",
-      "offset": 35991,
-      "length": 17,
-      "value": "\"pip.landscape.2\""
-    },
-    {
-      "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
-      "kind": "StringLiteral",
-      "offset": 36133,
-      "length": 10,
-      "value": "\"pip.none\""
-    },
-    {
-      "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
-      "kind": "StringLiteral",
-      "offset": 36276,
-      "length": 14,
-      "value": "\"pip.original\""
-    },
-    {
-      "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
-      "kind": "StringLiteral",
-      "offset": 36426,
-      "length": 16,
-      "value": "\"pip.portrait.1\""
-    },
-    {
-      "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
-      "kind": "StringLiteral",
-      "offset": 36578,
-      "length": 16,
-      "value": "\"pip.portrait.2\""
-    },
-    {
-      "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
-      "kind": "StringLiteral",
-      "offset": 36724,
-      "length": 13,
-      "value": "\"pip.react.1\""
-    },
-    {
-      "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
-      "kind": "StringLiteral",
-      "offset": 36867,
-      "length": 13,
-      "value": "\"pip.react.2\""
-    },
-    {
-      "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
-      "kind": "StringLiteral",
-      "offset": 37010,
-      "length": 13,
-      "value": "\"pip.react.3\""
-    },
-    {
-      "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
-      "kind": "StringLiteral",
-      "offset": 37153,
-      "length": 13,
-      "value": "\"pip.react.4\""
-    },
-    {
-      "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
-      "kind": "StringLiteral",
-      "offset": 37303,
+      "offset": 36736,
       "length": 16,
       "value": "\"recorder.cross\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 37468,
+      "offset": 36901,
       "length": 22,
       "value": "\"recorder.crossButton\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 37652,
+      "offset": 37085,
       "length": 29,
       "value": "\"recorder.weatherman.dragTip\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 37845,
+      "offset": 37278,
       "length": 30,
       "value": "\"recorder.weatherman.pinchTip\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 38024,
+      "offset": 37457,
       "length": 22,
       "value": "\"recorder_resetButton\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 38196,
+      "offset": 37629,
       "length": 23,
       "value": "\"reload_effect_preview\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 38352,
+      "offset": 37785,
       "length": 14,
       "value": "\"remove_draft\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 38499,
+      "offset": 37932,
       "length": 14,
       "value": "\"remy_preview\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 38648,
+      "offset": 38081,
       "length": 15,
       "value": "\"retro_preview\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 38783,
+      "offset": 38216,
       "length": 7,
       "value": "\"robot\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 38939,
+      "offset": 38372,
       "length": 23,
       "value": "\"shared_new_back_arrow\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 39095,
+      "offset": 38528,
       "length": 14,
       "value": "\"slider_thumb\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 39257,
+      "offset": 38690,
       "length": 22,
       "value": "\"slideshow_arrow_down\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 39423,
+      "offset": 38856,
       "length": 20,
       "value": "\"slideshow_arrow_up\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 39578,
+      "offset": 39011,
       "length": 15,
       "value": "\"spark_preview\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 39719,
+      "offset": 39152,
       "length": 10,
       "value": "\"squirrel\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 39875,
+      "offset": 39308,
       "length": 21,
       "value": "\"start_record_button\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 40031,
+      "offset": 39464,
       "length": 15,
       "value": "\"sunny_preview\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 40183,
+      "offset": 39616,
       "length": 16,
       "value": "\"sunset_preview\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 40373,
+      "offset": 39806,
       "length": 35,
       "value": "\"templateBuilder.Music.banubaMusic\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 40574,
+      "offset": 40007,
       "length": 31,
       "value": "\"templateBuilder.Music.extract\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 40769,
+      "offset": 40202,
       "length": 30,
       "value": "\"templateBuilder.Music.upload\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 40980,
+      "offset": 40413,
       "length": 38,
       "value": "\"templateBuilder.copyrightTooltipIcon\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 41187,
+      "offset": 40620,
       "length": 32,
       "value": "\"templateBuilder.removeTagCross\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 41379,
+      "offset": 40812,
       "length": 28,
       "value": "\"templateBuilder.share.edit\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 41570,
+      "offset": 41003,
       "length": 29,
       "value": "\"templateBuilder.sliderThumb\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 41765,
+      "offset": 41198,
       "length": 32,
       "value": "\"text_edit.background_color_off\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 41982,
+      "offset": 41415,
       "length": 42,
       "value": "\"text_edit.background_color_on.background\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 42197,
+      "offset": 41630,
       "length": 36,
       "value": "\"text_edit.background_color_on.icon\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 42378,
+      "offset": 41811,
       "length": 21,
       "value": "\"text_edit.color_off\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 42542,
+      "offset": 41975,
       "length": 20,
       "value": "\"text_edit.color_on\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 42705,
+      "offset": 42138,
       "length": 20,
       "value": "\"text_edit.font_off\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 42866,
+      "offset": 42299,
       "length": 19,
       "value": "\"text_edit.font_on\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 43045,
+      "offset": 42478,
       "length": 29,
       "value": "\"text_edit.text_align_center\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 43230,
+      "offset": 42663,
       "length": 27,
       "value": "\"text_edit.text_align_left\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 43415,
+      "offset": 42848,
       "length": 28,
       "value": "\"text_edit.text_align_right\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 43581,
+      "offset": 43014,
       "length": 17,
       "value": "\"text_style_none\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 43718,
+      "offset": 43151,
       "length": 7,
       "value": "\"thumb\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 43865,
+      "offset": 43298,
       "length": 18,
       "value": "\"trim.edit.delete\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 44023,
+      "offset": 43456,
       "length": 18,
       "value": "\"trim.edit.rotate\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 44179,
+      "offset": 43612,
       "length": 17,
       "value": "\"trim.edit.split\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 44332,
+      "offset": 43765,
       "length": 16,
       "value": "\"trim.edit.trim\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 44498,
+      "offset": 43931,
       "length": 23,
       "value": "\"trim.transition.blink\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 44669,
+      "offset": 44102,
       "length": 22,
       "value": "\"trim.transition.fade\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 44861,
+      "offset": 44294,
       "length": 33,
       "value": "\"trim.transition.fadingFromWhite\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 45050,
+      "offset": 44483,
       "length": 26,
       "value": "\"trim.transition.fromDark\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 45242,
+      "offset": 44675,
       "length": 31,
       "value": "\"trim.transition.infinityMinus\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 45437,
+      "offset": 44870,
       "length": 30,
       "value": "\"trim.transition.infinityPlus\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 45623,
+      "offset": 45056,
       "length": 26,
       "value": "\"trim.transition.intoDark\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 45797,
+      "offset": 45230,
       "length": 22,
       "value": "\"trim.transition.none\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 45971,
+      "offset": 45404,
       "length": 24,
       "value": "\"trim.transition.normal\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 46165,
+      "offset": 45598,
       "length": 33,
       "value": "\"trim.transition.retractionMinus\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 46366,
+      "offset": 45799,
       "length": 32,
       "value": "\"trim.transition.retractionPlus\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 46564,
+      "offset": 45997,
       "length": 31,
       "value": "\"trim.transition.rotationMinus\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 46759,
+      "offset": 46192,
       "length": 30,
       "value": "\"trim.transition.rotationPlus\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 46949,
+      "offset": 46382,
       "length": 28,
       "value": "\"trim.transition.scrollDown\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 47137,
+      "offset": 46570,
       "length": 28,
       "value": "\"trim.transition.scrollLeft\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 47341,
+      "offset": 46774,
       "length": 36,
       "value": "\"trim.transition.scrollMirroredDown\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 47553,
+      "offset": 46986,
       "length": 36,
       "value": "\"trim.transition.scrollMirroredLeft\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 47767,
+      "offset": 47200,
       "length": 37,
       "value": "\"trim.transition.scrollMirroredRight\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 47976,
+      "offset": 47409,
       "length": 34,
       "value": "\"trim.transition.scrollMirroredUp\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 48172,
+      "offset": 47605,
       "length": 29,
       "value": "\"trim.transition.scrollRight\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 48357,
+      "offset": 47790,
       "length": 26,
       "value": "\"trim.transition.scrollUp\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 48561,
+      "offset": 47994,
       "length": 38,
       "value": "\"trim.transition.small_any_transition\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 48775,
+      "offset": 48208,
       "length": 37,
       "value": "\"trim.transition.small_no_transition\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 48970,
+      "offset": 48403,
       "length": 27,
       "value": "\"trim.transition.spinRight\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 49159,
+      "offset": 48592,
       "length": 29,
       "value": "\"trim.transition.stretchLeft\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 49352,
+      "offset": 48785,
       "length": 30,
       "value": "\"trim.transition.stretchRight\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 49544,
+      "offset": 48977,
       "length": 29,
       "value": "\"trim.transition.stretching2\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 49729,
+      "offset": 49162,
       "length": 26,
       "value": "\"trim.transition.whipDown\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 49911,
+      "offset": 49344,
       "length": 26,
       "value": "\"trim.transition.whipLeft\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 50095,
+      "offset": 49528,
       "length": 27,
       "value": "\"trim.transition.whipRight\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 50274,
+      "offset": 49707,
       "length": 24,
       "value": "\"trim.transition.whipUp\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 50447,
+      "offset": 49880,
       "length": 22,
       "value": "\"videoEditor.addAudio\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 50630,
+      "offset": 50063,
       "length": 28,
       "value": "\"videoEditor.addAudioButton\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 50815,
+      "offset": 50248,
       "length": 26,
       "value": "\"videoEditor.addAudioMenu\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 50996,
+      "offset": 50429,
       "length": 25,
       "value": "\"videoEditor.addCaptions\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 51184,
+      "offset": 50617,
       "length": 29,
       "value": "\"videoEditor.addCaptionsMenu\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 51364,
+      "offset": 50797,
       "length": 23,
       "value": "\"videoEditor.addCircle\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 51540,
+      "offset": 50973,
       "length": 24,
       "value": "\"videoEditor.addEffects\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 51717,
+      "offset": 51150,
       "length": 24,
       "value": "\"videoEditor.addFilters\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 51904,
+      "offset": 51337,
       "length": 29,
       "value": "\"videoEditor.addGalleryVideo\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 52092,
+      "offset": 51525,
       "length": 27,
       "value": "\"videoEditor.addLowerThird\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 52268,
+      "offset": 51701,
       "length": 22,
       "value": "\"videoEditor.addMasks\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 52441,
+      "offset": 51874,
       "length": 23,
       "value": "\"videoEditor.addSquare\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 52619,
+      "offset": 52052,
       "length": 25,
       "value": "\"videoEditor.addStickers\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 52791,
+      "offset": 52224,
       "length": 21,
       "value": "\"videoEditor.addText\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 52967,
+      "offset": 52400,
       "length": 25,
       "value": "\"videoEditor.addTextMenu\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 53141,
+      "offset": 52574,
       "length": 22,
       "value": "\"videoEditor.addVoice\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 53324,
+      "offset": 52757,
       "length": 28,
       "value": "\"videoEditor.addVoiceEffect\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 53509,
+      "offset": 52942,
       "length": 26,
       "value": "\"videoEditor.addVoiceMenu\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 53690,
+      "offset": 53123,
       "length": 25,
       "value": "\"videoEditor.adjustAudio\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 53862,
+      "offset": 53295,
       "length": 21,
       "value": "\"videoEditor.aiVideo\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 54038,
+      "offset": 53471,
       "length": 25,
       "value": "\"videoEditor.alignCenter\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 54214,
+      "offset": 53647,
       "length": 23,
       "value": "\"videoEditor.alignLeft\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 54390,
+      "offset": 53823,
       "length": 24,
       "value": "\"videoEditor.alignRight\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 54591,
+      "offset": 54024,
       "length": 37,
       "value": "\"videoEditor.applied_transition_icon\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 54771,
+      "offset": 54204,
       "length": 19,
       "value": "\"videoEditor.apply\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 54941,
+      "offset": 54374,
       "length": 23,
       "value": "\"videoEditor.arrowDown\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 55107,
+      "offset": 54540,
       "length": 19,
       "value": "\"videoEditor.audio\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 55267,
+      "offset": 54700,
       "length": 18,
       "value": "\"videoEditor.back\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 55450,
+      "offset": 54883,
       "length": 30,
       "value": "\"videoEditor.backgroundActive\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 55649,
+      "offset": 55082,
       "length": 32,
       "value": "\"videoEditor.backgroundInactive\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 55844,
+      "offset": 55277,
       "length": 30,
       "value": "\"videoEditor.blur-mask-circle\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 56037,
+      "offset": 55470,
       "length": 30,
       "value": "\"videoEditor.blur-mask-square\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 56212,
+      "offset": 55645,
       "length": 20,
       "value": "\"videoEditor.cancel\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 56377,
+      "offset": 55810,
       "length": 20,
       "value": "\"videoEditor.canvas\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 56564,
+      "offset": 55997,
       "length": 31,
       "value": "\"videoEditor.colorPickerActive\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 56766,
+      "offset": 56199,
       "length": 33,
       "value": "\"videoEditor.colorPickerInactive\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 56940,
+      "offset": 56373,
       "length": 18,
       "value": "\"videoEditor.crop\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 57103,
+      "offset": 56536,
       "length": 20,
       "value": "\"videoEditor.crop11\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 57284,
+      "offset": 56717,
       "length": 28,
       "value": "\"videoEditor.crop11Selected\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 57457,
+      "offset": 56890,
       "length": 20,
       "value": "\"videoEditor.crop34\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 57638,
+      "offset": 57071,
       "length": 28,
       "value": "\"videoEditor.crop34Selected\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 57811,
+      "offset": 57244,
       "length": 20,
       "value": "\"videoEditor.crop43\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 57992,
+      "offset": 57425,
       "length": 28,
       "value": "\"videoEditor.crop43Selected\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 58165,
+      "offset": 57598,
       "length": 20,
       "value": "\"videoEditor.crop45\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 58346,
+      "offset": 57779,
       "length": 28,
       "value": "\"videoEditor.crop45Selected\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 58521,
+      "offset": 57954,
       "length": 21,
       "value": "\"videoEditor.crop916\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 58705,
+      "offset": 58138,
       "length": 29,
       "value": "\"videoEditor.crop916Selected\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 58887,
+      "offset": 58320,
       "length": 24,
       "value": "\"videoEditor.cropCustom\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 59080,
+      "offset": 58513,
       "length": 32,
       "value": "\"videoEditor.cropCustomSelected\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 59257,
+      "offset": 58690,
       "length": 20,
       "value": "\"videoEditor.delete\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 59434,
+      "offset": 58867,
       "length": 26,
       "value": "\"videoEditor.downloadMask\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 59621,
+      "offset": 59054,
       "length": 28,
       "value": "\"videoEditor.draggerChevron\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 59790,
+      "offset": 59223,
       "length": 18,
       "value": "\"videoEditor.draw\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 59949,
+      "offset": 59382,
       "length": 18,
       "value": "\"videoEditor.edit\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 60118,
+      "offset": 59551,
       "length": 23,
       "value": "\"videoEditor.editVideo\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 60302,
+      "offset": 59735,
       "length": 28,
       "value": "\"videoEditor.editVolumeIcon\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 60477,
+      "offset": 59910,
       "length": 21,
       "value": "\"videoEditor.effects\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 60653,
+      "offset": 60086,
       "length": 25,
       "value": "\"videoEditor.effectsBack\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 60825,
+      "offset": 60258,
       "length": 21,
       "value": "\"videoEditor.filters\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 60999,
+      "offset": 60432,
       "length": 24,
       "value": "\"videoEditor.fontActive\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 61180,
+      "offset": 60613,
       "length": 26,
       "value": "\"videoEditor.fontInactive\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 61349,
+      "offset": 60782,
       "length": 19,
       "value": "\"videoEditor.masks\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 61517,
+      "offset": 60950,
       "length": 22,
       "value": "\"videoEditor.noEffect\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 61700,
+      "offset": 61133,
       "length": 29,
       "value": "\"videoEditor.no_voice_effect\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 61905,
+      "offset": 61338,
       "length": 36,
       "value": "\"videoEditor.overlayItems.leftArrow\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 62084,
+      "offset": 61517,
       "length": 19,
       "value": "\"videoEditor.pause\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 62252,
+      "offset": 61685,
       "length": 22,
       "value": "\"videoEditor.pixelate\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 62415,
+      "offset": 61848,
       "length": 18,
       "value": "\"videoEditor.play\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 62592,
+      "offset": 62025,
       "length": 27,
       "value": "\"videoEditor.playbackThumb\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 62766,
+      "offset": 62199,
       "length": 21,
       "value": "\"videoEditor.preview\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 62942,
+      "offset": 62375,
       "length": 25,
       "value": "\"videoEditor.previewPlay\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 63108,
+      "offset": 62541,
       "length": 18,
       "value": "\"videoEditor.redo\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 63273,
+      "offset": 62706,
       "length": 21,
       "value": "\"videoEditor.replace\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 63439,
+      "offset": 62872,
       "length": 20,
       "value": "\"videoEditor.rotate\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 63614,
+      "offset": 63047,
       "length": 25,
       "value": "\"videoEditor.sliderThumb\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 63808,
+      "offset": 63241,
       "length": 33,
       "value": "\"videoEditor.small_no_transition\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 63984,
+      "offset": 63417,
       "length": 19,
       "value": "\"videoEditor.speed\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 64146,
+      "offset": 63579,
       "length": 19,
       "value": "\"videoEditor.split\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 64314,
+      "offset": 63747,
       "length": 22,
       "value": "\"videoEditor.stickers\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 64477,
+      "offset": 63910,
       "length": 18,
       "value": "\"videoEditor.text\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 64646,
+      "offset": 64079,
       "length": 23,
       "value": "\"videoEditor.textStyle\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 64830,
+      "offset": 64263,
       "length": 28,
       "value": "\"videoEditor.timelineCursor\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 64999,
+      "offset": 64432,
       "length": 18,
       "value": "\"videoEditor.undo\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 65180,
+      "offset": 64613,
       "length": 29,
       "value": "\"videoEditor.voiceRecordIcon\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 65381,
+      "offset": 64814,
       "length": 34,
       "value": "\"videoEditor.voiceRecording.start\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 65585,
+      "offset": 65018,
       "length": 33,
       "value": "\"videoEditor.voiceRecording.stop\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 65763,
+      "offset": 65196,
       "length": 20,
       "value": "\"videoEditor.volume\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 65936,
+      "offset": 65369,
       "length": 24,
       "value": "\"videoTemplates.bigPlay\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 66109,
+      "offset": 65542,
       "length": 22,
       "value": "\"videoTemplates.clock\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 66278,
+      "offset": 65711,
       "length": 21,
       "value": "\"videoTemplates.more\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 66448,
+      "offset": 65881,
       "length": 22,
       "value": "\"videoTemplates.pause\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 66617,
+      "offset": 66050,
       "length": 21,
       "value": "\"videoTemplates.play\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 66793,
+      "offset": 66226,
       "length": 25,
       "value": "\"videoTemplates.segments\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 66979,
+      "offset": 66412,
       "length": 28,
       "value": "\"videoTemplates.transitions\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 67169,
+      "offset": 66602,
       "length": 30,
       "value": "\"video_editor_blur_scale_icon\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 67334,
+      "offset": 66767,
       "length": 15,
       "value": "\"vinyl_preview\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 67499,
+      "offset": 66932,
       "length": 22,
       "value": "\"visualEffectsPreview\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 67656,
+      "offset": 67089,
       "length": 15,
       "value": "\"vivid_preview\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 67800,
+      "offset": 67233,
       "length": 12,
       "value": "\"voice_icon\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 67940,
+      "offset": 67373,
       "length": 11,
       "value": "\"watermark\""
     },
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BanubaVideoEditorSDK\/IntermediateBuildFilesPath\/BanubaVideoEditorSDK.build\/Release-iphoneos\/BanubaVideoEditorSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 68084,
+      "offset": 67517,
       "length": 14,
       "value": "\"welcome_logo\""
     }

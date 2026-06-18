@@ -1998,6 +1998,8 @@ public enum PIPMode {
   case react4
   case landscape1
   case landscape2
+  case landscape3
+  case landscape4
   case portrait1
   case portrait2
   public static func == (a: BanubaVideoEditorSDK.PIPMode, b: BanubaVideoEditorSDK.PIPMode) -> Swift.Bool
@@ -2062,7 +2064,6 @@ public struct AdditionalEffectsButtonConfiguration {
     case beauty
     case masks
     case muteSound
-    case pip
     case blur
     case trimDraft
     case captions
