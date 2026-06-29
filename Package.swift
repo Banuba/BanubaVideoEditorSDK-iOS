@@ -53,7 +53,7 @@ let package = Package(
     .binaryTarget(
       name: "BanubaVideoEditorSDK",
       url: "https://nexus.banuba.net/repository/ios-frameworks/ios/frameworks/BanubaVideoEditorSDK/1.53.0/BanubaVideoEditorSDK-1.53.0.xcframework.zip",
-      checksum: "7df33344eb237bf9f6e0634b3f7eaf57acd7e7c363ff53d83322345a34d0fe1d"
+      checksum: "ced6311797aaf10a1db6bbb2a13a64efa7722d1a031ea1cdae749dac38f1eb83"
     )
   ]
 )
