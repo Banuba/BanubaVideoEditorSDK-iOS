@@ -3,9 +3,9 @@
 import PackageDescription
 
 let designSystemVersionRange: Range<Version> = "1.0.4"..<"2.0.0"
-let banubaUtilsVersionRange: Range<Version> = "1.55.0"..<"1.59.99"
-let banubaCoreVersionRange: Range<Version> = "1.55.0"..<"1.59.99"
-let banubaLicenseServicingVersionRange: Range<Version> = "1.55.0"..<"1.59.99"
+let banubaUtilsVersion: Version = "1.55.1"
+let banubaCoreVersion: Version = "1.55.1"
+let banubaLicenseServicingVersion: Version = "1.55.1"
 
 let package = Package(
   name: "BanubaVideoEditorSDK",
@@ -20,9 +20,9 @@ let package = Package(
   ],
   dependencies: [
     .package(url: "https://github.com/Banuba/BanubaDesignSystem.git", designSystemVersionRange),
-    .package(url: "https://github.com/Banuba/BanubaUtilities-iOS.git", banubaUtilsVersionRange),
-    .package(url: "https://github.com/Banuba/BanubaVideoEditorCore-iOS.git", banubaCoreVersionRange),
-    .package(url: "https://github.com/Banuba/BanubaLicenseServicingSDK.git", banubaLicenseServicingVersionRange),
+    .package(url: "https://github.com/Banuba/BanubaUtilities-iOS.git", exact: banubaUtilsVersion),
+    .package(url: "https://github.com/Banuba/BanubaVideoEditorCore-iOS.git", exact: banubaCoreVersion),
+    .package(url: "https://github.com/Banuba/BanubaLicenseServicingSDK.git", exact: banubaLicenseServicingVersion),
   ],
   targets: [
     .target(
@@ -45,8 +45,8 @@ let package = Package(
     ),
     .binaryTarget(
       name: "BanubaVideoEditorSDK",
-      url: "https://nexus.banuba.net/repository/ios-frameworks/ios/frameworks/BanubaVideoEditorSDK/1.55.0/BanubaVideoEditorSDK-1.55.0.xcframework.zip",
-      checksum: "ffce371602568cf36aeb7057ea68070b8fb9e5fd89f4ed54d940d8646548b547"
+      url: "https://nexus.banuba.net/repository/ios-frameworks/ios/frameworks/BanubaVideoEditorSDK/1.55.1/BanubaVideoEditorSDK-1.55.1.xcframework.zip",
+      checksum: "0b12d9eda84b7b6c083d9dd0695f50c93e39f3e6cbf9d5148d79f15b77e195c6"
     )
   ]
 )
